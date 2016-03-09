@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageView6"
+        android:layout_row="0"
+        android:background="@drawable/logo_big_one"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/login"
+        android:id="@+id/textView20"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/email"
+        android:id="@+id/textView18"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmailLG"
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/senha"
+        android:id="@+id/textView19"
+        android:layout_row="4"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txtSenhaLG"
+        android:layout_row="5"
+        android:layout_column="0" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/concordo_com_os_termos_e_diretrizes_do_servi_o"
+        android:id="@+id/checkBox"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:checked="true"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:text="@string/entrar_ou_registrar_se"
+        android:id="@+id/btLoginRegister1"
+        android:drawableLeft="@drawable/ic_seguranca"
+        android:layout_row="7"
+        android:bottomRightRadius="8dp"
+        android:bottomLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        android:topLeftRadius="8dp"
+        android:background="@color/colorAccent"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal" />
+
+    <GridLayout
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_row="8"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_width="48dp"
+
+            android:layout_height="48dp"
+            android:id="@+id/imageButton"
+            android:layout_row="0"
+            android:background="@drawable/icon_facebook_48"
+            android:layout_column="0" />
+
+        <ImageButton
+
+            android:layout_width="48dp"
+
+            android:layout_height="48dp"
+            android:id="@+id/imageButton2"
+            android:layout_row="0"
+            android:background="@drawable/icon_google_plus_48"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal" />
+    </GridLayout>
+
+</GridLayout>

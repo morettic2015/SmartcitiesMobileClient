@@ -1,0 +1,37 @@
+package view.infoseg.morettic.com.br.infosegapp.util;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+import view.infoseg.morettic.com.br.infosegapp.view.LoginFragment;
+
+/**
+ * Created by LuisAugusto on 24/02/2016.
+ */
+public class ValueObject {
+
+    public static String ID_PROFILE = "-1" ;
+    public static Activity MAIN;
+    public static String ID_OCORRENCIA = "-1" ;
+    public static String URL_SUBMIT_UPLOAD;
+    public static String UPLOAD_AVATAR = null;
+    public static String UPLOAD_AVATAR_TOKEN;
+    public static String UPLOAD_PIC_OCORRENCIA = null;
+    public static String UPLOAD_PIC_OCORRENCIA_TOKEN;
+    public static SharedPreferences MY_PREFERENCES;
+    public static JSONObject OCORRENCIAS_JSON;
+    public static boolean AUTENTICADO = false;
+    public static LoginFragment LOGIN;
+    public static Bitmap AVATAR_BITMAP;
+    public static HashMap<Long,JSONObject> MAPA_OCORRENCIAS = new HashMap<Long, JSONObject>();
+    public static HashMap<String,Bitmap> MAPA_BITMAPS = new HashMap<String, Bitmap>();
+    public static Bitmap IMG_OCORRENCIA = null;
+    public static Bitmap IMG_AUTHOR = null;
+}

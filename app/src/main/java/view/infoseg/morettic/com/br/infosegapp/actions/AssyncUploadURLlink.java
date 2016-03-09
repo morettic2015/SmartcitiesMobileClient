@@ -1,0 +1,94 @@
+package view.infoseg.morettic.com.br.infosegapp.actions;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.AsyncTask;
+
+import org.json.JSONObject;
+
+import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
+import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
+
+/**
+ * Created by LuisAugusto on 24/02/2016.
+ */
+public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
+    public static final String UPLOAD_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
+    private ProgressDialog dialog;
+    private Activity a1;
+    private Bitmap bitmapM;
+    private boolean origemIsOcorrencia = false;
+
+    public void setOrigemOcorrencia(boolean isIt) {
+        this.origemIsOcorrencia = isIt;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        dialog.setMessage("Fazendo upload...");
+        dialog.show();
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        super.onPostExecute(result);
+        if (dialog.isShowing()) {
+            dialog.dismiss();
+        }
+    }
+
+    public AssyncUploadURLlink(InfosegMain activity, Bitmap b1) {
+        this.dialog = new ProgressDialog(activity);
+        this.a1 = activity;
+        this.bitmapM = b1;
+    }
+
+    protected String doInBackground(JSONObject... urls) {
+        JSONObject js = null;
+        // Creating new JSON Parser
+        try {
+            js = HttpUtil.getJSONFromUrl(UPLOAD_URL);
+            ValueObject.URL_SUBMIT_UPLOAD = js.getString("uploadPath");
+
+            // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+            Uri tempUri = HttpUtil.getImageUri(a1.getApplicationContext(), this.bitmapM);
+
+            // CALL THIS METHOD TO GET THE ACTUAL PATH
+            String realPathInSO = HttpUtil.getRealPathFromURI(tempUri, this.a1);
+
+            String fTYpe = realPathInSO.substring(realPathInSO.length() - 3, realPathInSO.length());
+            if (ValueObject.URL_SUBMIT_UPLOAD != null) {
+
+                js = HttpFileUpload.uploadFile(realPathInSO,
+                        ValueObject.URL_SUBMIT_UPLOAD,
+                        fTYpe);
+                js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
+
+                //Salva em lugares distintos
+                if (origemIsOcorrencia) {
+                    ValueObject.UPLOAD_PIC_OCORRENCIA = js.getString("key");
+                    ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN = js.getString("token");
+                } else {
+                    ValueObject.UPLOAD_AVATAR = js.getString("key");
+                    ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");
+                }
+            }
+            //Salva a imagem no banco e retorna seus parametros
+
+
+        } catch (Exception e) {
+            js = new JSONObject();
+            ValueObject.URL_SUBMIT_UPLOAD = null;
+
+            //e.printStackTrace();
+        } finally {
+            return js.toString();
+        }
+    }
+
+
+}

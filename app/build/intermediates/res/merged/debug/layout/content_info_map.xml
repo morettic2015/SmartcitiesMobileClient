@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/app_name"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageViewOcorrencia"
+        android:layout_row="7"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/ic_cast_dark"
+        android:layout_column="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo"
+        android:id="@+id/txtTitMapOcorrencia"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_weight="0.02" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Descriçao"
+        android:id="@+id/txtDescricaoMapOcorrencia"
+        android:layout_weight="0.13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="data"
+        android:id="@+id/txtDataMapOcorrencia"
+        android:layout_gravity="left|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="tipo"
+        android:id="@+id/txtTipoMapOcorrencia"
+        android:layout_gravity="left|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="autor"
+        android:id="@+id/txtAutorMapOcorrencia"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_weight="0.13" />
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:id="@+id/imageViewAvatarMap"
+        android:layout_row="7"
+        android:src="@drawable/ic_profile_img"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_weight="0.11" />
+
+</LinearLayout>
