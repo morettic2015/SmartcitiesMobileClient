@@ -1,14 +1,19 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -29,6 +34,9 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
+import static android.Manifest.permission.*;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 //import android.app.Fragment;
 //import android.app.FragmentTransaction;
 
@@ -38,6 +46,7 @@ public class InfosegMain extends AppCompatActivity
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
     private Uri imageUri;
+    private static int MY_REQUEST_CODE,MY_REQUEST_CODE1,MY_REQUEST_CODE2,MY_REQUEST_CODE3;
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
@@ -47,6 +56,7 @@ public class InfosegMain extends AppCompatActivity
         // tb.title;
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,13 +99,41 @@ public class InfosegMain extends AppCompatActivity
         b4.setOnClickListener((View.OnClickListener)this);
 
 
-
+        /**
+         * SE nao estiver autenticado pop up maldito dos infernos
+         * */
         if (!ValueObject.AUTENTICADO) {
             LoginFragment loginFragment = LoginFragment.newInstance();
             ValueObject.LOGIN = loginFragment;
             loginFragment.show(getFragmentManager(), "dialog");
         }
         ValueObject.MAIN = this;
+        /**
+         *
+         *  @PQP O GOOGLE TEM QUE CAGAR NE AGORA PRECISO VERIFICAR CADA PERMISSAO NA MAO.... A  VAI SE FUDE SENAO A PORRA DA NULL POINTE E O CARALHO
+         *  @ BRIAN e LARRY VCS CHUPAM MUITA ROLA PQP entendo o contexto da mudanca mas nao seria algo que a ENgine Android fosse responsavel em habilitar em runtime/;
+         *
+         *  @ Porra pra que dificultar caralho bugado esse android M ou 6 bando de chupa rola do caralho
+         *
+         *  E SE VOCE ESTIVER LENDO ISSO PORRA E PORQUE E UM VIADO FILHO DA PUTA QUE NAO MERECER SER UM DEUS VIVO
+         *
+         *   HUAUHAUAUHAU NO ARCO IRIS DA MANHA UM SILENCIO INVADE O PANTANO E FAZ OS CARNEIROS FLUTUAREM NAS MARGES DO NILO
+         * */
+        //Checka permissão do GPS
+        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            String[] p = {ACCESS_FINE_LOCATION};
+            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE2);
+        }
+        //Checa permissão da camera
+        if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, CAMERA)) {
+            String[] p = {CAMERA};
+            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE);
+        }
+        //android.permission.WRITE_EXTERNAL_STORAGE
+        if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE)) {
+            String[] p = {WRITE_EXTERNAL_STORAGE};
+            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE3);
+        }
     }
 
     @Override
@@ -217,12 +255,12 @@ public class InfosegMain extends AppCompatActivity
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-
-
                 }
                 break;
         }
     }
+
+
 
 
     @Override

@@ -32,5 +32,10 @@
                  android:title="Envie" /> -->
         </menu>
     </item>
+    <item android:title="Patrocinadores">
+        <menu>
+
+        </menu>
+    </item>
 
 </menu>

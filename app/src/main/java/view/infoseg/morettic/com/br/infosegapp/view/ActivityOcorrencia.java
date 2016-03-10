@@ -35,10 +35,12 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveProfile;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.app.Activity.RESULT_OK;
 
 public class ActivityOcorrencia extends Fragment {
-    static final int REQUEST_IMAGE_CAPTURE = 1;
+    static int REQUEST_IMAGE_CAPTURE = 1;
     private View v;
     private RadioGroup radioGroup;
     private String tipoOcorrencia = "SERVICOS";
@@ -52,6 +54,8 @@ public class ActivityOcorrencia extends Fragment {
     private AlertDialog.Builder builder;
     public static int OPCAO = -1;
     private int codigo = 0;
+    private int MY_REQUEST_CODE;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,7 +64,6 @@ public class ActivityOcorrencia extends Fragment {
         InfosegMain.setTitleToolbar("Registrar ocorrência", container);
 
         v = inflater.inflate(R.layout.activity_ocorrencia, container, false);
-
 
         //Inicializa os campos da tela
         txtTitulo = (EditText) v.findViewById(R.id.txtTitulo);
@@ -190,15 +193,9 @@ public class ActivityOcorrencia extends Fragment {
 
 
           // String bestProvider = lm.getBestProvider(getActivity().getCriteria(), true);
-           if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-               // TODO: Consider calling
-               //    ActivityCompat#requestPermissions
-               // here to request the missing permissions, and then overriding
-               //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-               //                                          int[] grantResults)
-               // to handle the case where the user grants the permission. See the documentation
-               // for ActivityCompat#requestPermissions for more details.
-
+           if (ActivityCompat.checkSelfPermission(getActivity(), ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+               String[] p = {ACCESS_FINE_LOCATION};
+               ActivityCompat.requestPermissions(getActivity(),p,MY_REQUEST_CODE);
            }
 
            Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);

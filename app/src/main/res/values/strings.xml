@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Smartcities Framework</string>
+    <string name="app_name">SmartcitiesAPP</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -62,4 +62,5 @@
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
+    <string name="registrar">Registrar</string>
 </resources>

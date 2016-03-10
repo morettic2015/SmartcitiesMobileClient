@@ -185,7 +185,7 @@
             android:background="@drawable/button_shape_model"
             android:layout_row="7"
             android:drawableLeft="@drawable/ic_menu_send"
-            android:text="@string/enviar"
+            android:text="@string/registrar"
             android:layout_marginRight="5dp"
             android:layout_gravity="right" />
 
