@@ -4,7 +4,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/modal_shape_model"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
@@ -83,7 +83,7 @@
         android:bottomLeftRadius="8dp"
         android:topRightRadius="8dp"
         android:topLeftRadius="8dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/button_shape_model"
         android:layout_column="0"
         android:layout_gravity="center_horizontal" />
 

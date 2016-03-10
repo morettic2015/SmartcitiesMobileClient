@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.provider.MediaStore;
 
@@ -92,7 +94,7 @@ public class HttpUtil {
                 "&id="+id;
     }
 
-    public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile){
+    public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile,String address){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
                 "titulo=" + encode(tit) +
                 "&lat=" + lat +
@@ -100,6 +102,7 @@ public class HttpUtil {
                 "&desc=" + encode(desc) +
                 "&idPic=" + idPic +
                 "&tipo=" + tipo +
+                "&address=" + encode(address) +
                 "&idProfile="+ idProfile;
     }
 
@@ -154,4 +157,10 @@ public class HttpUtil {
     public static final String getTokenImagemById(){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec";
     }
+
+    public static final String getGeocodingUrl(String lat,String lon){
+        return "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
+    }
+
+
 }

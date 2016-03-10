@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -32,7 +33,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 //import android.app.FragmentTransaction;
 
 public class InfosegMain extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
@@ -72,6 +73,22 @@ public class InfosegMain extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //Inicializa os botooes da tela Splash
+        ImageView b1 = (ImageView)findViewById(R.id.btNovoSplah);
+        b1.setOnClickListener((View.OnClickListener)this);
+
+        ImageView b2 = (ImageView)findViewById(R.id.btPerfilSlash);
+        b2.setOnClickListener((View.OnClickListener)this);
+
+        ImageView b3 = (ImageView)findViewById(R.id.btConfigSplash);
+        b3.setOnClickListener((View.OnClickListener)this);
+
+        ImageView b4 = (ImageView)findViewById(R.id.btMapaSplash);
+        b4.setOnClickListener((View.OnClickListener)this);
+
+
 
         if (!ValueObject.AUTENTICADO) {
             LoginFragment loginFragment = LoginFragment.newInstance();
@@ -131,7 +148,7 @@ public class InfosegMain extends AppCompatActivity
             title = "Visualizar ocorrências";
         } else if (id == R.id.nav_slideshow) {
             fragment = new ActivityProfile();
-            title = "Perfil do usuario";
+            title = "Perfil";
         } else if (id == R.id.nav_manage) {
             fragment = new ActivityConfig();
             title = "Configurações";
@@ -143,6 +160,14 @@ public class InfosegMain extends AppCompatActivity
             startActivity(sendIntent);
         }
 
+        loadFragment(fragment,title);
+
+        //setTitle(title);
+
+        return true;
+    }
+
+    private void loadFragment(Fragment fragment,String title){
         if (fragment != null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -155,12 +180,7 @@ public class InfosegMain extends AppCompatActivity
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
-
         }
-
-        //setTitle(title);
-
-        return true;
     }
 
     public void showDatePickerDialog(View v) {
@@ -174,6 +194,8 @@ public class InfosegMain extends AppCompatActivity
         photoPickerIntent.setType("image/*");
         startActivityForResult(photoPickerIntent, SELECT_PHOTO);
     }
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
@@ -203,4 +225,27 @@ public class InfosegMain extends AppCompatActivity
     }
 
 
+    @Override
+    public void onClick(View v) {
+        String title = null;
+        switch (v.getId()) {
+            case R.id.btPerfilSlash:
+                loadFragment(new ActivityProfile(),"Perfil");
+                break;
+
+            case R.id.btNovoSplah:
+                //whatever
+                loadFragment(new ActivityOcorrencia(),"Registrar ocorrência");
+                break;
+
+            case R.id.btMapaSplash:
+                loadFragment(new ActivityMap(),"Visualizar ocorrências");
+                //whatever
+                break;
+            case R.id.btConfigSplash:
+                //whatever
+                loadFragment(new ActivityConfig(),"Configurações");
+                break;
+        }
+    }
 }

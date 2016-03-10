@@ -40,4 +40,26 @@
     <string name="senha">Senha</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
+    <string name="foto_1">Foto 1</string>
+    <string name="salvar">Salvar</string>
+    <string name="filtros">Filtros</string>
+    <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
+    <string name="tipos_de_ocorr_ncias">Tipos de ocorrências</string>
+    <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Informe os tipos de ocorrência que deseja visualizar</string>
+    <string name="saude">Saude</string>
+    <string name="transporte">Transporte</string>
+    <string name="meio_ambiente">Meio Ambiente</string>
+    <string name="educa_o">Educação</string>
+    <string name="seguran_a">Segurança</string>
+    <string name="politica">Politica</string>
+    <string name="minhas_ocorr_ncias">Minhas ocorrências</string>
+    <string name="sa_de">Saúde</string>
+    <string name="enviar">Enviar</string>
+    <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
+    <string name="descri_o">Descrição</string>
+    <string name="tipo_do_servi_o">Tipo do serviço</string>
+    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, na área de saúde, educação, segurança e serviços</string>
+    <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
+    <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
 </resources>

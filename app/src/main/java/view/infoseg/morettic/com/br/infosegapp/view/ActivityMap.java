@@ -95,7 +95,11 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             // for ActivityCompat#requestPermissions for more details.
 
         }
-        Location location = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+        Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        Location GPSLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+        Location location = GPSLocation==null?NetLocation:GPSLocation;
 
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();

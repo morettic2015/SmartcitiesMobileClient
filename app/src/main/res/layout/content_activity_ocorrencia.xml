@@ -20,14 +20,52 @@
         android:layout_alignParentTop="true"
         android:background="#f1f1f1">
 
-        <ImageButton
-            android:id="@+id/btCaptureCam"
-            android:layout_width="67dp"
-            android:layout_height="64dp"
-            android:layout_column="0"
-            android:layout_gravity="right"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:layout_row="0"
-            android:background="@drawable/ic_menu_camera" />
+            android:layout_column="0"
+            android:weightSum="1"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/btCaptureCam"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_row="0"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_menu_camera"
+                android:contentDescription="@string/foto_1" />
+            <ImageButton
+                android:id="@+id/btCaptureCam1"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_column="1"
+                android:layout_marginRight="5dp"
+                android:layout_row="0"
+                android:background="@drawable/ic_menu_camera"
+                 />
+            <ImageButton
+                android:id="@+id/btCaptureCam2"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_column="2"
+                android:layout_marginRight="5dp"
+                android:layout_row="0"
+                android:background="@drawable/ic_menu_camera"
+                />
+            <ImageButton
+                android:id="@+id/btCaptureCam3"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_column="3"
+                android:layout_row="0"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_menu_camera"
+                android:layout_gravity="right" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/LabelTit"
@@ -35,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="1"
-            android:text="Título da ocorrência"
+            android:text="@string/t_tulo_da_ocorr_ncia"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <EditText
@@ -51,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="3"
-            android:text="Descrição"
+            android:text="@string/descri_o"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <EditText
@@ -69,15 +107,22 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="5"
-            android:text="Tipo do serviço"
+            android:text="@string/tipo_do_servi_o"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
+        <ScrollView
+            android:id="@+id/scrollview_choices"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_column="0"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/scrollbar_shape_style"
+            android:layout_row="6">
         <RadioGroup
             android:id="@+id/idRadioOcorrencia"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="6">
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
 
             <RadioButton
                 android:id="@+id/rSaude"
@@ -85,7 +130,7 @@
                 android:layout_height="wrap_content"
 
 
-                android:text="Saúde" />
+                android:text="@string/sa_de" />
 
             <RadioButton
                 android:id="@+id/rEducacao"
@@ -131,16 +176,17 @@
 
                 />
         </RadioGroup>
-
+        </ScrollView>
         <Button
             android:id="@+id/btEnviarOcorrencia"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
             android:layout_column="0"
-            android:background="@color/colorAccent"
+            android:background="@drawable/button_shape_model"
             android:layout_row="7"
             android:drawableLeft="@drawable/ic_menu_send"
-            android:text="Denunciar"
+            android:text="@string/enviar"
+            android:layout_marginRight="5dp"
             android:layout_gravity="right" />
 
 

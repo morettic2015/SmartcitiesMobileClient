@@ -305,7 +305,7 @@
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
-    <dimen name="popup_height">360dp</dimen>
+    <dimen name="popup_height">380dp</dimen>
     <dimen name="popup_width">300dp</dimen>
     <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
     <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
@@ -396,22 +396,32 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Concordo com os termos e diretrizes do serviço</string>
+    <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
+    <string name="descri_o">Descrição</string>
+    <string name="educa_o">Educação</string>
     <string name="email">Email</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
+    <string name="enviar">Enviar</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
+    <string name="filtros">Filtros</string>
+    <string name="foto_1">Foto 1</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="true">
         AIzaSyA_AOEj7g0543pBn31jFHKMfLMzN4s3cw0
     </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Informe os tipos de ocorrência que deseja visualizar</string>
+    <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
     <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
     <string name="login">Login</string>
+    <string name="meio_ambiente">Meio Ambiente</string>
+    <string name="minhas_ocorr_ncias">Minhas ocorrências</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>
@@ -431,18 +441,30 @@
     </string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="politica">Politica</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
+    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, na área de saúde, educação, segurança e serviços</string>
+    <string name="sa_de">Saúde</string>
+    <string name="salvar">Salvar</string>
+    <string name="saude">Saude</string>
+    <string name="seguran_a">Segurança</string>
+    <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
     <string name="senha">Senha</string>
     <string name="start_level">Level 1</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
+    <string name="tipo_do_servi_o">Tipo do serviço</string>
+    <string name="tipos_de_ocorr_ncias">Tipos de ocorrências</string>
     <string name="title_activity_activity_adds">Patrocinadores</string>
     <string name="title_activity_activity_map">Map</string>
     <string name="title_activity_activity_ocorrencia">Registrar ocorrência</string>
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_maps">Map</string>
+    <string name="transporte">Transporte</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1975,5 +1997,16 @@
         <item name="android:topRightRadius">8dp</item>
         <item name="android:topLeftRadius">8dp</item>
 
+    </style>
+    <style name="scrollbar_shape_style">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_vertical_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_vertical_track</item>
+        <item name="android:scrollbarSize">12dp</item>
+        <item name="android:scrollbarFadeDuration">2000</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
     </style>
 </resources>

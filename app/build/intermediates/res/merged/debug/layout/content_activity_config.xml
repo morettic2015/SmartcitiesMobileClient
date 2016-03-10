@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="0"
-            android:text="Filtros"
+            android:text="@string/filtros"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_row="1"
-            android:text="Selecione as distâncias para filtrar"
+            android:text="@string/selecione_as_dist_ncias_para_filtrar"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <CheckBox
@@ -44,7 +44,7 @@
             android:layout_column="0"
             android:layout_row="2"
             android:checked="true"
-            android:text="Minhas ocorrências" />
+            android:text="@string/minhas_ocorr_ncias" />
 
         <CheckBox
             android:id="@+id/chkCity"
@@ -80,7 +80,7 @@
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_row="4"
-            android:text="Tipos de ocorrências"
+            android:text="@string/tipos_de_ocorr_ncias"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -90,7 +90,7 @@
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_row="5"
-            android:text="Informe os tipos de ocorrência que deseja visualizar"
+            android:text="@string/informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <CheckBox
@@ -100,7 +100,7 @@
             android:layout_column="0"
             android:layout_row="6"
             android:checked="false"
-            android:text="Saude" />
+            android:text="@string/saude" />
 
         <CheckBox
             android:id="@+id/chkEducacao"
@@ -109,7 +109,7 @@
             android:layout_column="1"
             android:layout_row="6"
             android:checked="false"
-            android:text="Educação" />
+            android:text="@string/educa_o" />
 
         <CheckBox
             android:id="@+id/chkTransporte"
@@ -118,7 +118,7 @@
             android:layout_column="0"
             android:layout_row="7"
             android:checked="false"
-            android:text="Transporte" />
+            android:text="@string/transporte" />
 
         <CheckBox
             android:id="@+id/chkSeguranca"
@@ -127,7 +127,7 @@
             android:layout_column="1"
             android:layout_row="7"
             android:checked="false"
-            android:text="Segurança" />
+            android:text="@string/seguran_a" />
 
         <CheckBox
             android:id="@+id/chkMeioAmbiente"
@@ -136,7 +136,7 @@
             android:layout_column="0"
             android:layout_row="8"
             android:checked="false"
-            android:text="Meio Ambiente" />
+            android:text="@string/meio_ambiente" />
 
         <CheckBox
             android:id="@+id/chkPolitica"
@@ -145,19 +145,20 @@
             android:layout_column="1"
             android:layout_row="8"
             android:checked="false"
-            android:text="Politica" />
+            android:text="@string/politica" />
 
         <Button
             android:id="@+id/btSalvarPreferencias"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="279dp"
+            android:layout_height="35dp"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_row="9"
             android:drawableLeft="@drawable/ic_save_action"
-            android:text="Salvar"
-            android:background="@color/colorAccent"
-            android:layout_gravity="right" />
+            android:text="@string/salvar"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_shape_model"
+            android:layout_gravity="center_horizontal" />
 
     </GridLayout>
 </RelativeLayout>
