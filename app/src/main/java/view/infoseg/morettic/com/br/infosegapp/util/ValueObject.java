@@ -16,7 +16,12 @@ import view.infoseg.morettic.com.br.infosegapp.view.LoginFragment;
  * Created by LuisAugusto on 24/02/2016.
  */
 public class ValueObject {
-
+    public static String UPLOAD_PIC_OCORRENCIA_TOKEN3 = null;
+    public static String UPLOAD_PIC_OCORRENCIA3 = null;
+    public static String UPLOAD_PIC_OCORRENCIA_TOKEN2 = null;
+    public static String UPLOAD_PIC_OCORRENCIA2 = null;
+    public static String UPLOAD_PIC_OCORRENCIA_TOKEN1 = null;
+    public static String UPLOAD_PIC_OCORRENCIA1 = null;
     public static String ID_PROFILE = "-1" ;
     public static Activity MAIN;
     public static String ID_OCORRENCIA = "-1" ;

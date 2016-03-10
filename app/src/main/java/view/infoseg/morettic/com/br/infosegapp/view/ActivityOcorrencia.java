@@ -43,7 +43,7 @@ public class ActivityOcorrencia extends Fragment {
     private RadioGroup radioGroup;
     private String tipoOcorrencia = "SERVICOS";
     private Button btEnviar;
-    private ImageButton btCapCam;
+    private ImageButton btCapCam,btCapCam1,btCapCam2,btCapCam3;
     private RadioButton selectedOne;
     private EditText txtTitulo, txtDescricao;
     private LocationManager lm;
@@ -51,6 +51,7 @@ public class ActivityOcorrencia extends Fragment {
     private double longitude, latitude;
     private AlertDialog.Builder builder;
     public static int OPCAO = -1;
+    private int codigo = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,6 +69,9 @@ public class ActivityOcorrencia extends Fragment {
         radioGroup = (RadioGroup) v.findViewById(R.id.idRadioOcorrencia);
         builder = new AlertDialog.Builder(inflater.getContext());
         btCapCam = (ImageButton)v.findViewById(R.id.btCaptureCam);
+        btCapCam1 = (ImageButton)v.findViewById(R.id.btCaptureCam1);
+        btCapCam2 = (ImageButton)v.findViewById(R.id.btCaptureCam2);
+        btCapCam3 = (ImageButton)v.findViewById(R.id.btCaptureCam3);
 
 
         //Evento para salvar a ocorrência
@@ -100,7 +104,7 @@ public class ActivityOcorrencia extends Fragment {
 
                         Geocoder geoCoder = new Geocoder(v.getContext(), Locale.getDefault());
                       //geoCoder.getFromLocation(latitude,longitude,1);
-                        AssyncSaveOcorrencia assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,selectedOne);
+                        AssyncSaveOcorrencia assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,selectedOne,btCapCam,btCapCam1,btCapCam2,btCapCam3);
                         assyncSaveOcorrencia.execute();
                     } else {
                         builder.setTitle("Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
@@ -123,6 +127,25 @@ public class ActivityOcorrencia extends Fragment {
 
         btCapCam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                codigo = R.id.btCaptureCam;
+                dispatchTakePictureIntent(v);
+            }
+        });
+        btCapCam1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                codigo = R.id.btCaptureCam1;
+                dispatchTakePictureIntent(v);
+            }
+        });
+        btCapCam2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                codigo = R.id.btCaptureCam2;
+                dispatchTakePictureIntent(v);
+            }
+        });
+        btCapCam3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                codigo = R.id.btCaptureCam3;
                 dispatchTakePictureIntent(v);
             }
         });
@@ -205,11 +228,11 @@ public class ActivityOcorrencia extends Fragment {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImageButton ib = (ImageButton) getView().findViewById(R.id.btCaptureCam);
+            ImageButton ib = (ImageButton) getView().findViewById(codigo);
             ib.setImageBitmap(imageBitmap);
 
             InfosegMain ism = (InfosegMain) getActivity();
-            AssyncUploadURLlink aurl = new AssyncUploadURLlink(ism, imageBitmap);
+            AssyncUploadURLlink aurl = new AssyncUploadURLlink(ism, imageBitmap,codigo);
             aurl.setOrigemOcorrencia(true);
             aurl.execute();
         }

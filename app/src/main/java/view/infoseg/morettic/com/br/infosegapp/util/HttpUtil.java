@@ -94,8 +94,8 @@ public class HttpUtil {
                 "&id="+id;
     }
 
-    public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile,String address){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
+    public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile,String address,String idPic1,String idPic2,String idPic3){
+        String ret =  "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
                 "titulo=" + encode(tit) +
                 "&lat=" + lat +
                 "&lon=" + lon +
@@ -104,6 +104,18 @@ public class HttpUtil {
                 "&tipo=" + tipo +
                 "&address=" + encode(address) +
                 "&idProfile="+ idProfile;
+
+        if(idPic1!=null){
+            ret+="&idPic1=" + idPic1;
+        }
+        if(idPic2!=null){
+            ret+="&idPic2=" + idPic2;
+        }
+        if(idPic3!=null){
+            ret+="&idPic3=" + idPic3;
+        }
+
+        return ret;
     }
 
     public static final String getOcorrenciasPath(String pId,String pLat, String pMine, String distance, String types){

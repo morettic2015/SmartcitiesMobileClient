@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 
 import org.json.JSONObject;
 
+import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
@@ -22,6 +23,7 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
     private Activity a1;
     private Bitmap bitmapM;
     private boolean origemIsOcorrencia = false;
+    private int code;
 
     public void setOrigemOcorrencia(boolean isIt) {
         this.origemIsOcorrencia = isIt;
@@ -41,10 +43,11 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
         }
     }
 
-    public AssyncUploadURLlink(InfosegMain activity, Bitmap b1) {
+    public AssyncUploadURLlink(InfosegMain activity, Bitmap b1, int origem) {
         this.dialog = new ProgressDialog(activity);
         this.a1 = activity;
         this.bitmapM = b1;
+        this.code = origem;
     }
 
     protected String doInBackground(JSONObject... urls) {
@@ -70,8 +73,26 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
 
                 //Salva em lugares distintos
                 if (origemIsOcorrencia) {
-                    ValueObject.UPLOAD_PIC_OCORRENCIA = js.getString("key");
-                    ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN = js.getString("token");
+                    switch (this.code){
+                        case R.id.btCaptureCam:
+                            ValueObject.UPLOAD_PIC_OCORRENCIA = js.getString("key");
+                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN = js.getString("token");
+                            break;
+                        case R.id.btCaptureCam1:
+                            ValueObject.UPLOAD_PIC_OCORRENCIA1 = js.getString("key");
+                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN1 = js.getString("token");
+                            break;
+                        case R.id.btCaptureCam2:
+                            ValueObject.UPLOAD_PIC_OCORRENCIA2 = js.getString("key");
+                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN2 = js.getString("token");
+                            break;
+                        case R.id.btCaptureCam3:
+                            ValueObject.UPLOAD_PIC_OCORRENCIA3 = js.getString("key");
+                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN3 = js.getString("token");
+                            break;
+
+                    }
+
                 } else {
                     ValueObject.UPLOAD_AVATAR = js.getString("key");
                     ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");

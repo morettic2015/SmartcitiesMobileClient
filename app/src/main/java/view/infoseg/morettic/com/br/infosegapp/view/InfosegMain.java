@@ -213,7 +213,7 @@ public class InfosegMain extends AppCompatActivity
                         bt.setImageBitmap(yourSelectedImage);
 
                         //Upload da imagem inicializado
-                        new AssyncUploadURLlink(this, yourSelectedImage).execute();
+                        new AssyncUploadURLlink(this, yourSelectedImage,0).execute();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
