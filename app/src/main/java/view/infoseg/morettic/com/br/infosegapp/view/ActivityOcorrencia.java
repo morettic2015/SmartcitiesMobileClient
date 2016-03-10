@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.media.Image;
@@ -20,10 +21,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
@@ -40,11 +44,13 @@ public class ActivityOcorrencia extends Fragment {
     private String tipoOcorrencia = "SERVICOS";
     private Button btEnviar;
     private ImageButton btCapCam;
+    private RadioButton selectedOne;
     private EditText txtTitulo, txtDescricao;
     private LocationManager lm;
     private Location location;
     private double longitude, latitude;
     private AlertDialog.Builder builder;
+    public static int OPCAO = -1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -91,7 +97,10 @@ public class ActivityOcorrencia extends Fragment {
 
 
                     if (erros.toString().equals("")) {
-                        AssyncSaveOcorrencia assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js);
+
+                        Geocoder geoCoder = new Geocoder(v.getContext(), Locale.getDefault());
+                      //geoCoder.getFromLocation(latitude,longitude,1);
+                        AssyncSaveOcorrencia assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,selectedOne);
                         assyncSaveOcorrencia.execute();
                     } else {
                         builder.setTitle("Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
@@ -124,6 +133,8 @@ public class ActivityOcorrencia extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int opcao = radioGroup.getCheckedRadioButtonId();
+                OPCAO = opcao;
+                selectedOne = (RadioButton)v.findViewById(OPCAO);
                 switch (opcao) {
                     case R.id.rMeioAmbiente:
                         tipoOcorrencia = "MEIO_AMBIENTE";
@@ -151,21 +162,32 @@ public class ActivityOcorrencia extends Fragment {
             }
         });
         //Recupera a localização do usuário
-        lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+       try {
+           lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-        }
-        location = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-        longitude = location.getLongitude();
-        latitude = location.getLatitude();
 
+          // String bestProvider = lm.getBestProvider(getActivity().getCriteria(), true);
+           if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+               // TODO: Consider calling
+               //    ActivityCompat#requestPermissions
+               // here to request the missing permissions, and then overriding
+               //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+               //                                          int[] grantResults)
+               // to handle the case where the user grants the permission. See the documentation
+               // for ActivityCompat#requestPermissions for more details.
+
+           }
+
+           Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+           Location GPSLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+           location = GPSLocation==null?NetLocation:GPSLocation;
+
+           longitude = location.getLongitude();
+           latitude = location.getLatitude();
+       }catch(Exception e){
+           e.printStackTrace();
+       }
 
         return v;
     }

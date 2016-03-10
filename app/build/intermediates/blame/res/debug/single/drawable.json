@@ -4,6 +4,10 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrollbar_vertical_track.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable\\scrollbar_vertical_track.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
@@ -48,12 +52,12 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
@@ -114,6 +118,10 @@
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrollbar_vertical_thumb.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable\\scrollbar_vertical_thumb.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_light.xml",
