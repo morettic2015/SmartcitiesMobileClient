@@ -196,14 +196,14 @@ public final class R {
 		public static final int monochrome = 0x7f0d005f;
 		public static final int none = 0x7f0d0011;
 		public static final int normal = 0x7f0d000d;
-		public static final int place_autocomplete_clear_button = 0x7f0d0112;
-		public static final int place_autocomplete_powered_by_google = 0x7f0d0114;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f0d0116;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f0d0117;
-		public static final int place_autocomplete_progress = 0x7f0d0115;
-		public static final int place_autocomplete_search_button = 0x7f0d0110;
-		public static final int place_autocomplete_search_input = 0x7f0d0111;
-		public static final int place_autocomplete_separator = 0x7f0d0113;
+		public static final int place_autocomplete_clear_button = 0x7f0d0114;
+		public static final int place_autocomplete_powered_by_google = 0x7f0d0116;
+		public static final int place_autocomplete_prediction_primary_text = 0x7f0d0118;
+		public static final int place_autocomplete_prediction_secondary_text = 0x7f0d0119;
+		public static final int place_autocomplete_progress = 0x7f0d0117;
+		public static final int place_autocomplete_search_button = 0x7f0d0112;
+		public static final int place_autocomplete_search_input = 0x7f0d0113;
+		public static final int place_autocomplete_separator = 0x7f0d0115;
 		public static final int production = 0x7f0d0049;
 		public static final int sandbox = 0x7f0d004a;
 		public static final int satellite = 0x7f0d0038;
@@ -264,13 +264,13 @@ public final class R {
 		public static final int common_open_on_phone = 0x7f07002d;
 		public static final int common_signin_button_text = 0x7f07002e;
 		public static final int common_signin_button_text_long = 0x7f07002f;
-		public static final int create_calendar_message = 0x7f07004e;
-		public static final int create_calendar_title = 0x7f07004f;
-		public static final int decline = 0x7f070050;
+		public static final int create_calendar_message = 0x7f07004f;
+		public static final int create_calendar_title = 0x7f070050;
+		public static final int decline = 0x7f070051;
 		public static final int place_autocomplete_clear_button = 0x7f07003b;
 		public static final int place_autocomplete_search_hint = 0x7f07003c;
-		public static final int store_picture_message = 0x7f070076;
-		public static final int store_picture_title = 0x7f070077;
+		public static final int store_picture_message = 0x7f070077;
+		public static final int store_picture_title = 0x7f070078;
 		public static final int wallet_buy_button_place_holder = 0x7f07003e;
 	}
 	public static final class style {

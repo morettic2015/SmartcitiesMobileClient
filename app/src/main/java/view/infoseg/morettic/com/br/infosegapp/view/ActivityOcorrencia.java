@@ -98,8 +98,11 @@ public class ActivityOcorrencia extends Fragment {
                         erros.append("descrição ");
                     }
                     if(ValueObject.UPLOAD_PIC_OCORRENCIA==null){
-                        erros.append("Foto da ocorrência ");
+                        erros.append("Foto ");
+                        codigo = R.id.btCaptureCam;//Foto principal da ocorrência
                         dispatchTakePictureIntent(v);//Abre janela para tirar foto
+                    }if(selectedOne==null||!selectedOne.isChecked()){
+                        erros.append("tipo ");
                     }
 
 

@@ -11,10 +11,12 @@ import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.StringBuilderPrinter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -62,6 +64,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     private MapView mMapView;
     private GoogleMap googleMap;
     private AlertDialog.Builder builder;
+    private StringBuilder stringBuilder = new StringBuilder();
 
 
     @Override
@@ -99,7 +102,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
         Location GPSLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
-        Location location = GPSLocation==null?NetLocation:GPSLocation;
+        Location location = GPSLocation == null ? NetLocation : GPSLocation;
 
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();
@@ -155,10 +158,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                     js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
                     try {
 
-                        AssyncImageLoad ew = new AssyncImageLoad("0",js.getString("token"));
+                        AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"));
                         ew.execute();
 
-                        AssyncImageLoad ew1 = new AssyncImageLoad("1",js.getString("avatar"));
+                        AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"));
                         ew1.execute();
 
                     } catch (JSONException e) {
@@ -169,28 +172,61 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             }
 
             @Override
-            public View  getInfoContents(Marker arg0) {
+            public View getInfoContents(Marker arg0) {
                 String idOcorrencia = arg0.getSnippet();
                 JSONObject js = null;
 
                 View v = inflater.inflate(R.layout.content_info_map, null);
-                if (idOcorrencia!=null&&MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
-
-                    js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
-
-                    TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
-                    TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
-                    TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
-                    TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
-                    TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
-                    ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
-                    ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
-                    imgVOcorrencia.setImageBitmap(ValueObject.IMG_OCORRENCIA);
-                    imgVAvatar.setImageBitmap(ValueObject.IMG_AUTHOR);
-
-                    //txtTit.setV(js.getString("tit").);
-
+                if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
                     try {
+                        js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
+
+                        TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
+                        TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
+                        TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
+                        TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
+                        TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
+                        ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
+                        ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
+                        imgVOcorrencia.setImageBitmap(ValueObject.IMG_OCORRENCIA);
+                        imgVAvatar.setImageBitmap(ValueObject.IMG_AUTHOR);
+                        Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+
+                        /**
+                         *
+                         *      @TODO
+                         *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
+                         *
+                         *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
+                         * */
+                        //Mensagem share
+                        stringBuilder = new StringBuilder();
+                        stringBuilder.append("Ocorrencia:");
+                        stringBuilder.append(js.getString("tit"));
+                        stringBuilder.append(" descricao:");
+                        stringBuilder.append(js.getString("desc"));
+                        stringBuilder.append(" date:");
+                        stringBuilder.append(js.getString("date"));
+                        stringBuilder.append(" tipo:");
+                        stringBuilder.append(js.getString("tipo"));
+                        stringBuilder.append(" author:");
+                        stringBuilder.append(js.getString("author"));
+                        stringBuilder.append("Visualize as ocorrencias em seu celular! http://smartcitiesframework.com.br");
+
+
+                        bShare.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View v) {
+                                Intent sendIntent = new Intent();
+
+
+                                sendIntent.setAction(Intent.ACTION_SEND);
+                                sendIntent.putExtra(Intent.EXTRA_TEXT, stringBuilder.toString());
+                                sendIntent.setType("text/plain");
+                                startActivity(sendIntent);
+                            }
+                        });
+
+
                         txtTit.setText(js.getString("tit"));
                         txtAutor.setText(js.getString("author"));
                         txtDesc.setText(js.getString("desc"));
@@ -235,8 +271,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         super.onLowMemory();
         mMapView.onLowMemory();
     }
+
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent){
+    public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         System.out.print(requestCode);
     }
  /*   public void onInfoWindowClick(Marker marker) {

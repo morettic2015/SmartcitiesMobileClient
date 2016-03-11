@@ -25,7 +25,8 @@
             android:layout_column="0"
             android:layout_row="0"
             android:text="@string/filtros"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_columnSpan="2" />
 
         <TextView
             android:id="@+id/textView14"
@@ -149,16 +150,17 @@
 
         <Button
             android:id="@+id/btSalvarPreferencias"
-            android:layout_width="279dp"
+            android:layout_width="120dp"
             android:layout_height="35dp"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_row="9"
             android:drawableLeft="@drawable/ic_save_action"
             android:text="@string/salvar"
-            android:layout_marginRight="5dp"
             android:background="@drawable/button_shape_model"
-            android:layout_gravity="center_horizontal" />
+            android:enabled="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp" />
 
     </GridLayout>
 </RelativeLayout>
