@@ -70,11 +70,15 @@ public class LoginFragment extends DialogFragment {
 
     public void onDismiss(final DialogInterface dialog) {
         //final Activity activity = getActivity();
-        if (!ValueObject.AUTENTICADO) {
-            LoginFragment loginFragment = LoginFragment.newInstance();
-            loginFragment.show(getFragmentManager(), "dialog");
-        } else {
-            this.dismiss();
+        try {
+            if (!ValueObject.AUTENTICADO) {
+                LoginFragment loginFragment = LoginFragment.newInstance();
+                loginFragment.show(getFragmentManager(), "dialog");
+            } else {
+                this.dismiss();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

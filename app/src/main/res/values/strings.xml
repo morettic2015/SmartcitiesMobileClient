@@ -63,4 +63,6 @@
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
     <string name="registrar">Registrar</string>
+    <string name="title_activity_activity_ads">ActivityAds</string>
+    <string name="help_us">Ajude-nos!</string>
 </resources>

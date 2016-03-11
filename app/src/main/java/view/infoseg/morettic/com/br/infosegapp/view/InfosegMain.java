@@ -52,7 +52,7 @@ public class InfosegMain extends AppCompatActivity
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
         //this.toolbar.setI
         tb.setTitle(title);
-        tb.setNavigationIcon(R.drawable.ic_main_icon);
+        //tb.setNavigationIcon(R.drawable.ic_main_icon);
         // tb.title;
     }
 
@@ -190,6 +190,9 @@ public class InfosegMain extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
             fragment = new ActivityConfig();
             title = "Configurações";
+        } else if (id == R.id.nav_adds) {
+            fragment = new ActivityAds();
+            title = getString(R.string.help_us);
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);

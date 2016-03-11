@@ -4,19 +4,19 @@
     <group android:checkableBehavior="all">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_novo_generico_01"
             android:title="Registrar ocorrência" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_map_generico_01"
             android:title="Visualizar ocorrências" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_avatar_novo_01"
             android:title="Perfil" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_config_generico_01"
             android:title="Configurações" />
     </group>
 
@@ -34,7 +34,10 @@
     </item>
     <item android:title="Patrocinadores">
         <menu>
-
+            <item
+                android:id="@+id/nav_adds"
+                android:icon="@drawable/ic_attach_money"
+                android:title="Ajude-nos" />
         </menu>
     </item>
 

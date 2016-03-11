@@ -26,8 +26,8 @@
 
         <ImageView
             android:id="@+id/btNovoSplah"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_column="0"
@@ -49,8 +49,8 @@
 
         <ImageView
             android:id="@+id/btPerfilSlash"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_column="0"
@@ -70,8 +70,8 @@
 
         <ImageView
             android:id="@+id/btMapaSplash"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_column="0"
@@ -91,8 +91,8 @@
 
         <ImageView
             android:id="@+id/btConfigSplash"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_column="0"
             android:layout_row="3"
             android:layout_marginTop="10dp"
@@ -110,15 +110,26 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:padding="5dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Powered by"
+            android:id="@+id/textView23"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal" />
+
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="104dp"
             android:layout_height="37dp"
             android:layout_column="0"
-            android:layout_row="4"
+            android:layout_row="6"
             android:background="@drawable/morettic_icon"
-            android:layout_columnSpan="2"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_columnSpan="2" />
 
     </GridLayout>
 </RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionName="1.0"
-    package="view.infoseg.morettic.com.br.infosegapp">
+    package="view.infoseg.morettic.com.br.infosegapp"
+    android:versionName="1.0">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -17,7 +17,9 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--android.permission.ACCESS_NETWORK_STATE
+
+    <!--
+    android.permission.ACCESS_NETWORK_STATE
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
@@ -61,6 +63,14 @@
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".view.ActivityAds"
+            android:label="@string/title_activity_activity_ads"
+            android:parentActivityName=".view.InfosegMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="view.infoseg.morettic.com.br.infosegapp.view.InfosegMain" />
+        </activity>
     </application>
 
 </manifest>
