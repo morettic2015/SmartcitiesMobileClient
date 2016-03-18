@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.fitness.data.Value;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -39,6 +40,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
 
 /*public class ActivityMap extends FragmentActivity implements OnMapReadyCallback {
@@ -106,15 +108,52 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();
-
+        /**
+         *     ehMeu.setChecked(MY_PREFERENCES.getBoolean("ehMeu",false));
+         eMeuEstado.setChecked(MY_PREFERENCES.getBoolean("eMeuEstado",false));
+         ehMinhaCidade.setChecked(MY_PREFERENCES.getBoolean("ehMinhaCidade",false));
+         ehMeuPais.setChecked(MY_PREFERENCES.getBoolean("ehMeuPais",false));
+         saude.setChecked(MY_PREFERENCES.getBoolean("saude",false));
+         transporte.setChecked(MY_PREFERENCES.getBoolean("transporte",false));
+         meioAmbiente.setChecked(MY_PREFERENCES.getBoolean("meioAmbiente",false));
+         educacao.setChecked(MY_PREFERENCES.getBoolean("educacao",false));
+         seguranca.setChecked(MY_PREFERENCES.getBoolean("seguranca",false));
+         politica.setChecked(MY_PREFERENCES.getBoolean("politica",false));
+         *
+         * */
 
         JSONObject jsFilter = new JSONObject();
         try {
+
+            int distance = MY_PREFERENCES.getBoolean("ehMeuPais",false)?200: MY_PREFERENCES.getBoolean("eMeuEstado",false)?50:20;
+
             jsFilter.put("lat", latitude);
 
             jsFilter.put("mine", "1");
-            jsFilter.put("type", "aaaa,bbbb,assss");
-            jsFilter.put("d", "100");
+
+            StringBuilder sbTipos = new StringBuilder();
+
+            if(MY_PREFERENCES.getBoolean("saude",false)){
+                sbTipos.append("SAUDE,");
+            }
+            if(MY_PREFERENCES.getBoolean("politica",false)){
+                sbTipos.append("POLITICA,");
+            }
+            if(MY_PREFERENCES.getBoolean("meioAmbiente",false)){
+                sbTipos.append("MEIO_AMBIENTE,");
+            }
+            if(MY_PREFERENCES.getBoolean("transporte",false)){
+                sbTipos.append("TRANSPORTE,");
+            }
+            if(MY_PREFERENCES.getBoolean("seguranca",false)){
+                sbTipos.append("SEGURANCA,");
+            }
+            if(MY_PREFERENCES.getBoolean("educacao",false)){
+                sbTipos.append("EDUCACAO,");
+            }
+
+            jsFilter.put("type", sbTipos.toString());
+            jsFilter.put("d", distance);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -188,8 +227,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                         TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
                         ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
                         ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
-                        imgVOcorrencia.setImageBitmap(ValueObject.IMG_OCORRENCIA);
-                        imgVAvatar.setImageBitmap(ValueObject.IMG_AUTHOR);
+                        imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
+                        imgVAvatar.setImageBitmap(IMG_AUTHOR);
                         Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
 
                         /**

@@ -29,7 +29,7 @@ import static java.net.URLEncoder.encode;
 /**
  * Created by LuisAugusto on 24/02/2016.
  *
- * http://gaeloginendpoint.appspot.com/upload.exec
+ * https://gaeloginendpoint.appspot.com/upload.exec
  */
 public class HttpUtil {
 
@@ -78,10 +78,10 @@ public class HttpUtil {
     }
 
     public static final String getSaveImagePath(String image, String token){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName"+image+"&iToken="+token;
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName"+image+"&iToken="+token;
     }
     public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id) throws UnsupportedEncodingException {
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=3&" +
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=3&" +
                 "email="+email+
                 "&avatar="+avatar+
                 "&nome="+ encode(nome, "UTF-8")+
@@ -95,7 +95,7 @@ public class HttpUtil {
     }
 
     public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile,String address,String idPic1,String idPic2,String idPic3){
-        String ret =  "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
+        String ret =  "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
                 "titulo=" + encode(tit) +
                 "&lat=" + lat +
                 "&lon=" + lon +
@@ -119,7 +119,7 @@ public class HttpUtil {
     }
 
     public static final String getOcorrenciasPath(String pId,String pLat, String pMine, String distance, String types){
-        String r = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
+        String r = "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
                 "&lat=" + pLat +
                 "&d="+ distance +
@@ -131,19 +131,27 @@ public class HttpUtil {
         return r;
     }
 
+    public static Bitmap getBitmapFromURL(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
     public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
-        String urlImage = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
-        URL url = new URL(urlImage);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setDoInput(true);
-        connection.connect();
-        InputStream input = connection.getInputStream();
-        Bitmap myBitmap = BitmapFactory.decodeStream(input);
-        return myBitmap;
+        String urlImage = "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
+        return getBitmapFromURL(urlImage);
     }
 
     public static final String getPathLoginRegister(String login,String senha){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
     }
     public static final Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
         int width = bm.getWidth();
@@ -164,14 +172,22 @@ public class HttpUtil {
     }
 
     public static final String getTokenImagemById(String id){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(id);
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(id);
     }
     public static final String getTokenImagemById(){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec";
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec";
     }
 
     public static final String getGeocodingUrl(String lat,String lon){
         return "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
+    }
+
+    public static final String getProfileByEmail(String email){
+        return "https://api.fullcontact.com/v2/person.json?email="+email+"&apiKey=ba2fbd5adb0456e2";
+    }
+
+    public static final String getHasEmailDataStore(String email){
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=11&email="+encode(email);
     }
 
 

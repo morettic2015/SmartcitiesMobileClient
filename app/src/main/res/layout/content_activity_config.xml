@@ -54,7 +54,7 @@
             android:layout_column="1"
             android:layout_row="2"
             android:checked="false"
-            android:text="10 km" />
+            android:text="20 km" />
 
         <CheckBox
             android:id="@+id/chkEstado"
@@ -63,7 +63,7 @@
             android:layout_column="0"
             android:layout_row="3"
             android:checked="false"
-            android:text="20km" />
+            android:text="50km" />
 
         <CheckBox
             android:id="@+id/chkPais"
@@ -72,7 +72,7 @@
             android:layout_column="1"
             android:layout_row="3"
             android:checked="false"
-            android:text="50km" />
+            android:text="200km" />
 
         <TextView
             android:id="@+id/textView15"

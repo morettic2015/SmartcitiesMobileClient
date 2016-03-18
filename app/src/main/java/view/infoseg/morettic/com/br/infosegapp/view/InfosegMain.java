@@ -36,6 +36,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.Manifest.permission.*;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 
 //import android.app.Fragment;
 //import android.app.FragmentTransaction;
@@ -46,6 +47,7 @@ public class InfosegMain extends AppCompatActivity
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
     private Uri imageUri;
+    private LoginFragment loginFragment;
     private static int MY_REQUEST_CODE,MY_REQUEST_CODE1,MY_REQUEST_CODE2,MY_REQUEST_CODE3;
 
     static void setTitleToolbar(String title, View v) {
@@ -102,8 +104,8 @@ public class InfosegMain extends AppCompatActivity
         /**
          * SE nao estiver autenticado pop up maldito dos infernos
          * */
-        if (!ValueObject.AUTENTICADO) {
-            LoginFragment loginFragment = LoginFragment.newInstance();
+        if (!ValueObject.AUTENTICADO||MY_PREFERENCES.getString("id", "").equals("")) {
+            loginFragment = LoginFragment.newInstance();
             ValueObject.LOGIN = loginFragment;
             loginFragment.show(getFragmentManager(), "dialog");
         }

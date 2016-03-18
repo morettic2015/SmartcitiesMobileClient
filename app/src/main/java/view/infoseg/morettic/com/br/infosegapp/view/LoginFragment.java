@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
@@ -63,9 +64,31 @@ public class LoginFragment extends DialogFragment {
 
             }
         });
+        ImageButton google = (ImageButton)v.findViewById(R.id.imageButtonGoogle);
+        google.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SocialFragment socialFragment = SocialFragment.newInstance();
+                socialFragment.show(getFragmentManager(), "dialog");
+            }
+        });
+        ImageButton facebook = (ImageButton)v.findViewById(R.id.imageButtonFacebook);
+        facebook.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SocialFragment socialFragment = SocialFragment.newInstance();
+                socialFragment.show(getFragmentManager(), "dialog");
+            }
+        });
+        ImageButton twitter = (ImageButton)v.findViewById(R.id.imageButtonTwitter);
+        twitter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SocialFragment socialFragment = SocialFragment.newInstance();
+                socialFragment.show(getFragmentManager(), "dialog");
+            }
+        });
 
 
-        return v;
+
+                return v;
     }
 
     public void onDismiss(final DialogInterface dialog) {

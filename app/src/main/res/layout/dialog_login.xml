@@ -88,29 +88,39 @@
         android:layout_gravity="center_horizontal" />
 
     <GridLayout
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_row="8"
         android:layout_column="0"
         android:layout_gravity="center_horizontal">
 
         <ImageButton
-            android:layout_width="48dp"
+            android:layout_width="44dp"
 
-            android:layout_height="48dp"
-            android:id="@+id/imageButton"
+            android:layout_height="44dp"
+            android:id="@+id/imageButtonFacebook"
             android:layout_row="0"
             android:background="@drawable/icon_facebook_48"
             android:layout_column="0" />
 
         <ImageButton
 
-            android:layout_width="48dp"
+            android:layout_width="44dp"
 
-            android:layout_height="48dp"
-            android:id="@+id/imageButton2"
+            android:layout_height="44dp"
+            android:id="@+id/imageButtonGoogle"
             android:layout_row="0"
             android:background="@drawable/icon_google_plus_48"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageButtonTwitter"
+            android:layout_row="0"
+            android:background="@drawable/twitter_ic"
             android:layout_column="1"
             android:layout_gravity="center_horizontal" />
     </GridLayout>
