@@ -190,5 +190,9 @@ public class HttpUtil {
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=11&email="+encode(email);
     }
 
+    public static final String sendEmailNovoCadastro(String email){
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=12&email="+encode(email)+"&tipo=NOVO_CADASTRO";
+    }
+
 
 }

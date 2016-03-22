@@ -108,27 +108,13 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();
-        /**
-         *     ehMeu.setChecked(MY_PREFERENCES.getBoolean("ehMeu",false));
-         eMeuEstado.setChecked(MY_PREFERENCES.getBoolean("eMeuEstado",false));
-         ehMinhaCidade.setChecked(MY_PREFERENCES.getBoolean("ehMinhaCidade",false));
-         ehMeuPais.setChecked(MY_PREFERENCES.getBoolean("ehMeuPais",false));
-         saude.setChecked(MY_PREFERENCES.getBoolean("saude",false));
-         transporte.setChecked(MY_PREFERENCES.getBoolean("transporte",false));
-         meioAmbiente.setChecked(MY_PREFERENCES.getBoolean("meioAmbiente",false));
-         educacao.setChecked(MY_PREFERENCES.getBoolean("educacao",false));
-         seguranca.setChecked(MY_PREFERENCES.getBoolean("seguranca",false));
-         politica.setChecked(MY_PREFERENCES.getBoolean("politica",false));
-         *
-         * */
 
         JSONObject jsFilter = new JSONObject();
         try {
-
-            int distance = MY_PREFERENCES.getBoolean("ehMeuPais",false)?200: MY_PREFERENCES.getBoolean("eMeuEstado",false)?50:20;
+            //4000 = ~= 200km 400 = ~= 20km 1000 = ~= 50km
+            int distance = MY_PREFERENCES.getBoolean("ehMeuPais",false)?4000: MY_PREFERENCES.getBoolean("eMeuEstado",false)?1000:400;
 
             jsFilter.put("lat", latitude);
-
             jsFilter.put("mine", "1");
 
             StringBuilder sbTipos = new StringBuilder();

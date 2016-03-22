@@ -1,63 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\bus_icon.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\bus_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_avatar_novo_01.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_avatar_novo_01.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_voice_search_api_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_voice_search_api_material.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_clear_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_clear_material.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\environment_icon.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\environment_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\icon_facebook_48.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\icon_facebook_48.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\morettic_icon.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\morettic_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_cut_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_cut_material.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_paste_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_paste_material.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_config_generico_01.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_config_generico_01.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_novo_generico_01.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_novo_generico_01.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_ab_back_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_ab_back_material.png"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\security_icon.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\security_icon.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\healthcare_icon.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\healthcare_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_checkbox_unchecked_mtrl.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_checkbox_unchecked_mtrl.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\educationicon.png",
@@ -68,6 +16,10 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\icon_google_plus_48.png"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\bus_icon.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\bus_icon.png"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_map_generico_01.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_map_generico_01.png"
     },
@@ -76,24 +28,16 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_attach_money.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_selectall_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_selectall_material.png"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\infobox_info_icon.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\infobox_info_icon.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_copy_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_copy_material.png"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_avatar_novo_01.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_avatar_novo_01.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_share_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_share_material.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_go_search_api_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_go_search_api_material.png"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\environment_icon.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\environment_icon.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_adds_item.png",
@@ -104,27 +48,31 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\politica_icon.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_checkbox_checked_mtrl.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_checkbox_checked_mtrl.png"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\twitter_ic.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\twitter_ic.png"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\icon_facebook_48.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\icon_facebook_48.png"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\morettic_icon.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\morettic_icon.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_config_02.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_config_02.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_overflow_material.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_overflow_material.png"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_novo_generico_01.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_novo_generico_01.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_radio_off_mtrl.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_radio_off_mtrl.png"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_config_generico_01.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_config_generico_01.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\service_icon_1.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\service_icon_1.png"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_radio_on_mtrl.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_radio_on_mtrl.png"
     }
 ]

@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:2:1-62:12
 	package
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:3:5-54
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:4:5-30
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:4:5-39
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 	xmlns:android
@@ -82,7 +82,7 @@ MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\LuisAugust
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:19:22-76
 application
-ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:27:5-62:19
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:27:5-60:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20

@@ -17,8 +17,6 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 
 public class ActivityAds extends Fragment {
     // Remove the below line after defining your own ad unit ID.
-    private static final String TOAST_TEXT = "Test ads are being shown. "
-            + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
 
     private static final int START_LEVEL = 1;
     private int mLevel;
@@ -26,6 +24,7 @@ public class ActivityAds extends Fragment {
     private InterstitialAd mInterstitialAd;
     //private TextView mLevelTextView;
     private View v;
+    private static int counter = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +40,7 @@ public class ActivityAds extends Fragment {
             @Override
             public void onClick(View view) {
                 showInterstitial();
+                counter = 0;
             }
         });
 
@@ -52,24 +52,24 @@ public class ActivityAds extends Fragment {
         mInterstitialAd = newInterstitialAd();
         loadInterstitial();
 
-        // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
-        //Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show();
-
         return v;
     }
 
-
-
+    public InterstitialAd initAddsForMe(){
+        return newInterstitialAd();
+    }
 
     private InterstitialAd newInterstitialAd() {
         InterstitialAd interstitialAd = new InterstitialAd(v.getContext());
         interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-        //
-       // interstitialAd.setAdUnitId("ca-app-pub-5450650045028162/2228043490");
+
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
                 mNextLevelButton.setEnabled(true);
+                if(counter++<=1) {
+                    mInterstitialAd.show();
+                }
             }
 
             @Override

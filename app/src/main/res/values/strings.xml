@@ -33,8 +33,9 @@
     <!-- -
         This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
         For more information, see https://support.google.com/admob/answer/3052638
-    <!- -->
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!- ca-app-pub-5450650045028162/2228043490 -->
+    <!-- <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string> -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-5450650045028162/2228043490</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Concordo com os termos e diretrizes do serviço</string>
     <string name="senha">Senha</string>

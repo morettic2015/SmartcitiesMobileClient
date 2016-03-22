@@ -4091,14 +4091,7 @@
                     "endOffset": 53545
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 67,
-                        "startColumn": 4,
-                        "startOffset": 4145,
-                        "endColumn": 52,
-                        "endOffset": 4193
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -4375,7 +4368,14 @@
                     "endOffset": 55394
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1995,
+                        "endColumn": 90,
+                        "endOffset": 2081
+                    }
                 }
             },
             {

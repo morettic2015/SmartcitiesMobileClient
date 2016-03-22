@@ -109,10 +109,10 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                         int tamanho = ja.length();
                         for (int i = 0; i < tamanho; i++) {
                             JSONObject jLocal = ja.getJSONObject(i);
-                            if (jLocal.getBoolean("isPrimary")) {
+                            //if (jLocal.getBoolean("isPrimary")) {
                                 imagePath = jLocal.getString("url");
                                 break;
-                            }
+                            //}
                         }
                         //Recupera o avatar e cria um bitmap
                         this.avatar = HttpUtil.getBitmapFromURL(imagePath);
@@ -144,6 +144,11 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                 url = HttpUtil.getSaveUpdateProfile(this.email, imageToken, this.nome, "xxx.xxx.xxx-xx", "88000-000", this.senha, "N/I", true, "dd/MM/yyyy", "-1");
                 js = HttpUtil.getJSONFromUrl(url);
                 ValueObject.ID_PROFILE = js.getString("key");
+
+                //Envia email de cadastro
+                url = HttpUtil.sendEmailNovoCadastro(email);
+                js = HttpUtil.getJSONFromUrl(url);
+
             }else{
                 //@Todo implementar o envio de email.....
                 mensagem = "Email já registrado. Um email com sua senha foi enviado para sua conta.";

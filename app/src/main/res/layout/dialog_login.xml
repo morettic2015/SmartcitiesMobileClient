@@ -73,9 +73,9 @@
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:layout_width="243dp"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:text="@string/entrar_ou_registrar_se"
+        android:text="Entrar"
         android:id="@+id/btLoginRegister1"
         android:drawableLeft="@drawable/ic_seguranca"
         android:layout_row="7"

@@ -24,6 +24,8 @@ public class LoginFragment extends DialogFragment {
 
     private Button btLogin;
     private EditText email, senha;
+    protected static LoginFragment myInstance;
+
 
 
     static LoginFragment newInstance() {
@@ -64,21 +66,21 @@ public class LoginFragment extends DialogFragment {
 
             }
         });
-        ImageButton google = (ImageButton)v.findViewById(R.id.imageButtonGoogle);
+        ImageButton google = (ImageButton) v.findViewById(R.id.imageButtonGoogle);
         google.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 SocialFragment socialFragment = SocialFragment.newInstance();
                 socialFragment.show(getFragmentManager(), "dialog");
             }
         });
-        ImageButton facebook = (ImageButton)v.findViewById(R.id.imageButtonFacebook);
+        ImageButton facebook = (ImageButton) v.findViewById(R.id.imageButtonFacebook);
         facebook.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 SocialFragment socialFragment = SocialFragment.newInstance();
                 socialFragment.show(getFragmentManager(), "dialog");
             }
         });
-        ImageButton twitter = (ImageButton)v.findViewById(R.id.imageButtonTwitter);
+        ImageButton twitter = (ImageButton) v.findViewById(R.id.imageButtonTwitter);
         twitter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 SocialFragment socialFragment = SocialFragment.newInstance();
@@ -87,21 +89,20 @@ public class LoginFragment extends DialogFragment {
         });
 
 
-
-                return v;
+        return v;
     }
 
     public void onDismiss(final DialogInterface dialog) {
         //final Activity activity = getActivity();
         try {
             if (!ValueObject.AUTENTICADO) {
-                LoginFragment loginFragment = LoginFragment.newInstance();
-                loginFragment.show(getFragmentManager(), "dialog");
+                myInstance = LoginFragment.newInstance();
+                myInstance.show(getFragmentManager(), "dialog");
             } else {
                 this.dismiss();
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            //e.printStackTrace();
         }
     }
 
