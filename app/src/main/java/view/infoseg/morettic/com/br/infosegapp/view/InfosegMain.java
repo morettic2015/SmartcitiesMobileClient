@@ -201,7 +201,7 @@ public class InfosegMain extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos! http://smartcitiesframework.com.br");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp");
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }

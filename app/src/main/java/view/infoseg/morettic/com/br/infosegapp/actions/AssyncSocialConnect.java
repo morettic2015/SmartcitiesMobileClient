@@ -94,7 +94,12 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                 //URL PARA SALVAR O PERFIL.
                 url = HttpUtil.getProfileByEmail(email);
                 //Load data from social network
-                js = HttpUtil.getJSONFromUrl(url);
+                try {
+                    js = HttpUtil.getJSONFromUrl(url);
+                }catch(Exception e){
+                    js = new JSONObject();
+                    js.put("status",500);
+                }
 
                 //Status 200 conseguiu obter o perfil....
                 this.nome = "Não Informado";
