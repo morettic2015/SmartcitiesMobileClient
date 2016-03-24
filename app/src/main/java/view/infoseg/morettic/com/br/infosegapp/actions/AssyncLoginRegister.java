@@ -42,11 +42,13 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        if (dialog.isShowing()) {
-            dialog.dismiss();
-        }
-        if (ValueObject.AUTENTICADO) {
-            ValueObject.LOGIN.dismiss();
+        if (dialog.isShowing()||ValueObject.AUTENTICADO) {
+            try{
+                dialog.dismiss();
+                ValueObject.LOGIN.dismiss();
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
     }
 

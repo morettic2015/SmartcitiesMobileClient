@@ -1,26 +1,17 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.util.StringBuilderPrinter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.fitness.data.Value;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -37,8 +28,7 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
-import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
+import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
@@ -67,7 +57,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     private GoogleMap googleMap;
     private AlertDialog.Builder builder;
     private StringBuilder stringBuilder = new StringBuilder();
-
+    private double longitude = 0,latitude = 0;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
@@ -80,35 +70,21 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume();// needed to get the map to display immediately
-
+        Location location = ActivityUtil.getMyLocation(getActivity(),builder);
+        try {
+            this.longitude = location.getLongitude();
+            this.latitude = location.getLatitude();
+        }catch(Exception e){//LATITUDE DE BRASILIA
+            this.longitude = -15.7941d;
+            this.latitude = -47.8825d;
+        }
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        builder = new AlertDialog.Builder(getActivity());
         googleMap = mMapView.getMap();
         // latitude and longitude
-        LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-
-        }
-
-        Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-        Location GPSLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-        Location location = GPSLocation == null ? NetLocation : GPSLocation;
-
-        double longitude = location.getLongitude();
-        double latitude = location.getLatitude();
-
         JSONObject jsFilter = new JSONObject();
         try {
             //4000 = ~= 200km 400 = ~= 20km 1000 = ~= 50km
@@ -141,136 +117,137 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             jsFilter.put("type", sbTipos.toString());
             jsFilter.put("d", distance);
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        }
+        } finally {
 
-        AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
-        assyncMapQuery.execute();
+            AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
+            assyncMapQuery.execute();
 
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(latitude, longitude);
-        googleMap.addMarker(new MarkerOptions().position(sydney).title("Sua localização é lat:" + latitude + " lon:" + longitude));
+            // Add a marker in Sydney and move the camera
+            /*
+            googleMap.addMarker(new MarkerOptions().position(sydney).title("Sua localização é lat:" + latitude + " lon:" + longitude));
 
-        // create marker
-        final MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Posição atual");
+            // create marker
+            final MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Posição atual");
 
-        // Changing marker icon
-        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+            // Changing marker icon
+            marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
 
-        // adding marker
-        googleMap.addMarker(marker);
-        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            // adding marker
+            googleMap.addMarker(marker);*/
+            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            LatLng local = new LatLng(latitude, longitude);
+            //ZOOM no mapa com efeito emo flamenguista
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
+            googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-        //ZOOM no mapa com efeito emo flamenguista
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(18).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            /**
+             *
+             * Action para visualizar detalhes da ocorrencia
+             *
+             * */
+            googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
-        /**
-         *
-         * Action para visualizar detalhes da ocorrencia
-         *
-         * */
-        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                @Override
+                public View getInfoWindow(Marker arg0) {
+                    String idOcorrencia = arg0.getSnippet();
+                    JSONObject js = null;
+                    if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
 
-            @Override
-            public View getInfoWindow(Marker arg0) {
-                String idOcorrencia = arg0.getSnippet();
-                JSONObject js = null;
-                if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
-
-                    js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
-                    try {
-
-                        AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"));
-                        ew.execute();
-
-                        AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"));
-                        ew1.execute();
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                return null;
-            }
-
-            @Override
-            public View getInfoContents(Marker arg0) {
-                String idOcorrencia = arg0.getSnippet();
-                JSONObject js = null;
-
-                View v = inflater.inflate(R.layout.content_info_map, null);
-                if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
-                    try {
                         js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
+                        try {
 
-                        TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
-                        TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
-                        TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
-                        TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
-                        TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
-                        ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
-                        ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
-                        imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
-                        imgVAvatar.setImageBitmap(IMG_AUTHOR);
-                        Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+                            AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"));
+                            ew.execute();
 
-                        /**
-                         *
-                         *      @TODO
-                         *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
-                         *
-                         *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
-                         * */
-                        //Mensagem share
-                        stringBuilder = new StringBuilder();
-                        stringBuilder.append("Ocorrencia:");
-                        stringBuilder.append(js.getString("tit"));
-                        stringBuilder.append(" descricao:");
-                        stringBuilder.append(js.getString("desc"));
-                        stringBuilder.append(" date:");
-                        stringBuilder.append(js.getString("date"));
-                        stringBuilder.append(" tipo:");
-                        stringBuilder.append(js.getString("tipo"));
-                        stringBuilder.append(" author:");
-                        stringBuilder.append(js.getString("author"));
-                        stringBuilder.append("Visualize as ocorrencias em seu celular! http://smartcitiesframework.com.br");
+                            AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"));
+                            ew1.execute();
 
-
-                        bShare.setOnClickListener(new View.OnClickListener() {
-                            public void onClick(View v) {
-                                Intent sendIntent = new Intent();
-
-
-                                sendIntent.setAction(Intent.ACTION_SEND);
-                                sendIntent.putExtra(Intent.EXTRA_TEXT, stringBuilder.toString());
-                                sendIntent.setType("text/plain");
-                                startActivity(sendIntent);
-                            }
-                        });
-
-
-                        txtTit.setText(js.getString("tit"));
-                        txtAutor.setText(js.getString("author"));
-                        txtDesc.setText(js.getString("desc"));
-                        txtDt.setText(js.getString("date"));
-                        txtTp.setText(js.getString("tipo"));
-
-
-                        //((ImageView) v.findViewById(R.id.)).setImageBitmap(ValueObject.MAPA_BITMAPS.get(js.getString("")));
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
+                    return null;
                 }
-                return v;
-            }
-        });
 
-        // Perform any camera updates here
-        return v;
+                @Override
+                public View getInfoContents(Marker arg0) {
+                    String idOcorrencia = arg0.getSnippet();
+                    JSONObject js = null;
+
+                    View v = inflater.inflate(R.layout.content_info_map, null);
+                    if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
+                        try {
+                            js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
+
+                            TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
+                            TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
+                            TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
+                            TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
+                            TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
+                            ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
+                            ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
+                            imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
+                            imgVAvatar.setImageBitmap(IMG_AUTHOR);
+                            Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+
+                            /**
+                             *
+                             *      @TODO
+                             *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
+                             *
+                             *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
+                             * */
+                            //Mensagem share
+                            stringBuilder = new StringBuilder();
+                            stringBuilder.append("Ocorrencia:");
+                            stringBuilder.append(js.getString("tit"));
+                            stringBuilder.append(" descricao:");
+                            stringBuilder.append(js.getString("desc"));
+                            stringBuilder.append(" date:");
+                            stringBuilder.append(js.getString("date"));
+                            stringBuilder.append(" tipo:");
+                            stringBuilder.append(js.getString("tipo"));
+                            stringBuilder.append(" author:");
+                            stringBuilder.append(js.getString("author"));
+                            stringBuilder.append("Visualize as ocorrencias em seu celular! http://smartcitiesframework.com.br");
+
+
+                            bShare.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    Intent sendIntent = new Intent();
+
+
+                                    sendIntent.setAction(Intent.ACTION_SEND);
+                                    sendIntent.putExtra(Intent.EXTRA_TEXT, stringBuilder.toString());
+                                    sendIntent.setType("text/plain");
+                                    startActivity(sendIntent);
+                                }
+                            });
+
+
+                            txtTit.setText(js.getString("tit"));
+                            txtAutor.setText(js.getString("author"));
+                            txtDesc.setText(js.getString("desc"));
+                            txtDt.setText(js.getString("date"));
+                            txtTp.setText(js.getString("tipo"));
+
+
+                            //((ImageView) v.findViewById(R.id.)).setImageBitmap(ValueObject.MAPA_BITMAPS.get(js.getString("")));
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    return v;
+                }
+            });
+
+            // Perform any camera updates here
+            return v;
+        }
     }
 
     @Override

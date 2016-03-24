@@ -60,6 +60,10 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_activity_gps_fail.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\layout\\content_activity_gps_fail.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_navigation_item_subheader.xml"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_infoseg_main.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\layout\\nav_header_infoseg_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gps_fail.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\layout\\activity_gps_fail.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",

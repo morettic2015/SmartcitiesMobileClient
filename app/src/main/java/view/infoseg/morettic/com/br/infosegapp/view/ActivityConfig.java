@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
+
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -16,15 +18,13 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ActivityConfig.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ActivityConfig#newInstance} factory method to
  * create an instance of this fragment.
  */
 
 
 public class ActivityConfig extends Fragment {
     private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica;
+    private TextView txtMsgConfig02;
     private Button bt;
     private View v;
     private SharedPreferences.Editor editor;
@@ -46,7 +46,7 @@ public class ActivityConfig extends Fragment {
         educacao = (CheckBox) v.findViewById(R.id.chkEducacao);
         seguranca = (CheckBox) v.findViewById(R.id.chkSeguranca);
         politica = (CheckBox) v.findViewById(R.id.chkPolitica);
-
+        txtMsgConfig02 = (TextView) v.findViewById(R.id.txtMsgConfig02);
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -60,6 +60,8 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("educacao",educacao.isChecked()).commit();
                 editor.putBoolean("seguranca",seguranca.isChecked()).commit();
                 editor.putBoolean("politica",politica.isChecked()).commit() ;
+
+                txtMsgConfig02.setText("Preferências salvas com sucesso!");
             }
         });
 

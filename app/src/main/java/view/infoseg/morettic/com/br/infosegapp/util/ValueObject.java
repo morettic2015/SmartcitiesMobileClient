@@ -3,6 +3,8 @@ package view.infoseg.morettic.com.br.infosegapp.util;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.location.Location;
+import android.location.LocationManager;
 
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -39,4 +41,6 @@ public class ValueObject {
     public static HashMap<String,Bitmap> MAPA_BITMAPS = new HashMap<String, Bitmap>();
     public static Bitmap IMG_OCORRENCIA = null;
     public static Bitmap IMG_AUTHOR = null;
+    public static LocationManager locationManager;
+    public static Location myLocation;
 }

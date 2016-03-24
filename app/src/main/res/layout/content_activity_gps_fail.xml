@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/app_name"
+    android:paddingBottom="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="0dp"
+    android:paddingTop="70dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f1f1f1">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Localização indisponível"
+            android:id="@+id/textView24"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Para que você consiga visualizar e relatar ocorrências, é necessário ativar o seu GPS. Ative o GPS no seu dispositivo e tente novamente."
+            android:id="@+id/textView28"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:layout_row="3"
+            android:background="@drawable/ic_gps_fixed"
+            android:onClick="takePhoto" />
+
+    </GridLayout>
+</RelativeLayout>

@@ -24,7 +24,7 @@ public class LoginFragment extends DialogFragment {
 
     private Button btLogin;
     private EditText email, senha;
-    protected static LoginFragment myInstance;
+   // protected static LoginFragment myInstance;
 
 
 
@@ -96,9 +96,10 @@ public class LoginFragment extends DialogFragment {
         //final Activity activity = getActivity();
         try {
             if (!ValueObject.AUTENTICADO) {
-                myInstance = LoginFragment.newInstance();
-                myInstance.show(getFragmentManager(), "dialog");
+                ValueObject.LOGIN = LoginFragment.newInstance();
+                ValueObject.LOGIN.show(getFragmentManager(), "dialog");
             } else {
+                ValueObject.LOGIN.dismiss();
                 this.dismiss();
             }
         } catch (Exception e) {

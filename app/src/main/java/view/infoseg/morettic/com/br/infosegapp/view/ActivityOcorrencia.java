@@ -1,20 +1,16 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
-import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +27,10 @@ import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveProfile;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
+import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
-import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.app.Activity.RESULT_OK;
 
 public class ActivityOcorrencia extends Fragment {
@@ -54,7 +48,6 @@ public class ActivityOcorrencia extends Fragment {
     private AlertDialog.Builder builder;
     public static int OPCAO = -1;
     private int codigo = 0;
-    private int MY_REQUEST_CODE;
 
 
     @Override
@@ -70,7 +63,7 @@ public class ActivityOcorrencia extends Fragment {
         txtDescricao = (EditText) v.findViewById(R.id.txtDescricao);
         btEnviar = (Button) v.findViewById(R.id.btEnviarOcorrencia);
         radioGroup = (RadioGroup) v.findViewById(R.id.idRadioOcorrencia);
-        builder = new AlertDialog.Builder(inflater.getContext());
+        builder = new android.support.v7.app.AlertDialog.Builder(inflater.getContext());
         btCapCam = (ImageButton)v.findViewById(R.id.btCaptureCam);
         btCapCam1 = (ImageButton)v.findViewById(R.id.btCaptureCam1);
         btCapCam2 = (ImageButton)v.findViewById(R.id.btCaptureCam2);
@@ -192,19 +185,9 @@ public class ActivityOcorrencia extends Fragment {
         });
         //Recupera a localização do usuário
        try {
-           lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
 
-          // String bestProvider = lm.getBestProvider(getActivity().getCriteria(), true);
-           if (ActivityCompat.checkSelfPermission(getActivity(), ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-               String[] p = {ACCESS_FINE_LOCATION};
-               ActivityCompat.requestPermissions(getActivity(),p,MY_REQUEST_CODE);
-           }
-
-           Location NetLocation = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-           Location GPSLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-           location = GPSLocation==null?NetLocation:GPSLocation;
+           location = ActivityUtil.getMyLocation(getActivity(),builder);
 
            longitude = location.getLongitude();
            latitude = location.getLatitude();

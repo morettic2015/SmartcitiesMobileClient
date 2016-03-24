@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -32,12 +33,13 @@ import java.io.InputStream;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
+import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.Manifest.permission.*;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
-import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
+//import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
 
 //import android.app.Fragment;
 //import android.app.FragmentTransaction;
@@ -48,7 +50,7 @@ public class InfosegMain extends AppCompatActivity
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
     private Uri imageUri;
-    private static int MY_REQUEST_CODE,MY_REQUEST_CODE1,MY_REQUEST_CODE2,MY_REQUEST_CODE3;
+    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3;
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
@@ -89,27 +91,29 @@ public class InfosegMain extends AppCompatActivity
 
 
         //Inicializa os botooes da tela Splash
-        ImageView b1 = (ImageView)findViewById(R.id.btNovoSplah);
-        b1.setOnClickListener((View.OnClickListener)this);
+        ImageView b1 = (ImageView) findViewById(R.id.btNovoSplah);
+        b1.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b2 = (ImageView)findViewById(R.id.btPerfilSlash);
-        b2.setOnClickListener((View.OnClickListener)this);
+        ImageView b2 = (ImageView) findViewById(R.id.btPerfilSlash);
+        b2.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b3 = (ImageView)findViewById(R.id.btConfigSplash);
-        b3.setOnClickListener((View.OnClickListener)this);
+        ImageView b3 = (ImageView) findViewById(R.id.btConfigSplash);
+        b3.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b4 = (ImageView)findViewById(R.id.btMapaSplash);
-        b4.setOnClickListener((View.OnClickListener)this);
+        ImageView b4 = (ImageView) findViewById(R.id.btMapaSplash);
+        b4.setOnClickListener((View.OnClickListener) this);
 
-
+        /**
+         * Abre a janela para ativar o GPS do celular
+         * */
+        turnGPSOn();
         /**
          * SE nao estiver autenticado pop up maldito dos infernos
          * */
-        if (!ValueObject.AUTENTICADO||MY_PREFERENCES.getString("id", "").equals("")) {
-            if (myInstance == null) {
-                myInstance = LoginFragment.newInstance();
-                ValueObject.LOGIN = myInstance;
-                myInstance.show(getFragmentManager(), "dialog");
+        if (!ValueObject.AUTENTICADO || MY_PREFERENCES.getString("id", "").equals("")) {
+            if (ValueObject.LOGIN == null) {
+                ValueObject.LOGIN = LoginFragment.newInstance();
+                ValueObject.LOGIN.show(getFragmentManager(), "dialog");
             }
         }
         ValueObject.MAIN = this;
@@ -127,17 +131,17 @@ public class InfosegMain extends AppCompatActivity
         //Checka permissão do GPS
         if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             String[] p = {ACCESS_FINE_LOCATION};
-            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE2);
+            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE2);
         }
         //Checa permissão da camera
         if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, CAMERA)) {
             String[] p = {CAMERA};
-            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE);
+            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE);
         }
         //android.permission.WRITE_EXTERNAL_STORAGE
         if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE)) {
             String[] p = {WRITE_EXTERNAL_STORAGE};
-            ActivityCompat.requestPermissions(this,p,MY_REQUEST_CODE3);
+            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE3);
         }
     }
 
@@ -206,14 +210,14 @@ public class InfosegMain extends AppCompatActivity
             startActivity(sendIntent);
         }
 
-        loadFragment(fragment,title);
+        loadFragment(fragment, title);
 
         //setTitle(title);
 
         return true;
     }
 
-    private void loadFragment(Fragment fragment,String title){
+    private void loadFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -242,7 +246,6 @@ public class InfosegMain extends AppCompatActivity
     }
 
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
@@ -259,7 +262,7 @@ public class InfosegMain extends AppCompatActivity
                         bt.setImageBitmap(yourSelectedImage);
 
                         //Upload da imagem inicializado
-                        new AssyncUploadURLlink(this, yourSelectedImage,0).execute();
+                        new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -269,29 +272,51 @@ public class InfosegMain extends AppCompatActivity
     }
 
 
-
-
     @Override
     public void onClick(View v) {
         String title = null;
         switch (v.getId()) {
             case R.id.btPerfilSlash:
-                loadFragment(new ActivityProfile(),"Perfil");
+                loadFragment(new ActivityProfile(), "Perfil");
                 break;
 
             case R.id.btNovoSplah:
                 //whatever
-                loadFragment(new ActivityOcorrencia(),"Registrar ocorrência");
+                if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
+                    loadFragment(new ActivityNoGps(), "Localização inválida");
+                } else {
+                    loadFragment(new ActivityOcorrencia(), "Registrar ocorrência");
+                }
                 break;
 
             case R.id.btMapaSplash:
-                loadFragment(new ActivityMap(),"Visualizar ocorrências");
-                //whatever
+                if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
+                    loadFragment(new ActivityNoGps(), "Localização inválida");
+                } else {
+                    loadFragment(new ActivityMap(), "Visualizar ocorrências");
+                }
                 break;
             case R.id.btConfigSplash:
                 //whatever
-                loadFragment(new ActivityConfig(),"Configurações");
+                loadFragment(new ActivityConfig(), "Configurações");
                 break;
         }
     }
+
+    private void turnGPSOn() {
+        try {
+            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+
+            if (!provider.contains("gps")) { //if gps is disabled
+                final Intent poke = new Intent();
+                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
+                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
+                poke.setData(Uri.parse("3"));
+                sendBroadcast(poke);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

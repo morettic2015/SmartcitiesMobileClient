@@ -74,5 +74,9 @@
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\service_icon_1.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\service_icon_1.png"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_gps_fixed.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable-ldpi\\ic_gps_fixed.png"
     }
 ]
