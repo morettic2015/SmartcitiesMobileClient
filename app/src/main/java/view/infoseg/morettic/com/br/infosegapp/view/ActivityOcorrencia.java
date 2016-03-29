@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,6 +49,7 @@ public class ActivityOcorrencia extends Fragment {
     private AlertDialog.Builder builder;
     public static int OPCAO = -1;
     private int codigo = 0;
+    private TextView txtMsg;
 
 
     @Override
@@ -68,13 +70,14 @@ public class ActivityOcorrencia extends Fragment {
         btCapCam1 = (ImageButton)v.findViewById(R.id.btCaptureCam1);
         btCapCam2 = (ImageButton)v.findViewById(R.id.btCaptureCam2);
         btCapCam3 = (ImageButton)v.findViewById(R.id.btCaptureCam3);
-
+        txtMsg = (TextView)v.findViewById(R.id.txtMsgOcorrencia1);
 
         //Evento para salvar a ocorrência
         btEnviar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 JSONObject js = new JSONObject();
                 StringBuilder erros = new StringBuilder();
+                AssyncSaveOcorrencia assyncSaveOcorrencia;
                 try {
                     js.put("lon", longitude);
                     js.put("lat", latitude);
@@ -98,12 +101,11 @@ public class ActivityOcorrencia extends Fragment {
                         erros.append("tipo ");
                     }
 
-
                     if (erros.toString().equals("")) {
 
                         Geocoder geoCoder = new Geocoder(v.getContext(), Locale.getDefault());
                       //geoCoder.getFromLocation(latitude,longitude,1);
-                        AssyncSaveOcorrencia assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,selectedOne,btCapCam,btCapCam1,btCapCam2,btCapCam3);
+                        assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,txtMsg,selectedOne,btCapCam,btCapCam1,btCapCam2,btCapCam3);
                         assyncSaveOcorrencia.execute();
                     } else {
                         builder.setTitle("Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
@@ -118,8 +120,8 @@ public class ActivityOcorrencia extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 } finally {
-
-
+                    js = null;
+                    erros = null;
                 }
             }
         });
@@ -208,16 +210,20 @@ public class ActivityOcorrencia extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImageButton ib = (ImageButton) getView().findViewById(codigo);
-            ib.setImageBitmap(imageBitmap);
+        try {
+            if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+                Bundle extras = data.getExtras();
+                Bitmap imageBitmap = (Bitmap) extras.get("data");
+                ImageButton ib = (ImageButton) getView().findViewById(codigo);
+                ib.setImageBitmap(imageBitmap);
 
-            InfosegMain ism = (InfosegMain) getActivity();
-            AssyncUploadURLlink aurl = new AssyncUploadURLlink(ism, imageBitmap,codigo);
-            aurl.setOrigemOcorrencia(true);
-            aurl.execute();
+                InfosegMain ism = (InfosegMain) getActivity();
+                AssyncUploadURLlink aurl = new AssyncUploadURLlink(ism, imageBitmap, codigo);
+                aurl.setOrigemOcorrencia(true);
+                aurl.execute();
+            }
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 

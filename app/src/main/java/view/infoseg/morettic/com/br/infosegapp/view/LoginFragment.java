@@ -59,7 +59,7 @@ public class LoginFragment extends DialogFragment {
                 } else if (senha.getText().toString() == null || senha.getText().toString().equals("")) {
                     senha.setFocusable(true);
                 } else {
-                    AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(v, email.getText().toString(), senha.getText().toString());
+                    AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(v.getContext(), email.getText().toString(), senha.getText().toString());
                     assyncLoginRegister.execute();
                 }
 

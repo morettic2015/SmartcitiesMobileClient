@@ -3,6 +3,7 @@ package view.infoseg.morettic.com.br.infosegapp.view;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -20,6 +21,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -32,12 +34,14 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.Manifest.permission.*;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 //import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
 
@@ -110,11 +114,15 @@ public class InfosegMain extends AppCompatActivity
         /**
          * SE nao estiver autenticado pop up maldito dos infernos
          * */
-        if (!ValueObject.AUTENTICADO || MY_PREFERENCES.getString("id", "").equals("")) {
+        if (!ValueObject.AUTENTICADO && MY_PREFERENCES.getString("id", "").equals("")) {
             if (ValueObject.LOGIN == null) {
                 ValueObject.LOGIN = LoginFragment.newInstance();
                 ValueObject.LOGIN.show(getFragmentManager(), "dialog");
             }
+        } else {
+            //Load Data
+            AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(this.getApplicationContext(), MY_PREFERENCES.getString("email", ""), MY_PREFERENCES.getString("passwd", ""));
+            assyncLoginRegister.execute();
         }
         ValueObject.MAIN = this;
         /**
@@ -202,6 +210,34 @@ public class InfosegMain extends AppCompatActivity
         } else if (id == R.id.nav_adds) {
             fragment = new ActivityAds();
             title = getString(R.string.help_us);
+        } else if (id == R.id.nav_exit) {
+            //Fecha o APP
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Sair");
+            alertDialogBuilder
+                    .setMessage("Deseja sair do SmartcitiesAPP?")
+                    .setCancelable(false)
+                    .setPositiveButton("SIM",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    //Limpa as preferencias
+                                    getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
+                                    //Move para background e destroi o app
+                                    moveTaskToBack(true);
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(1);
+                                }
+                            })
+
+                    .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:2:1-68:12
 	package
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:3:13-62
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
@@ -85,7 +85,7 @@ MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\LuisAugust
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:21:22-76
 application
-ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:29:5-62:19
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:29:5-66:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -240,8 +240,14 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:56:13-52
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:55:13-58
+meta-data#com.google.android.backup.api_key
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:59:9-60:82
+	android:value
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:60:13-79
+	android:name
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:59:20-68
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:59:9-61:69
+ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:63:9-65:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
@@ -275,9 +281,9 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisA
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:61:13-66
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:65:13-66
 	android:name
-		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:60:13-58
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:64:13-58
 uses-sdk
 INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78

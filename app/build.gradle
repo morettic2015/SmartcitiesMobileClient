@@ -8,8 +8,8 @@ android {
         applicationId "view.infoseg.morettic.com.br.infosegapp"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 4
-        versionName "Beta01e02"
+        versionCode 6
+        versionName "Beta01e06"
     }
     buildTypes {
         release {

@@ -55,6 +55,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <!-- @Backupservice @TODO implementar backup das preferencias do usuario-->
+        <meta-data android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIO4PmOUlH6c371FTGC9a4RDwv06HrJSi96EZfhw" />
+
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import org.json.JSONObject;
 
@@ -35,6 +36,8 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
     private EditText edTit, editDesc;
     private RadioButton rdSelect;
     private ImageButton i1,i2,i3,i4;
+    private boolean hasErros = false;
+    private TextView txt;
 
 
 
@@ -65,10 +68,12 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         if (dialog.isShowing()) {
             dialog.dismiss();
         }
+        String msg = hasErros?"Um erro ocorreu. Verifique sua Internet e tente novamente.":"Sucesso. Ocorrencia registrada!";
+        txt.setText(msg);
 
     }
 
-    public AssyncSaveOcorrencia(View activity, JSONObject ocorrencia, Geocoder geocoder1,EditText tit, EditText desc,RadioButton sel,ImageButton... imageButtons) {
+    public AssyncSaveOcorrencia(View activity, JSONObject ocorrencia, Geocoder geocoder1, EditText tit, EditText desc, TextView txt, RadioButton sel, ImageButton... imageButtons) {
         this.dialog = new ProgressDialog(activity.getContext());
         this.a1 = activity;
         this.ocorrencia = ocorrencia;
@@ -80,6 +85,7 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         this.i2 = imageButtons[1];
         this.i3 = imageButtons[2];
         this.i4 = imageButtons[3];
+        this.txt = txt;
 
         //builder = new AlertDialog.Builder(this.a1.getContext());
     }
@@ -130,7 +136,7 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         } catch (Exception e) {
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
-
+            hasErros = true;
             //e.printStackTrace();
         } finally {
             return js.toString();

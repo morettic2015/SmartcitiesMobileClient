@@ -50,24 +50,28 @@ public class ActivityUtil {
         for(String provider:providers){
             myLocal = ValueObject.locationManager.getLastKnownLocation(provider);
             if(myLocal!=null){
-                return myLocal;
+                break;
             }
-        }
-        AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(fa);;
-        builder.setTitle("Localização indisponível");
-        //define a mensagem
-        builder.setMessage("Por favor habilite seu GPS para continuar.");
-        //define um botão como positivo
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                fa.startActivity(i);
-            }
-        });
+        }if(myLocal==null) {
+            AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(fa);
+            ;
+            builder.setTitle("Localização indisponível");
+            //define a mensagem
+            builder.setMessage("Por favor habilite seu GPS para continuar.");
+            //define um botão como positivo
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface arg0, int arg1) {
+                    Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    fa.startActivity(i);
+                }
+            });
 
-        alerta = builder.create();
-        alerta.show();
-        return null;
+            alerta = builder.create();
+            alerta.show();
+            return null;
+        }else{
+            return myLocal;
+        }
     }
 
     public static Location getMyLocation(FragmentActivity fa, AlertDialog.Builder builder) {
@@ -84,25 +88,29 @@ public class ActivityUtil {
         for(String provider:providers){
             myLocal = ValueObject.locationManager.getLastKnownLocation(provider);
             if(myLocal!=null){
-                return myLocal;
+               break;
             }
         }
-        //define o titulo
-        builder.setTitle("Localização indisponível");
-        //define a mensagem
-        builder.setMessage("Por favor habilite seu GPS para continuar.");
-        //define um botão como positivo
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                fa1.startActivity(i);
-            }
-        });
+        if(myLocal==null) {
+            //define o titulo
+            builder.setTitle("Localização indisponível");
+            //define a mensagem
+            builder.setMessage("Por favor habilite seu GPS para continuar.");
+            //define um botão como positivo
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface arg0, int arg1) {
+                    Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    fa1.startActivity(i);
+                }
+            });
 
-        alerta = builder.create();
-        alerta.show();
-        //Infelizmente nao tem localização retorna null
-        return null;
+            alerta = builder.create();
+            alerta.show();
+            //Infelizmente nao tem localização retorna null
+            return null;
+        }else{
+            return myLocal;
+        }
     }
 
 }

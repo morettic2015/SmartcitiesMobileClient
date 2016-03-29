@@ -3,6 +3,7 @@ package view.infoseg.morettic.com.br.infosegapp.actions;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -35,26 +36,31 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Autenticando...");
-        dialog.show();
+        try {
+            dialog.setMessage("Autenticando...");
+            dialog.show();
+        } catch (Exception e) {
+
+        }
     }
 
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        if (dialog.isShowing()||ValueObject.AUTENTICADO) {
-            try{
+
+        try {
+            if (dialog.isShowing() || ValueObject.AUTENTICADO) {
                 dialog.dismiss();
                 ValueObject.LOGIN.dismiss();
-            }catch(Exception e){
-                e.printStackTrace();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    public AssyncLoginRegister(View activity, String login, String senha) {
-        this.dialog = new ProgressDialog(activity.getContext());
-        this.a1 = activity;
+    public AssyncLoginRegister(Context ctx, String login, String senha) {
+        this.dialog = new ProgressDialog(ctx);
+
         this.email = login;
         this.senha = senha;
 
@@ -112,8 +118,8 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 ValueObject.AUTENTICADO = true;
                 try {
 
-                   // url = HttpUtil.getTokenImagemById(ValueObject.UPLOAD_AVATAR);
-                   // js = HttpUtil.getJSONFromUrl(url);
+                    // url = HttpUtil.getTokenImagemById(ValueObject.UPLOAD_AVATAR);
+                    // js = HttpUtil.getJSONFromUrl(url);
                     ValueObject.AVATAR_BITMAP = HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar"));
                     ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 96, 96);
 

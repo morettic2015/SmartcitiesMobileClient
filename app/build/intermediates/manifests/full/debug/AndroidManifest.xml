@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="view.infoseg.morettic.com.br.infosegapp"
     android:installLocation="preferExternal"
-    android:versionCode="4"
-    android:versionName="Beta01e02" >
+    android:versionCode="6"
+    android:versionName="Beta01e06" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -65,6 +65,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+        <!-- @Backupservice @TODO implementar backup das preferencias do usuario -->
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIO4PmOUlH6c371FTGC9a4RDwv06HrJSi96EZfhw" />
 
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data

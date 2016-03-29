@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="all">
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_novo_generico_01"
@@ -18,27 +18,24 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_config_generico_01"
             android:title="Configurações" />
+        <item android:title="Opcões">
+            <menu>
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Compartilhe" />
+                <item
+                    android:id="@+id/nav_adds"
+                    android:icon="@drawable/ic_attach_money"
+                    android:title="Ajude-nos" />
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_action_exit"
+                    android:title="Sair" />
+            </menu>
+        </item>
+
     </group>
 
-    <item android:title="Redes sociais">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Compartilhe" />
-            <!-- <item
-                 android:id="@+id/nav_send"
-                 android:icon="@drawable/ic_menu_send"
-                 android:title="Envie" /> -->
-        </menu>
-    </item>
-    <item android:title="Patrocinadores">
-        <menu>
-            <item
-                android:id="@+id/nav_adds"
-                android:icon="@drawable/ic_attach_money"
-                android:title="Ajude-nos" />
-        </menu>
-    </item>
 
 </menu>
