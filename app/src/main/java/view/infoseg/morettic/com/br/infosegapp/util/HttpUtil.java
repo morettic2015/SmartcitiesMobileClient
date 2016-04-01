@@ -177,6 +177,7 @@ public class HttpUtil {
     public static final String getTokenImagemById(String id){
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(id);
     }
+
     public static final String getTokenImagemById(){
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec";
     }
@@ -197,5 +198,10 @@ public class HttpUtil {
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=12&email="+encode(email)+"&tipo=NOVO_CADASTRO";
     }
 
-
+    public static final String saveConfigInfo(String id,String phone,String properties){
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=15&idProfile="+id+"&phone="+encode(phone)+"&props="+encode(properties);
+    }
+    public static final String getListTOp20(){
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
+    }
 }

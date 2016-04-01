@@ -51,6 +51,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         try {
             if (dialog.isShowing() || ValueObject.AUTENTICADO) {
                 dialog.dismiss();
+                if(ValueObject.LOGIN!=null)
                 ValueObject.LOGIN.dismiss();
             }
         } catch (Exception e) {

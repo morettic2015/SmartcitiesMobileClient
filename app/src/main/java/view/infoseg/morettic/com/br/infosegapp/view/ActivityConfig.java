@@ -1,18 +1,28 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.telephony.PhoneNumberFormattingTextWatcher;
+import android.telephony.TelephonyManager;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import static android.Manifest.permission.GET_ACCOUNTS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveConfig;
+import view.infoseg.morettic.com.br.infosegapp.util.Mask;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 /**
@@ -27,7 +37,9 @@ public class ActivityConfig extends Fragment {
     private TextView txtMsgConfig02;
     private Button bt;
     private View v;
+    private EditText txtPhone;
     private SharedPreferences.Editor editor;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,6 +59,14 @@ public class ActivityConfig extends Fragment {
         seguranca = (CheckBox) v.findViewById(R.id.chkSeguranca);
         politica = (CheckBox) v.findViewById(R.id.chkPolitica);
         txtMsgConfig02 = (TextView) v.findViewById(R.id.txtMsgConfig02);
+        txtPhone = (EditText)v.findViewById(R.id.txtTelefoneConfig);
+        /**
+        Mascara do telefone
+         * */
+
+
+        txtPhone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
+
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -60,8 +80,14 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("educacao",educacao.isChecked()).commit();
                 editor.putBoolean("seguranca",seguranca.isChecked()).commit();
                 editor.putBoolean("politica",politica.isChecked()).commit() ;
+                editor.putString("phoneNumber",txtPhone.getText().toString()).commit() ;
+
+
+                AssyncSaveConfig assyncSaveConfig = new AssyncSaveConfig(getContext(),ValueObject.ID_PROFILE.toString(),txtPhone.getText().toString());
+                assyncSaveConfig.execute();
 
                 txtMsgConfig02.setText("Preferências salvas com sucesso!");
+
             }
         });
 
@@ -77,6 +103,7 @@ public class ActivityConfig extends Fragment {
         educacao.setChecked(MY_PREFERENCES.getBoolean("educacao",false));
         seguranca.setChecked(MY_PREFERENCES.getBoolean("seguranca",false));
         politica.setChecked(MY_PREFERENCES.getBoolean("politica",false));
+        txtPhone.setText(MY_PREFERENCES.getString("phoneNumber",""));
 
         return v;
     }

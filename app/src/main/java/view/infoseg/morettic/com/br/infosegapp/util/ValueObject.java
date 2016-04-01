@@ -43,4 +43,7 @@ public class ValueObject {
     public static Bitmap IMG_AUTHOR = null;
     public static LocationManager locationManager;
     public static Location myLocation;
+    public static String[] LIST_OCORRENCIAS;
+    public static Bitmap[] LIST_BITMAPS_OCORRENCIAS;
+    public static Bitmap BITMAP_DEFAULT;
 }

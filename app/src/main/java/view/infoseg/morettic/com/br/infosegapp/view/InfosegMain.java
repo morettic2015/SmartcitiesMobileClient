@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Process;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -34,6 +35,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
@@ -41,6 +43,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.Manifest.permission.*;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 //import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
@@ -54,7 +57,7 @@ public class InfosegMain extends AppCompatActivity
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
     private Uri imageUri;
-    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3;
+    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3,MY_REQUEST_CODE4;
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
@@ -107,6 +110,9 @@ public class InfosegMain extends AppCompatActivity
         ImageView b4 = (ImageView) findViewById(R.id.btMapaSplash);
         b4.setOnClickListener((View.OnClickListener) this);
 
+        ImageView b5 = (ImageView) findViewById(R.id.btListOcorrencias);
+        b5.setOnClickListener((View.OnClickListener) this);
+
         /**
          * Abre a janela para ativar o GPS do celular
          * */
@@ -121,9 +127,14 @@ public class InfosegMain extends AppCompatActivity
             }
         } else {
             //Load Data
+            BITMAP_DEFAULT = BitmapFactory.decodeResource(getResources(), R.drawable.ic_smartcities_icon_logo);
             AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(this.getApplicationContext(), MY_PREFERENCES.getString("email", ""), MY_PREFERENCES.getString("passwd", ""));
             assyncLoginRegister.execute();
+            //Load Ocorrencias
         }
+        AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+        assyncLoadListOcorrencias.execute();
+
         ValueObject.MAIN = this;
         /**
          *
@@ -150,6 +161,11 @@ public class InfosegMain extends AppCompatActivity
         if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE)) {
             String[] p = {WRITE_EXTERNAL_STORAGE};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE3);
+        }
+        //Checa a permissao da puta que te pariu
+        if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
+            String[] p = {GET_ACCOUNTS};
+            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }
     }
 
@@ -196,26 +212,30 @@ public class InfosegMain extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
             fragment = new ActivityOcorrencia();
-            title = "Registrar ocorrência";
-        } else if (id == R.id.nav_gallery) {
+            title = getString(R.string.register_event);
+        }else if (id == R.id.nav_gallery) {
             fragment = new ActivityMap();
 
-            title = "Visualizar ocorrências";
+            title = getString(R.string.mapa_ocorrencias);
+        }else if (id == R.id.nav_list) {
+            fragment = new ListOcorrencia();
+
+            title = getString(R.string.list_ocorrencias);
         } else if (id == R.id.nav_slideshow) {
             fragment = new ActivityProfile();
-            title = "Perfil";
+            title = getString(R.string.perfil);
         } else if (id == R.id.nav_manage) {
             fragment = new ActivityConfig();
-            title = "Configurações";
+            title = getString(R.string.configura_es);
         } else if (id == R.id.nav_adds) {
             fragment = new ActivityAds();
             title = getString(R.string.help_us);
         } else if (id == R.id.nav_exit) {
             //Fecha o APP
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle("Sair");
+            alertDialogBuilder.setTitle(getString(R.string.sair));
             alertDialogBuilder
-                    .setMessage("Deseja sair do SmartcitiesAPP?")
+                    .setMessage(getString(R.string.sair_remover_sessao))
                     .setCancelable(false)
                     .setPositiveButton("SIM",
                             new DialogInterface.OnClickListener() {
@@ -224,7 +244,7 @@ public class InfosegMain extends AppCompatActivity
                                     getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
                                     //Move para background e destroi o app
                                     moveTaskToBack(true);
-                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    Process.killProcess(Process.myPid());
                                     System.exit(1);
                                 }
                             })
@@ -241,7 +261,7 @@ public class InfosegMain extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_msg));
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
@@ -271,7 +291,7 @@ public class InfosegMain extends AppCompatActivity
 
     public void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
-        newFragment.show(getFragmentManager(), "Selecione uma data");
+        newFragment.show(getFragmentManager(), getString(R.string.selecioneData));
 
     }
 
@@ -313,28 +333,33 @@ public class InfosegMain extends AppCompatActivity
         String title = null;
         switch (v.getId()) {
             case R.id.btPerfilSlash:
-                loadFragment(new ActivityProfile(), "Perfil");
+                loadFragment(new ActivityProfile(), getString(R.string.perfil));
                 break;
 
             case R.id.btNovoSplah:
                 //whatever
                 if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
-                    loadFragment(new ActivityNoGps(), "Localização inválida");
+                    loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    loadFragment(new ActivityOcorrencia(), "Registrar ocorrência");
+                    loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
                 }
                 break;
 
             case R.id.btMapaSplash:
                 if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
-                    loadFragment(new ActivityNoGps(), "Localização inválida");
+                    loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    loadFragment(new ActivityMap(), "Visualizar ocorrências");
+                    loadFragment(new ActivityMap(), getString(R.string.view_events));
                 }
+                break;
+            case R.id.btListOcorrencias:
+                AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+                assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
+                loadFragment(new ListOcorrencia(),getString(R.string.list_ocorrencias));
                 break;
             case R.id.btConfigSplash:
                 //whatever
-                loadFragment(new ActivityConfig(), "Configurações");
+                loadFragment(new ActivityConfig(), getString(R.string.configura_es));
                 break;
         }
     }

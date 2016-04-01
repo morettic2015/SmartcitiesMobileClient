@@ -1,0 +1,81 @@
+package view.infoseg.morettic.com.br.infosegapp.view;
+
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
+
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_BITMAPS_OCORRENCIAS;
+
+public class OcorrenciaListAdapter extends ArrayAdapter<String> {
+
+    private final Activity context;
+    private final String[] itemname;
+
+    public OcorrenciaListAdapter(Activity context, String[] itemname) {
+        super(context, R.layout.content_activity_ocorrencia_list_model, itemname);
+        // TODO Auto-generated constructor stub
+
+        this.context = context;
+        this.itemname = itemname;
+    }
+
+    public View getView(int position, View view, ViewGroup parent) {
+        LayoutInflater inflater = context.getLayoutInflater();
+        View rowView = inflater.inflate(R.layout.content_activity_ocorrencia_list_model, null, true);
+
+        TextView txtTitle = (TextView) rowView.findViewById(R.id.txtTitListView);
+        TextView txtDescListView = (TextView) rowView.findViewById(R.id.txtDescListView);
+        TextView txtAuthorListView = (TextView) rowView.findViewById(R.id.txtAuthorListView);
+        TextView txtDateListView = (TextView) rowView.findViewById(R.id.txtDateListView);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.mcIconType);
+        ImageView imageView1 = (ImageView) rowView.findViewById(R.id.mcIcon);
+        //TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
+        try {
+
+            JSONObject ocorrencia = new JSONObject(itemname[position]);
+            txtTitle.setText(ocorrencia.getString("tit"));
+            txtDescListView.setText(ocorrencia.getString("desc"));
+            txtAuthorListView.setText(ocorrencia.getString("author"));
+            txtDateListView.setText(ocorrencia.getString("date"));
+            if (ocorrencia.getString("tipo").equals("POLITICA")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_politics));
+            } else if (ocorrencia.getString("tipo").equals("SAUDE")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_healthcare));
+            } else if (ocorrencia.getString("tipo").equals("EDUCACAO")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_education));
+            } else if (ocorrencia.getString("tipo").equals("MEIO_AMBIENTE")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_meioambiente));
+            } else if (ocorrencia.getString("tipo").equals("TRANSPORTE")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_bus));
+            } else if (ocorrencia.getString("tipo").equals("SEGURANCA")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_security));
+            }
+            if (LIST_BITMAPS_OCORRENCIAS[position] != null)
+                imageView1.setImageBitmap(LIST_BITMAPS_OCORRENCIAS[position]);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e1) {
+            e1.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //imageView.setImageResource(imgid[position]);
+        //extratxt.setText("Description "+itemname[position]);
+        return rowView;
+
+    }
+
+    ;
+}

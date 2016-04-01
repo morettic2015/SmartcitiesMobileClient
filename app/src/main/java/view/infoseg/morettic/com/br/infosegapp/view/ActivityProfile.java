@@ -41,7 +41,7 @@ public class ActivityProfile extends Fragment {
     private RadioGroup radioGroup;
     private EditText cpf, nasc, cep, complemento, passwd, nome, email;
     private ImageButton btAvatar;
-    private RadioButton rd,rd1;
+    private RadioButton rd;
     private AlertDialog.Builder builder;
     private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
 

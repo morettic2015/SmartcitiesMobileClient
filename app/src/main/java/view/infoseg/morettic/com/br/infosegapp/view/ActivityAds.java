@@ -59,7 +59,7 @@ public class ActivityAds extends Fragment {
         return newInterstitialAd();
     }
 
-    private InterstitialAd newInterstitialAd() {
+    private InterstitialAd newInterstitialAd() throws IllegalStateException {
         InterstitialAd interstitialAd = new InterstitialAd(v.getContext());
         interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
 

@@ -67,4 +67,17 @@
     <string name="title_activity_activity_ads">ActivityAds</string>
     <string name="help_us">Ajude-nos!</string>
     <string name="compartilhe">Compartilhar</string>
+    <string name="configura_es">Configurações</string>
+    <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Informe seu celular para receber informativos via SMS. Iremos enviar alertas quando seu dispositivo estiver em área de ocorrências de sua prefêrencia.</string>
+    <string name="title">Title</string>
+    <string name="share_msg">Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="invalid_locate">Localização inválida</string>
+    <string name="register_event">Registrar ocorrência</string>
+    <string name="view_events">Visualizar ocorrências</string>
+    <string name="perfil">Perfil</string>
+    <string name="list_ocorrencias">Lista de ocorrências</string>
+    <string name="selecioneData">Selecione uma data</string>
+    <string name="sair">Sair</string>
+    <string name="mapa_ocorrencias">Mapa de ocorrências</string>
+    <string name="sair_remover_sessao">Deseja sair do SmartcitiesAPP e remover sua sessão atual?</string>
 </resources>

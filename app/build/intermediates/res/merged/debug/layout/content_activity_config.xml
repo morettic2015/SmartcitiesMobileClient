@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="0"
-            android:text="@string/filtros"
+            android:text="@string/configura_es"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_columnSpan="2" />
 
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="4"
-            android:checked="false"
+            android:checked="true"
             android:text="200km" />
 
         <TextView
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="7"
-            android:checked="false"
+            android:checked="true"
             android:text="@string/educa_o" />
 
         <CheckBox
@@ -127,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="8"
-            android:checked="false"
+            android:checked="true"
             android:text="@string/transporte" />
 
         <CheckBox
@@ -136,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="8"
-            android:checked="false"
+            android:checked="true"
             android:text="@string/seguran_a" />
 
         <CheckBox
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="9"
-            android:checked="false"
+            android:checked="true"
             android:text="@string/meio_ambiente" />
 
         <CheckBox
@@ -154,22 +154,43 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="9"
-            android:checked="false"
+            android:checked="true"
             android:text="@string/politica" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="10"
+            android:text="@string/informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_columnSpan="2" />
+
+        <EditText
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txtTelefoneConfig"
+            android:layout_row="11"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:text="+55 48 9999-9999" />
 
         <Button
             android:id="@+id/btSalvarPreferencias"
             android:layout_width="120dp"
             android:layout_height="35dp"
             android:layout_column="0"
-            android:layout_columnSpan="2"
-            android:layout_row="10"
+            android:layout_row="12"
             android:drawableLeft="@drawable/ic_save_action"
             android:text="@string/salvar"
             android:background="@drawable/button_shape_model"
             android:enabled="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_columnSpan="2" />
 
     </GridLayout>
 </RelativeLayout>
