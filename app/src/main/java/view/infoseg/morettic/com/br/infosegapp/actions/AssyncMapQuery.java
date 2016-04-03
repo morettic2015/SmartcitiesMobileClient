@@ -1,11 +1,14 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.view.View;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -100,6 +103,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                  },
 
                  * */
+
                 if (js.has("rList")) {
                     jOcorrencias = js.getJSONArray("rList");
                     for (int i = 0; i < jOcorrencias.length(); i++) {
@@ -107,7 +111,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
                         // create marker
                         MarkerOptions marker = new MarkerOptions().position(new LatLng(ocorrencia.getDouble("lat"), ocorrencia.getDouble("lon")));
-                        marker.title(ocorrencia.getString("tit")+" "+ocorrencia.getString("date"));
+                        marker.title(ocorrencia.getString("tit") + " " + ocorrencia.getString("date"));
                         marker.snippet(ocorrencia.getString("id"));
                         // marker.infoWindowAnchor()
 
@@ -115,51 +119,37 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
                         String mTypo = ocorrencia.getString("tipo");
                         float icon = BitmapDescriptorFactory.HUE_VIOLET;//DEFAULT
-                        /**
-                         *  SERVICOS,
-                         SAUDE,
-                         POLITICA,
-                         MEIO_AMBIENTE,
-                         EDUCACAO,
-                         TRANSPORTE,
-                         OUTROS,
-                         SEGURANCA;
-                         *
-                         * */
-                        if(mTypo.equals("SERVICOS")){
+
+                        if (mTypo.equals("SERVICOS")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_service));
-                        }else if(mTypo.equals("SAUDE")){
+                        } else if (mTypo.equals("SAUDE")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_healthcare));
-                        }else if(mTypo.equals("POLITICA")){
+                        } else if (mTypo.equals("POLITICA")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_politics));
-                        }else if(mTypo.equals("MEIO_AMBIENTE")){
+                        } else if (mTypo.equals("MEIO_AMBIENTE")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_meioambiente));
-                        }else if(mTypo.equals("EDUCACAO")){
+                        } else if (mTypo.equals("EDUCACAO")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_education));
-                        }else if(mTypo.equals("TRANSPORTE")){
+                        } else if (mTypo.equals("TRANSPORTE")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_bus));
-                        }else if(mTypo.equals("OUTROS")){
+                        } else if (mTypo.equals("OUTROS")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_info));
-                        }else if(mTypo.equals("SEGURANCA")){
+                        } else if (mTypo.equals("SEGURANCA")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_security));
-                        }else if(mTypo.equals("UPA")){
+                        } else if (mTypo.equals("UPA")) {
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_upa_icon));
-                        }else{
+                        } else {
                             marker.icon(BitmapDescriptorFactory.defaultMarker());
                         }
 
                         //Adiciona objeto no mapa de ocorrencias
-                        ValueObject.MAPA_OCORRENCIAS.put(ocorrencia.getLong("id"),ocorrencia);
-                       // ValueObject.MAPA_BITMAPS.put(ocorrencia.getString("token"),HttpUtil.getBitmapFromURLBlobKey(ocorrencia.getString("token")));
-                       // ValueObject.MAPA_BITMAPS.put(ocorrencia.getString("avatar"),HttpUtil.getBitmapFromURLBlobKey(ocorrencia.getString("avatar")));
-
-                        ;
+                        ValueObject.MAPA_OCORRENCIAS.put(ocorrencia.getLong("id"), ocorrencia);
+                          ;
                         //marker.infoWindowAnchor(0,0);
                         this.lMarkers.add(marker);
 
-                        // adding marker
-                        //this.googleMap.addMarker(marker);
                     }
+
                 }
 
 

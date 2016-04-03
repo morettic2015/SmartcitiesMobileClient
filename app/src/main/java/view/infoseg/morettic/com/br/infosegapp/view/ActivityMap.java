@@ -1,6 +1,7 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,8 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -142,10 +145,21 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             // adding marker
             googleMap.addMarker(marker);*/
             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            googleMap.setTrafficEnabled(true);//Adiciona a camada de transito?
+            googleMap.setBuildingsEnabled(true);//predios
             LatLng local = new LatLng(latitude, longitude);
+            //Adiciona raio
+           /* CircleOptions circleOptions = new CircleOptions().center(local).radius(20000); // In meters
+            Circle circle = this.googleMap.addCircle(circleOptions);
+            circle.setFillColor(Color.TRANSPARENT);
+            circle.setZIndex(-10f);
+            circle.setStrokeColor(Color.BLACK);
+            circle.setStrokeWidth(1.5f);*/
+
             //ZOOM no mapa com efeito emo flamenguista
             CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
 
             /**
              *
