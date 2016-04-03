@@ -23,10 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
+            android:layout_columnSpan="2"
             android:layout_row="0"
             android:text="@string/configura_es"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_columnSpan="2" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/txtMsgConfig02"
@@ -103,94 +103,111 @@
             android:text="@string/informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <CheckBox
-            android:id="@+id/chkSaude"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
+
+        <ScrollView
+            style="@style/scrollbar_shape_style"
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
             android:layout_column="0"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
             android:layout_row="7"
-            android:checked="false"
-            android:text="@string/saude" />
+            android:layout_columnSpan="2">
 
-        <CheckBox
-            android:id="@+id/chkEducacao"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="7"
-            android:checked="true"
-            android:text="@string/educa_o" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
 
-        <CheckBox
-            android:id="@+id/chkTransporte"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="8"
-            android:checked="true"
-            android:text="@string/transporte" />
+                <CheckBox
+                    android:id="@+id/chkSaude"
+                    android:layout_width="322dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/saude" />
+                <CheckBox
+                    android:id="@+id/chkUpa"
+                    android:layout_width="276dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Unidades de pronto atendimento" />
 
-        <CheckBox
-            android:id="@+id/chkSeguranca"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="8"
-            android:checked="true"
-            android:text="@string/seguran_a" />
+                <CheckBox
+                    android:id="@+id/chkEducacao"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/educa_o" />
 
-        <CheckBox
-            android:id="@+id/chkMeioAmbiente"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="9"
-            android:checked="true"
-            android:text="@string/meio_ambiente" />
+                <CheckBox
+                    android:id="@+id/chkTransporte"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/transporte" />
 
-        <CheckBox
-            android:id="@+id/chkPolitica"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="9"
-            android:checked="true"
-            android:text="@string/politica" />
+                <CheckBox
+                    android:id="@+id/chkSeguranca"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/seguran_a" />
+
+                <CheckBox
+                    android:id="@+id/chkMeioAmbiente"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/meio_ambiente" />
+
+                <CheckBox
+                    android:id="@+id/chkPolitica"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/politica" />
+
+            </LinearLayout>
+        </ScrollView>
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_row="10"
+            android:layout_row="8"
             android:text="@string/informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_columnSpan="2" />
 
         <EditText
+            android:id="@+id/txtTelefoneConfig"
             android:layout_width="297dp"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:id="@+id/txtTelefoneConfig"
-            android:layout_row="11"
             android:layout_column="0"
-            android:layout_columnSpan="2"
-            android:text="+55 48 9999-9999" />
+            android:layout_row="9"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="+55 48 9999-9999"
+            android:layout_columnSpan="2" />
 
         <Button
             android:id="@+id/btSalvarPreferencias"
             android:layout_width="120dp"
             android:layout_height="35dp"
             android:layout_column="0"
-            android:layout_row="12"
-            android:drawableLeft="@drawable/ic_save_action"
-            android:text="@string/salvar"
-            android:background="@drawable/button_shape_model"
-            android:enabled="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
+            android:layout_row="10"
+            android:background="@drawable/button_shape_model"
+            android:drawableLeft="@drawable/ic_save_action"
+            android:enabled="true"
+            android:text="@string/salvar"
             android:layout_columnSpan="2" />
 
     </GridLayout>
+
+
 </RelativeLayout>

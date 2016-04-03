@@ -106,6 +106,7 @@ public class ActivityOcorrencia extends Fragment {
                         Geocoder geoCoder = new Geocoder(v.getContext(), Locale.getDefault());
                       //geoCoder.getFromLocation(latitude,longitude,1);
                         assyncSaveOcorrencia = new AssyncSaveOcorrencia(v, js,geoCoder,txtTitulo,txtDescricao,txtMsg,selectedOne,btCapCam,btCapCam1,btCapCam2,btCapCam3);
+
                         assyncSaveOcorrencia.execute();
                     } else {
                         builder.setTitle("Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");

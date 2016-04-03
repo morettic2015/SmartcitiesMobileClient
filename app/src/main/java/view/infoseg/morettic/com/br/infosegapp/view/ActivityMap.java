@@ -91,6 +91,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             int distance = MY_PREFERENCES.getBoolean("ehMeuPais",false)?4000: MY_PREFERENCES.getBoolean("eMeuEstado",false)?1000:400;
 
             jsFilter.put("lat", latitude);
+            jsFilter.put("lon", longitude);
             jsFilter.put("mine", "1");
 
             StringBuilder sbTipos = new StringBuilder();
@@ -112,6 +113,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             }
             if(MY_PREFERENCES.getBoolean("educacao",false)){
                 sbTipos.append("EDUCACAO,");
+            }
+            if(MY_PREFERENCES.getBoolean("upa",false)){
+                sbTipos.append("UPA,");
             }
 
             jsFilter.put("type", sbTipos.toString());
@@ -191,7 +195,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                             ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
                             imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
                             imgVAvatar.setImageBitmap(IMG_AUTHOR);
-                            Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+                            //Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
 
                             /**
                              *
@@ -215,7 +219,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                             stringBuilder.append("Visualize as ocorrencias em seu celular! http://smartcitiesframework.com.br");
 
 
-                            bShare.setOnClickListener(new View.OnClickListener() {
+                         /*   bShare.setOnClickListener(new View.OnClickListener() {
                                 public void onClick(View v) {
                                     Intent sendIntent = new Intent();
 
@@ -225,7 +229,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                     sendIntent.setType("text/plain");
                                     startActivity(sendIntent);
                                 }
-                            });
+                            });*/
 
 
                             txtTit.setText(js.getString("tit"));

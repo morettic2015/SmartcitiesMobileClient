@@ -76,6 +76,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             }
             String url = HttpUtil.getOcorrenciasPath(ValueObject.ID_PROFILE,
                     this.filter.getString("lat"),
+                    this.filter.getString("lon"),
                     mine,
                     this.filter.getString("d"),
                     this.filter.getString("type"));
@@ -141,6 +142,10 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_info));
                         }else if(mTypo.equals("SEGURANCA")){
                             marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_security));
+                        }else if(mTypo.equals("UPA")){
+                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_upa_icon));
+                        }else{
+                            marker.icon(BitmapDescriptorFactory.defaultMarker());
                         }
 
                         //Adiciona objeto no mapa de ocorrencias

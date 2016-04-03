@@ -121,10 +121,11 @@ public class HttpUtil {
         return ret;
     }
 
-    public static final String getOcorrenciasPath(String pId,String pLat, String pMine, String distance, String types){
+    public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, String distance, String types){
         String r = "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
                 "&lat=" + pLat +
+                "&lon=" + pLon +
                 "&d="+ distance +
                 "&type="+types ;
 
@@ -203,5 +204,9 @@ public class HttpUtil {
     }
     public static final String getListTOp20(){
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
+    }
+
+    public static final String getRatingUrl(String idOcorrencia,String rate){
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ValueObject.ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
     }
 }

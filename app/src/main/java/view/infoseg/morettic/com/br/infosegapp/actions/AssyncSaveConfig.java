@@ -105,6 +105,10 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
             sb.append("politica");
             sb.append(":");
             sb.append(MY_PREFERENCES.getBoolean("politica",false));
+            sb.append("-");
+            sb.append("upa");
+            sb.append(":");
+            sb.append(MY_PREFERENCES.getBoolean("upa",false));
 
             String url = HttpUtil.saveConfigInfo(idProfile, phone,sb.toString());
             //url =

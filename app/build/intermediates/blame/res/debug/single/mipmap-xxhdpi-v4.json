@@ -12,6 +12,10 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_map_security.png"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_upa_icon.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_upa_icon.png"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_map_service.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_map_service.png"
     },

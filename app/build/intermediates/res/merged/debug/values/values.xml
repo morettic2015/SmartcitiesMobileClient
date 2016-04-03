@@ -431,7 +431,10 @@
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
     <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-5450650045028162/2228043490</string>
+    <string name="invalid_locate">Localização inválida</string>
+    <string name="list_ocorrencias">Lista de ocorrências</string>
     <string name="login">Login</string>
+    <string name="mapa_ocorrencias">Mapa de ocorrências</string>
     <string name="meio_ambiente">Meio Ambiente</string>
     <string name="minhas_ocorr_ncias">Minhas ocorrências</string>
     <string name="mr_media_route_button_content_description">Cast</string>
@@ -448,6 +451,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="next_level">Next Level</string>
+    <string name="perfil">Perfil</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
@@ -456,14 +460,19 @@
     <string name="politica">Politica</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
+    <string name="register_event">Registrar ocorrência</string>
     <string name="registrar">Registrar</string>
     <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, na área de saúde, educação, segurança e serviços</string>
     <string name="sa_de">Saúde</string>
+    <string name="sair">Sair</string>
+    <string name="sair_remover_sessao">Deseja sair do SmartcitiesAPP e remover sua sessão atual?</string>
     <string name="salvar">Salvar</string>
     <string name="saude">Saude</string>
     <string name="seguran_a">Segurança</string>
+    <string name="selecioneData">Selecione uma data</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
     <string name="senha">Senha</string>
+    <string name="share_msg">Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="start_level">Level 1</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -479,6 +488,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_maps">Map</string>
     <string name="transporte">Transporte</string>
+    <string name="view_events">Visualizar ocorrências</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

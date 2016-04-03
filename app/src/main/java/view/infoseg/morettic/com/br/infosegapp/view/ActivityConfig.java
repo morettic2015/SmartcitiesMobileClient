@@ -33,7 +33,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 
 public class ActivityConfig extends Fragment {
-    private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica;
+    private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica,upa;
     private TextView txtMsgConfig02;
     private Button bt;
     private View v;
@@ -53,6 +53,7 @@ public class ActivityConfig extends Fragment {
         ehMinhaCidade = (CheckBox) v.findViewById(R.id.chkCity);
         ehMeuPais = (CheckBox) v.findViewById(R.id.chkPais);
         saude = (CheckBox) v.findViewById(R.id.chkSaude);
+        upa = (CheckBox) v.findViewById(R.id.chkUpa);
         transporte = (CheckBox) v.findViewById(R.id.chkTransporte);
         meioAmbiente = (CheckBox) v.findViewById(R.id.chkMeioAmbiente);
         educacao = (CheckBox) v.findViewById(R.id.chkEducacao);
@@ -79,6 +80,7 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("meioAmbiente",meioAmbiente.isChecked()).commit();
                 editor.putBoolean("educacao",educacao.isChecked()).commit();
                 editor.putBoolean("seguranca",seguranca.isChecked()).commit();
+                editor.putBoolean("upa",upa.isChecked()).commit();
                 editor.putBoolean("politica",politica.isChecked()).commit() ;
                 editor.putString("phoneNumber",txtPhone.getText().toString()).commit() ;
 
@@ -102,6 +104,7 @@ public class ActivityConfig extends Fragment {
         meioAmbiente.setChecked(MY_PREFERENCES.getBoolean("meioAmbiente",false));
         educacao.setChecked(MY_PREFERENCES.getBoolean("educacao",false));
         seguranca.setChecked(MY_PREFERENCES.getBoolean("seguranca",false));
+        upa.setChecked(MY_PREFERENCES.getBoolean("upa",false));
         politica.setChecked(MY_PREFERENCES.getBoolean("politica",false));
         txtPhone.setText(MY_PREFERENCES.getString("phoneNumber",""));
 

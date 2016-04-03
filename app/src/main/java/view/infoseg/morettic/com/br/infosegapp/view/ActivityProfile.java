@@ -131,12 +131,6 @@ public class ActivityProfile extends Fragment {
                     if (cpf.getText().toString().equals("")) {
                         erros.append("cpf / cnpj ");
                     }
-                  /*  if (rd.isChecked() && !Validate.isValidCPF(cpf.getText().toString())) {
-                        erros.append("cpf ");
-
-                    } else if (!Validate.isValidCNPJ(cpf.getText().toString())) {
-                        erros.append("cnpj ");
-                    }*/
                     if (cep.getText().toString().equals("")) {
                         erros.append("email ");
                     }
