@@ -38,14 +38,15 @@ public class HttpUtil {
 
     public static String getText(String url) throws Exception {
         StringBuilder response = new StringBuilder();
+        URL website = null;
+        URLConnection connection = null;
+        BufferedReader in = null;
+        String inputLine = null;
         try {
-            URL website = new URL(url);
-            URLConnection connection = website.openConnection();
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()));
-
-            String inputLine;
-
+            website = new URL(url);
+            connection = website.openConnection();
+            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            //Le o arquivo remoto linha a linha
             while ((inputLine = in.readLine()) != null)
                 response.append(inputLine);
 
@@ -53,6 +54,10 @@ public class HttpUtil {
         }catch(Exception e){
             e.printStackTrace();
         }finally {
+            in.close();
+            website = null;
+            in = null;
+            connection = null;
             return response.toString();
         }
 
@@ -135,18 +140,26 @@ public class HttpUtil {
         return r;
     }
 
-    public static Bitmap getBitmapFromURL(String src) {
+    public static Bitmap getBitmapFromURL(String src) throws IOException {
+        URL url = null;
+        HttpURLConnection connection = null;
+        Bitmap myBitmap = null;
+        InputStream input = null;
         try {
-            URL url = new URL(src);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            url = new URL(src);
+            connection = (HttpURLConnection) url.openConnection();
             connection.setDoInput(true);
             connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            return myBitmap;
+            input = connection.getInputStream();
+
+            myBitmap = BitmapFactory.decodeStream(input);
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
+        } finally {
+            url = null;
+            input.close();
+            connection.disconnect();
+            return myBitmap;
         }
     }
     public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
@@ -208,5 +221,8 @@ public class HttpUtil {
 
     public static final String getRatingUrl(String idOcorrencia,String rate){
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ValueObject.ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
+    }
+    public static final String getForecast(String lat,String lon){
+        return "http://www.myweather2.com/developer/forecast.ashx?uac=9H1IUHm/Ih&query=" + encode(lat) + "," + encode(lon) + "&temp_unit=c&output=json";
     }
 }

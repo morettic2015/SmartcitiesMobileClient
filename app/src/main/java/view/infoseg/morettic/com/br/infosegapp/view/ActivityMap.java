@@ -60,7 +60,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     private GoogleMap googleMap;
     private AlertDialog.Builder builder;
     private StringBuilder stringBuilder = new StringBuilder();
-    private double longitude = 0,latitude = 0;
+    private double longitude = 0, latitude = 0;
+    private TextView txtInfoForecast;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
@@ -69,15 +70,17 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         InfosegMain.setTitleToolbar("Visualizar ocorrências", container);
         View v = inflater.inflate(R.layout.activity_map, container,
                 false);
+
+        txtInfoForecast = (TextView) v.findViewById(R.id.txtInfoForecast);
         mMapView = (MapView) v.findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume();// needed to get the map to display immediately
-        Location location = ActivityUtil.getMyLocation(getActivity(),builder);
+        Location location = ActivityUtil.getMyLocation(getActivity(), builder);
         try {
             this.longitude = location.getLongitude();
             this.latitude = location.getLatitude();
-        }catch(Exception e){//LATITUDE DE BRASILIA
+        } catch (Exception e) {//LATITUDE DE BRASILIA
             this.longitude = -15.7941d;
             this.latitude = -47.8825d;
         }
@@ -91,7 +94,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         JSONObject jsFilter = new JSONObject();
         try {
             //4000 = ~= 200km 400 = ~= 20km 1000 = ~= 50km
-            int distance = MY_PREFERENCES.getBoolean("ehMeuPais",false)?4000: MY_PREFERENCES.getBoolean("eMeuEstado",false)?1000:400;
+            int distance = MY_PREFERENCES.getBoolean("ehMeuPais", false) ? 4000 : MY_PREFERENCES.getBoolean("eMeuEstado", false) ? 1000 : 400;
 
             jsFilter.put("lat", latitude);
             jsFilter.put("lon", longitude);
@@ -99,25 +102,25 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
             StringBuilder sbTipos = new StringBuilder();
 
-            if(MY_PREFERENCES.getBoolean("saude",false)){
+            if (MY_PREFERENCES.getBoolean("saude", false)) {
                 sbTipos.append("SAUDE,");
             }
-            if(MY_PREFERENCES.getBoolean("politica",false)){
+            if (MY_PREFERENCES.getBoolean("politica", false)) {
                 sbTipos.append("POLITICA,");
             }
-            if(MY_PREFERENCES.getBoolean("meioAmbiente",false)){
+            if (MY_PREFERENCES.getBoolean("meioAmbiente", false)) {
                 sbTipos.append("MEIO_AMBIENTE,");
             }
-            if(MY_PREFERENCES.getBoolean("transporte",false)){
+            if (MY_PREFERENCES.getBoolean("transporte", false)) {
                 sbTipos.append("TRANSPORTE,");
             }
-            if(MY_PREFERENCES.getBoolean("seguranca",false)){
+            if (MY_PREFERENCES.getBoolean("seguranca", false)) {
                 sbTipos.append("SEGURANCA,");
             }
-            if(MY_PREFERENCES.getBoolean("educacao",false)){
+            if (MY_PREFERENCES.getBoolean("educacao", false)) {
                 sbTipos.append("EDUCACAO,");
             }
-            if(MY_PREFERENCES.getBoolean("upa",false)){
+            if (MY_PREFERENCES.getBoolean("upa", false)) {
                 sbTipos.append("UPA,");
             }
 
@@ -128,7 +131,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             e.printStackTrace();
         } finally {
 
+
             AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
+            assyncMapQuery.setTxtInfoForecast(txtInfoForecast);
             assyncMapQuery.execute();
 
 
@@ -157,7 +162,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             circle.setStrokeWidth(1.5f);*/
 
             //ZOOM no mapa com efeito emo flamenguista
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(12).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
 
@@ -283,6 +288,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        builder = null;
+        stringBuilder = null;
+        txtInfoForecast = null;
+        googleMap = null;
         mMapView.onDestroy();
     }
 
@@ -294,21 +303,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
-        System.out.print(requestCode);
-    }
- /*   public void onInfoWindowClick(Marker marker) {
-        builder.setMessage(marker.getTitle())
-                .setTitle("teste");
-
-// 3. Get the AlertDialog from create()
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        // System.out.print(requestCode);
     }
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        googleMap.setOnInfoWindowClickListener(getActivity());
-    }*/
 }
 
 

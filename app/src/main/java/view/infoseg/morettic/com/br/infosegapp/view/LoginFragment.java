@@ -122,4 +122,12 @@ public class LoginFragment extends DialogFragment {
 
         // ... other stuff you want to do in your onStart() method
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        btLogin = null;
+        email = null;
+        senha = null;
+    }
 }

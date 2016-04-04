@@ -47,6 +47,20 @@ public class ActivityProfile extends Fragment {
 
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        builder = null;
+        cpfMask = null;
+        cnpjMask = null;
+        cepMask = null;
+        radioGroup = null;
+        rdCNPJ = null;
+        editor = null;
+        rd = null;
+        v.destroyDrawingCache();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment

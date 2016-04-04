@@ -46,4 +46,5 @@ public class ValueObject {
     public static String[] LIST_OCORRENCIAS;
     public static Bitmap[] LIST_BITMAPS_OCORRENCIAS;
     public static Bitmap BITMAP_DEFAULT;
+    public static JSONObject FORECAST;
 }

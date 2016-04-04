@@ -8,18 +8,46 @@
     tools:context="view.infoseg.morettic.com.br.infosegapp.view.ActivityMap" /> -->
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:paddingTop="70dp">
+    android:paddingTop="50dp">
+
+
+    <LinearLayout
+        android:layout_column="0"
+        android:layout_row="0"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/wallet_bright_foreground_holo_dark"
+        android:layout_height="39dp"
+        android:layout_gravity="center_vertical">
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_icon_weather_tiempo" />
+        <TextView
+            android:id="@+id/txtInfoForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="forecast"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:capitalize="characters"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_column="0"
+        android:layout_row="1"/>
+
+</GridLayout>

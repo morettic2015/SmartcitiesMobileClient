@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -19,6 +20,7 @@ import org.json.JSONObject;
 
 import java.net.URLEncoder;
 
+import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
@@ -32,7 +34,11 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
  * Created by LuisAugusto on 24/02/2016.
  */
 public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, String> {
+    private Context ctx;
 
+    public void setCtx(Context c){
+        this.ctx = c;
+    }
     protected String doInBackground(JSONObject... urls) {
         JSONObject js = null;
         try {
@@ -45,7 +51,14 @@ public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, Strin
             for(int i=0;i<ja.length();i++){
                 try {
                     LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getBitmapFromURLBlobKey(ja.getJSONObject(i).getString("token"));
-                    LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(LIST_BITMAPS_OCORRENCIAS[i], 96, 96);
+                    if(LIST_BITMAPS_OCORRENCIAS[i]!=null){//Requisição nao retornou uma imagem válida......
+                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(LIST_BITMAPS_OCORRENCIAS[i], 96, 96);
+                    }else{
+                        Resources res = ctx.getResources();
+                        int id = R.drawable.ic_smartcities_icon_logo;
+                        Bitmap b = BitmapFactory.decodeResource(res, id);
+                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 96, 96);
+                    }
                 }catch(Exception e){
                     LIST_BITMAPS_OCORRENCIAS[i] = null;
                 }

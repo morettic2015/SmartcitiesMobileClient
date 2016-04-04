@@ -51,8 +51,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
 //import android.app.Fragment;
 //import android.app.FragmentTransaction;
 
-public class InfosegMain extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
@@ -133,6 +132,7 @@ public class InfosegMain extends AppCompatActivity
             //Load Ocorrencias
         }
         AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+        assyncLoadListOcorrencias.setCtx(getApplicationContext());
         assyncLoadListOcorrencias.execute();
 
         ValueObject.MAIN = this;
@@ -267,7 +267,8 @@ public class InfosegMain extends AppCompatActivity
         }
 
         loadFragment(fragment, title);
-
+        title = null;
+        fragment = null;
         //setTitle(title);
 
         return true;
@@ -286,6 +287,8 @@ public class InfosegMain extends AppCompatActivity
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
+            drawer = null;
+            transaction = null;
         }
     }
 
@@ -354,6 +357,7 @@ public class InfosegMain extends AppCompatActivity
                 break;
             case R.id.btListOcorrencias:
                 AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+                assyncLoadListOcorrencias.setCtx(getApplicationContext());
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
                 loadFragment(new ListOcorrencia(),getString(R.string.list_ocorrencias));
                 break;
@@ -375,6 +379,7 @@ public class InfosegMain extends AppCompatActivity
                 poke.setData(Uri.parse("3"));
                 sendBroadcast(poke);
             }
+            provider = null;
         } catch (Exception e) {
             e.printStackTrace();
         }
