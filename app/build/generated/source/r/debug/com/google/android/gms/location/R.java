@@ -269,8 +269,8 @@ public final class R {
 		public static final int decline = 0x7f080052;
 		public static final int place_autocomplete_clear_button = 0x7f08003b;
 		public static final int place_autocomplete_search_hint = 0x7f08003c;
-		public static final int store_picture_message = 0x7f080082;
-		public static final int store_picture_title = 0x7f080083;
+		public static final int store_picture_message = 0x7f080083;
+		public static final int store_picture_title = 0x7f080084;
 		public static final int wallet_buy_button_place_holder = 0x7f08003e;
 	}
 	public static final class style {

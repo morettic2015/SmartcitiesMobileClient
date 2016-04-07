@@ -451,6 +451,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="next_level">Next Level</string>
+    <string name="ok">OK</string>
     <string name="perfil">Perfil</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
@@ -458,6 +459,7 @@
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
     <string name="politica">Politica</string>
+    <string name="preferences">"Preferências "</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="register_event">Registrar ocorrência</string>
@@ -488,6 +490,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_maps">Map</string>
     <string name="transporte">Transporte</string>
+    <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
     <string name="view_events">Visualizar ocorrências</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>

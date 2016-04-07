@@ -80,4 +80,7 @@
     <string name="sair">Sair</string>
     <string name="mapa_ocorrencias">Mapa de ocorrências</string>
     <string name="sair_remover_sessao">Deseja sair do SmartcitiesAPP e remover sua sessão atual?</string>
+    <string name="preferences">"Preferências "</string>
+    <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
+    <string name="ok">OK</string>
 </resources>

@@ -214,7 +214,27 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             fragment = new ActivityOcorrencia();
             title = getString(R.string.register_event);
         }else if (id == R.id.nav_gallery) {
-            fragment = new ActivityMap();
+            if(ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+                fragment = new ActivityMap();
+                title = getString(R.string.configura_es);
+            }else{
+                final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+                alertDialogBuilder.setTitle(getString(R.string.preferences));
+                alertDialogBuilder
+                        .setMessage(getString(R.string.view_config_map))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                fragment = new ActivityConfig();
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+
+
 
             title = getString(R.string.mapa_ocorrencias);
         }else if (id == R.id.nav_list) {
@@ -352,7 +372,25 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    loadFragment(new ActivityMap(), getString(R.string.view_events));
+                    if(ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+                        loadFragment(new ActivityMap(), getString(R.string.view_events));
+                    }else{
+                        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+                        alertDialogBuilder.setTitle(getString(R.string.preferences));
+                        alertDialogBuilder
+                                .setMessage(getString(R.string.view_config_map))
+                                .setCancelable(false)
+                                .setPositiveButton("SIM",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                        loadFragment(new ActivityConfig(), getString(R.string.configura_es));
+                    }
+
                 }
                 break;
             case R.id.btListOcorrencias:
