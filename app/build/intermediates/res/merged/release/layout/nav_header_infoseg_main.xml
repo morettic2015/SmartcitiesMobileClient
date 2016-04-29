@@ -12,19 +12,13 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:weightSum="1">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </GridLayout>
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="Smartcities framework - Registro de ocorrências"
-        android:src="@drawable/logo_big_one"
+        android:src="@mipmap/ic_maiin_now01"
         android:layout_marginLeft="15dp"
         android:layout_rowSpan="2"
         android:layout_row="0"

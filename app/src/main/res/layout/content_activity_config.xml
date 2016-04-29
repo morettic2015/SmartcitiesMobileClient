@@ -108,13 +108,15 @@
             style="@style/scrollbar_shape_style"
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
-            android:layout_height="83dp"
+            android:layout_height="82dp"
             android:layout_column="0"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
             android:layout_row="7"
-            android:layout_columnSpan="2">
+            android:layout_columnSpan="2"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="3dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,51 +125,66 @@
 
                 <CheckBox
                     android:id="@+id/chkSaude"
-                    android:layout_width="322dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_health01"
                     android:checked="true"
-                    android:text="@string/saude" />
+                    android:text="@string/saude"
+                    android:layout_margin="0dp" />
                 <CheckBox
                     android:id="@+id/chkUpa"
-                    android:layout_width="276dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_upa01"
                     android:checked="true"
                     android:text="Unidades de pronto atendimento" />
 
                 <CheckBox
                     android:id="@+id/chkEducacao"
-                    android:layout_width="185dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:drawableRight="@mipmap/icon_education01"
                     android:text="@string/educa_o" />
 
                 <CheckBox
                     android:id="@+id/chkTransporte"
-                    android:layout_width="185dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:drawableRight="@mipmap/icon_transport01"
                     android:text="@string/transporte" />
 
                 <CheckBox
                     android:id="@+id/chkSeguranca"
-                    android:layout_width="185dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_security01"
                     android:checked="true"
                     android:text="@string/seguran_a" />
 
                 <CheckBox
                     android:id="@+id/chkMeioAmbiente"
-                    android:layout_width="185dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:drawableRight="@mipmap/icon_nature01"
                     android:text="@string/meio_ambiente" />
 
                 <CheckBox
                     android:id="@+id/chkPolitica"
-                    android:layout_width="185dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:drawableRight="@mipmap/icon_politics01"
                     android:text="@string/politica" />
+                <CheckBox
+                    android:id="@+id/chkEsporte"
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableRight="@mipmap/icon_sport01"
+                    android:text="Esporte" />
 
             </LinearLayout>
         </ScrollView>
@@ -184,7 +201,7 @@
 
         <EditText
             android:id="@+id/txtTelefoneConfig"
-            android:layout_width="297dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="9"

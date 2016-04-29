@@ -52,7 +52,8 @@ public class ActivityUtil {
             if(myLocal!=null){
                 break;
             }
-        }if(myLocal==null) {
+        }
+        if(myLocal==null) {
             AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(fa);
             ;
             builder.setTitle("Localização indisponível");

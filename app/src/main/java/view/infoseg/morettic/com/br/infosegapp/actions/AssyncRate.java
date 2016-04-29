@@ -39,17 +39,21 @@ public class AssyncRate extends AsyncTask<JSONObject, Void, String> {
         this.rate = r;
         this.idOcorrencia = id;
     }
+    protected void onPostExecute(String result) {
+        this.rate = null;
+        this.idOcorrencia = null;
+    }
 
     protected String doInBackground(JSONObject... urls) {
         JSONObject js = null;
         try {
-            String url = HttpUtil.getRatingUrl(idOcorrencia,rate);
-            //url =
-            js = HttpUtil.getJSONFromUrl(url);
+           js = HttpUtil.getJSONFromUrl(HttpUtil.getRatingUrl(idOcorrencia,rate));
 
         } catch (Exception e) {
             js = new JSONObject();
         } finally {
+            //rate = null;
+            //idOcorrencia = null;
             return js.toString();
         }
     }

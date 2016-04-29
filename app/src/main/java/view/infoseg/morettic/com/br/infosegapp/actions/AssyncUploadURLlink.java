@@ -41,6 +41,9 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
         if (dialog.isShowing()) {
             dialog.dismiss();
         }
+        a1 = null;
+        bitmapM = null;
+        dialog = null;
     }
 
     public AssyncUploadURLlink(InfosegMain activity, Bitmap b1, int origem) {
@@ -98,9 +101,9 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
                     ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");
                 }
             }
-            //Salva a imagem no banco e retorna seus parametros
-
-
+            realPathInSO = null;
+            tempUri = null;
+            fTYpe = null;
         } catch (Exception e) {
             js = new JSONObject();
             ValueObject.URL_SUBMIT_UPLOAD = null;

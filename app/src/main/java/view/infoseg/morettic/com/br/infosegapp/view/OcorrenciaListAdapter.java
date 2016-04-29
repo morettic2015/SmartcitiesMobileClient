@@ -61,19 +61,21 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
             txtAuthorListView.setText(ocorrencia.getString("author"));
             txtDateListView.setText(ocorrencia.getString("date"));
             if (ocorrencia.getString("tipo").equals("POLITICA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_politics));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_politics01));
             } else if (ocorrencia.getString("tipo").equals("SAUDE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_healthcare));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_health01));
             } else if (ocorrencia.getString("tipo").equals("EDUCACAO")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_education));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_education01));
             } else if (ocorrencia.getString("tipo").equals("MEIO_AMBIENTE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_meioambiente));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_nature01));
             } else if (ocorrencia.getString("tipo").equals("TRANSPORTE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_bus));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_transport01));
             } else if (ocorrencia.getString("tipo").equals("SEGURANCA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_map_security));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_security01));
             } else if (ocorrencia.getString("tipo").equals("UPA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.ic_upa_icon));
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_upa01));
+            }else if (ocorrencia.getString("tipo").equals("ESPORTE")) {
+                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_sport01));
             }
             if (LIST_BITMAPS_OCORRENCIAS[position] != null) {
                 imageView1.setImageBitmap(LIST_BITMAPS_OCORRENCIAS[position]);

@@ -98,7 +98,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
             jsFilter.put("lat", latitude);
             jsFilter.put("lon", longitude);
-            jsFilter.put("mine", "1");
+            jsFilter.put("mine", MY_PREFERENCES.getBoolean("ehMeu",false));
 
             StringBuilder sbTipos = new StringBuilder();
 
@@ -122,6 +122,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             }
             if (MY_PREFERENCES.getBoolean("upa", false)) {
                 sbTipos.append("UPA,");
+            }
+            if (MY_PREFERENCES.getBoolean("esporte", false)) {
+                sbTipos.append("ESPORTE,");
             }
 
             jsFilter.put("type", sbTipos.toString());
@@ -279,6 +282,11 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         mMapView.onResume();
     }
 
+    public void onStop (){
+        super.onStop();
+        stringBuilder = null;
+        txtInfoForecast = null;
+    }
     @Override
     public void onPause() {
         super.onPause();

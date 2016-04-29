@@ -52,18 +52,15 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
 //import android.app.FragmentTransaction;
 
 public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-    private static final int TAKE_PICTURE = 1;
+    //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private Toolbar toolbar;
-    private Uri imageUri;
-    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3,MY_REQUEST_CODE4;
+    //private Uri imageUri;
+    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
-        //this.toolbar.setI
         tb.setTitle(title);
-        //tb.setNavigationIcon(R.drawable.ic_main_icon);
-        // tb.title;
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
@@ -77,14 +74,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         ValueObject.MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         fab.setVisibility(View.GONE);
+        fab.setOnClickListener((View.OnClickListener) this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -94,7 +85,6 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
         //Inicializa os botooes da tela Splash
         ImageView b1 = (ImageView) findViewById(R.id.btNovoSplah);
@@ -167,6 +157,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             String[] p = {GET_ACCOUNTS};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }
+
     }
 
     @Override
@@ -213,11 +204,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             // Handle the camera action
             fragment = new ActivityOcorrencia();
             title = getString(R.string.register_event);
-        }else if (id == R.id.nav_gallery) {
-            if(ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+        } else if (id == R.id.nav_gallery) {
+            if (ValueObject.MY_PREFERENCES.contains("ehMeu")) {
                 fragment = new ActivityMap();
                 title = getString(R.string.configura_es);
-            }else{
+            } else {
                 final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
                 alertDialogBuilder.setTitle(getString(R.string.preferences));
                 alertDialogBuilder
@@ -235,9 +226,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             }
 
 
-
             title = getString(R.string.mapa_ocorrencias);
-        }else if (id == R.id.nav_list) {
+        } else if (id == R.id.nav_list) {
             fragment = new ListOcorrencia();
 
             title = getString(R.string.list_ocorrencias);
@@ -372,9 +362,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    if(ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+                    if (ValueObject.MY_PREFERENCES.contains("ehMeu")) {
                         loadFragment(new ActivityMap(), getString(R.string.view_events));
-                    }else{
+                    } else {
                         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
                         alertDialogBuilder.setTitle(getString(R.string.preferences));
                         alertDialogBuilder
@@ -397,11 +387,14 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
                 assyncLoadListOcorrencias.setCtx(getApplicationContext());
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
-                loadFragment(new ListOcorrencia(),getString(R.string.list_ocorrencias));
+                loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
                 break;
             case R.id.btConfigSplash:
                 //whatever
                 loadFragment(new ActivityConfig(), getString(R.string.configura_es));
+                break;
+            case R.id.fab:
+                //@todo
                 break;
         }
     }

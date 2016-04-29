@@ -30,8 +30,9 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
 public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
     public static final String LOGIN_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     private ProgressDialog dialog;
-    private View a1;
+    //private View a1;
     private String idProfile, phone;
+    private StringBuilder sb;
 
 
 
@@ -49,6 +50,9 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         dialog.dismiss();
+        sb = null;
+        phone = null;
+        idProfile = null;
     }
 
     public AssyncSaveConfig(Context ctx, String idProfile, String phone) {
@@ -64,7 +68,7 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
 
         try {
             //Validacao @TODO
-            StringBuilder sb = new StringBuilder();
+            sb = new StringBuilder();
             //URL PARA SALVAR O PERFIL.
             sb.append("ehMeu");
             sb.append(":");
@@ -109,6 +113,10 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
             sb.append("upa");
             sb.append(":");
             sb.append(MY_PREFERENCES.getBoolean("upa",false));
+            sb.append("-");
+            sb.append("esporte");
+            sb.append(":");
+            sb.append(MY_PREFERENCES.getBoolean("esporte",false));
 
             String url = HttpUtil.saveConfigInfo(idProfile, phone,sb.toString());
             //url =

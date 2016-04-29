@@ -33,6 +33,7 @@ public class AssyncImageLoad extends AsyncTask<String, Void, Bitmap> {
         try {
 
             mIcon11 = HttpUtil.getBitmapFromURLBlobKey(this.key);
+            mIcon11 = HttpUtil.getResizedBitmap(mIcon11,250,160);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();

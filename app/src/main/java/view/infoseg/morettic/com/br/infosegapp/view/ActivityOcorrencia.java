@@ -48,8 +48,9 @@ public class ActivityOcorrencia extends Fragment {
     private double longitude, latitude;
     private AlertDialog.Builder builder;
     public static int OPCAO = -1;
-    private int codigo = 0;
+    private static int codigo = 0;
     private TextView txtMsg;
+    private ImageButton ib;
 
 
     @Override
@@ -129,24 +130,28 @@ public class ActivityOcorrencia extends Fragment {
 
         btCapCam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                ib = (ImageButton) v.findViewById(R.id.btCaptureCam);
                 codigo = R.id.btCaptureCam;
                 dispatchTakePictureIntent(v);
             }
         });
         btCapCam1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                ib = (ImageButton) v.findViewById(R.id.btCaptureCam1);
                 codigo = R.id.btCaptureCam1;
                 dispatchTakePictureIntent(v);
             }
         });
         btCapCam2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                ib = (ImageButton) v.findViewById(R.id.btCaptureCam2);
                 codigo = R.id.btCaptureCam2;
                 dispatchTakePictureIntent(v);
             }
         });
         btCapCam3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                ib = (ImageButton) v.findViewById(R.id.btCaptureCam3);
                 codigo = R.id.btCaptureCam3;
                 dispatchTakePictureIntent(v);
             }
@@ -178,6 +183,9 @@ public class ActivityOcorrencia extends Fragment {
                         break;
                     case R.id.rTransporte:
                         tipoOcorrencia = "TRANSPORTE";
+                        break;
+                    case R.id.rEsporte:
+                        tipoOcorrencia = "ESPORTE";
                         break;
                     default:
                         tipoOcorrencia = "SERVICOS";
@@ -215,7 +223,6 @@ public class ActivityOcorrencia extends Fragment {
             if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
-                ImageButton ib = (ImageButton) getView().findViewById(codigo);
                 ib.setImageBitmap(imageBitmap);
 
                 InfosegMain ism = (InfosegMain) getActivity();

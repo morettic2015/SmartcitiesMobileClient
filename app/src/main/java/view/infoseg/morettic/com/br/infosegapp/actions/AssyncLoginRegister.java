@@ -56,6 +56,11 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            email = null;
+            senha = null;
+            dialog = null;
+            editor = null;
         }
     }
 
@@ -86,19 +91,6 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 ValueObject.AUTENTICADO = false;
             } else {
 
-                /**
-                 * {
-                 nasc: "18/2/2016",
-                 cpfCnpj: "028.903.629-14",
-                 complemento: "Jsnsns",
-                 cep: "88020100",
-                 email: "MALACMA@HOTMAIL.COM",
-                 nome: "LUIS FERNANDO MISOTO",
-                 avatar: 5464390522372096,
-                 key: 6272386882076672,
-                 pass: "jsjsj" pjf
-                 }
-                 * */
 
 
                 ValueObject.ID_PROFILE = js.getString("key");

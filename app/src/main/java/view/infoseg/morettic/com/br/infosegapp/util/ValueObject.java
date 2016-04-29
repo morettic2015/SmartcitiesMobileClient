@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.location.Location;
 import android.location.LocationManager;
+import android.support.v4.util.ArrayMap;
+
 
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -37,8 +39,8 @@ public class ValueObject {
     public static boolean AUTENTICADO = false;
     public static LoginFragment LOGIN;
     public static Bitmap AVATAR_BITMAP;
-    public static HashMap<Long,JSONObject> MAPA_OCORRENCIAS = new HashMap<Long, JSONObject>();
-    public static HashMap<String,Bitmap> MAPA_BITMAPS = new HashMap<String, Bitmap>();
+    public static ArrayMap<Long,JSONObject> MAPA_OCORRENCIAS = new ArrayMap<Long, JSONObject>();
+    public static ArrayMap<String,Bitmap> MAPA_BITMAPS = new ArrayMap<String, Bitmap>();
     public static Bitmap IMG_OCORRENCIA = null;
     public static Bitmap IMG_AUTHOR = null;
     public static LocationManager locationManager;

@@ -33,7 +33,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 
 public class ActivityConfig extends Fragment {
-    private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica,upa;
+    private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica,upa,esportes;
     private TextView txtMsgConfig02;
     private Button bt;
     private View v;
@@ -59,6 +59,7 @@ public class ActivityConfig extends Fragment {
         educacao = (CheckBox) v.findViewById(R.id.chkEducacao);
         seguranca = (CheckBox) v.findViewById(R.id.chkSeguranca);
         politica = (CheckBox) v.findViewById(R.id.chkPolitica);
+        esportes = (CheckBox) v.findViewById(R.id.chkEsporte);
         txtMsgConfig02 = (TextView) v.findViewById(R.id.txtMsgConfig02);
         txtPhone = (EditText)v.findViewById(R.id.txtTelefoneConfig);
         /**
@@ -83,12 +84,15 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("upa",upa.isChecked()).commit();
                 editor.putBoolean("politica",politica.isChecked()).commit() ;
                 editor.putString("phoneNumber",txtPhone.getText().toString()).commit() ;
+                editor.putBoolean("esporte",esportes.isChecked()).commit();
 
 
                 AssyncSaveConfig assyncSaveConfig = new AssyncSaveConfig(getContext(),ValueObject.ID_PROFILE.toString(),txtPhone.getText().toString());
                 assyncSaveConfig.execute();
 
                 txtMsgConfig02.setText("Preferências salvas com sucesso!");
+
+                ValueObject.MY_PREFERENCES = v.getContext().getSharedPreferences("INFOSEGMAIN", 0);
 
             }
         });
@@ -102,6 +106,7 @@ public class ActivityConfig extends Fragment {
         saude.setChecked(MY_PREFERENCES.getBoolean("saude",false));
         transporte.setChecked(MY_PREFERENCES.getBoolean("transporte",false));
         meioAmbiente.setChecked(MY_PREFERENCES.getBoolean("meioAmbiente",false));
+        esportes.setChecked(MY_PREFERENCES.getBoolean("esporte",false));
         educacao.setChecked(MY_PREFERENCES.getBoolean("educacao",false));
         seguranca.setChecked(MY_PREFERENCES.getBoolean("seguranca",false));
         upa.setChecked(MY_PREFERENCES.getBoolean("upa",false));

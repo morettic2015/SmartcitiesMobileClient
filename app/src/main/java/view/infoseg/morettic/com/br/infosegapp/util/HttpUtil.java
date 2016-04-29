@@ -35,7 +35,8 @@ import static java.net.URLEncoder.encode;
  * https://gaeloginendpoint.appspot.com/upload.exec
  */
 public class HttpUtil {
-
+    private BitmapFactory.Options options;
+    private Bitmap reusedBitmap;
     public static String getText(String url) throws Exception {
         StringBuilder response = new StringBuilder();
         URL website = null;
@@ -51,6 +52,7 @@ public class HttpUtil {
                 response.append(inputLine);
 
             in.close();
+            inputLine = null;
         }catch(Exception e){
             e.printStackTrace();
         }finally {
@@ -86,7 +88,7 @@ public class HttpUtil {
     }
 
     public static final String getSaveImagePath(String image, String token){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName"+image+"&iToken="+token;
+        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName="+image+"&iToken="+token;
     }
     public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id) throws UnsupportedEncodingException {
         return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=3&" +

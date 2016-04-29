@@ -57,7 +57,7 @@ public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, Strin
                         Resources res = ctx.getResources();
                         int id = R.drawable.ic_smartcities_icon_logo;
                         Bitmap b = BitmapFactory.decodeResource(res, id);
-                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 96, 96);
+                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 80, 80);
                     }
                 }catch(Exception e){
                     LIST_BITMAPS_OCORRENCIAS[i] = null;
