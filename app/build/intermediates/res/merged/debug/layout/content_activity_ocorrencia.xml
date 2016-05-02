@@ -148,9 +148,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:drawableRight="@mipmap/icon_security01"
-
-
-                    android:text="Segurança" />
+                    android:text="@string/seguran_a" />
 
                 <RadioButton
                     android:id="@+id/rSaude"
@@ -203,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:drawableRight="@mipmap/icon_sport01"
-                    android:text="Esportes"
+                    android:text="@string/esporte"
                     android:layout_marginRight="20dp"
 
                     />

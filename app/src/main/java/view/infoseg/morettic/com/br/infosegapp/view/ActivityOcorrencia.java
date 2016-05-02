@@ -57,7 +57,7 @@ public class ActivityOcorrencia extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        InfosegMain.setTitleToolbar("Registrar ocorrência", container);
+        InfosegMain.setTitleToolbar(getString(R.string.register_event), container);
 
         v = inflater.inflate(R.layout.activity_ocorrencia, container, false);
 

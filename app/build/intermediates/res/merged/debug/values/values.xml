@@ -343,6 +343,9 @@
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="google_play_services_version">8487000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="NAO">Não</string>
+    <string name="SIM">SIM</string>
+    <string name="a12">Visualizar ocorrências</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -364,16 +367,19 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="accept">Accept</string>
     <string name="action_settings">Copyright</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="app_name">SmartcitiesAPP</string>
+    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in_short" translatable="false">Sign in</string>
+    <string name="app_name">City Watch APP</string>
+    <string name="app_title_main">City Watch</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="autenticando">Autenticando...</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
+    <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
@@ -405,9 +411,13 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="compartilhe">Compartilhar</string>
+    <string name="complemento">Complemento</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Concordo com os termos e diretrizes do serviço</string>
     <string name="configura_es">Configurações</string>
     <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
+    <string name="confirmacao_de_senha">Confirmacao de senha</string>
+    <string name="consultando_ocorrencias">Consultando ocorrencias...</string>
+    <string name="cpf_cnpj">CPF/CNPJ</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
@@ -416,22 +426,25 @@
     <string name="email">Email</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
     <string name="enviar">Enviar</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">Este campo é requerido</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_invalid_email">Email invalido</string>
+    <string name="error_invalid_password">Senha muito curta</string>
+    <string name="esporte">Esporte</string>
     <string name="filtros">Filtros</string>
     <string name="foto_1">Foto 1</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="true">
-        AIzaSyA_AOEj7g0543pBn31jFHKMfLMzN4s3cw0
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBFDfjNE_Q3E87_axsIphs6CIvSlfZOliE
     </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="help_us">Ajude-nos!</string>
+    <string name="humidade">Humidade</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Informe os tipos de ocorrência que deseja visualizar</string>
     <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Informe seu celular para receber informativos via SMS. Iremos enviar alertas quando seu dispositivo estiver em área de ocorrências de sua prefêrencia.</string>
+    <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Informe seu email senha e confirmação de senha para registrar-se</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
-    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-5450650045028162/2228043490</string>
+    <string name="interstitial_ad_sample" translatable="false">Interstitial Ad Sample</string>
+    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-5450650045028162/2228043490</string>
     <string name="invalid_locate">Localização inválida</string>
     <string name="list_ocorrencias">Lista de ocorrências</string>
     <string name="login">Login</string>
@@ -449,14 +462,20 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="next_level">Next Level</string>
+    <string name="nascimento">Nascimento</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="next_level" translatable="false">Next Level</string>
+    <string name="nome">Nome</string>
     <string name="ok">OK</string>
+    <string name="opc_es">Opcões</string>
     <string name="perfil">Perfil</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
+    <string name="perfil_create">Criando perfil...</string>
+    <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="pessoa_fisica">Pessoa fisica</string>
+    <string name="pessoa_juridica">Pessoa juridica</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
     <string name="politica">Politica</string>
@@ -465,34 +484,44 @@
     <string name="prompt_password">Password (optional)</string>
     <string name="register_event">Registrar ocorrência</string>
     <string name="registrar">Registrar</string>
-    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, na área de saúde, educação, segurança e serviços</string>
+    <string name="registrar_ocorr_ncia">Registrar ocorrência</string>
+    <string name="registrar_se">Registrar-se</string>
+    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, em uma das categorias disponíveis</string>
+    <string name="registro_de_ocorr_ncias_municipais">Registro de ocorrências municipais</string>
     <string name="sa_de">Saúde</string>
     <string name="sair">Sair</string>
-    <string name="sair_remover_sessao">Deseja sair do SmartcitiesAPP e remover sua sessão atual?</string>
+    <string name="sair_remover_sessao">Deseja sair do City Watch e remover sua sessão atual?</string>
     <string name="salvar">Salvar</string>
     <string name="saude">Saude</string>
+    <string name="save_config">Salvando as configurações...</string>
+    <string name="save_occurrences">Salvando ocorrencia...</string>
+    <string name="save_profile_msg">Salvando perfil...</string>
     <string name="seguran_a">Segurança</string>
     <string name="selecioneData">Selecione uma data</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
     <string name="senha">Senha</string>
-    <string name="share_msg">Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
-    <string name="start_level">Level 1</string>
+    <string name="share_msg">Instale o APP City Watch para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="start_level" translatable="false">Level 1</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
     <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
+    <string name="temperatura">Temperatura</string>
     <string name="tipo_do_servi_o">Tipo do serviço</string>
     <string name="tipos_de_ocorr_ncias">Tipos de ocorrências</string>
-    <string name="title">Title</string>
+    <string name="title">Titulo</string>
     <string name="title_activity_activity_adds">Patrocinadores</string>
-    <string name="title_activity_activity_ads">ActivityAds</string>
-    <string name="title_activity_activity_map">Map</string>
+    <string name="title_activity_activity_ads" translatable="false">ActivityAds</string>
+    <string name="title_activity_activity_map">Mapa</string>
     <string name="title_activity_activity_ocorrencia">Registrar ocorrência</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login">Entrar</string>
+    <string name="title_activity_maps">Mapa</string>
     <string name="transporte">Transporte</string>
+    <string name="upa">Unidades de pronto atendimento</string>
+    <string name="upload_image">Fazendo upload...</string>
     <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
     <string name="view_events">Visualizar ocorrências</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

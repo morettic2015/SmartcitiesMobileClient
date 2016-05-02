@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 import java.net.URLEncoder;
 
+import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
@@ -28,11 +29,12 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
     private ProgressDialog dialog;
     private View a1;
     private JSONObject perfil;
+    private String msg;
 
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Salvando perfil...");
+        dialog.setMessage(msg);
         dialog.show();
     }
 
@@ -48,6 +50,7 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
         this.dialog = new ProgressDialog(activity.getContext());
         this.a1 = activity;
         this.perfil = perfil;
+        this.msg = activity.getContext().getString(R.string.save_profile_msg);
         //builder = new AlertDialog.Builder(this.a1.getContext());
     }
 

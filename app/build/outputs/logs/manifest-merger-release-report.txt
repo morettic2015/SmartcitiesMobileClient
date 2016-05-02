@@ -220,7 +220,7 @@ MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\LuisAugust
 	android:allowBackup
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:30:9-35
 	android:icon
-		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:31:9-46
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:31:9-50
 	android:theme
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:34:9-40
 activity#view.infoseg.morettic.com.br.infosegapp.view.InfosegMain

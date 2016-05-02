@@ -8,11 +8,11 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="103dp"
-        android:layout_height="64dp"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
         android:id="@+id/imageView6"
         android:layout_row="0"
-        android:background="@drawable/logo_big_one"
+        android:background="@mipmap/ic_city_watch"
         android:layout_column="0"
         android:layout_gravity="center_horizontal" />
 
@@ -75,7 +75,7 @@
     <Button
         android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:text="Entrar"
+        android:text="@string/login"
         android:id="@+id/btLoginRegister1"
         android:drawableLeft="@drawable/ic_seguranca"
         android:layout_row="7"

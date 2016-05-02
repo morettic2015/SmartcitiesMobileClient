@@ -106,7 +106,7 @@
             android:layout_column="1"
             android:layout_gravity="left|center_vertical|right"
             android:layout_row="3"
-            android:text="Visualize as últimas ocorrências em uma lista ordenada por data"
+            android:text="@string/visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:padding="5dp" />
 
@@ -163,7 +163,7 @@
         android:layout_height="60dp"
         android:id="@+id/imageView7"
         android:layout_row="0"
-        android:src="@mipmap/ic_maiin_now01"
+        android:src="@mipmap/ic_city_watch"
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:layout_gravity="center_horizontal"

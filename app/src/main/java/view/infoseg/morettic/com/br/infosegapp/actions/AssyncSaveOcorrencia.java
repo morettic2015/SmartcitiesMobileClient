@@ -38,12 +38,13 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
     private ImageButton i1,i2,i3,i4;
     private boolean hasErros = false;
     private TextView txt;
+    private String msg;
 
 
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Salvando ocorrencia...");
+        dialog.setMessage(msg);
         dialog.show();
     }
 
@@ -86,6 +87,7 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         this.i3 = imageButtons[2];
         this.i4 = imageButtons[3];
         this.txt = txt;
+        this.msg = activity.getContext().getString(R.string.save_occurrences);
 
         //builder = new AlertDialog.Builder(this.a1.getContext());
     }

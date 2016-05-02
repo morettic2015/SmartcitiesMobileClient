@@ -16,6 +16,7 @@ import org.json.JSONObject;
 
 import java.net.URLEncoder;
 
+import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
@@ -33,13 +34,13 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
     //private View a1;
     private String idProfile, phone;
     private StringBuilder sb;
-
+    private String msg;
 
 
     @Override
     protected void onPreExecute() {
         try {
-            dialog.setMessage("Salvando as configurações...");
+            dialog.setMessage(msg);
             dialog.show();
         } catch (Exception e) {
 
@@ -59,6 +60,7 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
         this.dialog = new ProgressDialog(ctx);
         this.idProfile = idProfile;
         this.phone = phone;
+        this.msg = ctx.getString(R.string.save_config);
 
     }
 

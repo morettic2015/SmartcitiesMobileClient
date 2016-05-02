@@ -5,37 +5,37 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_novo_generico_01"
-            android:title="Registrar ocorrência" />
+            android:title="@string/registrar_ocorr_ncia" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_map_generico_01"
-            android:title="Mapa de ocorrências" />
+            android:title="@string/mapa_ocorrencias" />
         <item
             android:id="@+id/nav_list"
             android:icon="@mipmap/ic_list_ocorrencias"
-            android:title="Lista de ocorrências" />
+            android:title="@string/list_ocorrencias" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_avatar_novo_01"
-            android:title="Perfil" />
+            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_config_generico_01"
-            android:title="Configurações" />
-        <item android:title="Opcões">
+            android:title="@string/configura_es" />
+        <item android:title="@string/opc_es">
             <menu>
                 <item
                     android:id="@+id/nav_share"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="Compartilhe" />
+                    android:title="@string/compartilhe" />
                 <item
                     android:id="@+id/nav_adds"
                     android:icon="@drawable/ic_attach_money"
-                    android:title="Ajude-nos" />
+                    android:title="@string/help_us" />
                 <item
                     android:id="@+id/nav_exit"
                     android:icon="@drawable/ic_action_exit"
-                    android:title="Sair" />
+                    android:title="@string/sair" />
             </menu>
         </item>
 

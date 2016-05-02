@@ -43,6 +43,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
     private StringBuilder sb = new StringBuilder();
     private List<MarkerOptions> lMarkers = new ArrayList<MarkerOptions>();
     private List<LatLng> lSaude = new ArrayList<LatLng>();
+    private String msg;
 
     public void setTxtInfoForecast(TextView txt) {
         this.txtInfoForecast = txt;
@@ -50,7 +51,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Consultando ocorrencias...");
+        dialog.setMessage(msg);
         dialog.show();
     }
 
@@ -86,6 +87,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
         this.a1 = activity;
         this.filter = filter;
         this.googleMap = googleMap;
+        this.msg = activity.getContext().getString(R.string.consultando_ocorrencias);
     }
 
     protected List<MarkerOptions> doInBackground(JSONObject... urls) {

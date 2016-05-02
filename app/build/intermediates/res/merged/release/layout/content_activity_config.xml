@@ -137,7 +137,7 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@mipmap/icon_upa01"
                     android:checked="true"
-                    android:text="Unidades de pronto atendimento" />
+                    android:text="@string/upa" />
 
                 <CheckBox
                     android:id="@+id/chkEducacao"
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:drawableRight="@mipmap/icon_sport01"
-                    android:text="Esporte" />
+                    android:text="@string/esporte" />
 
             </LinearLayout>
         </ScrollView>

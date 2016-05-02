@@ -8,8 +8,8 @@ android {
         applicationId "view.infoseg.morettic.com.br.infosegapp"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 11
-        versionName "SMTCTS01e11"
+        versionCode 13
+        versionName "SMTCTS01e13_i18n"
     }
     buildTypes {
         release {

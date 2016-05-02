@@ -16,6 +16,7 @@ import org.json.JSONObject;
 
 import java.net.URLEncoder;
 
+import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
@@ -32,12 +33,12 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
     private View a1;
     private String email, senha;
     private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
-
+    String msg;
 
     @Override
     protected void onPreExecute() {
         try {
-            dialog.setMessage("Autenticando...");
+            dialog.setMessage(msg);
             dialog.show();
         } catch (Exception e) {
 
@@ -51,8 +52,8 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         try {
             if (dialog.isShowing() || ValueObject.AUTENTICADO) {
                 dialog.dismiss();
-                if(ValueObject.LOGIN!=null)
-                ValueObject.LOGIN.dismiss();
+                if (ValueObject.LOGIN != null)
+                    ValueObject.LOGIN.dismiss();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +67,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
 
     public AssyncLoginRegister(Context ctx, String login, String senha) {
         this.dialog = new ProgressDialog(ctx);
-
+        msg = ctx.getString(R.string.autenticando);
         this.email = login;
         this.senha = senha;
 
@@ -90,7 +91,6 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
             if (js.has("erro")) {
                 ValueObject.AUTENTICADO = false;
             } else {
-
 
 
                 ValueObject.ID_PROFILE = js.getString("key");

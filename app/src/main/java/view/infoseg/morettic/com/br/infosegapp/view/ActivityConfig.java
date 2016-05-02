@@ -44,7 +44,7 @@ public class ActivityConfig extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        InfosegMain.setTitleToolbar("Configurações", container);
+        InfosegMain.setTitleToolbar(getString(R.string.configura_es), container);
         editor = ValueObject.MY_PREFERENCES.edit();
         v = inflater.inflate(R.layout.activity_config, container, false);
         bt = (Button) v.findViewById(R.id.btSalvarPreferencias);

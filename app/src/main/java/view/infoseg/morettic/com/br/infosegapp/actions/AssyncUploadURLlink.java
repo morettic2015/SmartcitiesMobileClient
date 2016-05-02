@@ -31,7 +31,7 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Fazendo upload...");
+        dialog.setMessage(a1.getString(R.string.upload_image));
         dialog.show();
     }
 

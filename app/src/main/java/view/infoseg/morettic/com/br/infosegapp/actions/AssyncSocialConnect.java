@@ -50,7 +50,7 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog.setMessage("Criando perfil...");
+        dialog.setMessage(ctx.getString(R.string.perfil_create));
         dialog.show();
     }
 
@@ -124,12 +124,12 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                     } else {//Cria um bitmap do APP
                         this.avatar = BitmapFactory.decodeResource(r1, R.drawable.ic_avatar_novo_01);
                     }
-                    mensagem = "Perfil criado com sucesso.";
+                    mensagem = ctx.getString(R.string.profile_sucess);
                 } else {
                     this.nome = this.email;
                     //Não achou o usuario cria o padrao mesmo.....
                     this.avatar = BitmapFactory.decodeResource(r1, R.drawable.ic_avatar_novo_01);
-                    mensagem = "Perfil criado com sucesso.";
+                    mensagem = ctx.getString(R.string.profile_sucess);
                 }
                 //Cria o usuario
                 Uri tempUri = HttpUtil.getImageUri(ctx, this.avatar);
@@ -156,7 +156,7 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
 
             }else{
                 //@Todo implementar o envio de email.....
-                mensagem = "Email já registrado. Um email com sua senha foi enviado para sua conta.";
+                mensagem = ctx.getString(R.string.email_already_registered);
             }
         }catch (Exception e) {
             js = new JSONObject();

@@ -67,7 +67,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // inflate and return the layout
-        InfosegMain.setTitleToolbar("Visualizar ocorrências", container);
+        InfosegMain.setTitleToolbar(getString(R.string.view_events), container);
         View v = inflater.inflate(R.layout.activity_map, container,
                 false);
 

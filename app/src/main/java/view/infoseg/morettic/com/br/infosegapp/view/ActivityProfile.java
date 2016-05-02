@@ -64,7 +64,7 @@ public class ActivityProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        InfosegMain.setTitleToolbar("Perfil", container);
+        InfosegMain.setTitleToolbar(getString(R.string.perfil), container);
 
         //recupera a view
         v = inflater.inflate(R.layout.activity_profile, container, false);

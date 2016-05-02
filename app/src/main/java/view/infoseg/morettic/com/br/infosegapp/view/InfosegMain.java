@@ -69,7 +69,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infoseg_main);
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
-        this.toolbar.setTitle("Smartcities framework");
+        this.toolbar.setTitle(getString(R.string.app_title_main));
         //Inicializa as preferencias do usuario
         ValueObject.MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
@@ -247,7 +247,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             alertDialogBuilder
                     .setMessage(getString(R.string.sair_remover_sessao))
                     .setCancelable(false)
-                    .setPositiveButton("SIM",
+                    .setPositiveButton(getString(R.string.SIM),
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     //Limpa as preferencias
@@ -259,7 +259,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                                 }
                             })
 
-                    .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(getString(R.string.NAO), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
 
                             dialog.cancel();
@@ -370,7 +370,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         alertDialogBuilder
                                 .setMessage(getString(R.string.view_config_map))
                                 .setCancelable(false)
-                                .setPositiveButton("SIM",
+                                .setPositiveButton(getString(R.string.SIM),
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
                                                 dialog.cancel();

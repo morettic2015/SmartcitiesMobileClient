@@ -1,41 +1,39 @@
 <resources>
-    <string name="app_name">SmartcitiesAPP</string>
+    <string name="app_name">City Watch APP</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <string name="action_settings">Copyright</string>
     <string name="title_activity_activity_ocorrencia">Registrar ocorrência</string>
-    <string name="title_activity_activity_map">Map</string>
+    <string name="title_activity_activity_map">Mapa</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="title_activity_login">Entrar</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
+    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in_short" translatable="false">Sign in</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Este campo é requerido</string>
+    <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
         completions."
     </string>
     <string name="title_activity_activity_adds">Patrocinadores</string>
 
-    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
-    <string name="start_level">Level 1</string>
-    <string name="next_level">Next Level</string>
+    <string name="interstitial_ad_sample" translatable="false">Interstitial Ad Sample</string>
+    <string name="start_level" translatable="false">Level 1</string>
+    <string name="next_level" translatable="false">Next Level</string>
     <!-- -
         This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
         For more information, see https://support.google.com/admob/answer/3052638
     <!- ca-app-pub-5450650045028162/2228043490 -->
     <!-- <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string> -->
-    <string name="interstitial_ad_unit_id">ca-app-pub-5450650045028162/2228043490</string>
+    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-5450650045028162/2228043490</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Concordo com os termos e diretrizes do serviço</string>
     <string name="senha">Senha</string>
@@ -43,7 +41,6 @@
     <string name="login">Login</string>
     <string name="foto_1">Foto 1</string>
     <string name="salvar">Salvar</string>
-    <string name="filtros">Filtros</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
     <string name="tipos_de_ocorr_ncias">Tipos de ocorrências</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Informe os tipos de ocorrência que deseja visualizar</string>
@@ -59,18 +56,18 @@
     <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
     <string name="descri_o">Descrição</string>
     <string name="tipo_do_servi_o">Tipo do serviço</string>
-    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, na área de saúde, educação, segurança e serviços</string>
+    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, em uma das categorias disponíveis</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
     <string name="registrar">Registrar</string>
-    <string name="title_activity_activity_ads">ActivityAds</string>
+    <string name="title_activity_activity_ads" translatable="false">ActivityAds</string>
     <string name="help_us">Ajude-nos!</string>
     <string name="compartilhe">Compartilhar</string>
     <string name="configura_es">Configurações</string>
     <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Informe seu celular para receber informativos via SMS. Iremos enviar alertas quando seu dispositivo estiver em área de ocorrências de sua prefêrencia.</string>
-    <string name="title">Title</string>
-    <string name="share_msg">Instale o APP Smartcities framework para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="title">Titulo</string>
+    <string name="share_msg">Instale o APP City Watch para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="invalid_locate">Localização inválida</string>
     <string name="register_event">Registrar ocorrência</string>
     <string name="view_events">Visualizar ocorrências</string>
@@ -79,8 +76,42 @@
     <string name="selecioneData">Selecione uma data</string>
     <string name="sair">Sair</string>
     <string name="mapa_ocorrencias">Mapa de ocorrências</string>
-    <string name="sair_remover_sessao">Deseja sair do SmartcitiesAPP e remover sua sessão atual?</string>
+    <string name="sair_remover_sessao">Deseja sair do City Watch e remover sua sessão atual?</string>
     <string name="preferences">"Preferências "</string>
     <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
     <string name="ok">OK</string>
+    <string name="app_title_main">City Watch</string>
+    <string name="a12">Visualizar ocorrências</string>
+    <string name="SIM">SIM</string>
+    <string name="NAO">Não</string>
+    <string name="error_invalid_email">Email invalido</string>
+    <string name="error_invalid_password">Senha muito curta</string>
+    <string name="filtros">Filtros</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>
+    <string name="registrar_ocorr_ncia">Registrar ocorrência</string>
+    <string name="opc_es">Opcões</string>
+    <string name="nome">Nome</string>
+    <string name="nascimento">Nascimento</string>
+    <string name="complemento">Complemento</string>
+    <string name="cep">CEP</string>
+    <string name="pessoa_juridica">Pessoa juridica</string>
+    <string name="pessoa_fisica">Pessoa fisica</string>
+    <string name="autenticando">Autenticando...</string>
+    <string name="consultando_ocorrencias">Consultando ocorrencias...</string>
+    <string name="save_config">Salvando as configurações...</string>
+    <string name="save_occurrences">Salvando ocorrencia...</string>
+    <string name="save_profile_msg">Salvando perfil...</string>
+    <string name="perfil_create">Criando perfil...</string>
+    <string name="upload_image">Fazendo upload...</string>
+    <string name="registro_de_ocorr_ncias_municipais">Registro de ocorrências municipais</string>
+    <string name="upa">Unidades de pronto atendimento</string>
+    <string name="esporte">Esporte</string>
+    <string name="cpf_cnpj">CPF/CNPJ</string>
+    <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Informe seu email senha e confirmação de senha para registrar-se</string>
+    <string name="confirmacao_de_senha">Confirmacao de senha</string>
+    <string name="registrar_se">Registrar-se</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="humidade">Humidade</string>
+    <string name="profile_sucess">Perfil criado com sucesso.</string>
+    <string name="email_already_registered">Email já registrado. Um email com sua senha foi enviado para sua conta.</string>
 </resources>
