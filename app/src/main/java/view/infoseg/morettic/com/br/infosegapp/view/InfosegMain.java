@@ -44,6 +44,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import static android.Manifest.permission.*;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 //import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
@@ -228,9 +229,13 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
             title = getString(R.string.mapa_ocorrencias);
         } else if (id == R.id.nav_list) {
-            fragment = new ListOcorrencia();
-
-            title = getString(R.string.list_ocorrencias);
+            if(isDataListLoaded()) {
+                fragment = new ListOcorrencia();
+                title = getString(R.string.list_ocorrencias);
+            }else{
+                fragment = new ActivityAds();
+                title = getString(R.string.help_us);
+            }
         } else if (id == R.id.nav_slideshow) {
             fragment = new ActivityProfile();
             title = getString(R.string.perfil);
@@ -387,7 +392,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
                 assyncLoadListOcorrencias.setCtx(getApplicationContext());
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
-                loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
+                if(isDataListLoaded()) {
+                    loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
+                }
                 break;
             case R.id.btConfigSplash:
                 //whatever
@@ -415,5 +422,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             e.printStackTrace();
         }
     }
-
+    private boolean isDataListLoaded(){
+        if(LIST_OCORRENCIAS==null){
+            return false;
+        }else{
+            return true;
+        }
+    }
 }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="NAO">No</string>
+    <string name="SIM">sí</string>
+    <string name="a12">Ver ocurrencias</string>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ir a la pantalla de inicio"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
@@ -19,6 +22,11 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartir con"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
+    <string name="action_settings">derechos de autor</string>
+    <string name="app_name">City Watch APP</string>
+    <string name="app_title_main">City Watch</string>
+    <string name="autenticando">Conectado</string>
+    <string name="cep">código postal</string>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> necesita uno o varios servicios de Google Play que no están disponibles en este momento. Ponte en contacto con el desarrollador para obtener ayuda."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Habilitar los Servicios de Google Play"</string>
     <string msgid="2016066508617425489" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no funcionará hasta que no habilites los Servicios de Google Play."</string>
@@ -48,6 +56,40 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Abrir en teléfono"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Iniciar sesión"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
+    <string name="compartilhe">Cuota</string>
+    <string name="complemento">Complemento</string>
+    <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Estoy de acuerdo con el EULA</string>
+    <string name="configura_es">Ajustes</string>
+    <string name="configure_suas_preferencias_no_app">Ajustar sus preferencias en APP</string>
+    <string name="confirmacao_de_senha">Confirmación de contraseña</string>
+    <string name="consultando_ocorrencias">Consulta de ocurrencias ...</string>
+    <string name="cpf_cnpj">Doc. Id.</string>
+    <string name="descri_o">Descripción</string>
+    <string name="educa_o">Educación</string>
+    <string name="email">Email</string>
+    <string name="email_already_registered">El correo electrónico ya registrado. Un correo electrónico con su contraseña ha sido enviada a su cuenta.</string>
+    <string name="entrar_ou_registrar_se">Iniciar sesión o registrarse</string>
+    <string name="enviar">Enviar</string>
+    <string name="error_field_required">Este campo es obligatorio</string>
+    <string name="error_incorrect_password">contraseña incorrecta</string>
+    <string name="error_invalid_email">No válida de correo electrónico</string>
+    <string name="error_invalid_password">Contraseña demasiado corta</string>
+    <string name="esporte">deporte</string>
+    <string name="filtros">Filtros</string>
+    <string name="foto_1">Foto 1</string>
+    <string name="hello_blank_fragment">fu</string>
+    <string name="help_us">Ayúdanos!</string>
+    <string name="humidade">Humedad</string>
+    <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Introduzca los tipos de eventos que desea ver</string>
+    <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Informe a su teléfono móvil para recibir información a través de SMS. Le mandaremos una alerta cuando el dispositivo está en la zona de las ocurrencias de su elección.</string>
+    <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Introduzca su contraseña de correo electrónico y la confirmación de la contraseña para registrarse</string>
+    <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Introduzca sus datos y mantenerlos actualizados, para colaborar en eventos en su municipio</string>
+    <string name="invalid_locate">Localización inválida</string>
+    <string name="list_ocorrencias">lista de resultados</string>
+    <string name="login">Login</string>
+    <string name="mapa_ocorrencias">Mapa de ocurrencias </string>
+    <string name="meio_ambiente">Medio ambiente</string>
+    <string name="minhas_ocorr_ncias">Mis ocurrencias</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Enviar contenido"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Buscando dispositivos…"</string>
     <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Conectar a dispositivo"</string>
@@ -59,8 +101,57 @@
     <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Dejar de enviar contenido"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"Sistema"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Dispositivos"</string>
+    <string name="nascimento">Cumpleaños</string>
+    <string name="nome">Nombre</string>
+    <string name="ok">OK</string>
+    <string name="opc_es">Opciones</string>
+    <string name="perfil">Perfil</string>
+    <string name="perfil_create">Creación de perfil ...</string>
+    <string name="pessoa_fisica">Persona física</string>
+    <string name="pessoa_juridica">Persona jurídica</string>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Borrar búsqueda"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Buscar"</string>
+    <string name="politica">Politica</string>
+    <string name="preferences">"Preferencias"</string>
+    <string name="profile_sucess">Perfil creado con éxito.</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña (opcional)</string>
+    <string name="register_event">Registro ocurrencia</string>
+    <string name="registrar">Registrar</string>
+    <string name="registrar_ocorr_ncia">Registro ocurrencia</string>
+    <string name="registrar_se">Inscribirse</string>
+    <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registrar eventos en su ciudad, en una de las categorías disponibles</string>
+    <string name="registro_de_ocorr_ncias_municipais">Registro de ocorrências municipais</string>
+    <string name="sa_de">Salud</string>
+    <string name="sair">Dejar</string>
+    <string name="sair_remover_sessao">¿Quieres salir de lo City Wath y renovar la sesión actual?</string>
+    <string name="salvar">Guardar</string>
+    <string name="saude">Salud</string>
+    <string name="save_config">Guardar las preferencias ...</string>
+    <string name="save_occurrences">Guardar ocurrencia ...</string>
+    <string name="save_profile_msg">Guardar perfil ...</string>
+    <string name="seguran_a">Seguridad</string>
+    <string name="selecioneData">Seleccione una fecha</string>
+    <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>
+    <string name="senha">Contraseña</string>
+    <string name="share_msg">! Instalar APP Ciudad del reloj para registrar los problemas de su comunidad y compartir con los ciudadanos \ nhttps: //play.google.com/store/apps/details id = view.infoseg.morettic.com.br.infosegapp</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string name="t_tulo_da_ocorr_ncia">Nombre del evento</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="tipo_do_servi_o">Tipo de servicio</string>
+    <string name="tipos_de_ocorr_ncias">Tipos de eventos</string>
+    <string name="title">Titulo</string>
+    <string name="title_activity_activity_adds">Patrocinadores</string>
+    <string name="title_activity_activity_map">Mapa</string>
+    <string name="title_activity_activity_ocorrencia">Registro ocurrencia</string>
+    <string name="title_activity_login">Entrar</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="transporte">Transporte</string>
+    <string name="upa">Unidades de emergencia</string>
+    <string name="upload_image">Subiendo ...</string>
+    <string name="view_config_map">Para ver los eventos en el mapa debe configurar el filtro</string>
+    <string name="view_events">Ver ocurrencias</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Ver los eventos de su elección en el mapa.</string>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Comprar con Google"</string>
 </resources>

@@ -91,6 +91,4 @@
     <string name="humidade">Humidity</string>
     <string name="email_already_registered">Email already registered. An email with your password has been sent to your account.</string>
     <string name="profile_sucess">Profile successfully created.</string>
-    <string name="action_sign_in" translatable="false">Sign in or register</string>
-    <string name="action_sign_in_short" translatable="false">Sign in</string>
 </resources>

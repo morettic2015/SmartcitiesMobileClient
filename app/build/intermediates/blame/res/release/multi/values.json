@@ -3743,7 +3743,14 @@
                     "endOffset": 49795
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 907,
+                        "endColumn": 83,
+                        "endOffset": 986
+                    }
                 }
             },
             {
@@ -3755,7 +3762,14 @@
                     "endOffset": 49873
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 992,
+                        "endColumn": 77,
+                        "endOffset": 1065
+                    }
                 }
             },
             {
@@ -4319,14 +4333,7 @@
                     "endOffset": 55333
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 110,
-                        "startColumn": 4,
-                        "startOffset": 7566,
-                        "endColumn": 69,
-                        "endOffset": 7631
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -4434,14 +4441,7 @@
                     "endOffset": 55920
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 115,
-                        "startColumn": 4,
-                        "startOffset": 7863,
-                        "endColumn": 124,
-                        "endOffset": 7983
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -4598,14 +4598,7 @@
                     "endOffset": 56728
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 113,
-                        "startColumn": 4,
-                        "startOffset": 7745,
-                        "endColumn": 45,
-                        "endOffset": 7786
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -4641,14 +4634,7 @@
                     "endOffset": 57346
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 109,
-                        "startColumn": 4,
-                        "startOffset": 7408,
-                        "endColumn": 156,
-                        "endOffset": 7560
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -5093,14 +5079,7 @@
                     "endOffset": 60048
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 114,
-                        "startColumn": 4,
-                        "startOffset": 7792,
-                        "endColumn": 69,
-                        "endOffset": 7857
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -5172,14 +5151,7 @@
                     "endOffset": 60395
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 111,
-                        "startColumn": 4,
-                        "startOffset": 7637,
-                        "endColumn": 53,
-                        "endOffset": 7686
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -5431,14 +5403,7 @@
                     "endOffset": 62035
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 112,
-                        "startColumn": 4,
-                        "startOffset": 7692,
-                        "endColumn": 51,
-                        "endOffset": 7739
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {

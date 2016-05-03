@@ -424,6 +424,7 @@
     <string name="descri_o">Descrição</string>
     <string name="educa_o">Educação</string>
     <string name="email">Email</string>
+    <string name="email_already_registered">Email já registrado. Um email com sua senha foi enviado para sua conta.</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
     <string name="enviar">Enviar</string>
     <string name="error_field_required">Este campo é requerido</string>
@@ -480,6 +481,7 @@
     <string name="place_autocomplete_search_hint">Search</string>
     <string name="politica">Politica</string>
     <string name="preferences">"Preferências "</string>
+    <string name="profile_sucess">Perfil criado com sucesso.</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="register_event">Registrar ocorrência</string>
