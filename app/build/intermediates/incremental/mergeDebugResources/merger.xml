@@ -1778,7 +1778,7 @@
         <item name="android:radius">20dp</item>
     </style><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">false</item>
+        <item name="windowNoTitle">true</item>
     </style></file><file path="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\res\values-v21\styles.xml" qualifiers="v21"><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
