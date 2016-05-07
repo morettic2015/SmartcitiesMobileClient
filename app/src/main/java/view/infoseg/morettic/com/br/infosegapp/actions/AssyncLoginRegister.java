@@ -31,7 +31,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
     public static final String LOGIN_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     private ProgressDialog dialog;
     private View a1;
-    private String email, senha;
+    private String email, senha, desc, imagePath, adrress;
     private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
     String msg;
 
@@ -65,6 +65,17 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         }
     }
 
+    public AssyncLoginRegister(Context ctx, String login, String senha,String desc, String imagePath, String adrress) {
+        this.dialog = new ProgressDialog(ctx);
+        msg = ctx.getString(R.string.autenticando);
+        this.email = login;
+        this.senha = senha;
+        this.adrress = adrress;
+        this.imagePath = imagePath;
+        this.desc = desc;
+        this.adrress = adrress;
+        //builder = new AlertDialog.Builder(this.a1.getContext());
+    }
     public AssyncLoginRegister(Context ctx, String login, String senha) {
         this.dialog = new ProgressDialog(ctx);
         msg = ctx.getString(R.string.autenticando);

@@ -51,12 +51,11 @@ public class HttpUtil {
             while ((inputLine = in.readLine()) != null)
                 response.append(inputLine);
 
-            in.close();
             inputLine = null;
         }catch(Exception e){
             e.printStackTrace();
         }finally {
-            in.close();
+            //in.close();
             website = null;
             in = null;
             connection = null;
@@ -95,12 +94,12 @@ public class HttpUtil {
                 "email="+email+
                 "&avatar="+avatar+
                 "&nome="+ encode(nome, "UTF-8")+
-                "&cpfCnpj="+cpfCnpj+
-                "&cep="+cep+
+                "&cpfCnpj="+encode(cpfCnpj)+
+                "&cep="+encode(cep)+
                 "&passwd="+passwd+
                 "&complemento="+ encode(complemento)+
                 "&pjf="+Boolean.toString(pjf)+
-                "&nasc="+nasc+
+                "&nasc="+encode(nasc)+
                 "&id="+id;
     }
 
@@ -159,8 +158,8 @@ public class HttpUtil {
             e.printStackTrace();
         } finally {
             url = null;
-            input.close();
-            connection.disconnect();
+            //input.close();
+            //connection.disconnect();
             return myBitmap;
         }
     }

@@ -25,11 +25,24 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+//import io.fabric.sdk.android.Fabric;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.Callback;
+import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterException;
+import com.twitter.sdk.android.core.models.Tweet;
+import com.twitter.sdk.android.tweetui.TweetUtils;
+import com.twitter.sdk.android.tweetui.TweetView;
+
+import io.fabric.sdk.android.Fabric;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -39,6 +52,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.Manifest.permission.*;
@@ -53,9 +67,13 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
 //import android.app.FragmentTransaction;
 
 public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+
     //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
+    private static final int TWITTER_CODE = 140;
     private Toolbar toolbar;
+    private FloatingActionButton fab;
     //private Uri imageUri;
     private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
 
@@ -68,14 +86,15 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_infoseg_main);
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         this.toolbar.setTitle(getString(R.string.app_title_main));
         //Inicializa as preferencias do usuario
         ValueObject.MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setVisibility(View.GONE);
         fab.setOnClickListener((View.OnClickListener) this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -103,6 +122,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         ImageView b5 = (ImageView) findViewById(R.id.btListOcorrencias);
         b5.setOnClickListener((View.OnClickListener) this);
 
+
         /**
          * Abre a janela para ativar o GPS do celular
          * */
@@ -127,6 +147,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         assyncLoadListOcorrencias.execute();
 
         ValueObject.MAIN = this;
+        //Inicializa o cliente twitter
+        TwitterUtil.initTwitterConfig(this);
         /**
          *
          *  @PQP O GOOGLE TEM QUE CAGAR NE AGORA PRECISO VERIFICAR CADA PERMISSAO NA MAO.... A  VAI SE FUDE SENAO A PORRA DA NULL POINTE E O CARALHO
@@ -229,10 +251,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
             title = getString(R.string.mapa_ocorrencias);
         } else if (id == R.id.nav_list) {
-            if(isDataListLoaded()) {
+            if (isDataListLoaded()) {
                 fragment = new ListOcorrencia();
                 title = getString(R.string.list_ocorrencias);
-            }else{
+            } else {
                 fragment = new ActivityAds();
                 title = getString(R.string.help_us);
             }
@@ -342,7 +364,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                     }
                 }
                 break;
+            case TWITTER_CODE:
+                TwitterUtil.onActResult(requestCode, resultCode, imageReturnedIntent);
+                break;
         }
+
     }
 
 
@@ -392,7 +418,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
                 assyncLoadListOcorrencias.setCtx(getApplicationContext());
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
-                if(isDataListLoaded()) {
+                if (isDataListLoaded()) {
                     loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
                 }
                 break;
@@ -402,6 +428,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.fab:
                 //@todo
+                // TODO: Use a more specific parent
+                // TODO: Base this Tweet ID on some data from elsewhere in your app
+                TwitterUtil.getLatestTweet();
+                // fa
                 break;
         }
     }
@@ -422,10 +452,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             e.printStackTrace();
         }
     }
-    private boolean isDataListLoaded(){
-        if(LIST_OCORRENCIAS==null){
+
+    private boolean isDataListLoaded() {
+        if (LIST_OCORRENCIAS == null) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }

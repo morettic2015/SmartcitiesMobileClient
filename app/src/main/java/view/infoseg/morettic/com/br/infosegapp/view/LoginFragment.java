@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
+import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
@@ -20,7 +21,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
 /**
  * Created by LuisAugusto on 02/03/2016.
  */
-public class LoginFragment extends DialogFragment {
+public class LoginFragment extends DialogFragment implements View.OnClickListener {
 
     private Button btLogin;
     private EditText email, senha;
@@ -51,46 +52,18 @@ public class LoginFragment extends DialogFragment {
         email.setText(MY_PREFERENCES.getString("email", ""));
         senha.setText(MY_PREFERENCES.getString("passwd", ""));
 
-        btLogin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                if (email.getText().toString() == null || email.getText().toString().equals("")) {
-                    email.setFocusable(true);
-                } else if (senha.getText().toString() == null || senha.getText().toString().equals("")) {
-                    senha.setFocusable(true);
-                } else {
-                    AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(v.getContext(), email.getText().toString(), senha.getText().toString());
-                    assyncLoginRegister.execute();
-                }
-
-
-            }
-        });
+        btLogin.setOnClickListener(this);
         ImageButton google = (ImageButton) v.findViewById(R.id.imageButtonGoogle);
-        google.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                SocialFragment socialFragment = SocialFragment.newInstance();
-                socialFragment.show(getFragmentManager(), "dialog");
-            }
-        });
+        google.setOnClickListener(this);
         ImageButton facebook = (ImageButton) v.findViewById(R.id.imageButtonFacebook);
-        facebook.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                SocialFragment socialFragment = SocialFragment.newInstance();
-                socialFragment.show(getFragmentManager(), "dialog");
-            }
-        });
+        facebook.setOnClickListener(this);
         ImageButton twitter = (ImageButton) v.findViewById(R.id.imageButtonTwitter);
-        twitter.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                SocialFragment socialFragment = SocialFragment.newInstance();
-                socialFragment.show(getFragmentManager(), "dialog");
-            }
-        });
+        twitter.setOnClickListener(this);
 
 
         return v;
     }
+
 
     public void onDismiss(final DialogInterface dialog) {
         //final Activity activity = getActivity();
@@ -104,6 +77,10 @@ public class LoginFragment extends DialogFragment {
             }
         } catch (Exception e) {
             //e.printStackTrace();
+        }finally {
+            btLogin = null;
+            email = null;
+            senha = null;
         }
     }
 
@@ -129,5 +106,31 @@ public class LoginFragment extends DialogFragment {
         btLogin = null;
         email = null;
         senha = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btLoginRegister1:
+                if (email.getText().toString() == null || email.getText().toString().equals("")) {
+                    email.setFocusable(true);
+                } else if (senha.getText().toString() == null || senha.getText().toString().equals("")) {
+                    senha.setFocusable(true);
+                } else {
+                    AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(v.getContext(), email.getText().toString(), senha.getText().toString());
+                    assyncLoginRegister.execute();
+                }
+                break;
+            case R.id.imageButtonGoogle:
+                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                break;
+            case R.id.imageButtonFacebook:
+                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                break;
+            case R.id.imageButtonTwitter:
+                TwitterUtil.click();
+                break;
+
+        }
     }
 }

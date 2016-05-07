@@ -158,6 +158,14 @@
         android:layout_below="@+id/textView30"
         android:layout_centerHorizontal="true" />
 
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
     <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -170,4 +178,7 @@
         android:layout_alignTop="@+id/textView30"
         android:layout_toLeftOf="@+id/imageView4"
         android:layout_toStartOf="@+id/imageView4" />
+
+
+
 </RelativeLayout>

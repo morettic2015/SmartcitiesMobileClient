@@ -14,11 +14,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="Smartcities framework - Registro de ocorrências"
-        android:src="@mipmap/ic_city_watch"
+        android:src="@drawable/city_watch_play"
         android:layout_marginLeft="15dp"
         android:layout_rowSpan="2"
         android:layout_row="0"
