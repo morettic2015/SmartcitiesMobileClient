@@ -3,6 +3,7 @@ package view.infoseg.morettic.com.br.infosegapp.view;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 
 /**
@@ -68,11 +70,11 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
     public void onDismiss(final DialogInterface dialog) {
         //final Activity activity = getActivity();
         try {
-            if (!ValueObject.AUTENTICADO) {
-                ValueObject.LOGIN = LoginFragment.newInstance();
-                ValueObject.LOGIN.show(getFragmentManager(), "dialog");
+            if (!AUTENTICADO) {
+                LOGIN = LoginFragment.newInstance();
+                LOGIN.show(getFragmentManager(), "dialog");
             } else {
-                ValueObject.LOGIN.dismiss();
+                LOGIN.dismiss();
                 this.dismiss();
             }
         } catch (Exception e) {
@@ -122,7 +124,9 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                 }
                 break;
             case R.id.imageButtonGoogle:
-                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                //SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                Intent googlePlus = new Intent(MAIN,ActivityGPlus.class);
+                MAIN.startActivity(googlePlus);
                 break;
             case R.id.imageButtonFacebook:
                 SocialFragment.newInstance().show(getFragmentManager(), "dialog");

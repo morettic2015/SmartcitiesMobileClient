@@ -53,6 +53,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="view.infoseg.morettic.com.br.infosegapp.view.ActivityGPlus"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -78,6 +83,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="0c26a186ce4351babd320ea71ff44034565beb21" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

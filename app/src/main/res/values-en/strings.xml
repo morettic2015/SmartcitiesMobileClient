@@ -91,4 +91,8 @@
     <string name="humidade">Humidity</string>
     <string name="email_already_registered">Email already registered. An email with your password has been sent to your account.</string>
     <string name="profile_sucess">Profile successfully created.</string>
+    <string name="criar_uma_conta">Sign up is free!</string>
+    <string name="person_info_null">Person information is null</string>
+    <string name="google_connected">User is connected to google!</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Use your Google Plus account to register and log in. So automatically we create your profile and load your avatar.</string>
 </resources>

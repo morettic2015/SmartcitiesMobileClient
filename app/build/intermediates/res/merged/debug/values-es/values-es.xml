@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <plurals name="tw__time_hours">
         <item quantity="one">1 h</item>
         <item quantity="other">%dh</item>
@@ -76,6 +76,7 @@
     <string name="confirmacao_de_senha">Confirmación de contraseña</string>
     <string name="consultando_ocorrencias">Consulta de ocurrencias ...</string>
     <string name="cpf_cnpj">Doc. Id.</string>
+    <string name="criar_uma_conta"> Regístrate es gratis!</string>
     <string name="descri_o">Descripción</string>
     <string name="dgts__call_me">Llámame</string>
     <string name="dgts__calling">Llamando…</string>
@@ -136,6 +137,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="esporte">deporte</string>
     <string name="filtros">Filtros</string>
     <string name="foto_1">Foto 1</string>
+    <string name="google_connected">El usuario está conectado a Google!</string>
     <string name="hello_blank_fragment">fu</string>
     <string name="help_us">Ayúdanos!</string>
     <string name="humidade">Humedad</string>
@@ -166,6 +168,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="opc_es">Opciones</string>
     <string name="perfil">Perfil</string>
     <string name="perfil_create">Creación de perfil ...</string>
+    <string name="person_info_null">persona información es nula</string>
     <string name="pessoa_fisica">Persona física</string>
     <string name="pessoa_juridica">Persona jurídica</string>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Borrar búsqueda"</string>
@@ -226,6 +229,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="tw__tweet_content_description">%1$s. %2$s. %3$s.</string>
     <string name="upa">Unidades de emergencia</string>
     <string name="upload_image">Subiendo ...</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilice su cuenta de Google Plus para registrarse y conectarse. Así automáticamente creamos su perfil y cargar su avatar.</string>
     <string name="view_config_map">Para ver los eventos en el mapa debe configurar el filtro</string>
     <string name="view_events">Ver ocurrencias</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>

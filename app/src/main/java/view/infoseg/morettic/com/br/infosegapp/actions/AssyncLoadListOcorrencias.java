@@ -52,12 +52,12 @@ public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, Strin
                 try {
                     LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getBitmapFromURLBlobKey(ja.getJSONObject(i).getString("token"));
                     if(LIST_BITMAPS_OCORRENCIAS[i]!=null){//Requisição nao retornou uma imagem válida......
-                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(LIST_BITMAPS_OCORRENCIAS[i], 96, 96);
+                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(LIST_BITMAPS_OCORRENCIAS[i], 200, 200);
                     }else{
                         Resources res = ctx.getResources();
                         int id = R.drawable.ic_smartcities_icon_logo;
                         Bitmap b = BitmapFactory.decodeResource(res, id);
-                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 80, 80);
+                        LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 200, 200);
                     }
                 }catch(Exception e){
                     LIST_BITMAPS_OCORRENCIAS[i] = null;

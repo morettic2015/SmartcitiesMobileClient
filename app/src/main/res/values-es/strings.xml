@@ -91,4 +91,8 @@
     <string name="view_events">Ver ocurrencias</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Ver los eventos de su elección en el mapa.</string>
+    <string name="criar_uma_conta"> Regístrate es gratis!</string>
+    <string name="google_connected">El usuario está conectado a Google!</string>
+    <string name="person_info_null">persona información es nula</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilice su cuenta de Google Plus para registrarse y conectarse. Así automáticamente creamos su perfil y cargar su avatar.</string>
 </resources>

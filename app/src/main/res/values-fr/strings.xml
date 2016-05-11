@@ -91,4 +91,8 @@
     <string name="view_events">Voir la carte occurrences</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Voir la carte occurrences</string>
+    <string name="criar_uma_conta">Inscrivez-vous gratuitement !</string>
+    <string name="google_connected">L\'utilisateur est connecté à Google!</string>
+    <string name="person_info_null">Informations personne est null</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilisez votre compte Google Plus pour vous inscrire et vous connecter. Donc, automatiquement, nous créons votre profil et charger votre avatar.</string>
 </resources>

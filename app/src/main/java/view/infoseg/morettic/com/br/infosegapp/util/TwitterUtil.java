@@ -11,17 +11,26 @@ import android.os.AsyncTask;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterApiClient;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
+import com.twitter.sdk.android.core.models.Tweet;
 import com.twitter.sdk.android.core.models.User;
+import com.twitter.sdk.android.core.services.StatusesService;
+import com.twitter.sdk.android.tweetui.TimelineResult;
+import com.twitter.sdk.android.tweetui.UserTimeline;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -85,11 +94,6 @@ public class TwitterUtil {
         return loginButton.callOnClick();
     }
 
-
-    public static void getLatestTweet() {
-
-    }
-
     public static void getTwitterData() {
         TwitterSession session = Twitter.getSessionManager().getActiveSession();
         Twitter.getApiClient(session).getAccountService().verifyCredentials(true, false, new Callback<User>() {
@@ -114,17 +118,20 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
     private User user;
     private Activity act;
     private ProgressDialog dialog;
+
     public AssyncSaveTwitterProfile(User user, Activity a) {
         this.user = user;
         this.act = a;
         this.dialog = new ProgressDialog(a);
 
     }
+
     @Override
     protected void onPreExecute() {
         this.dialog.setMessage(act.getString(R.string.autenticando));
         this.dialog.show();
     }
+
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         dialog.dismiss();
@@ -180,6 +187,30 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
             tempUri = null;
             realPathInSO = null;
             tempUri = null;
+            /////CARRRREEEGGGGGA TWEEETSSS de 5 dias atras...
+          /*  Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DATE, -5);
+
+            UserTimeline userTimeline = new UserTimeline.Builder().screenName(user.screenName).build();
+            userTimeline.next(cal.getTimeInMillis(), new Callback<TimelineResult<Tweet>>() {
+                @Override
+                public void success(Result<TimelineResult<Tweet>> result1) {
+                    List<Tweet> lTweet = result1.data.items;
+                    for (Tweet t1 : lTweet) {
+                        if (t1.coordinates != null) {
+                            t1.coordinates.getLatitude();
+                            t1.coordinates.getLongitude();
+                        }
+                    }
+                }
+
+                @Override
+                public void failure(TwitterException exception) {
+
+                }
+            });*/
+
+
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (JSONException e) {
@@ -188,58 +219,9 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             return js.toString();
         }
     }
 
 }
-
-/**
- * Twitter.getApiClient(result.data).getAccountService().verifyCredentials(true, false, new Callback<User>() {
- *
- * @Override public void success(Result<User> userResult) {
- * <p/>
- * User user = userResult.data;
- * <p/>
- * try {
- * Bitmap btm = HttpUtil.getBitmapFromURL(user.profileBackgroundImageUrl);
- * JSONObject js = HttpUtil.getJSONFromUrl(AssyncUploadURLlink.UPLOAD_URL);
- * ValueObject.URL_SUBMIT_UPLOAD = js.getString("uploadPath");
- * <p/>
- * // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
- * Uri tempUri = HttpUtil.getImageUri(activity.getApplicationContext(), btm);
- * <p/>
- * // CALL THIS METHOD TO GET THE ACTUAL PATH
- * String realPathInSO = HttpUtil.getRealPathFromURI(tempUri, activity);
- * <p/>
- * String fTYpe = realPathInSO.substring(realPathInSO.length() - 3, realPathInSO.length());
- * <p/>
- * js = HttpFileUpload.uploadFile(realPathInSO,
- * ValueObject.URL_SUBMIT_UPLOAD,
- * fTYpe);
- * js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
- * <p/>
- * ValueObject.UPLOAD_AVATAR = js.getString("key");
- * ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");
- * <p/>
- * //AssyncLoginRegister assyncLoginRegister = AssyncLoginRegister(activity.getApplicationContext(), String login, String senha, user.description, String imagePath, user.location);
- * //assyncLoginRegister.execute();
- * //TODO IMPOR TWETTS + PROFILE.
- * <p/>
- * } catch (JSONException e) {
- * e.printStackTrace();
- * } catch (IOException e) {
- * e.printStackTrace();
- * } catch (Exception e) {
- * e.printStackTrace();
- * }
- * }
- * @Override public void failure(TwitterException e) {
- * <p/>
- * }
- * <p/>
- * }
- * <p/>
- * );
- */

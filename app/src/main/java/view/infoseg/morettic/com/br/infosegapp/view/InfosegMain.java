@@ -72,6 +72,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private static final int TWITTER_CODE = 140;
+
     private Toolbar toolbar;
     private FloatingActionButton fab;
     //private Uri imageUri;
@@ -278,7 +279,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     //Limpa as preferencias
-                                    getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
+                                    //getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
                                     //Move para background e destroi o app
                                     moveTaskToBack(true);
                                     Process.killProcess(Process.myPid());
@@ -356,7 +357,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
                         ImageButton bt = (ImageButton) findViewById(R.id.btAvatar);
                         bt.setImageBitmap(yourSelectedImage);
-
+                        if(yourSelectedImage!=null)
+                            ValueObject.AVATAR_BITMAP = yourSelectedImage;
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException e) {
@@ -420,6 +422,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
                 if (isDataListLoaded()) {
                     loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
+                }else{
+                    loadFragment(new ActivityAds(), getString(R.string.help_us));
                 }
                 break;
             case R.id.btConfigSplash:
@@ -430,7 +434,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 //@todo
                 // TODO: Use a more specific parent
                 // TODO: Base this Tweet ID on some data from elsewhere in your app
-                TwitterUtil.getLatestTweet();
+                //.TwitterUtil.getLatestTweet();
                 // fa
                 break;
         }

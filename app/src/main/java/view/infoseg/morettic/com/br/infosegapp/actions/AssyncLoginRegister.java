@@ -125,7 +125,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                     // url = HttpUtil.getTokenImagemById(ValueObject.UPLOAD_AVATAR);
                     // js = HttpUtil.getJSONFromUrl(url);
                     ValueObject.AVATAR_BITMAP = HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar"));
-                    ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 96, 96);
+                    ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 200, 200);
 
 
                 } catch (Exception e) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <plurals name="tw__time_hours">
         <item quantity="one">1 h</item>
         <item quantity="other">%d h</item>
@@ -76,6 +76,7 @@
     <string name="confirmacao_de_senha">Confirmation mot de passe</string>
     <string name="consultando_ocorrencias">Interrogation occurrences ...</string>
     <string name="cpf_cnpj">Document</string>
+    <string name="criar_uma_conta">Inscrivez-vous gratuitement !</string>
     <string name="descri_o">La description</string>
     <string name="dgts__call_me">Appelez moi</string>
     <string name="dgts__calling">Appel en cours…</string>
@@ -135,6 +136,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="esporte">Sport</string>
     <string name="filtros">Filtres</string>
     <string name="foto_1">Image 1</string>
+    <string name="google_connected">L\'utilisateur est connecté à Google!</string>
     <string name="hello_blank_fragment">Fuck u</string>
     <string name="help_us">Aidez nous</string>
     <string name="humidade">Humidité</string>
@@ -165,6 +167,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="opc_es">options de</string>
     <string name="perfil">Profil</string>
     <string name="perfil_create">Création d\'un profil ...</string>
+    <string name="person_info_null">Informations personne est null</string>
     <string name="pessoa_fisica">Personnel</string>
     <string name="pessoa_juridica">Compagnie</string>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Effacer la recherche"</string>
@@ -225,6 +228,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="tw__tweet_content_description">%1$s. %2$s. %3$s.</string>
     <string name="upa">Unités d\'urgence</string>
     <string name="upload_image">Uploading ...</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilisez votre compte Google Plus pour vous inscrire et vous connecter. Donc, automatiquement, nous créons votre profil et charger votre avatar.</string>
     <string name="view_config_map">Pour regarder les occurrences sur la carte u besoin de u config filtres</string>
     <string name="view_events">Voir la carte occurrences</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>

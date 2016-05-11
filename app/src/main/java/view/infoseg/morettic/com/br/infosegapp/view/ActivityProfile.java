@@ -101,12 +101,12 @@ public class ActivityProfile extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 int opcao = radioGroup.getCheckedRadioButtonId();
                 if (opcao == rdCNPJ.getId()) {
-                    cnpjMask = Mask.insert("##.###.###/####-##", cpf);
+                    cnpjMask = Mask.insert("##.###.###/####-#########", cpf);
                     cpf.addTextChangedListener(cnpjMask);
                     if (cnpjMask != null)
                         cpf.removeTextChangedListener(cpfMask);
                 } else {
-                    cpfMask = Mask.insert("###.###.###-##", cpf);
+                    cpfMask = Mask.insert("###.###.###-#########", cpf);
                     cpf.addTextChangedListener(cpfMask);
                     if (cnpjMask != null)
                         cpf.removeTextChangedListener(cnpjMask);

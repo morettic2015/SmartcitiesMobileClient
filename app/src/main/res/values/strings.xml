@@ -115,4 +115,10 @@
     <string name="humidade">Humidade</string>
     <string name="profile_sucess">Perfil criado com sucesso.</string>
     <string name="email_already_registered">Email já registrado. Um email com sua senha foi enviado para sua conta.</string>
+    <string name="criar_uma_conta">Cadastre-se é gratuito!</string>
+    <string name="facebook_app_id" translatable="false">880918378640520</string>
+    <string name="server_client_id" translatable="false">811880962924-g0dcla32a9uau5gni7amqdl05osjt3h4.apps.googleusercontent.com</string>
+    <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilize sua conta do Google PLUS para registrar-se e fazer login. Assim automaticamente criamos seu perfil e carregamos seu avatar.</string>
+    <string name="google_connected">Usuário está conectado ao Google!</string>
+    <string name="person_info_null">Informação do perfil nao encontrada....</string>
 </resources>
