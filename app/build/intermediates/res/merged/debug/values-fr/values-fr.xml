@@ -35,7 +35,7 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Partager avec %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Réduire"</string>
     <string name="action_settings">droits d\'auteur</string>
-    <string name="app_name">City Watch APP</string>
+    <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Authentifier ...</string>
     <string name="cep">Code postal</string>
@@ -196,6 +196,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Choisissez la distance pour rechercher</string>
     <string name="senha">Mot de passe</string>
     <string name="share_msg">Installez City Watch et partager u occurrences de la ville!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="soletre_ocorrencia">Prononcez le mot</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="t_tulo_da_ocorr_ncia">Titre de Occurrence</string>
     <string name="temperatura">Température</string>
@@ -229,6 +230,8 @@ numéro de téléphone et/ou votre email.</string>
     <string name="upa">Unités d\'urgence</string>
     <string name="upload_image">Uploading ...</string>
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilisez votre compte Google Plus pour vous inscrire et vous connecter. Donc, automatiquement, nous créons votre profil et charger votre avatar.</string>
+    <string name="verifique_erros1">S\'il vous plaît vérifier les champs [</string>
+    <string name="verifique_erros2">] Et essayer à nouveau.</string>
     <string name="view_config_map">Pour regarder les occurrences sur la carte u besoin de u config filtres</string>
     <string name="view_events">Voir la carte occurrences</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>

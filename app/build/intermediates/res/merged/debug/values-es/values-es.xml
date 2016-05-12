@@ -35,7 +35,7 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
     <string name="action_settings">derechos de autor</string>
-    <string name="app_name">City Watch APP</string>
+    <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Conectado</string>
     <string name="cep">código postal</string>
@@ -197,6 +197,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>
     <string name="senha">Contraseña</string>
     <string name="share_msg">! Instalar APP Ciudad del reloj para registrar los problemas de su comunidad y compartir con los ciudadanos \ nhttps: //play.google.com/store/apps/details id = view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="soletre_ocorrencia">Hablar la palabra</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
     <string name="t_tulo_da_ocorr_ncia">Nombre del evento</string>
     <string name="temperatura">Temperatura</string>
@@ -230,6 +231,8 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="upa">Unidades de emergencia</string>
     <string name="upload_image">Subiendo ...</string>
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilice su cuenta de Google Plus para registrarse y conectarse. Así automáticamente creamos su perfil y cargar su avatar.</string>
+    <string name="verifique_erros1">Por favor, compruebe los campos [</string>
+    <string name="verifique_erros2">] Y vuelve a intentarlo.</string>
     <string name="view_config_map">Para ver los eventos en el mapa debe configurar el filtro</string>
     <string name="view_events">Ver ocurrencias</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>

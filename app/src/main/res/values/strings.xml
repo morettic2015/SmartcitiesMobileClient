@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">City Watch APP</string>
+    <string name="app_name">City Watch</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
@@ -121,4 +121,7 @@
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilize sua conta do Google PLUS para registrar-se e fazer login. Assim automaticamente criamos seu perfil e carregamos seu avatar.</string>
     <string name="google_connected">Usuário está conectado ao Google!</string>
     <string name="person_info_null">Informação do perfil nao encontrada....</string>
+    <string name="soletre_ocorrencia">Fale a palavra</string>
+    <string name="verifique_erros1">Por favor verifique os campos [</string>
+    <string name="verifique_erros2">] e tente novamente.</string>
 </resources>

@@ -86,7 +86,7 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
                 public void onClick(View view) {
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, "Titulo:"+titulo+"\n\nDescrição:"+desc+"\n\n"+MAIN.getString(R.string.share_msg));
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, MAIN.getString(R.string.t_tulo_da_ocorr_ncia)+titulo+"\n\n"+MAIN.getString(R.string.descri_o)+desc+"\n\n"+MAIN.getString(R.string.share_msg));
                     sendIntent.setType("text/plain");
                     MAIN.startActivity(sendIntent);
                 }

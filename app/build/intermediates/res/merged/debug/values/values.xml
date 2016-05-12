@@ -524,7 +524,7 @@
     <string name="action_settings">Copyright</string>
     <string name="action_sign_in" translatable="false">Sign in or register</string>
     <string name="action_sign_in_short" translatable="false">Sign in</string>
-    <string name="app_name">City Watch APP</string>
+    <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="autenticando">Autenticando...</string>
@@ -536,7 +536,7 @@
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">3cc556e0-6f96-463c-a6c9-1e3f2f3bb7a5</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">35b01b3b-b280-43a4-8b37-d7846fad314e</string>
     <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
@@ -720,6 +720,7 @@
     <string name="senha">Senha</string>
     <string name="server_client_id" translatable="false">811880962924-g0dcla32a9uau5gni7amqdl05osjt3h4.apps.googleusercontent.com</string>
     <string name="share_msg">Instale o APP City Watch para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="soletre_ocorrencia">Fale a palavra</string>
     <string name="start_level" translatable="false">Level 1</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -762,6 +763,8 @@
     <string name="upa">Unidades de pronto atendimento</string>
     <string name="upload_image">Fazendo upload...</string>
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilize sua conta do Google PLUS para registrar-se e fazer login. Assim automaticamente criamos seu perfil e carregamos seu avatar.</string>
+    <string name="verifique_erros1">Por favor verifique os campos [</string>
+    <string name="verifique_erros2">] e tente novamente.</string>
     <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
     <string name="view_events">Visualizar ocorrências</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>

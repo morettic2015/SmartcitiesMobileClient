@@ -25,7 +25,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFER
  */
 public class LoginFragment extends DialogFragment implements View.OnClickListener {
 
-    private Button btLogin;
+    private Button btLogin,btAdd;
     private EditText email, senha;
    // protected static LoginFragment myInstance;
 
@@ -49,12 +49,14 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
         View v = inflater.inflate(R.layout.dialog_login, container, false);
 
         btLogin = (Button) v.findViewById(R.id.btLoginRegister1);
+        btAdd = (Button) v.findViewById(R.id.imageButtonADDPERFIL);
         email = (EditText) v.findViewById(R.id.txtEmailLG);
         senha = (EditText) v.findViewById(R.id.txtSenhaLG);
         email.setText(MY_PREFERENCES.getString("email", ""));
         senha.setText(MY_PREFERENCES.getString("passwd", ""));
 
         btLogin.setOnClickListener(this);
+        btAdd.setOnClickListener(this);
         ImageButton google = (ImageButton) v.findViewById(R.id.imageButtonGoogle);
         google.setOnClickListener(this);
         ImageButton facebook = (ImageButton) v.findViewById(R.id.imageButtonFacebook);
@@ -124,9 +126,11 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                 }
                 break;
             case R.id.imageButtonGoogle:
-                //SocialFragment.newInstance().show(getFragmentManager(), "dialog");
                 Intent googlePlus = new Intent(MAIN,ActivityGPlus.class);
                 MAIN.startActivity(googlePlus);
+                break;
+            case R.id.imageButtonADDPERFIL:
+                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
                 break;
             case R.id.imageButtonFacebook:
                 SocialFragment.newInstance().show(getFragmentManager(), "dialog");

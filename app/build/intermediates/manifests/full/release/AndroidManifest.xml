@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="view.infoseg.morettic.com.br.infosegapp"
     android:installLocation="preferExternal"
-    android:versionCode="20"
-    android:versionName="SMTCTS01e15_i18n_Cloud_test1" >
+    android:versionCode="21"
+    android:versionName="SMTCTS01e15_i18n_e01" >
 
     <uses-sdk
         android:minSdkVersion="15"

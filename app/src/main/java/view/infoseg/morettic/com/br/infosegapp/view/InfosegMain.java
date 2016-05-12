@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Process;
 import android.provider.Settings;
+import android.speech.RecognizerIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -46,6 +47,7 @@ import io.fabric.sdk.android.Fabric;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
@@ -72,6 +74,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private static final int TWITTER_CODE = 140;
+    private static final int REQUEST_CODE_MIC = 1234;
 
     private Toolbar toolbar;
     private FloatingActionButton fab;
@@ -95,7 +98,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         ValueObject.MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setVisibility(View.GONE);
+        fab.setVisibility(View.GONE);
         fab.setOnClickListener((View.OnClickListener) this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -347,9 +350,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
 
-        switch (requestCode) {
-            case SELECT_PHOTO:
-                if (resultCode == RESULT_OK) {
+
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
+                case SELECT_PHOTO:
                     Uri selectedImage = imageReturnedIntent.getData();
                     InputStream imageStream = null;
                     try {
@@ -357,18 +361,27 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
                         ImageButton bt = (ImageButton) findViewById(R.id.btAvatar);
                         bt.setImageBitmap(yourSelectedImage);
-                        if(yourSelectedImage!=null)
+                        if (yourSelectedImage != null)
                             ValueObject.AVATAR_BITMAP = yourSelectedImage;
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                }
-                break;
-            case TWITTER_CODE:
-                TwitterUtil.onActResult(requestCode, resultCode, imageReturnedIntent);
-                break;
+
+                    break;
+                case TWITTER_CODE:
+                    TwitterUtil.onActResult(requestCode, resultCode, imageReturnedIntent);
+                    break;
+                case REQUEST_CODE_MIC:
+                    ArrayList<String> textMatchList = imageReturnedIntent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+                    if (!textMatchList.isEmpty()) {
+                        String Query = textMatchList.get(0);
+                        ValueObject.WORD.setText(Query);
+                    }
+                    break;
+            }
         }
 
     }
@@ -422,7 +435,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
                 if (isDataListLoaded()) {
                     loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
-                }else{
+                } else {
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                 }
                 break;
@@ -463,5 +476,13 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         } else {
             return true;
         }
+    }
+
+    public void startVoiceRecognitionActivity() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.soletre_ocorrencia));
+        startActivityForResult(intent, REQUEST_CODE_MIC);
     }
 }

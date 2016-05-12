@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">City Watch APP</string>
+    <string name="app_name">City Watch</string>
     <string name="NAO">Pas</string>
     <string name="SIM">Oui</string>
     <string name="a12">Afficher les occurrences</string>
@@ -95,4 +95,7 @@
     <string name="google_connected">L\'utilisateur est connecté à Google!</string>
     <string name="person_info_null">Informations personne est null</string>
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Utilisez votre compte Google Plus pour vous inscrire et vous connecter. Donc, automatiquement, nous créons votre profil et charger votre avatar.</string>
+    <string name="soletre_ocorrencia">Prononcez le mot</string>
+    <string name="verifique_erros1">S\'il vous plaît vérifier les champs [</string>
+    <string name="verifique_erros2">] Et essayer à nouveau.</string>
 </resources>

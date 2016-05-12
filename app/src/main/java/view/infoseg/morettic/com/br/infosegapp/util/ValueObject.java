@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.location.Location;
 import android.location.LocationManager;
 import android.support.v4.util.ArrayMap;
+import android.widget.EditText;
 
 
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -20,6 +21,7 @@ import view.infoseg.morettic.com.br.infosegapp.view.LoginFragment;
  * Created by LuisAugusto on 24/02/2016.
  */
 public class ValueObject {
+    public static EditText WORD;
     public static String UPLOAD_PIC_OCORRENCIA_TOKEN3 = null;
     public static String UPLOAD_PIC_OCORRENCIA3 = null;
     public static String UPLOAD_PIC_OCORRENCIA_TOKEN2 = null;
