@@ -6,7 +6,7 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:4:13-44
+		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:4:13-47
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 	android:versionCode

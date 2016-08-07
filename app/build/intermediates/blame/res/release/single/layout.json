@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\dialog_login.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\layout\\dialog_login.xml"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\info_window.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.4\\res\\layout\\info_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\dialog_login.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\layout\\dialog_login.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\layout\\dgts__activity_phone_number.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\tw__activity_share_email.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\layout\\tw__activity_share_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_ocorrencia_list.xml",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\layout\\dgts__activity_pin_code.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\tw__tweet_compact.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\layout\\tw__tweet_compact.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_select_dialog_material.xml",

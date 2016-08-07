@@ -15,7 +15,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
 /**
- * Created by LuisAugusto on 24/02/2016.
+ * Created by LuisAugusto on 24/02/2016. @todo
  */
 public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
     public static final String UPLOAD_URL = "http://gaeloginendpoint.appspot.com/upload.exec";

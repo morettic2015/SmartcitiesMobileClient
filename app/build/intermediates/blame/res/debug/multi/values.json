@@ -5474,14 +5474,7 @@
                     "endOffset": 59939
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 57,
-                        "endColumn": 47,
-                        "endOffset": 100
-                    }
+                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {

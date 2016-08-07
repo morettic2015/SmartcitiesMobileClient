@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="view.infoseg.morettic.com.br.infosegapp"
     android:installLocation="preferExternal"
-    android:versionCode="21"
+    android:versionCode="30"
     android:versionName="SMTCTS01e15_i18n_e01" >
 
     <uses-sdk
