@@ -54,6 +54,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
@@ -63,6 +64,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DE
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
 //import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
 
 //import android.app.Fragment;
@@ -80,6 +82,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     private FloatingActionButton fab;
     //private Uri imageUri;
     private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
+
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
@@ -153,6 +156,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         ValueObject.MAIN = this;
         //Inicializa o cliente twitter
         TwitterUtil.initTwitterConfig(this);
+
+        MY_DEVICE_TOKEN = InstanceIdService.getInstance().getToken();
+
         /**
          *
          *  @PQP O GOOGLE TEM QUE CAGAR NE AGORA PRECISO VERIFICAR CADA PERMISSAO NA MAO.... A  VAI SE FUDE SENAO A PORRA DA NULL POINTE E O CARALHO
