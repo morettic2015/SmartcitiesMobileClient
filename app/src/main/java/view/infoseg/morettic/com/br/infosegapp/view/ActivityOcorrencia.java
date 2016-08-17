@@ -21,6 +21,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,10 +32,12 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.app.Activity.RESULT_OK;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class ActivityOcorrencia extends Fragment implements View.OnClickListener {
     static int REQUEST_IMAGE_CAPTURE = 1;
@@ -128,8 +132,8 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
 
             longitude = location.getLongitude();
             latitude = location.getLatitude();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             return v;
         }
@@ -156,8 +160,8 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
                 aurl.setOrigemOcorrencia(true);
                 aurl.execute();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         }
     }
 
@@ -228,17 +232,10 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
 
                         assyncSaveOcorrencia.execute();
                     } else {
-                        builder.setTitle(MAIN.getString(R.string.verifique_erros1) + erros.toString() + MAIN.getString(R.string.verifique_erros2));
-                        builder.setNegativeButton(MAIN.getString(R.string.ok), new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        });
-                        builder.create();
-                        builder.show();
+                        ToastHelper.makeToast(this.getContext(),MAIN.getString(R.string.verifique_erros1) + erros.toString() + MAIN.getString(R.string.verifique_erros2));
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                } catch (JSONException ex) {
+                    logException(ex);
                 } finally {
                     js = null;
                     erros = null;

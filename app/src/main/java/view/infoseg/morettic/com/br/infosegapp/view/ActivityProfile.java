@@ -16,22 +16,23 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveProfile;
 import view.infoseg.morettic.com.br.infosegapp.util.Mask;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.Validate;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ActivityProfile.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ActivityProfile#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ActivityProfile extends Fragment {
@@ -42,14 +43,12 @@ public class ActivityProfile extends Fragment {
     private EditText cpf, nasc, cep, complemento, passwd, nome, email;
     private ImageButton btAvatar;
     private RadioButton rd;
-    private AlertDialog.Builder builder;
     private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
 
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        builder = null;
         cpfMask = null;
         cnpjMask = null;
         cepMask = null;
@@ -79,7 +78,6 @@ public class ActivityProfile extends Fragment {
         nome = (EditText) v.findViewById(R.id.txtNomeUsuario);
         rd = (RadioButton) v.findViewById(R.id.radioPessoaFisica);
         email = (EditText) v.findViewById(R.id.txtEmailUsuario);
-        builder = new AlertDialog.Builder(inflater.getContext());
         btAvatar = (ImageButton)v.findViewById(R.id.btAvatar);
         if(ValueObject.AVATAR_BITMAP!=null){
             btAvatar.setImageBitmap(ValueObject.AVATAR_BITMAP);
@@ -166,19 +164,12 @@ public class ActivityProfile extends Fragment {
                         AssyncSaveProfile assyncSaveProfile = new AssyncSaveProfile(v, js);
                         assyncSaveProfile.execute();
                     } else {
-                        builder.setTitle("Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
-                        builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        });
-                        builder.create();
-                        builder.show();
+                        ToastHelper.makeToast(getContext(),"Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
                     }
 
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception ex) {
+                    logException(ex);
                 } finally{
 
                 }
@@ -229,8 +220,8 @@ public class ActivityProfile extends Fragment {
             ValueObject.UPLOAD_AVATAR = MY_PREFERENCES.getString("avatar", "");
             rdCNPJ.setChecked(MY_PREFERENCES.getBoolean("pjf", false));
             rd.setChecked(!MY_PREFERENCES.getBoolean("pjf", false));
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (Exception ex){
+            logException(ex);
         }
     }
 }

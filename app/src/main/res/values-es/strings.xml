@@ -19,6 +19,7 @@
     <string name="descri_o">Descripción</string>
     <string name="educa_o">Educación</string>
     <string name="email">Email</string>
+    <string name="save_sucess">Salvo!</string>
     <string name="email_already_registered">El correo electrónico ya registrado. Un correo electrónico con su contraseña ha sido enviada a su cuenta.</string>
     <string name="entrar_ou_registrar_se">Iniciar sesión o registrarse</string>
     <string name="enviar">Enviar</string>
@@ -98,4 +99,6 @@
     <string name="soletre_ocorrencia">Hablar la palabra</string>
     <string name="verifique_erros1">Por favor, compruebe los campos [</string>
     <string name="verifique_erros2">] Y vuelve a intentarlo.</string>
+    <string name="erro_cadastro_perfil">Se ha producido un error. Compruebe su conexión a Internet y vuelve a intentarlo.</string>
+    <string name="sucesso_ocorrencia_registrada">El éxito. ocurrencia grabada!</string>
 </resources>

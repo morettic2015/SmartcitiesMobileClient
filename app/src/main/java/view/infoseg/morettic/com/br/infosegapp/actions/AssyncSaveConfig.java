@@ -11,6 +11,8 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,11 +21,14 @@ import java.net.URLEncoder;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
 import static java.net.URLEncoder.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -54,6 +59,8 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
         sb = null;
         phone = null;
         idProfile = null;
+        String msg = MAIN.getApplicationContext().getString(R.string.save_sucess);
+        ToastHelper.makeToast(MAIN.getApplicationContext(),msg);
     }
 
     public AssyncSaveConfig(Context ctx, String idProfile, String phone) {
@@ -123,7 +130,8 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
             String url = HttpUtil.saveConfigInfo(idProfile, phone,sb.toString());
             //url =
             js = HttpUtil.getJSONFromUrl(url);
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
         } finally {
             return js.toString();

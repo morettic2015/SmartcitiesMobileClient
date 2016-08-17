@@ -587,7 +587,7 @@
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">0bb67b9f-5a1c-4b2b-ad54-b2db64a8ca43</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">0c391418-68ae-4bfd-bea4-7b39018acad7</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -710,6 +710,7 @@
     <string name="email_already_registered">Email já registrado. Um email com sua senha foi enviado para sua conta.</string>
     <string name="entrar_ou_registrar_se">Entrar ou registrar-se</string>
     <string name="enviar">Enviar</string>
+    <string name="erro_cadastro_perfil">Um erro ocorreu. Verifique sua Internet e tente novamente.</string>
     <string name="error_field_required">Este campo é requerido</string>
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_invalid_email">Email invalido</string>
@@ -790,6 +791,7 @@
     <string name="save_config">Salvando as configurações...</string>
     <string name="save_occurrences">Salvando ocorrencia...</string>
     <string name="save_profile_msg">Salvando perfil...</string>
+    <string name="save_sucess">Salvo!</string>
     <string name="seguran_a">Segurança</string>
     <string name="selecioneData">Selecione uma data</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
@@ -801,6 +803,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <string name="sucesso_ocorrencia_registrada">Sucesso. Ocorrencia registrada!</string>
     <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
     <string name="tagmanager_preview_dialog_button">Continue</string>
     <string name="tagmanager_preview_dialog_message">Preview mode updated.</string>

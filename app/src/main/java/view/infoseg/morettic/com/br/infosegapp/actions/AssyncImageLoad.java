@@ -10,10 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import java.io.InputStream;
 
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
+
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 05/03/2016.
@@ -34,9 +38,8 @@ public class AssyncImageLoad extends AsyncTask<String, Void, Bitmap> {
 
             mIcon11 = HttpUtil.getBitmapFromURLBlobKey(this.key);
             mIcon11 = HttpUtil.getResizedBitmap(mIcon11,250,250);
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         }
 
         if(img.equals("0")){

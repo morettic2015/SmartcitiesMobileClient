@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 
+import com.google.firebase.crash.FirebaseCrash;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
@@ -47,6 +48,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 06/05/2016.
@@ -187,38 +189,15 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
             tempUri = null;
             realPathInSO = null;
             tempUri = null;
-            /////CARRRREEEGGGGGA TWEEETSSS de 5 dias atras...
-          /*  Calendar cal = Calendar.getInstance();
-            cal.add(Calendar.DATE, -5);
 
-            UserTimeline userTimeline = new UserTimeline.Builder().screenName(user.screenName).build();
-            userTimeline.next(cal.getTimeInMillis(), new Callback<TimelineResult<Tweet>>() {
-                @Override
-                public void success(Result<TimelineResult<Tweet>> result1) {
-                    List<Tweet> lTweet = result1.data.items;
-                    for (Tweet t1 : lTweet) {
-                        if (t1.coordinates != null) {
-                            t1.coordinates.getLatitude();
-                            t1.coordinates.getLongitude();
-                        }
-                    }
-                }
-
-                @Override
-                public void failure(TwitterException exception) {
-
-                }
-            });*/
-
-
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (UnsupportedEncodingException ex) {
+            logException(ex);
+        } catch (JSONException ex) {
+            logException(ex);
+        } catch (IOException ex) {
+            logException(ex);
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             return js.toString();
         }

@@ -14,6 +14,8 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.provider.Settings;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -28,6 +30,7 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 import static java.net.URLEncoder.encode;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -52,8 +55,8 @@ public class HttpUtil {
                 response.append(inputLine);
 
             inputLine = null;
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(Exception ex){
+            logException(ex);
         }finally {
             //in.close();
             website = null;
@@ -154,8 +157,8 @@ public class HttpUtil {
             input = connection.getInputStream();
 
             myBitmap = BitmapFactory.decodeStream(input);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ex) {
+            logException(ex);
         } finally {
             url = null;
             //input.close();
@@ -225,5 +228,8 @@ public class HttpUtil {
     }
     public static final String getForecast(String lat,String lon){
         return "http://www.myweather2.com/developer/forecast.ashx?uac=9H1IUHm/Ih&query=" + encode(lat) + "," + encode(lon) + "&temp_unit=c&output=json";
+    }
+    public static final String getDeviceRegister(String token,String so,String idUser){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=19&so="+encode(so)+"&token="+encode(token)+"&idUser="+idUser;
     }
 }

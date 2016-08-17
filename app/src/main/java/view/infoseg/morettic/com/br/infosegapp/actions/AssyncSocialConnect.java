@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,6 +30,7 @@ import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
 import static java.net.URLEncoder.*;
 import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -96,7 +99,8 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                 //Load data from social network
                 try {
                     js = HttpUtil.getJSONFromUrl(url);
-                }catch(Exception e){
+                }catch(Exception ex){
+                    logException(ex);
                     js = new JSONObject();
                     js.put("status",500);
                 }
@@ -158,7 +162,8 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                 //@Todo implementar o envio de email.....
                 mensagem = ctx.getString(R.string.email_already_registered);
             }
-        }catch (Exception e) {
+        }catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
 

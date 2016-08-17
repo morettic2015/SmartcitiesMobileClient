@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONObject;
 
 import java.util.List;
@@ -17,9 +19,11 @@ import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.ActivityOcorrencia;
 import static view.infoseg.morettic.com.br.infosegapp.view.ActivityOcorrencia.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -69,8 +73,8 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         if (dialog.isShowing()) {
             dialog.dismiss();
         }
-        String msg = hasErros?"Um erro ocorreu. Verifique sua Internet e tente novamente.":"Sucesso. Ocorrencia registrada!";
-        txt.setText(msg);
+        String msg = hasErros?this.a1.getContext().getString(R.string.erro_cadastro_perfil):this.a1.getContext().getString(R.string.sucesso_ocorrencia_registrada);
+        ToastHelper.makeToast(this.a1.getContext(),msg);
 
     }
 
@@ -135,7 +139,8 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
             ValueObject.ID_OCORRENCIA = js.getString("key");
 
 
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
             hasErros = true;

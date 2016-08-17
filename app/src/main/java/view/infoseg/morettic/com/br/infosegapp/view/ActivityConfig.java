@@ -90,7 +90,7 @@ public class ActivityConfig extends Fragment {
                 AssyncSaveConfig assyncSaveConfig = new AssyncSaveConfig(getContext(),ValueObject.ID_PROFILE.toString(),txtPhone.getText().toString());
                 assyncSaveConfig.execute();
 
-                txtMsgConfig02.setText("Preferências salvas com sucesso!");
+               // txtMsgConfig02.setText("Preferências salvas com sucesso!");
 
                 ValueObject.MY_PREFERENCES = v.getContext().getSharedPreferences("INFOSEGMAIN", 0);
 

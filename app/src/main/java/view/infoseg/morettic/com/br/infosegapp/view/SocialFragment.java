@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.w3c.dom.Text;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -19,6 +21,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.Validate;
 
 import static view.infoseg.morettic.com.br.infosegapp.R.style.MyDialog;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 16/03/2016.
@@ -65,8 +68,8 @@ public class SocialFragment extends DialogFragment {
 
 
         email.getText().toString();
-    }catch(Exception e){
-        e.printStackTrace();
+    }catch(Exception ex){
+        logException(ex);
     }
         return this.v;
     }

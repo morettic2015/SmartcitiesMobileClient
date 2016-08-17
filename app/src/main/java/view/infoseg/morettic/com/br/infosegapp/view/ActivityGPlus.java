@@ -39,6 +39,7 @@ package view.infoseg.morettic.com.br.infosegapp.view;
         import com.google.android.gms.common.api.Status;
         import com.google.android.gms.plus.Plus;
         import com.google.android.gms.plus.model.people.Person;
+        import com.google.firebase.crash.FirebaseCrash;
         import com.twitter.sdk.android.core.models.User;
 
         import org.json.JSONException;
@@ -63,6 +64,7 @@ package view.infoseg.morettic.com.br.infosegapp.view;
         import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
         import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
         import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
+        import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class ActivityGPlus extends Activity implements OnClickListener,
         ConnectionCallbacks, OnConnectionFailedListener {
@@ -136,6 +138,7 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 mIntentInProgress = true;
                 mConnectionResult.startResolutionForResult(this, RC_SIGN_IN);
             } catch (SendIntentException e) {
+                FirebaseCrash.log(e.toString());
                 mIntentInProgress = false;
                 mGoogleApiClient.connect();
             }
@@ -241,7 +244,7 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 Toast.makeText(getApplicationContext(), R.string.person_info_null, Toast.LENGTH_LONG).show();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            FirebaseCrash.log(e.toString());
         }
     }
 
@@ -295,8 +298,7 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 InputStream in = new java.net.URL(urldisplay).openStream();
                 mIcon11 = BitmapFactory.decodeStream(in);
             } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
+                FirebaseCrash.report(e);
             }
             return mIcon11;
         }
@@ -384,14 +386,14 @@ class AssyncSaveGPLUSProfile extends AsyncTask<JSONObject, Void, String> {
             AVATAR_BITMAP = HttpUtil.getResizedBitmap(btm, 200, 200);
 
 
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (UnsupportedEncodingException ex) {
+            logException(ex);
+        } catch (JSONException ex) {
+            logException(ex);
+        } catch (IOException ex) {
+            logException(ex);
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             return js.toString();
         }

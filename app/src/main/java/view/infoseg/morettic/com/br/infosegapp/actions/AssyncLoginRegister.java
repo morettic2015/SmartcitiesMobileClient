@@ -11,6 +11,8 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,6 +25,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
 import static java.net.URLEncoder.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -40,8 +43,8 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         try {
             dialog.setMessage(msg);
             dialog.show();
-        } catch (Exception e) {
-
+        } catch (Exception ex) {
+            logException(ex);
         }
     }
 
@@ -55,8 +58,8 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 if (ValueObject.LOGIN != null)
                     ValueObject.LOGIN.dismiss();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             email = null;
             senha = null;
@@ -128,14 +131,15 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                     ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 200, 200);
 
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception ex) {
+                    logException(ex);
                 }
                 //ValueObject.LOGIN.dismiss();
             }
 
 
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
 

@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,6 +18,7 @@ import java.net.URLEncoder;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
@@ -44,6 +47,8 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
         if (dialog.isShowing()) {
             dialog.dismiss();
         }
+        String msg = this.a1.getContext().getString(R.string.save_sucess);
+        ToastHelper.makeToast(this.a1.getContext(),msg);
     }
 
     public AssyncSaveProfile(View activity, JSONObject perfil) {
@@ -82,7 +87,8 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
 
             ValueObject.ID_PROFILE = js.getString("key");
 
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            FirebaseCrash.report(ex);
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
 

@@ -147,6 +147,7 @@
     <string name="email_already_registered">E-mail уже зарегистрирован. Электронное письмо с паролем было отправлено на ваш счет.</string>
     <string name="entrar_ou_registrar_se">Войдите или зарегистрируйтесь</string>
     <string name="enviar">послать</string>
+    <string name="erro_cadastro_perfil">Произошла ошибка. Проверьте Интернет и повторите попытку.</string>
     <string name="error_field_required">Это поле обязательно для заполнения</string>
     <string name="error_incorrect_password">неправильный пароль</string>
     <string name="error_invalid_email">адрес электронной почты недействителен</string>
@@ -210,6 +211,7 @@
     <string name="save_config">Сохранение настроек ...</string>
     <string name="save_occurrences">Сохранение возникновение ...</string>
     <string name="save_profile_msg">Сохранение профиля ...</string>
+    <string name="save_sucess">экономить!</string>
     <string name="seguran_a">безопасность</string>
     <string name="selecioneData">Выберите дату</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Выберите расстояния для фильтрации</string>
@@ -217,6 +219,7 @@
     <string name="share_msg">! Установите APP City Watch для записи проблемы вашего сообщества и делиться с гражданами \ nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="soletre_ocorrencia">Выразить желание</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="sucesso_ocorrencia_registrada">Успех. зафиксированное появление!</string>
     <string name="t_tulo_da_ocorr_ncia">Название мероприятия</string>
     <string name="temperatura">температура</string>
     <string name="tipo_do_servi_o">Тип обслуживания</string>

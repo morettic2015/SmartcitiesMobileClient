@@ -149,6 +149,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="email_already_registered">El correo electrónico ya registrado. Un correo electrónico con su contraseña ha sido enviada a su cuenta.</string>
     <string name="entrar_ou_registrar_se">Iniciar sesión o registrarse</string>
     <string name="enviar">Enviar</string>
+    <string name="erro_cadastro_perfil">Se ha producido un error. Compruebe su conexión a Internet y vuelve a intentarlo.</string>
     <string name="error_field_required">Este campo es obligatorio</string>
     <string name="error_incorrect_password">contraseña incorrecta</string>
     <string name="error_invalid_email">No válida de correo electrónico</string>
@@ -212,6 +213,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="save_config">Guardar las preferencias ...</string>
     <string name="save_occurrences">Guardar ocurrencia ...</string>
     <string name="save_profile_msg">Guardar perfil ...</string>
+    <string name="save_sucess">Salvo!</string>
     <string name="seguran_a">Seguridad</string>
     <string name="selecioneData">Seleccione una fecha</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>
@@ -219,6 +221,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="share_msg">! Instalar APP Ciudad del reloj para registrar los problemas de su comunidad y compartir con los ciudadanos \ nhttps: //play.google.com/store/apps/details id = view.infoseg.morettic.com.br.infosegapp</string>
     <string name="soletre_ocorrencia">Hablar la palabra</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string name="sucesso_ocorrencia_registrada">El éxito. ocurrencia grabada!</string>
     <string name="t_tulo_da_ocorr_ncia">Nombre del evento</string>
     <string name="temperatura">Temperatura</string>
     <string name="tipo_do_servi_o">Tipo de servicio</string>

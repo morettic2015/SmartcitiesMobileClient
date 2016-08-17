@@ -26,6 +26,7 @@
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Используйте свой Google Plus счет, чтобы зарегистрироваться и войти. Чтобы мы автоматически создать свой профиль и загрузить свой аватар.</string>
     <string name="upload_image">Идет загрузка ...</string>
     <string name="upa">Аварийные блоки</string>
+    <string name="save_sucess">экономить!</string>
     <string name="transporte">транспорт</string>
     <string name="title_activity_maps">карта</string>
     <string name="title_activity_login">входить</string>
@@ -98,4 +99,6 @@
     <string name="opc_es">опции</string>
     <string name="perfil">профиль</string>
     <string name="perfil_create">Создание профиля ...</string>
+    <string name="erro_cadastro_perfil">Произошла ошибка. Проверьте Интернет и повторите попытку.</string>
+    <string name="sucesso_ocorrencia_registrada">Успех. зафиксированное появление!</string>
 </resources>

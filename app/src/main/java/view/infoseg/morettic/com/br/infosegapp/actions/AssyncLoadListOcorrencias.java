@@ -14,6 +14,8 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,6 +31,7 @@ import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 import static java.net.URLEncoder.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -59,12 +62,14 @@ public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, Strin
                         Bitmap b = BitmapFactory.decodeResource(res, id);
                         LIST_BITMAPS_OCORRENCIAS[i] = HttpUtil.getResizedBitmap(b, 200, 200);
                     }
-                }catch(Exception e){
+                }catch(Exception ex){
+                    logException(ex);
                     LIST_BITMAPS_OCORRENCIAS[i] = null;
                 }
                 LIST_OCORRENCIAS[i] = ja.getJSONObject(i).toString();
             }
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
         } finally {
             return js.toString();

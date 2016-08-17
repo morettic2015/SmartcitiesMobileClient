@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
@@ -19,6 +21,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 02/03/2016.
@@ -79,8 +82,8 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                 LOGIN.dismiss();
                 this.dismiss();
             }
-        } catch (Exception e) {
-            //e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         }finally {
             btLogin = null;
             email = null;

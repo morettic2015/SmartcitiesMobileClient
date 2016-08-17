@@ -6,13 +6,19 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
+
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016. @todo
@@ -44,6 +50,8 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
         a1 = null;
         bitmapM = null;
         dialog = null;
+        String msg = MAIN.getApplicationContext().getString(R.string.save_sucess);
+        ToastHelper.makeToast(MAIN.getApplicationContext(),msg);
     }
 
     public AssyncUploadURLlink(InfosegMain activity, Bitmap b1, int origem) {
@@ -104,7 +112,8 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
             realPathInSO = null;
             tempUri = null;
             fTYpe = null;
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            logException(ex);
             js = new JSONObject();
             ValueObject.URL_SUBMIT_UPLOAD = null;
 

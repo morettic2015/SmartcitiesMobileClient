@@ -15,6 +15,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;*/
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -31,6 +33,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class HttpFileUpload implements Runnable {
     private final String boundary;
@@ -154,7 +158,7 @@ public class HttpFileUpload implements Runnable {
             reader.close();
             httpConn.disconnect();
         } else {
-            throw new IOException("Server returned non-OK status: " + status);
+            logException(new IOException("Server returned non-OK status: " + status));
         }
 
         return response;
@@ -182,7 +186,7 @@ public class HttpFileUpload implements Runnable {
                 tokenObject = line;
             }
         } catch (IOException ex) {
-            System.err.println(ex);
+            logException(ex);
             tokenObject = null;
         }
 

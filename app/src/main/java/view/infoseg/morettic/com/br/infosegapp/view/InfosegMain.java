@@ -34,6 +34,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 //import io.fabric.sdk.android.Fabric;
+import com.google.firebase.crash.FirebaseCrash;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
@@ -52,6 +53,7 @@ import java.util.ArrayList;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncRegisterDevice;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
@@ -129,7 +131,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         ImageView b5 = (ImageView) findViewById(R.id.btListOcorrencias);
         b5.setOnClickListener((View.OnClickListener) this);
 
-
+        new AssyncRegisterDevice().execute();
         /**
          * Abre a janela para ativar o GPS do celular
          * */
@@ -157,7 +159,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         //Inicializa o cliente twitter
         TwitterUtil.initTwitterConfig(this);
 
-        MY_DEVICE_TOKEN = InstanceIdService.getInstance().getToken();
+
 
         /**
          *
@@ -190,7 +192,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             String[] p = {GET_ACCOUNTS};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }
-
+        //register device
     }
 
     @Override
@@ -371,8 +373,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                             ValueObject.AVATAR_BITMAP = yourSelectedImage;
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                    } catch (FileNotFoundException ex) {
+                        logException(ex);
                     }
 
                     break;
@@ -471,8 +473,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 sendBroadcast(poke);
             }
             provider = null;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logException(ex);
         }
     }
 
@@ -491,4 +493,16 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.soletre_ocorrencia));
         startActivityForResult(intent, REQUEST_CODE_MIC);
     }
+
+
+    public static final void logException(Exception ex){
+        try {
+            FirebaseCrash.report(ex);
+            FirebaseCrash.log(ex.toString());
+        }catch(Exception e){
+            FirebaseCrash.log(ex.toString());
+        }
+
+    }
+
 }

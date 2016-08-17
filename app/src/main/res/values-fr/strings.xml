@@ -64,6 +64,7 @@
     <string name="sa_de">Santé</string>
     <string name="sair">Sortie</string>
     <string name="sair_remover_sessao">Confirmer la sortie?</string>
+    <string name="save_sucess">Sauvegarder!</string>
     <string name="salvar">Sauvegarder</string>
     <string name="saude">Santé</string>
     <string name="save_config">Enregistrement des paramètres ...</string>
@@ -98,4 +99,6 @@
     <string name="soletre_ocorrencia">Prononcez le mot</string>
     <string name="verifique_erros1">S\'il vous plaît vérifier les champs [</string>
     <string name="verifique_erros2">] Et essayer à nouveau.</string>
+    <string name="erro_cadastro_perfil">Une erreur est survenue. Vérifiez votre Internet et essayer à nouveau.</string>
+    <string name="sucesso_ocorrencia_registrada">Succès. occurrence enregistrée!</string>
 </resources>

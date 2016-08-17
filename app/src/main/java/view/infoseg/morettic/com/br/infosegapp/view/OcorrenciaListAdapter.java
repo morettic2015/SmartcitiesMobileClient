@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,6 +23,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_BITMAPS_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class OcorrenciaListAdapter extends ArrayAdapter<String> {
 
@@ -107,12 +110,12 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
              *
              * */
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (NullPointerException e1) {
-            e1.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (JSONException ex) {
+            logException(ex);
+        } catch (NullPointerException ex) {
+            logException(ex);
+        } catch (Exception ex) {
+            logException(ex);
         }
 
         //imageView.setImageResource(imgid[position]);

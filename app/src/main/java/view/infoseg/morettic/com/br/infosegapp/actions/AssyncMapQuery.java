@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.TileOverlayOptions;
+import com.google.firebase.crash.FirebaseCrash;
 import com.google.maps.android.heatmaps.Gradient;
 import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
@@ -28,6 +29,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.FORECAST;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -66,8 +68,8 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             txtInfoForecast.setText(sb.toString());
             //Adiciona o mapa de calor da saude
             addHeatMap();
-        } catch (Exception e) {
-
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             if (dialog.isShowing()) {
                 dialog.dismiss();
@@ -158,14 +160,16 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                     sb.append(",");
                     sb.append(FORECAST.getJSONObject("weather").getJSONArray("curren_weather").getJSONObject(0).getJSONArray("wind").getJSONObject(0).getString("speed"));
                     sb.append(FORECAST.getJSONObject("weather").getJSONArray("curren_weather").getJSONObject(0).getJSONArray("wind").getJSONObject(0).getString("wind_unit"));
-                } catch (Exception e) {
+                } catch (Exception ex) {
+                    logException(ex);
                     sb = new StringBuilder("Carregando dados meteorológicos...");
                 }
-            } catch (Exception e) {
+            } catch (Exception ex) {
+                logException(ex);
                 //js = new JSONObject();
             }
-        } catch (Exception e) {
-
+        } catch (Exception ex) {
+            logException(ex);
         } finally {
             return lMarkers;
         }

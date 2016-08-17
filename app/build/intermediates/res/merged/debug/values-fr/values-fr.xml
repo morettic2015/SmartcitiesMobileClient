@@ -148,6 +148,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="email_already_registered">Email déjà enregistré. Un e-mail avec votre mot de passe a été envoyé à votre compte.</string>
     <string name="entrar_ou_registrar_se">Connectez-vous ou inscrivez-vous</string>
     <string name="enviar">Envoyer</string>
+    <string name="erro_cadastro_perfil">Une erreur est survenue. Vérifiez votre Internet et essayer à nouveau.</string>
     <string name="error_field_required">Ce champ est requis</string>
     <string name="error_incorrect_password">Le mot de passe est incorrect</string>
     <string name="error_invalid_email">Adresse email invalide</string>
@@ -211,6 +212,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="save_config">Enregistrement des paramètres ...</string>
     <string name="save_occurrences">Enregistrement occurrence ...</string>
     <string name="save_profile_msg">Enregistrement du profil ...</string>
+    <string name="save_sucess">Sauvegarder!</string>
     <string name="seguran_a">Sécurité</string>
     <string name="selecioneData">Choisis une date</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Choisissez la distance pour rechercher</string>
@@ -218,6 +220,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="share_msg">Installez City Watch et partager u occurrences de la ville!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="soletre_ocorrencia">Prononcez le mot</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string name="sucesso_ocorrencia_registrada">Succès. occurrence enregistrée!</string>
     <string name="t_tulo_da_ocorr_ncia">Titre de Occurrence</string>
     <string name="temperatura">Température</string>
     <string name="tipo_do_servi_o">Type de prestation</string>

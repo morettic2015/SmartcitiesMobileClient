@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /*public class ActivityMap extends FragmentActivity implements OnMapReadyCallback {
 
@@ -86,8 +88,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         }
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            FirebaseCrash.report(ex);
         }
         googleMap = mMapView.getMap();
         // latitude and longitude
@@ -130,8 +132,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             jsFilter.put("type", sbTipos.toString());
             jsFilter.put("d", distance);
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            FirebaseCrash.report(ex);
         } finally {
 
 
@@ -263,8 +265,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                             //((ImageView) v.findViewById(R.id.)).setImageBitmap(ValueObject.MAPA_BITMAPS.get(js.getString("")));
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        } catch (JSONException ex) {
+                            logException(ex);
                         }
                     }
                     return v;

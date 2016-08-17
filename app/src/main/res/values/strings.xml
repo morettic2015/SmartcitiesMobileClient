@@ -97,11 +97,13 @@
     <string name="cep">CEP</string>
     <string name="pessoa_juridica">Pessoa juridica</string>
     <string name="pessoa_fisica">Pessoa fisica</string>
+    <string name="sucesso_ocorrencia_registrada">Sucesso. Ocorrencia registrada!</string>
     <string name="autenticando">Autenticando...</string>
     <string name="consultando_ocorrencias">Consultando ocorrencias...</string>
     <string name="save_config">Salvando as configurações...</string>
     <string name="save_occurrences">Salvando ocorrencia...</string>
     <string name="save_profile_msg">Salvando perfil...</string>
+    <string name="save_sucess">Salvo!</string>
     <string name="perfil_create">Criando perfil...</string>
     <string name="upload_image">Fazendo upload...</string>
     <string name="registro_de_ocorr_ncias_municipais">Registro de ocorrências municipais</string>
@@ -124,4 +126,5 @@
     <string name="soletre_ocorrencia">Fale a palavra</string>
     <string name="verifique_erros1">Por favor verifique os campos [</string>
     <string name="verifique_erros2">] e tente novamente.</string>
+    <string name="erro_cadastro_perfil">Um erro ocorreu. Verifique sua Internet e tente novamente.</string>
 </resources>

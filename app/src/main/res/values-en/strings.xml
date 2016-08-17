@@ -20,6 +20,7 @@
     <string name="error_invalid_password">Password is too short</string>
     <string name="filtros">Filters</string>
     <string name="foto_1">Pic 1</string>
+    <string name="save_sucess">Saved!</string>
     <string name="hello_blank_fragment">fuck u</string>
     <string name="help_us">Help us</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Choose the kind of occurrence u wanna see</string>
@@ -98,4 +99,6 @@
     <string name="soletre_ocorrencia">Speak the word</string>
     <string name="verifique_erros1"> Please check the fields [</string>
     <string name="verifique_erros2">] And try again.</string>
+    <string name="erro_cadastro_perfil">An error occurred. Check your Internet and try again.</string>
+    <string name="sucesso_ocorrencia_registrada">Success. recorded occurrence!</string>
 </resources>
