@@ -16,11 +16,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" /> -->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Powered by"
+        android:id="@+id/textView30"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/bt_morettic"
+        android:layout_width="104dp"
+        android:layout_height="37dp"
+        android:layout_column="0"
+        android:layout_row="6"
+        android:background="@drawable/morettic_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_columnSpan="2"
+        android:layout_below="@+id/textView30"
+        android:layout_centerHorizontal="true"
+        android:elevation="@dimen/abc_floating_window_z"
+        android:cropToPadding="false"
+        android:contentDescription="http://morettic.com.br" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bk_logo"
+        android:background="@mipmap/ic_city_watch"
+        android:layout_alignParentTop="true"
+        android:alpha="0.1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView30"
+        android:layout_toEndOf="@+id/twitter_login_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="310dp"
-        android:background="@drawable/main_shape_model"
+        android:background="@drawable/tw__transparent"
         android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
         android:id="@+id/gridLayout">
 
@@ -34,7 +79,8 @@
 
             android:layout_gravity="center_horizontal"
             android:layout_row="0"
-            android:background="@drawable/ic_novo_generico_01" />
+            android:background="@drawable/ic_novo_generico_01"
+            android:elevation="@dimen/abc_control_padding_material" />
 
         <TextView
             android:id="@+id/textView9"
@@ -55,7 +101,8 @@
             android:layout_marginLeft="10dp"
             android:layout_column="0"
             android:layout_row="1"
-            android:background="@drawable/ic_avatar_novo_01" />
+            android:background="@drawable/ic_avatar_novo_01"
+            android:elevation="@dimen/abc_control_padding_material" />
 
         <TextView
             android:id="@+id/textView10"
@@ -76,7 +123,8 @@
             android:layout_marginLeft="10dp"
             android:layout_column="0"
             android:layout_row="2"
-            android:background="@drawable/ic_map_generico_01" />
+            android:background="@drawable/ic_map_generico_01"
+            android:elevation="@dimen/abc_control_padding_material" />
 
         <TextView
             android:id="@+id/textView11"
@@ -97,7 +145,8 @@
             android:layout_row="3"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:background="@mipmap/ic_list_ocorrencias" />
+            android:background="@mipmap/ic_list_ocorrencias"
+            android:elevation="@dimen/abc_control_padding_material" />
 
         <TextView
             android:id="@+id/textView12"
@@ -118,7 +167,8 @@
             android:layout_row="4"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_config_generico_01" />
+            android:background="@drawable/ic_config_generico_01"
+            android:elevation="@dimen/abc_control_padding_material" />
 
         <TextView
             android:id="@+id/textView29"
@@ -133,31 +183,6 @@
 
     </GridLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Powered by"
-        android:id="@+id/textView30"
-        android:layout_row="5"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/gridLayout"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="104dp"
-        android:layout_height="37dp"
-        android:layout_column="0"
-        android:layout_row="6"
-        android:background="@drawable/morettic_icon"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnSpan="2"
-        android:layout_below="@+id/textView30"
-        android:layout_centerHorizontal="true" />
-
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/twitter_login_button"
         android:layout_width="wrap_content"
@@ -165,34 +190,16 @@
         android:visibility="gone"
         android:layout_centerInParent="true"/>
 
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/imageView7"
-        android:layout_row="0"
-        android:src="@mipmap/ic_city_watch"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignTop="@+id/textView30"
-        android:layout_toLeftOf="@+id/imageView4"
-        android:layout_toStartOf="@+id/imageView4" />
-
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/imageView3"
-        android:layout_row="0"
-        android:layout_margin="5dp"
-        android:src="@drawable/ic_smartcities_icon_logo"
-        android:layout_column="0"
-        android:background="@color/cardview_dark_background"
-        android:layout_columnSpan="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignTop="@+id/textView30"
-        android:layout_toRightOf="@+id/imageView4"
-        android:layout_toEndOf="@+id/imageView4" />
+    <!--
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_marginBottom="30dp" />
+    -->
 
 
 </RelativeLayout>

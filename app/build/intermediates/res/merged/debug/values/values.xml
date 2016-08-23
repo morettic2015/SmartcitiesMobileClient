@@ -577,6 +577,8 @@
     <string name="action_settings">Copyright</string>
     <string name="action_sign_in" translatable="false">Sign in or register</string>
     <string name="action_sign_in_short" translatable="false">Sign in</string>
+    <string name="ajude_nos_a_manter_o_app">Ajude-nos a manter o APP</string>
+    <string name="ajude_nosso_desenvolvimento">Ajude nosso desenvolvimento!</string>
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
@@ -587,7 +589,7 @@
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">0c391418-68ae-4bfd-bea4-7b39018acad7</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">51a1e569-edf8-41d3-88d3-20729d729297</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -647,6 +649,7 @@
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="criar_uma_conta">Cadastre-se é gratuito!</string>
+    <string name="dados_tempo">Carregando dados meteorológicos...</string>
     <string name="decline">Decline</string>
     <string name="default_web_client_id" translatable="false">811880962924-g69t3r7ks6tshcm1uci2u5lccj90to2q.apps.googleusercontent.com</string>
     <string name="descri_o">Descrição</string>
@@ -716,7 +719,8 @@
     <string name="error_invalid_email">Email invalido</string>
     <string name="error_invalid_password">Senha muito curta</string>
     <string name="esporte">Esporte</string>
-    <string name="facebook_app_id" translatable="false">880918378640520</string>
+    <string name="facebook_app_id" translatable="false">291386861194854</string>
+    <string name="facebook_login">Entrar pelo Facebook</string>
     <string name="filtros">Filtros</string>
     <string name="foto_1">Foto 1</string>
     <string name="gcm_defaultSenderId" translatable="false">811880962924</string>
@@ -727,6 +731,7 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyBFDfjNE_Q3E87_axsIphs6CIvSlfZOliE
     </string>
+    <string name="gps_habilitado">GPS ativo!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="help_us">Ajude-nos!</string>
     <string name="humidade">Humidade</string>
@@ -739,6 +744,8 @@
     <string name="invalid_locate">Localização inválida</string>
     <string name="kit_name">Twitter</string>
     <string name="list_ocorrencias">Lista de ocorrências</string>
+    <string name="localiza_o_indispon_vel">Localização indisponível</string>
+    <string name="localizacao_invalida">Localização inválida</string>
     <string name="login">Login</string>
     <string name="mapa_ocorrencias">Mapa de ocorrências</string>
     <string name="meio_ambiente">Meio Ambiente</string>
@@ -762,6 +769,8 @@
     <string name="nome">Nome</string>
     <string name="ok">OK</string>
     <string name="opc_es">Opcões</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Para que você consiga visualizar e relatar ocorrências, é necessário ativar o seu GPS. Ative o GPS no seu dispositivo e tente novamente.</string>
+    <string name="patroc_nio">Patrocínio:</string>
     <string name="perfil">Perfil</string>
     <string name="perfil_create">Criando perfil...</string>
     <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
@@ -792,6 +801,7 @@
     <string name="save_occurrences">Salvando ocorrencia...</string>
     <string name="save_profile_msg">Salvando perfil...</string>
     <string name="save_sucess">Salvo!</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Se você gosta do serviço, ajude-nos a manter o APP e desenvolver outras aplicações para tornar as cidades inteligentes. Basta clicar em dois anúncios! Um pequeno gesto estará colaborando para uma sociedade do conhecimento.</string>
     <string name="seguran_a">Segurança</string>
     <string name="selecioneData">Selecione uma data</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>

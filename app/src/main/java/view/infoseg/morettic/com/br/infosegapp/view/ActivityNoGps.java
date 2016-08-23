@@ -28,7 +28,7 @@ public class ActivityNoGps extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        InfosegMain.setTitleToolbar("Localização inválida", container);
+        InfosegMain.setTitleToolbar(getActivity().getString(R.string.localizacao_invalida), container);
         View v = inflater.inflate(R.layout.activity_gps_fail, container, false);
 
         return v;

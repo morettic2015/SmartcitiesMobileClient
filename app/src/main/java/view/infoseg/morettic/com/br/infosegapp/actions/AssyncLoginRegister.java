@@ -1,37 +1,27 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
-import android.widget.EditText;
 
-import com.google.firebase.crash.FirebaseCrash;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URLEncoder;
-
 import view.infoseg.morettic.com.br.infosegapp.R;
-import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
-import static java.net.URLEncoder.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
  */
 public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
-    public static final String LOGIN_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
+    //public static final String LOGIN_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     private ProgressDialog dialog;
     private View a1;
     private String email, senha, desc, imagePath, adrress;
@@ -44,7 +34,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
             dialog.setMessage(msg);
             dialog.show();
         } catch (Exception ex) {
-            logException(ex);
+            //logException(ex);
         }
     }
 
@@ -121,16 +111,15 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 this.editor.putString("id", ValueObject.ID_PROFILE).commit();
                 this.editor.putString("avatar", ValueObject.UPLOAD_AVATAR).commit();
 
+                //Update device ID for push notifications
+                MY_DEVICE_TOKEN = InstanceIdService.getToken();
+                this.editor.putString("DEVICE_TYPE", MY_DEVICE_TOKEN);
+                HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(MY_DEVICE_TOKEN, "ANDROID", ID_PROFILE));
 
                 ValueObject.AUTENTICADO = true;
                 try {
-
-                    // url = HttpUtil.getTokenImagemById(ValueObject.UPLOAD_AVATAR);
-                    // js = HttpUtil.getJSONFromUrl(url);
                     ValueObject.AVATAR_BITMAP = HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar"));
                     ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 200, 200);
-
-
                 } catch (Exception ex) {
                     logException(ex);
                 }

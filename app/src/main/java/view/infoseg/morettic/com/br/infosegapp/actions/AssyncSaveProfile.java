@@ -1,28 +1,17 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
 
-import com.google.firebase.crash.FirebaseCrash;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URLEncoder;
-
 import view.infoseg.morettic.com.br.infosegapp.R;
-import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
-import static java.net.URLEncoder.*;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
@@ -88,7 +77,7 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
             ValueObject.ID_PROFILE = js.getString("key");
 
         } catch (Exception ex) {
-            FirebaseCrash.report(ex);
+            logException(ex);
             js = new JSONObject();
             // ValueObject.URL_SUBMIT_UPLOAD = null;
 

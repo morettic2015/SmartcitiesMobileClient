@@ -111,6 +111,7 @@
             android:layout_height="44dp"
             android:id="@+id/imageButtonFacebook"
             android:layout_row="1"
+            android:visibility="gone"
             android:background="@drawable/icon_facebook_48"
             android:layout_column="0" />
 

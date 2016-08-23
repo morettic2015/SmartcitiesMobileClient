@@ -1,6 +1,5 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -16,7 +15,6 @@ import android.provider.Settings;
 import android.speech.RecognizerIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -26,81 +24,154 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-//import io.fabric.sdk.android.Fabric;
+import com.google.android.gms.ads.AdListener;
 import com.google.firebase.crash.FirebaseCrash;
-import com.twitter.sdk.android.Twitter;
-import com.twitter.sdk.android.core.Callback;
-import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.core.models.Tweet;
-import com.twitter.sdk.android.tweetui.TweetUtils;
-import com.twitter.sdk.android.tweetui.TweetView;
-
-import io.fabric.sdk.android.Fabric;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncRegisterDevice;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
-import static android.Manifest.permission.*;
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVATAR_BITMAP;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.COUNTER_CLICK;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_OCORRENCIAS;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGGER;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
-//import static view.infoseg.morettic.com.br.infosegapp.view.LoginFragment.myInstance;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.WORD;
 
-//import android.app.Fragment;
-//import android.app.FragmentTransaction;
+//import io.fabric.sdk.android.Fabric;
+
 
 public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    /**
+     * @Tappax object to show ADS as possible way to
+     */
+
+    private final String TAPPX_KEY = "/120940746/Pub-9972-Android-9558";
+    private com.google.android.gms.ads.doubleclick.PublisherInterstitialAd adInterstitial = null;
 
     //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
     private static final int TWITTER_CODE = 140;
     private static final int REQUEST_CODE_MIC = 1234;
-
+    /* *************************************
+     *              FACEBOOK               *
+     ***************************************/
+    /* The login button for Facebook */
+    ///  private LoginButton mFacebookLoginButton;
+    /* The callback manager for Facebook */
+    //  private CallbackManager mFacebookCallbackManager;
+    /* Used to track user logging in/out off Facebook */
+    //  private AccessTokenTracker mFacebookAccessTokenTracker;
     private Toolbar toolbar;
     private FloatingActionButton fab;
     //private Uri imageUri;
     private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
-
+    //private Firebase mFirebaseRef;
 
     static void setTitleToolbar(String title, View v) {
         Toolbar tb = (Toolbar) v.findViewById(R.id.toolbar);
         tb.setTitle(title);
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        /**
+         * Abre a janela para ativar o GPS do celular
+         * */
+        turnGPSOn();
+        /**
+         * SE nao estiver autenticado pop up maldito dos infernos
+         * */
+        if (!AUTENTICADO && MY_PREFERENCES.getString("id", "").equals("")) {
+            if (LOGIN == null) {
+                LOGIN = LoginFragment.newInstance();
+                LOGIN.show(getFragmentManager(), "dialog");
+            }
+        } else {
+            //Load Data
+            BITMAP_DEFAULT = BitmapFactory.decodeResource(getResources(), R.drawable.ic_smartcities_icon_logo);
+            AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(this.getApplicationContext(), MY_PREFERENCES.getString("email", ""), MY_PREFERENCES.getString("passwd", ""));
+            assyncLoginRegister.execute();
+            //Load Ocorrencias
+            //Load / register device
+            AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+            assyncLoadListOcorrencias.setCtx(getApplicationContext());
+            assyncLoadListOcorrencias.execute();
+             /*
+                *   @Here we show ADS!
+                *   @If Counter click <5 show ads. 5 ads each navigation;
+                *   @Only if the user has looged in.....
+                * **/
+            if (COUNTER_CLICK < 5) {
+                //Promote TAPPAX NETWORK!
+                Date d = new Date();
+                boolean isTappaxNetwork = false;
+                if ((d.getMinutes() % 3) == 0) {//If minutes mod 3 == 0 show ads
+                    isTappaxNetwork = true;
+                    COUNTER_CLICK++;
+                    adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
+                            new AdListener() {
+                                @Override
+                                public void onAdLoaded() {
+                                    com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
+                                }
+                            });
+                }
+                //If show Tappax dont show google play....
+                if ((d.getMinutes() % 2) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
+                    loadFragment(new ActivityAds(), getString(R.string.help_us));
+                    COUNTER_CLICK++;
+                }
+
+                d = null;
+            }
+        }
+
+
+        MAIN = this;
+        //Inicializa o cliente twitter
+        TwitterUtil.initTwitterConfig(this);
+
+
+    }
+
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        COUNTER_CLICK = 0;
         setContentView(R.layout.activity_infoseg_main);
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         this.toolbar.setTitle(getString(R.string.app_title_main));
         //Inicializa as preferencias do usuario
-        ValueObject.MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
+        MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setVisibility(View.GONE);
@@ -130,36 +201,6 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
         ImageView b5 = (ImageView) findViewById(R.id.btListOcorrencias);
         b5.setOnClickListener((View.OnClickListener) this);
-
-        new AssyncRegisterDevice().execute();
-        /**
-         * Abre a janela para ativar o GPS do celular
-         * */
-        turnGPSOn();
-        /**
-         * SE nao estiver autenticado pop up maldito dos infernos
-         * */
-        if (!ValueObject.AUTENTICADO && MY_PREFERENCES.getString("id", "").equals("")) {
-            if (ValueObject.LOGIN == null) {
-                ValueObject.LOGIN = LoginFragment.newInstance();
-                ValueObject.LOGIN.show(getFragmentManager(), "dialog");
-            }
-        } else {
-            //Load Data
-            BITMAP_DEFAULT = BitmapFactory.decodeResource(getResources(), R.drawable.ic_smartcities_icon_logo);
-            AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(this.getApplicationContext(), MY_PREFERENCES.getString("email", ""), MY_PREFERENCES.getString("passwd", ""));
-            assyncLoginRegister.execute();
-            //Load Ocorrencias
-        }
-        AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
-        assyncLoadListOcorrencias.setCtx(getApplicationContext());
-        assyncLoadListOcorrencias.execute();
-
-        ValueObject.MAIN = this;
-        //Inicializa o cliente twitter
-        TwitterUtil.initTwitterConfig(this);
-
-
 
         /**
          *
@@ -192,7 +233,6 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             String[] p = {GET_ACCOUNTS};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }
-        //register device
     }
 
     @Override
@@ -240,7 +280,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             fragment = new ActivityOcorrencia();
             title = getString(R.string.register_event);
         } else if (id == R.id.nav_gallery) {
-            if (ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+            if (MY_PREFERENCES.contains("ehMeu")) {
                 fragment = new ActivityMap();
                 title = getString(R.string.configura_es);
             } else {
@@ -329,7 +369,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
             // Replace whatever is in the fragment_container view with this fragment,
             // and add the transaction to the back stack so the user can navigate back
-            transaction.replace(R.id.drawer_layout, fragment);
+            transaction.replace(R.id.drawer_layout, fragment, title);
             transaction.addToBackStack(title);
 
             transaction.commit();
@@ -370,7 +410,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         ImageButton bt = (ImageButton) findViewById(R.id.btAvatar);
                         bt.setImageBitmap(yourSelectedImage);
                         if (yourSelectedImage != null)
-                            ValueObject.AVATAR_BITMAP = yourSelectedImage;
+                            AVATAR_BITMAP = yourSelectedImage;
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException ex) {
@@ -386,7 +426,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
                     if (!textMatchList.isEmpty()) {
                         String Query = textMatchList.get(0);
-                        ValueObject.WORD.setText(Query);
+                        WORD.setText(Query);
                     }
                     break;
             }
@@ -405,7 +445,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.btNovoSplah:
                 //whatever
-                if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
+                if (ActivityUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
                     loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
@@ -413,10 +453,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.btMapaSplash:
-                if (ActivityUtil.isLocationValid(ValueObject.MAIN) == null) {
+                if (ActivityUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    if (ValueObject.MY_PREFERENCES.contains("ehMeu")) {
+                    if (MY_PREFERENCES.contains("ehMeu")) {
                         loadFragment(new ActivityMap(), getString(R.string.view_events));
                     } else {
                         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -495,11 +535,13 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     }
 
 
-    public static final void logException(Exception ex){
+    public static final void logException(Exception ex) {
         try {
+            LOGGER.log(Level.SEVERE, ex.toString());
+            // ex.printStackTrace();
             FirebaseCrash.report(ex);
             FirebaseCrash.log(ex.toString());
-        }catch(Exception e){
+        } catch (Exception e) {
             FirebaseCrash.log(ex.toString());
         }
 

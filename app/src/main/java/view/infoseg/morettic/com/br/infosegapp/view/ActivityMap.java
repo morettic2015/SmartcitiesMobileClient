@@ -1,15 +1,12 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,13 +14,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.Circle;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONException;
@@ -34,8 +27,10 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /*public class ActivityMap extends FragmentActivity implements OnMapReadyCallback {
@@ -60,17 +55,18 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
     private MapView mMapView;
     private GoogleMap googleMap;
-    private AlertDialog.Builder builder;
+
     private StringBuilder stringBuilder = new StringBuilder();
     private double longitude = 0, latitude = 0;
     private TextView txtInfoForecast;
+    private View v;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // inflate and return the layout
         InfosegMain.setTitleToolbar(getString(R.string.view_events), container);
-        View v = inflater.inflate(R.layout.activity_map, container,
+        v = inflater.inflate(R.layout.activity_map, container,
                 false);
 
         txtInfoForecast = (TextView) v.findViewById(R.id.txtInfoForecast);
@@ -78,7 +74,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume();// needed to get the map to display immediately
-        Location location = ActivityUtil.getMyLocation(getActivity(), builder);
+        Location location = ActivityUtil.getMyLocation(getActivity());
         try {
             this.longitude = location.getLongitude();
             this.latitude = location.getLatitude();
@@ -286,7 +282,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
     public void onStop (){
         super.onStop();
-        stringBuilder = null;
+        //txtInfoForecast.destroyDrawingCache();
+        //this.mMapView.destroyDrawingCache();
+        this.v.destroyDrawingCache();
+
         txtInfoForecast = null;
     }
     @Override
@@ -298,7 +297,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        builder = null;
+
         stringBuilder = null;
         txtInfoForecast = null;
         googleMap = null;

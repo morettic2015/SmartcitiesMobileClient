@@ -35,6 +35,8 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
     <string name="action_settings">derechos de autor</string>
+    <string name="ajude_nos_a_manter_o_app">Ayúdanos a mantener el APP</string>
+    <string name="ajude_nosso_desenvolvimento">Ayúdanos a mantener el APP</string>
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Conectado</string>
@@ -96,6 +98,7 @@
     <string name="consultando_ocorrencias">Consulta de ocurrencias ...</string>
     <string name="cpf_cnpj">Doc. Id.</string>
     <string name="criar_uma_conta"> Regístrate es gratis!</string>
+    <string name="dados_tempo">Cargando datos del tiempo ...</string>
     <string name="descri_o">Descripción</string>
     <string name="dgts__call_me">Llámame</string>
     <string name="dgts__calling">Llamando…</string>
@@ -155,9 +158,11 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="error_invalid_email">No válida de correo electrónico</string>
     <string name="error_invalid_password">Contraseña demasiado corta</string>
     <string name="esporte">deporte</string>
+    <string name="facebook_login">Accede a través de Facebook</string>
     <string name="filtros">Filtros</string>
     <string name="foto_1">Foto 1</string>
     <string name="google_connected">El usuario está conectado a Google!</string>
+    <string name="gps_habilitado">habilitado para GPS</string>
     <string name="hello_blank_fragment">fu</string>
     <string name="help_us">Ayúdanos!</string>
     <string name="humidade">Humedad</string>
@@ -167,6 +172,8 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Introduzca sus datos y mantenerlos actualizados, para colaborar en eventos en su municipio</string>
     <string name="invalid_locate">Localización inválida</string>
     <string name="list_ocorrencias">lista de resultados</string>
+    <string name="localiza_o_indispon_vel">Ubicación no disponible</string>
+    <string name="localizacao_invalida">Localización inválida</string>
     <string name="login">Login</string>
     <string name="mapa_ocorrencias">Mapa de ocurrencias </string>
     <string name="meio_ambiente">Medio ambiente</string>
@@ -187,6 +194,8 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="nome">Nombre</string>
     <string name="ok">OK</string>
     <string name="opc_es">Opciones</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Así que usted puede ver y eventos de informe, debe activar el GPS. Por favor, activa el GPS en el dispositivo y vuelva a intentarlo.</string>
+    <string name="patroc_nio">patrocinio</string>
     <string name="perfil">Perfil</string>
     <string name="perfil_create">Creación de perfil ...</string>
     <string name="person_info_null">persona información es nula</string>
@@ -214,6 +223,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="save_occurrences">Guardar ocurrencia ...</string>
     <string name="save_profile_msg">Guardar perfil ...</string>
     <string name="save_sucess">Salvo!</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Si te gusta el servicio, nos ayude a mantener la aplicación y el desarrollo de otras aplicaciones para hacer que las ciudades inteligentes. Basta con hacer clic dos anuncios! Un pequeño gesto estará contribuyendo a una sociedad del conocimiento.</string>
     <string name="seguran_a">Seguridad</string>
     <string name="selecioneData">Seleccione una fecha</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>

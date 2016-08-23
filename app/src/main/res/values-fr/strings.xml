@@ -101,4 +101,14 @@
     <string name="verifique_erros2">] Et essayer à nouveau.</string>
     <string name="erro_cadastro_perfil">Une erreur est survenue. Vérifiez votre Internet et essayer à nouveau.</string>
     <string name="sucesso_ocorrencia_registrada">Succès. occurrence enregistrée!</string>
+    <string name="ajude_nos_a_manter_o_app">Aidez-nous à garder l\'APP</string>
+    <string name="ajude_nosso_desenvolvimento">Aidez-nous à garder l\'APP</string>
+    <string name="patroc_nio">patronage</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Si vous aimez le service, nous aider à garder l\'APP et de développer d\'autres applications pour rendre les villes intelligentes. Il suffit de cliquer deux annonces! Un petit geste sera de contribuer à une société de la connaissance.</string>
+    <string name="facebook_login">Connectez-vous via Facebook</string>
+    <string name="localiza_o_indispon_vel">Emplacement indisponible</string>
+    <string name="localizacao_invalida">Lieu invalide</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Ainsi, vous pouvez voir et les événements de rapport, vous devez activer votre GPS. S\'il vous plaît activer le GPS sur votre appareil et essayer à nouveau.</string>
+    <string name="gps_habilitado">GPS activé</string>
+    <string name="dados_tempo">Chargement des données météo ...</string>
 </resources>

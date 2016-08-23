@@ -101,4 +101,14 @@
     <string name="verifique_erros2">] And try again.</string>
     <string name="erro_cadastro_perfil">An error occurred. Check your Internet and try again.</string>
     <string name="sucesso_ocorrencia_registrada">Success. recorded occurrence!</string>
+    <string name="ajude_nos_a_manter_o_app">Help us keep the APP</string>
+    <string name="ajude_nosso_desenvolvimento">Help us keep the APP</string>
+    <string name="patroc_nio">Sponsorship</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">If you like the service, help us keep the APP and develop other applications to make smart cities. Just click two ads! A small gesture will be contributing to a knowledge society.</string>
+    <string name="facebook_login">Log in through Facebook</string>
+    <string name="localiza_o_indispon_vel">Location unavailable</string>
+    <string name="localizacao_invalida">Invalid location</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">So you can view and report events, you must enable your GPS. Please enable GPS on your device and try again.</string>
+    <string name="gps_habilitado">GPS enabled</string>
+    <string name="dados_tempo">Loading weather data ...</string>
 </resources>

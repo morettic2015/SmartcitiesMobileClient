@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest   xmlns:android="http://schemas.android.com/apk/res/android"
-            package="view.infoseg.morettic.com.br.infosegapp"
-            android:versionName="Beta01e0i18n1"
-            android:versionCode="2"
-            android:installLocation="preferExternal">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="view.infoseg.morettic.com.br.infosegapp"
+    android:installLocation="preferExternal"
+    android:versionCode="2"
+    android:versionName="Beta01e0i18n1" >
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -26,8 +26,6 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_ct_wtc"
@@ -44,24 +42,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+      <!--  <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/facebook_login"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <activity
             android:name=".view.ActivityGPlus"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <!-- Defining services -->
-        <service
-            android:name=".util.MessagingService">
+        <service android:name=".util.MessagingService" >
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name=".util.InstanceIdService">
+        <service android:name=".util.InstanceIdService" >
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        <receiver
+            android:name="view.infoseg.morettic.com.br.infosegapp.actions.TAPPXBroadcastReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -74,10 +88,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <!-- @Backupservice @TODO implementar backup das preferencias do usuario-->
-        <meta-data android:name="com.google.android.backup.api_key"
+        <!-- @Backupservice @TODO implementar backup das preferencias do usuario -->
+        <meta-data
+            android:name="com.google.android.backup.api_key"
             android:value="AEdPqrEAAAAIO4PmOUlH6c371FTGC9a4RDwv06HrJSi96EZfhw" />
-
+        <!-- SDK DO FACEBOOK -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"
@@ -85,8 +103,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="0c26a186ce4351babd320ea71ff44034565beb21" />
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 
 </manifest>

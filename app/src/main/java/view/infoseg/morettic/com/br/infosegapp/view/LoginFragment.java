@@ -32,7 +32,17 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
     private EditText email, senha;
    // protected static LoginFragment myInstance;
 
-
+    public void onStop() {
+        super.onStop();
+        if(btLogin!=null)
+            btLogin.destroyDrawingCache();
+        if(btAdd!=null)
+            btAdd.destroyDrawingCache();
+        if(email!=null)
+            email.destroyDrawingCache();
+        if(senha!=null)
+            senha.destroyDrawingCache();
+    }
 
     static LoginFragment newInstance() {
         return new LoginFragment();

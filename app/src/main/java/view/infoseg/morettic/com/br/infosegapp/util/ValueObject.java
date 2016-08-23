@@ -14,7 +14,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.logging.Logger;
 
+import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 import view.infoseg.morettic.com.br.infosegapp.view.LoginFragment;
 
 /**
@@ -52,4 +54,7 @@ public class ValueObject {
     public static Bitmap BITMAP_DEFAULT;
     public static JSONObject FORECAST;
     public static String MY_DEVICE_TOKEN = null;
+    public static final Logger LOGGER = Logger.getLogger( InfosegMain.class.getName() );
+    public static int COUNTER_CLICK = 0;
+    public static final int AVAILABLE = 2;
 }

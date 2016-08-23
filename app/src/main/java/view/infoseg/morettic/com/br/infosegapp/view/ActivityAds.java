@@ -1,9 +1,5 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 
@@ -55,9 +54,9 @@ public class ActivityAds extends Fragment {
         return v;
     }
 
-    public InterstitialAd initAddsForMe(){
+  /*  public InterstitialAd initAddsForMe(){
         return newInterstitialAd();
-    }
+    }*/
 
     private InterstitialAd newInterstitialAd() throws IllegalStateException {
         InterstitialAd interstitialAd = new InterstitialAd(v.getContext());
@@ -67,7 +66,7 @@ public class ActivityAds extends Fragment {
             @Override
             public void onAdLoaded() {
                 mNextLevelButton.setEnabled(true);
-                if(counter++<=1) {
+                if(++counter==1) {
                     mInterstitialAd.show();
                 }
             }

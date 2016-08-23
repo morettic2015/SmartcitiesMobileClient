@@ -39,7 +39,27 @@ public class ActivityConfig extends Fragment {
     private View v;
     private EditText txtPhone;
     private SharedPreferences.Editor editor;
-
+    @Override
+    public void onStop() {
+        super.onStop();
+        bt.destroyDrawingCache();
+        ehMeu.destroyDrawingCache();
+        eMeuEstado.destroyDrawingCache();
+        ehMinhaCidade.destroyDrawingCache();
+        ehMeuPais.destroyDrawingCache();
+        saude.destroyDrawingCache();
+        transporte.destroyDrawingCache();
+        meioAmbiente.destroyDrawingCache();
+        educacao.destroyDrawingCache();
+        seguranca.destroyDrawingCache();
+        politica.destroyDrawingCache();
+        upa.destroyDrawingCache();
+        esportes.destroyDrawingCache();
+        txtPhone.destroyDrawingCache();
+        txtMsgConfig02.destroyDrawingCache();
+        editor = null;
+        v.destroyDrawingCache();
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

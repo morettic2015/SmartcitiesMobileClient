@@ -8,13 +8,9 @@ import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.Circle;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.TileOverlayOptions;
-import com.google.firebase.crash.FirebaseCrash;
 import com.google.maps.android.heatmaps.Gradient;
 import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
@@ -29,6 +25,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.FORECAST;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -37,10 +34,10 @@ import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logExcept
 public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptions>> {
     // public static final String UPLOAD_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     private ProgressDialog dialog;
-    private View a1;
+
     private JSONObject filter;
     private GoogleMap googleMap;
-    private double lat, lon;
+
     private TextView txtInfoForecast;
     private StringBuilder sb = new StringBuilder();
     private List<MarkerOptions> lMarkers = new ArrayList<MarkerOptions>();
@@ -86,7 +83,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
     public AssyncMapQuery(View activity, JSONObject filter, GoogleMap googleMap) {
         this.dialog = new ProgressDialog(activity.getContext());
-        this.a1 = activity;
+      
         this.filter = filter;
         this.googleMap = googleMap;
         this.msg = activity.getContext().getString(R.string.consultando_ocorrencias);
@@ -148,7 +145,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                 //Create a forecast {"curren_weather":[{"humidity":"94","pressure":"1011","temp":"27","temp_unit":"c","weather_code":"1","weather_text":"Partly cloudy","wind":[{"dir":"WSW","speed":"3","wind_unit":"kph"}]}],"forecast":[{"date":"2016-04-04","day":[{"weather_code":"0","weather_text":"Sunny skies","wind":[{"dir":"SSW","dir_degree":"197","speed":"18","wind_unit":"kph"}]}],"day_max_temp":"34","night":[{"weather_code":"1","weather_text":"Partly cloudy skies","wind":[{"dir":"SW","dir_degree":"230","speed":"22","wind_unit":"kph"}]}],"night_min_temp":"25","temp_unit":"c"},{"date":"2016-04-05","day":[{"weather_code":"2","weather_text":"Cloudy skies","wind":[{"dir":"SW","dir_degree":"224","speed":"18","wind_unit":"kph"}]}],"day_max_temp":"34","night":[{"weather_code":"1","weather_text":"Partly cloudy skies","wind":[{"dir":"WSW","dir_degree":"240","speed":"22","wind_unit":"kph"}]}],"night_min_temp":"26","temp_unit":"c"}]}
                 //http://www.myweather2.com/developer/forecast.ashx?uac=9H1IUHm/Ih&query=" + lat + "," + lon + "&temp_unit=c&output=json"
                 if (FORECAST == null) {
-                    FORECAST = HttpUtil.getJSONFromUrl(HttpUtil.getForecast(lat + "", lon + ""));
+                    FORECAST = HttpUtil.getJSONFromUrl(HttpUtil.getForecast( this.filter.getString("lat") + "",  this.filter.getString("lon") + ""));
                 }
                 try {
                     sb.append("Temperatura:");
@@ -162,7 +159,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                     sb.append(FORECAST.getJSONObject("weather").getJSONArray("curren_weather").getJSONObject(0).getJSONArray("wind").getJSONObject(0).getString("wind_unit"));
                 } catch (Exception ex) {
                     logException(ex);
-                    sb = new StringBuilder("Carregando dados meteorológicos...");
+                    sb = new StringBuilder(MAIN.getApplicationContext().getString(R.string.dados_tempo));
                 }
             } catch (Exception ex) {
                 logException(ex);

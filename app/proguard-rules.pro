@@ -15,3 +15,12 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keepattributes *Annotation*
+-keepclassmembers class com.google.**.R$* {
+    public static <fields>;
+}
+-keep public class com.google.ads.** {*;}
+-keep public class com.google.android.gms.** {*;}
+-keep public class com.tappx.** { *; }
+
+-dontwarn com.tappx.mediation.mopub.**

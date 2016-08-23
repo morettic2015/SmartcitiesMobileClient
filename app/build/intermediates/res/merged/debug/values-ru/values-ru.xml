@@ -35,6 +35,8 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Открыть доступ пользователю %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Свернуть"</string>
     <string name="action_settings">Авторские права</string>
+    <string name="ajude_nos_a_manter_o_app">Помогите нам сохранить приложение</string>
+    <string name="ajude_nosso_desenvolvimento">Помогите нам сохранить приложение</string>
     <string name="app_name">Город часы</string>
     <string name="app_title_main">Город часы</string>
     <string name="autenticando">Аутентификация ...</string>
@@ -96,6 +98,7 @@
     <string name="consultando_ocorrencias">Выполнение запросов ... вхождений</string>
     <string name="cpf_cnpj">Док. Я бы.</string>
     <string name="criar_uma_conta">Зарегистрироваться абсолютно бесплатна!</string>
+    <string name="dados_tempo">Загрузка данных о погоде ...</string>
     <string name="descri_o">описание</string>
     <string name="dgts__call_me">Позвонить мне</string>
     <string name="dgts__calling">Вызов…</string>
@@ -153,9 +156,11 @@
     <string name="error_invalid_email">адрес электронной почты недействителен</string>
     <string name="error_invalid_password">Пароль слишком короткий</string>
     <string name="esporte">спорт</string>
+    <string name="facebook_login">Войти через Facebook</string>
     <string name="filtros">фильтры</string>
     <string name="foto_1">фото 1</string>
     <string name="google_connected">Пользователь подключается к Google!</string>
+    <string name="gps_habilitado">включен GPS</string>
     <string name="hello_blank_fragment">a</string>
     <string name="help_us">Помогите нам!</string>
     <string name="humidade">влажность</string>
@@ -165,6 +170,8 @@
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Введите ваши данные и держать их в курсе, для совместной работы над событиями в вашем городе</string>
     <string name="invalid_locate">недействительный Расположение</string>
     <string name="list_ocorrencias">список популярности</string>
+    <string name="localiza_o_indispon_vel">Местоположение недоступно</string>
+    <string name="localizacao_invalida">недействительный Расположение</string>
     <string name="login">Войти</string>
     <string name="mapa_ocorrencias">Карта вхождения</string>
     <string name="meio_ambiente">окружающая среда</string>
@@ -185,6 +192,8 @@
     <string name="nome">имя</string>
     <string name="ok">хорошо</string>
     <string name="opc_es">опции</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Таким образом, вы можете просматривать и события отчетов, необходимо включить функцию GPS. Пожалуйста, включите GPS на устройстве и повторите попытку.</string>
+    <string name="patroc_nio">протекция</string>
     <string name="perfil">профиль</string>
     <string name="perfil_create">Создание профиля ...</string>
     <string name="person_info_null">Личная информация не нашла ....</string>
@@ -212,6 +221,7 @@
     <string name="save_occurrences">Сохранение возникновение ...</string>
     <string name="save_profile_msg">Сохранение профиля ...</string>
     <string name="save_sucess">экономить!</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Если вам нравится обслуживание, помогают нам сохранить приложение и разрабатывать другие приложения, чтобы сделать умных городов. Просто нажмите два объявления! Небольшой жест будет способствовать обществу знаний.</string>
     <string name="seguran_a">безопасность</string>
     <string name="selecioneData">Выберите дату</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Выберите расстояния для фильтрации</string>

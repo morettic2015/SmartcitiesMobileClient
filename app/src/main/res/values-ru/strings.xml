@@ -101,4 +101,14 @@
     <string name="perfil_create">Создание профиля ...</string>
     <string name="erro_cadastro_perfil">Произошла ошибка. Проверьте Интернет и повторите попытку.</string>
     <string name="sucesso_ocorrencia_registrada">Успех. зафиксированное появление!</string>
+    <string name="ajude_nos_a_manter_o_app">Помогите нам сохранить приложение</string>
+    <string name="ajude_nosso_desenvolvimento">Помогите нам сохранить приложение</string>
+    <string name="patroc_nio">протекция</string>
+    <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Если вам нравится обслуживание, помогают нам сохранить приложение и разрабатывать другие приложения, чтобы сделать умных городов. Просто нажмите два объявления! Небольшой жест будет способствовать обществу знаний.</string>
+    <string name="facebook_login">Войти через Facebook</string>
+    <string name="localiza_o_indispon_vel">Местоположение недоступно</string>
+    <string name="localizacao_invalida">недействительный Расположение</string>
+    <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Таким образом, вы можете просматривать и события отчетов, необходимо включить функцию GPS. Пожалуйста, включите GPS на устройстве и повторите попытку.</string>
+    <string name="gps_habilitado">включен GPS</string>
+    <string name="dados_tempo">Загрузка данных о погоде ...</string>
 </resources>

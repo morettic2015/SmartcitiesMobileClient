@@ -5,66 +5,60 @@ package view.infoseg.morettic.com.br.infosegapp.view;
  */
 
 
-        import java.io.IOException;
-        import java.io.InputStream;
-        import java.io.UnsupportedEncodingException;
-
         import android.app.Activity;
-        import android.app.ProgressDialog;
-        import android.content.Intent;
-        import android.content.IntentSender.SendIntentException;
-        import android.content.SharedPreferences;
-        import android.graphics.Bitmap;
-        import android.graphics.BitmapFactory;
-        import android.net.Uri;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.Menu;
-        import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.widget.Button;
-        import android.widget.ImageView;
-        import android.widget.LinearLayout;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.IntentSender.SendIntentException;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import com.google.android.gms.common.ConnectionResult;
-        import com.google.android.gms.common.GooglePlayServicesUtil;
-        import com.google.android.gms.common.SignInButton;
-        import com.google.android.gms.common.api.GoogleApiClient;
-        import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-        import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-        import com.google.android.gms.common.api.ResultCallback;
-        import com.google.android.gms.common.api.Status;
-        import com.google.android.gms.plus.Plus;
-        import com.google.android.gms.plus.model.people.Person;
-        import com.google.firebase.crash.FirebaseCrash;
-        import com.twitter.sdk.android.core.models.User;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
+import com.google.firebase.crash.FirebaseCrash;
 
-        import org.json.JSONException;
-        import org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-        import view.infoseg.morettic.com.br.infosegapp.R;
-        import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
-        import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.UPLOAD_URL;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getBitmapFromURL;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVATAR_BITMAP;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
-        import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
-        import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
+import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+
+import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.UPLOAD_URL;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getBitmapFromURL;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVATAR_BITMAP;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
+import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class ActivityGPlus extends Activity implements OnClickListener,
         ConnectionCallbacks, OnConnectionFailedListener {

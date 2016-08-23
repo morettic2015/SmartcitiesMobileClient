@@ -49,6 +49,15 @@ public class ActivityProfile extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        cpf.destroyDrawingCache();
+        rdCNPJ.destroyDrawingCache();
+        complemento.destroyDrawingCache();
+        cep.destroyDrawingCache();
+        passwd.destroyDrawingCache();
+        nome.destroyDrawingCache();
+        email.destroyDrawingCache();
+        btAvatar.destroyDrawingCache();
+        rd.destroyDrawingCache();
         cpfMask = null;
         cnpjMask = null;
         cepMask = null;
@@ -135,28 +144,36 @@ public class ActivityProfile extends Fragment {
 
                     StringBuilder erros = new StringBuilder();
                     if (email.getText().toString().equals("") || !Validate.validateEmail(email.getText().toString())) {
-                        erros.append("email ");
+                        erros.append(MAIN.getString(R.string.email));
+                        erros.append(" ");
                     }
                     if (nome.getText().toString().equals("")) {
-                        erros.append("nome ");
+                        erros.append(MAIN.getString(R.string.nome));
+                        erros.append(" ");
                     }
                     if (cpf.getText().toString().equals("")) {
-                        erros.append("cpf / cnpj ");
+                        erros.append(MAIN.getString(R.string.cpf_cnpj));
+                        erros.append(" ");
                     }
                     if (cep.getText().toString().equals("")) {
-                        erros.append("email ");
+                        erros.append(MAIN.getString(R.string.cep));
+                        erros.append(" ");
                     }
                     if (passwd.getText().toString().equals("")) {
-                        erros.append("senha ");
+                        erros.append(MAIN.getString(R.string.senha));
+                        erros.append(" ");
                     }
                     if (complemento.getText().toString().equals("")) {
-                        erros.append("complemento ");
+                        erros.append(MAIN.getString(R.string.complemento));
+                        erros.append(" ");
                     }
                     if (nasc.getText().toString().equals("")) {
-                        erros.append("nasc ");
+                        erros.append(MAIN.getString(R.string.nascimento));
+                        erros.append(" ");
                     }
                     if (ValueObject.UPLOAD_AVATAR == null) {
-                        erros.append("foto ");
+                        erros.append(MAIN.getString(R.string.foto_1));
+                        erros.append(" ");
                     }
 
                     if (erros.toString().equals("")) {
@@ -164,7 +181,7 @@ public class ActivityProfile extends Fragment {
                         AssyncSaveProfile assyncSaveProfile = new AssyncSaveProfile(v, js);
                         assyncSaveProfile.execute();
                     } else {
-                        ToastHelper.makeToast(getContext(),"Por favor verifique os campos [" + erros.toString() + "] e tente novamente.");
+                        ToastHelper.makeToast(getContext(),MAIN.getString(R.string.verifique_erros1) + erros.toString() + MAIN.getString(R.string.verifique_erros2));
                     }
 
 

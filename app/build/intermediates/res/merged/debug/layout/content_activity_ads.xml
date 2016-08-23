@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Patrocínio:"
+            android:text="@string/patroc_nio"
             android:id="@+id/textView22"
             android:layout_gravity="center_horizontal" />
 
@@ -48,7 +48,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="5dp"
-            android:text="Ajude-nos a manter o APP"
+            android:text="@string/ajude_nos_a_manter_o_app"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal" />
 
@@ -58,7 +58,7 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="15dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Se você gosta do serviço, ajude-nos a manter o APP e desenvolver outras aplicações para tornar as cidades inteligentes. Basta clicar em dois anúncios! Um pequeno gesto estará colaborando para uma sociedade do conhecimento."
+            android:text="@string/se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento"
             android:id="@+id/textView21"
             android:layout_marginLeft="25dp" />
 
@@ -68,7 +68,7 @@
             android:layout_height="60dp"
             android:drawableLeft="@drawable/ic_attach_money"
             android:background="@drawable/button_shape_model"
-            android:text="Ajude nosso desenvolvimento!"
+            android:text="@string/ajude_nosso_desenvolvimento"
             android:layout_below="@+id/level"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"

@@ -1,20 +1,13 @@
 package view.infoseg.morettic.com.br.infosegapp.util;
 
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.location.Location;
-import android.location.LocationManager;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.provider.Settings;
-
-import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONObject;
 
@@ -27,19 +20,22 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.net.URLEncoder;
+
+import view.infoseg.morettic.com.br.infosegapp.R;
 
 import static java.net.URLEncoder.encode;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 24/02/2016.
  *
- * https://gaeloginendpoint.appspot.com/upload.exec
+ * http://gaeloginendpoint.appspot.com/upload.exec
  */
 public class HttpUtil {
-    private BitmapFactory.Options options;
-    private Bitmap reusedBitmap;
+    //private BitmapFactory.Options options;
+   // private Bitmap reusedBitmap;
     public static String getText(String url) throws Exception {
         StringBuilder response = new StringBuilder();
         URL website = null;
@@ -90,10 +86,10 @@ public class HttpUtil {
     }
 
     public static final String getSaveImagePath(String image, String token){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName="+image+"&iToken="+token;
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=2&iName="+image+"&iToken="+token;
     }
     public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id) throws UnsupportedEncodingException {
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=3&" +
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=3&" +
                 "email="+email+
                 "&avatar="+avatar+
                 "&nome="+ encode(nome, "UTF-8")+
@@ -107,7 +103,7 @@ public class HttpUtil {
     }
 
     public static final String getSaveOcorrenciaPath(String tit,double lat, double lon, String desc, String idPic, String tipo, String idProfile,String address,String idPic1,String idPic2,String idPic3){
-        String ret =  "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
+        String ret =  "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=1&" +
                 "titulo=" + encode(tit) +
                 "&lat=" + lat +
                 "&lon=" + lon +
@@ -131,7 +127,7 @@ public class HttpUtil {
     }
 
     public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, String distance, String types){
-        String r = "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
+        String r = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
                 "&lat=" + pLat +
                 "&lon=" + pLon +
@@ -158,7 +154,8 @@ public class HttpUtil {
 
             myBitmap = BitmapFactory.decodeStream(input);
         } catch (IOException ex) {
-            logException(ex);
+            //logException(ex);
+            myBitmap = BitmapFactory.decodeResource(MAIN.getResources(), R.mipmap.ic_city_watch);
         } finally {
             url = null;
             //input.close();
@@ -167,12 +164,12 @@ public class HttpUtil {
         }
     }
     public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
-        String urlImage = "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
+        String urlImage = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
         return getBitmapFromURL(urlImage);
     }
 
     public static final String getPathLoginRegister(String login,String senha){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
     }
     public static final Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
         int width = bm.getWidth();
@@ -192,39 +189,43 @@ public class HttpUtil {
         return resizedBitmap;
     }
 
-    public static final String getTokenImagemById(String id){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(id);
+    /*public static final String getTokenImagemById(String id){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(id);
     }
 
     public static final String getTokenImagemById(){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec";
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec";
     }
 
     public static final String getGeocodingUrl(String lat,String lon){
-        return "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
+        return "http://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
+    }*/
+
+    public static final String sinalizePushServerLocationChanged(double lat,double lon){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=33&lat="+ lat + "&lon=" + lon +"id="+ID_PROFILE;
     }
 
     public static final String getProfileByEmail(String email){
-        return "https://api.fullcontact.com/v2/person.json?email="+email+"&apiKey=ba2fbd5adb0456e2";
+        return "http://api.fullcontact.com/v2/person.json?email="+email+"&apiKey=ba2fbd5adb0456e2";
     }
 
     public static final String getHasEmailDataStore(String email){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=11&email="+encode(email);
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=11&email="+encode(email);
     }
 
     public static final String sendEmailNovoCadastro(String email){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=12&email="+encode(email)+"&tipo=NOVO_CADASTRO";
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=12&email="+encode(email)+"&tipo=NOVO_CADASTRO";
     }
 
     public static final String saveConfigInfo(String id,String phone,String properties){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=15&idProfile="+id+"&phone="+encode(phone)+"&props="+encode(properties);
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=15&idProfile="+id+"&phone="+encode(phone)+"&props="+encode(properties);
     }
     public static final String getListTOp20(){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
     }
 
     public static final String getRatingUrl(String idOcorrencia,String rate){
-        return "https://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ValueObject.ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
     }
     public static final String getForecast(String lat,String lon){
         return "http://www.myweather2.com/developer/forecast.ashx?uac=9H1IUHm/Ih&query=" + encode(lat) + "," + encode(lon) + "&temp_unit=c&output=json";

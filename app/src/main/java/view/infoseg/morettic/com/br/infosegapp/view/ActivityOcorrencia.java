@@ -1,16 +1,13 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +17,6 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,10 +28,12 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static android.app.Activity.RESULT_OK;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.WORD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 public class ActivityOcorrencia extends Fragment implements View.OnClickListener {
@@ -48,15 +45,32 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
     private ImageButton btCapCam, btCapCam1, btCapCam2, btCapCam3;
     private RadioButton selectedOne;
     private EditText txtTitulo, txtDescricao;
-    private LocationManager lm;
     private Location location;
     private double longitude, latitude;
-    private AlertDialog.Builder builder;
     public static int OPCAO = -1;
     private static int codigo = 0;
     private TextView txtMsg;
     private ImageButton ib;
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        this.location = null;
+        /*tipoOcorrencia = null;
+        radioGroup = null;
+        btCapCam = null;
+        btCapCam1 = null;
+        btCapCam2 = null;
+        btCapCam3 = null;
+        txtTitulo = null;
+        txtDescricao = null;
+        selectedOne = null;
+        btMic2 = null;
+        btMic1 = null;
+        btEnviar = null;*/
+
+        v.destroyDrawingCache();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,7 +87,7 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
         btMic2 = (Button) v.findViewById(R.id.btMic2);
         btMic1 = (Button) v.findViewById(R.id.btMic1);
         radioGroup = (RadioGroup) v.findViewById(R.id.idRadioOcorrencia);
-        builder = new android.support.v7.app.AlertDialog.Builder(inflater.getContext());
+       // builder = new android.support.v7.app.AlertDialog.Builder(inflater.getContext());
         btCapCam = (ImageButton) v.findViewById(R.id.btCaptureCam);
         btCapCam1 = (ImageButton) v.findViewById(R.id.btCaptureCam1);
         btCapCam2 = (ImageButton) v.findViewById(R.id.btCaptureCam2);
@@ -128,7 +142,7 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
         });
         //Recupera a localização do usuário
         try {
-            location = ActivityUtil.getMyLocation(getActivity(), builder);
+            location = ActivityUtil.getMyLocation(getActivity());
 
             longitude = location.getLongitude();
             latitude = location.getLatitude();
@@ -153,6 +167,9 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
             if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
+                if(ib==null){
+                    ib = (ImageButton) v.findViewById(R.id.btCaptureCam);
+                }
                 ib.setImageBitmap(imageBitmap);
 
                 InfosegMain ism = (InfosegMain) getActivity();
@@ -211,12 +228,15 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
 
                     if (txtTitulo.getText().toString().equals("")) {
                         erros.append(MAIN.getString(R.string.t_tulo_da_ocorr_ncia));
+                        erros.append(",");
                     }
                     if (txtDescricao.getText().toString().equals("")) {
                         erros.append(MAIN.getString(R.string.descri_o));
+                        erros.append(",");
                     }
                     if (UPLOAD_PIC_OCORRENCIA == null) {
                         erros.append(MAIN.getString(R.string.foto_1));
+                        erros.append(",");
                         codigo = R.id.btCaptureCam;//Foto principal da ocorrência
                         dispatchTakePictureIntent(v);//Abre janela para tirar foto
                     }
