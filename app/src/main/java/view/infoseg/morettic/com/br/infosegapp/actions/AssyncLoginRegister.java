@@ -10,11 +10,13 @@ import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -113,13 +115,18 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
 
                 //Update device ID for push notifications
                 MY_DEVICE_TOKEN = InstanceIdService.getToken();
-                this.editor.putString("DEVICE_TYPE", MY_DEVICE_TOKEN);
-                HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(MY_DEVICE_TOKEN, "ANDROID", ID_PROFILE));
-
+                if(!MY_PREFERENCES.getString("DEVICE_TYPE","").equals(MY_DEVICE_TOKEN)) {
+                    HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(MY_DEVICE_TOKEN, "ANDROID", ID_PROFILE));
+                    this.editor.putString("DEVICE_TYPE", MY_DEVICE_TOKEN).commit();
+                }
                 ValueObject.AUTENTICADO = true;
                 try {
-                    ValueObject.AVATAR_BITMAP = HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar"));
-                    ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(ValueObject.AVATAR_BITMAP, 200, 200);
+                    if(ImageCache.hasBitmapFromMemCache("avatar")){
+                        ValueObject.AVATAR_BITMAP = ImageCache.getBitmapFromMemCache("avatar");
+                    }else {
+                        ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar")), 200, 200);
+                        ImageCache.addBitmapToMemoryCache("avatar",ValueObject.AVATAR_BITMAP);
+                    }
                 } catch (Exception ex) {
                     logException(ex);
                 }

@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
-import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
@@ -74,11 +74,12 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume();// needed to get the map to display immediately
-        Location location = ActivityUtil.getMyLocation(getActivity());
+        Location location = LocationManagerUtil.getMyLocation(this.getActivity());
         try {
             this.longitude = location.getLongitude();
             this.latitude = location.getLatitude();
         } catch (Exception e) {//LATITUDE DE BRASILIA
+            FirebaseCrash.report(new Exception("IMPOSSIVEL DETERMINAR LOCALIZAÇÃO DO EMO"));
             this.longitude = -15.7941d;
             this.latitude = -47.8825d;
         }

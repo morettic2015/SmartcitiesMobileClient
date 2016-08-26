@@ -1,20 +1,10 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-
-import com.google.firebase.crash.FirebaseCrash;
-
-import java.io.InputStream;
 
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -35,9 +25,13 @@ public class AssyncImageLoad extends AsyncTask<String, Void, Bitmap> {
 
         Bitmap mIcon11 = null;
         try {
-
-            mIcon11 = HttpUtil.getBitmapFromURLBlobKey(this.key);
-            mIcon11 = HttpUtil.getResizedBitmap(mIcon11,250,250);
+            if(ImageCache.hasBitmapFromMemCache(this.key)){
+                mIcon11 =  ImageCache.getBitmapFromMemCache(this.key);
+            }else {
+                mIcon11 = HttpUtil.getBitmapFromURLBlobKey(this.key);
+                mIcon11 = HttpUtil.getResizedBitmap(mIcon11, 250, 250);
+                ImageCache.addBitmapToMemoryCache(this.key,mIcon11);
+            }
         } catch (Exception ex) {
             logException(ex);
         }

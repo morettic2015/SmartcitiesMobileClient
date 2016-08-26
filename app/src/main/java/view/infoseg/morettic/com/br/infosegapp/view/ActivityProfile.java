@@ -1,9 +1,6 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextWatcher;
@@ -16,17 +13,18 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.google.firebase.crash.FirebaseCrash;
-
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveProfile;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.Mask;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.Validate;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 
@@ -88,8 +86,8 @@ public class ActivityProfile extends Fragment {
         rd = (RadioButton) v.findViewById(R.id.radioPessoaFisica);
         email = (EditText) v.findViewById(R.id.txtEmailUsuario);
         btAvatar = (ImageButton)v.findViewById(R.id.btAvatar);
-        if(ValueObject.AVATAR_BITMAP!=null){
-            btAvatar.setImageBitmap(ValueObject.AVATAR_BITMAP);
+        if(ImageCache.hasBitmapFromMemCache("avatar")){
+            btAvatar.setImageBitmap(ImageCache.getBitmapFromMemCache("avatar"));
         }
 
         //Configura campos

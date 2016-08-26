@@ -8,30 +8,20 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 
-import com.google.firebase.crash.FirebaseCrash;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterApiClient;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
-import com.twitter.sdk.android.core.TwitterCore;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
-import com.twitter.sdk.android.core.models.Tweet;
 import com.twitter.sdk.android.core.models.User;
-import com.twitter.sdk.android.core.services.StatusesService;
-import com.twitter.sdk.android.tweetui.TimelineResult;
-import com.twitter.sdk.android.tweetui.UserTimeline;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -44,7 +34,10 @@ import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromU
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
@@ -184,7 +177,7 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
 
 
             AUTENTICADO = true;
-            AVATAR_BITMAP = HttpUtil.getResizedBitmap(btm, 200, 200);
+            ImageCache.addBitmapToMemoryCache("avatar",HttpUtil.getResizedBitmap(btm, 200, 200));
 
             tempUri = null;
             realPathInSO = null;

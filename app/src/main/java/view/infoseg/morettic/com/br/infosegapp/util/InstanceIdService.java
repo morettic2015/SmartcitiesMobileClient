@@ -1,7 +1,5 @@
 package view.infoseg.morettic.com.br.infosegapp.util;
 
-import android.util.Log;
-
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
@@ -13,7 +11,7 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 //Class extending FirebaseInstanceIdService
 public class InstanceIdService extends FirebaseInstanceIdService {
     private static InstanceIdService instance;
-    private static final String TAG = "MyFirebaseIIDService";
+   // private static final String TAG = "MyFirebaseIIDService";
     private static String token = null;
 
     public static InstanceIdService getInstance(){
@@ -30,13 +28,7 @@ public class InstanceIdService extends FirebaseInstanceIdService {
 
     @Override
     public void onTokenRefresh() {
-
-        //Getting registration token
         token = FirebaseInstanceId.getInstance().getToken();
-
-        //Displaying token on logcat
-        Log.d(TAG, "Refreshed token: " + token);
-
     }
 
     private void sendRegistrationToServer(String token) {

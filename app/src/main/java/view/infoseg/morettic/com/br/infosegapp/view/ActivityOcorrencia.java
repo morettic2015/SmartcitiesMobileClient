@@ -26,7 +26,7 @@ import java.util.Locale;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
-import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 
 import static android.app.Activity.RESULT_OK;
@@ -142,7 +142,7 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
         });
         //Recupera a localização do usuário
         try {
-            location = ActivityUtil.getMyLocation(getActivity());
+            location = LocationManagerUtil.getMyLocation(this.getActivity());
 
             longitude = location.getLongitude();
             latitude = location.getLatitude();

@@ -41,6 +41,7 @@ import java.io.UnsupportedEncodingException;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 
 import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.UPLOAD_URL;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
@@ -51,7 +52,6 @@ import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathF
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVATAR_BITMAP;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
@@ -339,6 +339,7 @@ class AssyncSaveGPLUSProfile extends AsyncTask<JSONObject, Void, String> {
         Bitmap btm = null;
         JSONObject js = null;
         try {
+
             btm = getBitmapFromURL(user.getImage().getUrl());
 
             js = getJSONFromUrl(UPLOAD_URL);
@@ -377,7 +378,7 @@ class AssyncSaveGPLUSProfile extends AsyncTask<JSONObject, Void, String> {
 
 
             AUTENTICADO = true;
-            AVATAR_BITMAP = HttpUtil.getResizedBitmap(btm, 200, 200);
+            ImageCache.addBitmapToMemoryCache("avatar",HttpUtil.getResizedBitmap(btm, 200, 200));
 
 
         } catch (UnsupportedEncodingException ex) {

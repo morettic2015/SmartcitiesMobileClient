@@ -43,7 +43,8 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
-import view.infoseg.morettic.com.br.infosegapp.util.ActivityUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
+import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
@@ -52,7 +53,6 @@ import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVATAR_BITMAP;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.COUNTER_CLICK;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_OCORRENCIAS;
@@ -129,11 +129,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 *   @If Counter click <5 show ads. 5 ads each navigation;
                 *   @Only if the user has looged in.....
                 * **/
-            if (COUNTER_CLICK < 5) {
+            if (COUNTER_CLICK < 100) {
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
                 boolean isTappaxNetwork = false;
-                if ((d.getMinutes() % 3) == 0) {//If minutes mod 3 == 0 show ads
+                if ((d.getMinutes() % 5) == 0) {//If minutes mod 3 == 0 show ads
                     isTappaxNetwork = true;
                     COUNTER_CLICK++;
                     adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
@@ -145,7 +145,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                             });
                 }
                 //If show Tappax dont show google play....
-                if ((d.getMinutes() % 2) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
+                if ((d.getMinutes() % 3) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }
@@ -173,9 +173,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         //Inicializa as preferencias do usuario
         MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setVisibility(View.GONE);
-        fab.setOnClickListener((View.OnClickListener) this);
+        fab.setOnClickListener((View.OnClickListener) this);*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -213,11 +213,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
          *
          *   HUAUHAUAUHAU NO ARCO IRIS DA MANHA UM SILENCIO INVADE O PANTANO E FAZ OS CARNEIROS FLUTUAREM NAS MARGES DO NILO
          * */
-        //Checka permissão do GPS
         if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             String[] p = {ACCESS_FINE_LOCATION};
-            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE2);
+            ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE);
         }
+
         //Checa permissão da camera
         if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, CAMERA)) {
             String[] p = {CAMERA};
@@ -409,8 +409,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
                         ImageButton bt = (ImageButton) findViewById(R.id.btAvatar);
                         bt.setImageBitmap(yourSelectedImage);
-                        if (yourSelectedImage != null)
-                            AVATAR_BITMAP = yourSelectedImage;
+                        if (yourSelectedImage != null)//Add the image to the cache
+                            ImageCache.addBitmapToMemoryCache("avatar",yourSelectedImage);
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException ex) {
@@ -445,7 +445,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.btNovoSplah:
                 //whatever
-                if (ActivityUtil.isLocationValid(MAIN) == null) {
+                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
                     loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
@@ -453,7 +453,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.btMapaSplash:
-                if (ActivityUtil.isLocationValid(MAIN) == null) {
+                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
                     if (MY_PREFERENCES.contains("ehMeu")) {

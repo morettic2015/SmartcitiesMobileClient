@@ -172,6 +172,8 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
         }
     }
 
+
+
     private void addHeatMap() {
         int[] colors = {
                 Color.rgb(102, 225, 0), // green
