@@ -60,7 +60,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         }
     }
 
-    public AssyncLoginRegister(Context ctx, String login, String senha,String desc, String imagePath, String adrress) {
+    public AssyncLoginRegister(Context ctx, String login, String senha, String desc, String imagePath, String adrress) {
         this.dialog = new ProgressDialog(ctx);
         msg = ctx.getString(R.string.autenticando);
         this.email = login;
@@ -71,6 +71,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         this.adrress = adrress;
         //builder = new AlertDialog.Builder(this.a1.getContext());
     }
+
     public AssyncLoginRegister(Context ctx, String login, String senha) {
         this.dialog = new ProgressDialog(ctx);
         msg = ctx.getString(R.string.autenticando);
@@ -85,8 +86,6 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         // Creating new JSON Parser   public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id){
 
         try {
-
-
             //Validacao @TODO
 
             //URL PARA SALVAR O PERFIL.
@@ -115,31 +114,27 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
 
                 //Update device ID for push notifications
                 MY_DEVICE_TOKEN = InstanceIdService.getToken();
-                if(!MY_PREFERENCES.getString("DEVICE_TYPE","").equals(MY_DEVICE_TOKEN)) {
+                if (!MY_PREFERENCES.getString("DEVICE_TYPE", "").equals(MY_DEVICE_TOKEN)) {
                     HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(MY_DEVICE_TOKEN, "ANDROID", ID_PROFILE));
                     this.editor.putString("DEVICE_TYPE", MY_DEVICE_TOKEN).commit();
                 }
                 ValueObject.AUTENTICADO = true;
                 try {
-                    if(ImageCache.hasBitmapFromMemCache("avatar")){
+                    if (!ImageCache.hasBitmapFromMemCache("avatar")) {/*
                         ValueObject.AVATAR_BITMAP = ImageCache.getBitmapFromMemCache("avatar");
-                    }else {
+                    }else {*/
                         ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar")), 200, 200);
-                        ImageCache.addBitmapToMemoryCache("avatar",ValueObject.AVATAR_BITMAP);
+                        ImageCache.addBitmapToMemoryCache("avatar", ValueObject.AVATAR_BITMAP);
                     }
                 } catch (Exception ex) {
                     logException(ex);
                 }
-                //ValueObject.LOGIN.dismiss();
             }
 
 
         } catch (Exception ex) {
             logException(ex);
             js = new JSONObject();
-            // ValueObject.URL_SUBMIT_UPLOAD = null;
-
-            //e.printStackTrace();
         } finally {
 
             return js.toString();

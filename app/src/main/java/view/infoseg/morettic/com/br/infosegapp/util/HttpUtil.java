@@ -201,8 +201,8 @@ public class HttpUtil {
         return "http://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
     }*/
 
-    public static final String sinalizePushServerLocationChanged(double lat,double lon){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=33&lat="+ lat + "&lon=" + lon +"id="+ID_PROFILE;
+    public static final String sinalizePushServerLocationChanged(double lat,double lon,String token){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=33&lat="+ lat + "&lon=" + lon +"&token="+token;
     }
 
     public static final String getProfileByEmail(String email){

@@ -13,15 +13,17 @@ import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logExcept
 public class AssyncSinalizePush extends AsyncTask<Void, Void, Void> {
 
     private double lat,lon;
+    private String token;
 
-    public AssyncSinalizePush(double lat, double lon) {
+    public AssyncSinalizePush(double lat, double lon,String token) {
         this.lat = lat;
         this.lon = lon;
+        this.token = token;
     }
 
     protected Void doInBackground(Void... urls) {
         try {
-            HttpUtil.getText(HttpUtil.sinalizePushServerLocationChanged(this.lat, this.lon));
+            HttpUtil.getText(HttpUtil.sinalizePushServerLocationChanged(this.lat, this.lon,this.token));
         } catch (Exception ex) {
             logException(ex);
         } finally {

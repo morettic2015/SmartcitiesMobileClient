@@ -133,7 +133,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
                 boolean isTappaxNetwork = false;
-                if ((d.getMinutes() % 5) == 0) {//If minutes mod 3 == 0 show ads
+                if ((d.getMinutes() % 4)== 0) {//If minutes mod 3 == 0 show ads
                     isTappaxNetwork = true;
                     COUNTER_CLICK++;
                     adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
@@ -145,7 +145,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                             });
                 }
                 //If show Tappax dont show google play....
-                if ((d.getMinutes() % 3) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
+                if ((d.getMinutes() % 7) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }

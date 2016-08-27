@@ -16,6 +16,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSinalizePush;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AVAILABLE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.locationManager;
 
 /**
@@ -24,37 +25,27 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.locationM
 public class LocationManagerUtil {
     private static Location myLocal;
     private static boolean hasListener = false;
-    private static FragmentActivity fa1;
+    private static String mProvider;
 
 
     /**
      * @PQP O GOOGLE TEM QUE CAGAR NE AGORA PRECISO VERIFICAR CADA PERMISSAO NA MAO.... A  VAI SE FUDE SENAO A PORRA DA NULL POINTE E O CARALHO
      * @ BRIAN e LARRY VCS CHUPAM MUITA ROLA PQP entendo o contexto da mudanca mas nao seria algo que a ENgine Android fosse responsavel em habilitar em runtime/;
      * @ Porra pra que dificultar caralho bugado esse android M ou 6 bando de chupa rola do caralho
-     * <p>
+     * <p/>
      * E SE VOCE ESTIVER LENDO ISSO PORRA E PORQUE E UM VIADO FILHO DA PUTA QUE NAO MERECER SER UM DEUS VIVO
-     * <p>
+     * <p/>
      * HUAUHAUAUHAU NO ARCO IRIS DA MANHA UM SILENCIO INVADE O PANTANO E FAZ OS CARNEIROS FLUTUAREM NAS MARGES DO NILO
      */
 
-    public static Location isLocationValid(final Activity fa) throws  SecurityException{
+    public static Location isLocationValid(final Activity fa) throws SecurityException {
 
         locationManager = (LocationManager) fa.getSystemService(Context.LOCATION_SERVICE);
         // String bestProvider = lm.getBestProvider(getActivity().getCriteria(), true);
 
 
-        List<String> providers = locationManager.getAllProviders();
-        Location l;
-        for (String provider : providers) {
-            myLocal = locationManager.getLastKnownLocation(provider);
-            if (myLocal != null) {
-                break;
-            }
-        }
-        if(!hasListener) {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new InnerLocationManager());
-            hasListener = true;
-        }
+        initGpsListener();
+
         if (myLocal == null) {
             Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             fa.startActivity(i);
@@ -69,25 +60,27 @@ public class LocationManagerUtil {
         }
     }
 
+    private static final void initGpsListener() throws SecurityException {
+        List<String> providers = locationManager.getAllProviders();
+        mProvider = LocationManager.GPS_PROVIDER;
+        for (String provider : providers) {
+            myLocal = locationManager.getLastKnownLocation(provider);
+            mProvider = provider;
+            /*if (myLocal != null) {
+                break;
+            }*/
+        }
+        if (!hasListener && myLocal != null) {
+            locationManager.requestLocationUpdates(mProvider, 1620000, 5000, new InnerLocationManager());
+        }
 
-    public static Location getMyLocation(FragmentActivity fa) throws SecurityException{
+    }
 
-        fa1 = fa;
+    public static Location getMyLocation(FragmentActivity fa) throws SecurityException {
         locationManager = (LocationManager) fa.getSystemService(Context.LOCATION_SERVICE);
         // String bestProvider = lm.getBestProvider(getActivity().getCriteria(), true);
 
-        List<String> providers = locationManager.getAllProviders();
-
-        for (String provider : providers) {
-            myLocal = locationManager.getLastKnownLocation(provider);
-            if (myLocal != null) {
-                break;
-            }
-        }
-        if(!hasListener) {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new InnerLocationManager());
-            hasListener = true;
-        }
+        initGpsListener();
 
         if (myLocal == null) {
             Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
@@ -107,9 +100,13 @@ public class LocationManagerUtil {
 
 
         @Override
-        public void onLocationChanged(Location locFromGps) {
-            new AssyncSinalizePush(locFromGps.getLatitude(), locFromGps.getLongitude()).execute();
-            myLocal = locFromGps;
+        public void onLocationChanged(final Location locFromGps) {
+            boolean dfLon = (myLocal.getLongitude()!=locFromGps.getLongitude());
+            boolean dfLat = (myLocal.getLatitude()!=locFromGps.getLatitude());
+            if(dfLat||dfLon) {
+                new AssyncSinalizePush(locFromGps.getLatitude(), locFromGps.getLongitude(), MY_PREFERENCES.getString("DEVICE_TYPE", "")).execute();
+                myLocal = locFromGps;
+            }
         }
 
         @Override
