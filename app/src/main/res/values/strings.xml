@@ -137,4 +137,5 @@
     <string name="localizacao_invalida">Localização inválida</string>
     <string name="gps_habilitado">GPS ativo!</string>
     <string name="dados_tempo">Carregando dados meteorológicos...</string>
+    <string name="salvando_perfil_face" translatable="false">Salvando perfil....</string>
 </resources>

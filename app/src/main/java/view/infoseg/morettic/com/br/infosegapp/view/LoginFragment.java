@@ -1,6 +1,5 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,14 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.google.firebase.crash.FirebaseCrash;
-
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
+import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
@@ -146,7 +145,8 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                 SocialFragment.newInstance().show(getFragmentManager(), "dialog");
                 break;
             case R.id.imageButtonFacebook:
-                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+               // SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                FacebookUtil.clickFace();
                 break;
             case R.id.imageButtonTwitter:
                 TwitterUtil.click();

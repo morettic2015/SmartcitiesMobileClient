@@ -1,9 +1,11 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -24,6 +26,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +39,8 @@ import com.google.firebase.crash.FirebaseCrash;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
@@ -43,6 +49,7 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
+import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
@@ -67,6 +74,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.WORD;
 
 public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    private static final int FACEBOOK_CODE = 64206;
     /**
      * @Tappax object to show ADS as possible way to
      */
@@ -78,15 +86,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     private static final int SELECT_PHOTO = 100;
     private static final int TWITTER_CODE = 140;
     private static final int REQUEST_CODE_MIC = 1234;
-    /* *************************************
-     *              FACEBOOK               *
-     ***************************************/
-    /* The login button for Facebook */
-    ///  private LoginButton mFacebookLoginButton;
-    /* The callback manager for Facebook */
-    //  private CallbackManager mFacebookCallbackManager;
-    /* Used to track user logging in/out off Facebook */
-    //  private AccessTokenTracker mFacebookAccessTokenTracker;
+
     private Toolbar toolbar;
     private FloatingActionButton fab;
     //private Uri imageUri;
@@ -111,6 +111,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
          * */
         if (!AUTENTICADO && MY_PREFERENCES.getString("id", "").equals("")) {
             if (LOGIN == null) {
+                //Init twitter login
+                TwitterUtil.initTwitterConfig(this);
+                //Initializa o cliente facebook
+                FacebookUtil.initFaceBookProps(this);
+                //Create dialog login
                 LOGIN = LoginFragment.newInstance();
                 LOGIN.show(getFragmentManager(), "dialog");
             }
@@ -157,16 +162,49 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
         MAIN = this;
         //Inicializa o cliente twitter
-        TwitterUtil.initTwitterConfig(this);
+        //printKeyHash(this);
 
+    }
+    public static String printKeyHash(Activity context) {
+        PackageInfo packageInfo;
+        String key = null;
+        try {
+            //getting application package name, as defined in manifest
+            String packageName = context.getApplicationContext().getPackageName();
 
+            //Retriving package info
+            packageInfo = context.getPackageManager().getPackageInfo(packageName,
+                    PackageManager.GET_SIGNATURES);
+
+            Log.e("Package Name=", context.getApplicationContext().getPackageName());
+
+            for (android.content.pm.Signature signature : packageInfo.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                key = new String(Base64.encode(md.digest(), 0));
+
+                // String key = new String(Base64.encodeBytes(md.digest()));
+                Log.e("Key Hash=", key);
+            }
+        } catch (PackageManager.NameNotFoundException e1) {
+            Log.e("Name not found", e1.toString());
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("No such an algorithm", e.toString());
+        } catch (Exception e) {
+            Log.e("Exception", e.toString());
+        }
+
+        return key;
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         COUNTER_CLICK = 0;
+        //Facebook SDK instance
+        FacebookUtil.initInstanceSdkFacebook(this);
         setContentView(R.layout.activity_infoseg_main);
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         this.toolbar.setTitle(getString(R.string.app_title_main));
@@ -233,6 +271,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             String[] p = {GET_ACCOUNTS};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }
+        //Inicializa client facebook
+
+
     }
 
     @Override
@@ -429,6 +470,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         WORD.setText(Query);
                     }
                     break;
+                case FACEBOOK_CODE:
+                    FacebookUtil.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+                    break;
+
             }
         }
 
