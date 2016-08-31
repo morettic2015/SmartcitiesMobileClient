@@ -126,7 +126,7 @@ public class HttpUtil {
         return ret;
     }
 
-    public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, String distance, String types){
+    public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, int distance, String types){
         String r = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
                 "&lat=" + pLat +
@@ -201,29 +201,24 @@ public class HttpUtil {
         return "http://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCkJEjT73RmsOw1Ldy3S9RbWg_-PDRh8zE&latlng="+lat+","+lon+"&sensor=true";
     }*/
 
-    public static final String sinalizePushServerLocationChanged(double lat,double lon,String token){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=33&lat="+ lat + "&lon=" + lon +"&token="+token;
+    public static final String sinalizePushServerLocationChanged(double lat,double lon,String token, String id){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=33&lat="+ lat + "&lon=" + lon +"&token="+token+"&id="+id;
     }
-
     public static final String getProfileByEmail(String email){
         return "http://api.fullcontact.com/v2/person.json?email="+email+"&apiKey=ba2fbd5adb0456e2";
     }
-
     public static final String getHasEmailDataStore(String email){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=11&email="+encode(email);
     }
-
     public static final String sendEmailNovoCadastro(String email){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=12&email="+encode(email)+"&tipo=NOVO_CADASTRO";
     }
-
     public static final String saveConfigInfo(String id,String phone,String properties){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=15&idProfile="+id+"&phone="+encode(phone)+"&props="+encode(properties);
     }
     public static final String getListTOp20(){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
     }
-
     public static final String getRatingUrl(String idOcorrencia,String rate){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
     }

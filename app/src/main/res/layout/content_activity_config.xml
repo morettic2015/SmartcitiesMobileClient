@@ -23,100 +23,82 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_columnSpan="2"
+            android:layout_columnSpan="4"
             android:layout_row="0"
             android:text="@string/configura_es"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TextView
-            android:id="@+id/txtMsgConfig02"
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="2"
+            android:text="@string/minhas_ocorr_ncias"
+            android:id="@+id/switchMy"
             android:layout_row="1"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_column="0"
+            android:checked="false" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/txtViewSeekBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_columnSpan="2"
             android:layout_row="2"
             android:text="@string/selecione_as_dist_ncias_para_filtrar"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <CheckBox
-            android:id="@+id/chkMine"
-            android:layout_width="185dp"
+        <SeekBar
+            android:id="@+id/seekBarDistance"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="0"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="26dp"
+            android:max="10"
             android:layout_row="3"
-            android:checked="true"
-            android:text="@string/minhas_ocorr_ncias" />
+            android:layout_column="0" />
 
-        <CheckBox
-            android:id="@+id/chkCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="3"
-            android:checked="false"
-            android:text="20 km" />
-
-        <CheckBox
-            android:id="@+id/chkEstado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="4"
-            android:checked="false"
-            android:text="50km" />
-
-        <CheckBox
-            android:id="@+id/chkPais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="4"
-            android:checked="true"
-            android:text="200km" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView27"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_columnSpan="2"
+            android:layout_row="4"
+            android:text="@string/informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/txtTelefoneConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
             android:layout_row="5"
-            android:text="@string/tipos_de_ocorr_ncias"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:ems="10"
+            android:inputType="phone"
+            android:text="+55 48 9999-9999" />
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_columnSpan="2"
             android:layout_row="6"
             android:text="@string/informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-
         <ScrollView
             style="@style/scrollbar_shape_style"
-            android:id="@+id/scrollView2"
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
+            android:layout_height="144dp"
             android:layout_column="0"
             android:layout_marginBottom="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginTop="3dp"
             android:layout_row="7"
-            android:layout_columnSpan="2"
             android:layout_margin="0dp"
-            android:layout_marginLeft="3dp">
+            android:layout_marginLeft="3dp"
+            android:layout_rowSpan="2">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,6 +113,7 @@
                     android:checked="true"
                     android:text="@string/saude"
                     android:layout_margin="0dp" />
+
                 <CheckBox
                     android:id="@+id/chkUpa"
                     android:layout_width="335dp"
@@ -178,6 +161,7 @@
                     android:checked="true"
                     android:drawableRight="@mipmap/icon_politics01"
                     android:text="@string/politica" />
+
                 <CheckBox
                     android:id="@+id/chkEsporte"
                     android:layout_width="335dp"
@@ -186,29 +170,15 @@
                     android:drawableRight="@mipmap/icon_sport01"
                     android:text="@string/esporte" />
 
+                <CheckBox
+                    android:id="@+id/chkImoveis"
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableRight="@mipmap/ic_launcher_smtc"
+                    android:text="Imoveis" />
             </LinearLayout>
         </ScrollView>
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="8"
-            android:text="@string/informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_columnSpan="2" />
-
-        <EditText
-            android:id="@+id/txtTelefoneConfig"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="9"
-            android:ems="10"
-            android:inputType="phone"
-            android:text="+55 48 9999-9999"
-            android:layout_columnSpan="2" />
 
         <Button
             android:id="@+id/btSalvarPreferencias"
@@ -217,12 +187,11 @@
             android:layout_column="0"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:layout_row="10"
+            android:layout_row="9"
             android:background="@drawable/button_shape_model"
             android:drawableLeft="@drawable/ic_save_action"
             android:enabled="true"
-            android:text="@string/salvar"
-            android:layout_columnSpan="2" />
+            android:text="@string/salvar" />
 
     </GridLayout>
 

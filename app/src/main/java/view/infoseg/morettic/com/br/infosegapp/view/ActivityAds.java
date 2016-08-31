@@ -14,6 +14,8 @@ import com.google.android.gms.ads.InterstitialAd;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+
 public class ActivityAds extends Fragment {
     // Remove the below line after defining your own ad unit ID.
 
@@ -60,7 +62,7 @@ public class ActivityAds extends Fragment {
 
     private InterstitialAd newInterstitialAd() throws IllegalStateException {
         InterstitialAd interstitialAd = new InterstitialAd(v.getContext());
-        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+        interstitialAd.setAdUnitId(MAIN.getString(R.string.interstitial_ad_unit_id));
 
         interstitialAd.setAdListener(new AdListener() {
             @Override

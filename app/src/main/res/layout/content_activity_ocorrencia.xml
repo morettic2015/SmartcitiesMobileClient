@@ -32,8 +32,8 @@
 
             <ImageButton
                 android:id="@+id/btCaptureCam"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
                 android:background="@drawable/ic_menu_camera"
@@ -42,8 +42,8 @@
 
             <ImageButton
                 android:id="@+id/btCaptureCam1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_column="1"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
@@ -52,8 +52,8 @@
 
             <ImageButton
                 android:id="@+id/btCaptureCam2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_column="2"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
@@ -62,8 +62,8 @@
 
             <ImageButton
                 android:id="@+id/btCaptureCam3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_column="3"
                 android:layout_gravity="right"
                 android:layout_marginRight="5dp"
@@ -122,7 +122,7 @@
         <EditText
             android:id="@+id/txtDescricao"
             android:layout_width="302dp"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="4"
             android:ems="10"
@@ -154,7 +154,7 @@
             android:id="@+id/scrollview_choices"
             style="@style/scrollbar_shape_style"
             android:layout_width="match_parent"
-            android:layout_height="101dp"
+            android:layout_height="141dp"
             android:layout_column="0"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="5dp"
@@ -228,6 +228,16 @@
                     android:checked="false"
                     android:drawableRight="@mipmap/icon_sport01"
                     android:text="@string/esporte"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <RadioButton
+                    android:id="@+id/rImoveis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@mipmap/icon_sport01"
+                    android:text="Imoveis"
                     android:layout_marginRight="20dp"
 
                     />

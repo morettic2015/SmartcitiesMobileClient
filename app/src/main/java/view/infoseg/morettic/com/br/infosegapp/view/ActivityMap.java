@@ -93,7 +93,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         JSONObject jsFilter = new JSONObject();
         try {
             //4000 = ~= 200km 400 = ~= 20km 1000 = ~= 50km
-            int distance = MY_PREFERENCES.getBoolean("ehMeuPais", false) ? 4000 : MY_PREFERENCES.getBoolean("eMeuEstado", false) ? 1000 : 400;
+            int distance = MY_PREFERENCES.getInt("distance",0)*20;
 
             jsFilter.put("lat", latitude);
             jsFilter.put("lon", longitude);
@@ -125,9 +125,12 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             if (MY_PREFERENCES.getBoolean("esporte", false)) {
                 sbTipos.append("ESPORTE,");
             }
+            if (MY_PREFERENCES.getBoolean("imoveis", false)) {
+                sbTipos.append("IMOVEIS,");
+            }
 
             jsFilter.put("type", sbTipos.toString());
-            jsFilter.put("d", distance);
+            jsFilter.put("distance", distance);
 
         } catch (Exception ex) {
             FirebaseCrash.report(ex);
@@ -139,29 +142,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             assyncMapQuery.execute();
 
 
-            // Add a marker in Sydney and move the camera
-            /*
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Sua localização é lat:" + latitude + " lon:" + longitude));
-
-            // create marker
-            final MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Posição atual");
-
-            // Changing marker icon
-            marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
-
-            // adding marker
-            googleMap.addMarker(marker);*/
             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
             googleMap.setTrafficEnabled(true);//Adiciona a camada de transito?
             googleMap.setBuildingsEnabled(true);//predios
             LatLng local = new LatLng(latitude, longitude);
-            //Adiciona raio
-           /* CircleOptions circleOptions = new CircleOptions().center(local).radius(20000); // In meters
-            Circle circle = this.googleMap.addCircle(circleOptions);
-            circle.setFillColor(Color.TRANSPARENT);
-            circle.setZIndex(-10f);
-            circle.setStrokeColor(Color.BLACK);
-            circle.setStrokeWidth(1.5f);*/
 
             //ZOOM no mapa com efeito emo flamenguista
             CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(12).build();
@@ -237,21 +221,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                             stringBuilder.append(js.getString("tipo"));
                             stringBuilder.append(" author:");
                             stringBuilder.append(js.getString("author"));
-                            stringBuilder.append("Visualize as ocorrencias em seu celular! http://smartcitiesframework.com.br");
-
-
-                         /*   bShare.setOnClickListener(new View.OnClickListener() {
-                                public void onClick(View v) {
-                                    Intent sendIntent = new Intent();
-
-
-                                    sendIntent.setAction(Intent.ACTION_SEND);
-                                    sendIntent.putExtra(Intent.EXTRA_TEXT, stringBuilder.toString());
-                                    sendIntent.setType("text/plain");
-                                    startActivity(sendIntent);
-                                }
-                            });*/
-
+                            stringBuilder.append("http://citywatch.com.br");
 
                             txtTit.setText(js.getString("tit"));
                             txtAutor.setText(js.getString("author"));

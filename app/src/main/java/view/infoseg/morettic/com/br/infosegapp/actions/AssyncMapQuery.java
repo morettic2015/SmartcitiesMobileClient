@@ -95,12 +95,17 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
         try {
             JSONArray jOcorrencias;
             try {
+
+                int distance = this.filter.getInt("distance");
                 js = HttpUtil.getJSONFromUrl(HttpUtil.getOcorrenciasPath(ValueObject.ID_PROFILE,
                         this.filter.getString("lat"),
                         this.filter.getString("lon"),
                         (this.filter.getBoolean("mine") ? "0" : null),
-                        this.filter.getString("d"),
+                        distance,
                         this.filter.getString("type")));
+
+
+
 
                 if (js.has("rList")) {
 

@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -23,7 +24,7 @@ public class AssyncSinalizePush extends AsyncTask<Void, Void, Void> {
 
     protected Void doInBackground(Void... urls) {
         try {
-            HttpUtil.getText(HttpUtil.sinalizePushServerLocationChanged(this.lat, this.lon,this.token));
+            HttpUtil.getText(HttpUtil.sinalizePushServerLocationChanged(this.lat, this.lon,this.token, ID_PROFILE));
         } catch (Exception ex) {
             logException(ex);
         } finally {

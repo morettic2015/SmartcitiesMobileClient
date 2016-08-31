@@ -1,29 +1,24 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
-import android.accounts.Account;
-import android.accounts.AccountManager;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.PhoneNumberFormattingTextWatcher;
-import android.telephony.TelephonyManager;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
-
-import static android.Manifest.permission.GET_ACCOUNTS;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveConfig;
-import view.infoseg.morettic.com.br.infosegapp.util.Mask;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
+
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,31 +28,21 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 
 public class ActivityConfig extends Fragment {
-    private CheckBox ehMeu, eMeuEstado,ehMinhaCidade, ehMeuPais, saude,transporte,meioAmbiente, educacao, seguranca, politica,upa,esportes;
-    private TextView txtMsgConfig02;
+    private CheckBox  saude,transporte,meioAmbiente, educacao, seguranca, politica,upa,esportes,imoveis;
+
     private Button bt;
     private View v;
     private EditText txtPhone;
+    private TextView textViewSeekBar;
+    private SeekBar seekBarDistance;
     private SharedPreferences.Editor editor;
+    private int distance = 0;
+    private final int constante = 200;
+    private Switch myOcurrences;
     @Override
     public void onStop() {
         super.onStop();
-        bt.destroyDrawingCache();
-        ehMeu.destroyDrawingCache();
-        eMeuEstado.destroyDrawingCache();
-        ehMinhaCidade.destroyDrawingCache();
-        ehMeuPais.destroyDrawingCache();
-        saude.destroyDrawingCache();
-        transporte.destroyDrawingCache();
-        meioAmbiente.destroyDrawingCache();
-        educacao.destroyDrawingCache();
-        seguranca.destroyDrawingCache();
-        politica.destroyDrawingCache();
-        upa.destroyDrawingCache();
-        esportes.destroyDrawingCache();
-        txtPhone.destroyDrawingCache();
-        txtMsgConfig02.destroyDrawingCache();
-        editor = null;
+
         v.destroyDrawingCache();
     }
     @Override
@@ -68,10 +53,31 @@ public class ActivityConfig extends Fragment {
         editor = ValueObject.MY_PREFERENCES.edit();
         v = inflater.inflate(R.layout.activity_config, container, false);
         bt = (Button) v.findViewById(R.id.btSalvarPreferencias);
-        ehMeu = (CheckBox) v.findViewById(R.id.chkMine);
-        eMeuEstado = (CheckBox) v.findViewById(R.id.chkEstado);
-        ehMinhaCidade = (CheckBox) v.findViewById(R.id.chkCity);
-        ehMeuPais = (CheckBox) v.findViewById(R.id.chkPais);
+
+        textViewSeekBar = (TextView)v.findViewById(R.id.txtViewSeekBar);
+        seekBarDistance = (SeekBar)v.findViewById(R.id.seekBarDistance);
+        seekBarDistance.setMax(50);
+        seekBarDistance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
+                distance = progresValue;
+                //Toast.makeText(getApplicationContext(), "Changing seekbar's progress", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                //Toast.makeText(getApplicationContext(), "Started tracking seekbar", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                textViewSeekBar.setText(seekBar.getContext().getText(R.string.selecione_as_dist_ncias_para_filtrar)+"("+distance+"KM )");
+                //Toast.makeText(getApplicationContext(), "Stopped tracking seekbar", Toast.LENGTH_SHORT).show();
+            }
+        });
+        myOcurrences = (Switch)v.findViewById(R.id.switchMy);
         saude = (CheckBox) v.findViewById(R.id.chkSaude);
         upa = (CheckBox) v.findViewById(R.id.chkUpa);
         transporte = (CheckBox) v.findViewById(R.id.chkTransporte);
@@ -80,7 +86,8 @@ public class ActivityConfig extends Fragment {
         seguranca = (CheckBox) v.findViewById(R.id.chkSeguranca);
         politica = (CheckBox) v.findViewById(R.id.chkPolitica);
         esportes = (CheckBox) v.findViewById(R.id.chkEsporte);
-        txtMsgConfig02 = (TextView) v.findViewById(R.id.txtMsgConfig02);
+        imoveis = (CheckBox) v.findViewById(R.id.chkImoveis);
+
         txtPhone = (EditText)v.findViewById(R.id.txtTelefoneConfig);
         /**
         Mascara do telefone
@@ -92,11 +99,13 @@ public class ActivityConfig extends Fragment {
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                editor.putBoolean("ehMeu",ehMeu.isChecked()).commit();
+              /*  editor.putBoolean("ehMeu",ehMeu.isChecked()).commit();
                 editor.putBoolean("eMeuEstado",eMeuEstado.isChecked()).commit();
                 editor.putBoolean("ehMinhaCidade",ehMinhaCidade.isChecked()).commit();
-                editor.putBoolean("ehMeuPais",ehMeuPais.isChecked()).commit();
+                editor.putBoolean("ehMeuPais",ehMeuPais.isChecked()).commit();*/
+                editor.putInt("distance",distance);
                 editor.putBoolean("saude",saude.isChecked()).commit();
+                editor.putBoolean("imoveis",imoveis.isChecked()).commit();
                 editor.putBoolean("transporte",transporte.isChecked()).commit();
                 editor.putBoolean("meioAmbiente",meioAmbiente.isChecked()).commit();
                 editor.putBoolean("educacao",educacao.isChecked()).commit();
@@ -105,6 +114,7 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("politica",politica.isChecked()).commit() ;
                 editor.putString("phoneNumber",txtPhone.getText().toString()).commit() ;
                 editor.putBoolean("esporte",esportes.isChecked()).commit();
+                editor.putBoolean("mine",myOcurrences.isChecked()).commit();
 
 
                 AssyncSaveConfig assyncSaveConfig = new AssyncSaveConfig(getContext(),ValueObject.ID_PROFILE.toString(),txtPhone.getText().toString());
@@ -119,10 +129,10 @@ public class ActivityConfig extends Fragment {
 
         //Init values from pref commited
 
-        ehMeu.setChecked(MY_PREFERENCES.getBoolean("ehMeu",false));
+/*        ehMeu.setChecked(MY_PREFERENCES.getBoolean("ehMeu",false));
         eMeuEstado.setChecked(MY_PREFERENCES.getBoolean("eMeuEstado",false));
-        ehMinhaCidade.setChecked(MY_PREFERENCES.getBoolean("ehMinhaCidade",false));
-        ehMeuPais.setChecked(MY_PREFERENCES.getBoolean("ehMeuPais",false));
+        ehMinhaCidade.setChecked(MY_PREFERENCES.getBoolean("ehMinhaCidade",false));*/
+        imoveis.setChecked(MY_PREFERENCES.getBoolean("imoveis",false));
         saude.setChecked(MY_PREFERENCES.getBoolean("saude",false));
         transporte.setChecked(MY_PREFERENCES.getBoolean("transporte",false));
         meioAmbiente.setChecked(MY_PREFERENCES.getBoolean("meioAmbiente",false));
@@ -132,7 +142,8 @@ public class ActivityConfig extends Fragment {
         upa.setChecked(MY_PREFERENCES.getBoolean("upa",false));
         politica.setChecked(MY_PREFERENCES.getBoolean("politica",false));
         txtPhone.setText(MY_PREFERENCES.getString("phoneNumber",""));
-
+        seekBarDistance.setProgress(MY_PREFERENCES.getInt("distance",0));
+        myOcurrences.setChecked(MY_PREFERENCES.getBoolean("mine",false));
         return v;
     }
 

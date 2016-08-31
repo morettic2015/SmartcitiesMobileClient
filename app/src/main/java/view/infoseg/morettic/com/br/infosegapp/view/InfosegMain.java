@@ -1,11 +1,9 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,8 +24,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Base64;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,12 +31,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 import com.google.firebase.crash.FirebaseCrash;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
@@ -80,7 +75,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
      */
 
     private final String TAPPX_KEY = "/120940746/Pub-9972-Android-9558";
-    private com.google.android.gms.ads.doubleclick.PublisherInterstitialAd adInterstitial = null;
+    private PublisherInterstitialAd adInterstitial = null;
 
     //private static final int TAKE_PICTURE = 1;
     private static final int SELECT_PHOTO = 100;
@@ -165,7 +160,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         //printKeyHash(this);
 
     }
-    public static String printKeyHash(Activity context) {
+    /*public static String printKeyHash(Activity context) {
         PackageInfo packageInfo;
         String key = null;
         try {
@@ -195,7 +190,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         }
 
         return key;
-    }
+    }*/
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
@@ -211,9 +206,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         //Inicializa as preferencias do usuario
         MY_PREFERENCES = getApplicationContext().getSharedPreferences("INFOSEGMAIN", 0);
 
-        /*fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
-        fab.setOnClickListener((View.OnClickListener) this);*/
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setVisibility(View.GONE);
+        fab.setOnClickListener((View.OnClickListener) this);
+        //fab.setB
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -489,13 +485,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.btNovoSplah:
-                //whatever
-                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
-                    loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
-                } else {
-                    loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
-                }
-                break;
+
 
             case R.id.btMapaSplash:
                 if (LocationManagerUtil.isLocationValid(MAIN)==null) {
@@ -537,11 +527,12 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 loadFragment(new ActivityConfig(), getString(R.string.configura_es));
                 break;
             case R.id.fab:
-                //@todo
-                // TODO: Use a more specific parent
-                // TODO: Base this Tweet ID on some data from elsewhere in your app
-                //.TwitterUtil.getLatestTweet();
-                // fa
+                //whatever
+                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
+                    loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
+                } else {
+                    loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
+                }
                 break;
         }
     }

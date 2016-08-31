@@ -1,31 +1,15 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.EditText;
 
-import com.google.firebase.crash.FirebaseCrash;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URLEncoder;
-
 import view.infoseg.morettic.com.br.infosegapp.R;
-import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
-import static java.net.URLEncoder.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -79,21 +63,17 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
             //Validacao @TODO
             sb = new StringBuilder();
             //URL PARA SALVAR O PERFIL.
-            sb.append("ehMeu");
+            sb.append("mine");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("ehMeu",false));
+            sb.append(MY_PREFERENCES.getBoolean("mine",false));
             sb.append("-");
-            sb.append("eMeuEstado");
+            sb.append("distance");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("eMeuEstado",false));
+            sb.append(MY_PREFERENCES.getInt("distance",0));
             sb.append("-");
-            sb.append("ehMinhaCidade");
+            sb.append("imoveis");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("ehMinhaCidade",false));
-            sb.append("-");
-            sb.append("ehMeuPais");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("ehMeuPais",false));
+            sb.append(MY_PREFERENCES.getBoolean("imoveis",false));
             sb.append("-");
             sb.append("saude");
             sb.append(":");
