@@ -75,9 +75,11 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
         mMapView.onResume();// needed to get the map to display immediately
         Location location = LocationManagerUtil.getMyLocation(this.getActivity());
+        JSONObject myAddres = null;
         try {
             this.longitude = location.getLongitude();
             this.latitude = location.getLatitude();
+            myAddres = LocationManagerUtil.getMyAddress(this.getContext(),this.latitude,this.longitude);
         } catch (Exception e) {//LATITUDE DE BRASILIA
             FirebaseCrash.report(new Exception("IMPOSSIVEL DETERMINAR LOCALIZAÇÃO DO EMO"));
             this.longitude = -15.7941d;
@@ -128,7 +130,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             if (MY_PREFERENCES.getBoolean("imoveis", false)) {
                 sbTipos.append("IMOVEIS,");
             }
-
+            if(myAddres!=null){
+                jsFilter.put("opengraph",myAddres);
+            }
             jsFilter.put("type", sbTipos.toString());
             jsFilter.put("distance", distance);
 

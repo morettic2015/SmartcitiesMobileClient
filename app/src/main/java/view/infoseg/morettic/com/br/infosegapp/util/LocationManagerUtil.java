@@ -3,13 +3,20 @@ package view.infoseg.morettic.com.br.infosegapp.util;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSinalizePush;
@@ -58,6 +65,31 @@ public class LocationManagerUtil {
             //Atualiza a posição do GPS a cada 15 minutos e a cada 5 mill metros
             return myLocal;
         }
+    }
+
+    public static JSONObject getMyAddress(Context ctx,double lat,double lon) throws IOException, JSONException {
+        JSONObject js = new JSONObject();
+        Geocoder gcd = new Geocoder(ctx,
+                Locale.getDefault());
+        List<Address> addresses;
+        try {
+            addresses = gcd.getFromLocation(lat, lon, 1);
+            if (addresses.size() > 0) {
+                js.put("address", addresses.get(0).getAddressLine(0));
+                js.put("locality", addresses.get(0).getLocality());
+                js.put("subLocality", addresses.get(0).getSubLocality());
+                js.put("state", addresses.get(0).getAdminArea().replaceAll("State of",""));
+                js.put("country", addresses.get(0).getCountryName());
+                js.put("postalCode", addresses.get(0).getPostalCode());
+                js.put("knownName", addresses.get(0).getFeatureName());
+            }
+        } catch (IOException e) {
+           throw e;
+        }finally {
+            return js;
+        }
+
+
     }
 
     private static final void initGpsListener() throws SecurityException {

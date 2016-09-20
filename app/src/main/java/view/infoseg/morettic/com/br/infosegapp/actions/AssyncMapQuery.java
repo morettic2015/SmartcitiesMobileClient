@@ -96,13 +96,27 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             JSONArray jOcorrencias;
             try {
 
+                boolean isOpenGraph = this.filter.getJSONObject("opengraph")!=null;
+                String myCity = null,myState = null;
+
+                if(isOpenGraph) {
+                    myCity = this.filter.getJSONObject("opengraph").getString("locality");
+                    myState = this.filter.getJSONObject("opengraph").getString("state");
+                }
+
                 int distance = this.filter.getInt("distance");
-                js = HttpUtil.getJSONFromUrl(HttpUtil.getOcorrenciasPath(ValueObject.ID_PROFILE,
+
+                String url = HttpUtil.getOcorrenciasPath(ValueObject.ID_PROFILE,
                         this.filter.getString("lat"),
                         this.filter.getString("lon"),
                         (this.filter.getBoolean("mine") ? "0" : null),
                         distance,
-                        this.filter.getString("type")));
+                        this.filter.getString("type"),
+                        isOpenGraph,
+                        myCity,
+                        myState);
+
+                js = HttpUtil.getJSONFromUrl(url);
 
 
 

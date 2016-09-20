@@ -132,9 +132,9 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             if (COUNTER_CLICK < 100) {
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
-                boolean isTappaxNetwork = false;
+
                 if ((d.getMinutes() % 4)== 0) {//If minutes mod 3 == 0 show ads
-                    isTappaxNetwork = true;
+
                     COUNTER_CLICK++;
                     adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
                             new AdListener() {
@@ -143,9 +143,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                                     com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
                                 }
                             });
-                }
-                //If show Tappax dont show google play....
-                if ((d.getMinutes() % 7) == 0 && !isTappaxNetwork) {//If minutes mod 2 == 0 show ads
+                } else if ((d.getMinutes() % 3) == 0 ) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }
@@ -317,7 +315,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             fragment = new ActivityOcorrencia();
             title = getString(R.string.register_event);
         } else if (id == R.id.nav_gallery) {
-            if (MY_PREFERENCES.contains("ehMeu")) {
+            if (MY_PREFERENCES.contains("distance")) {
                 fragment = new ActivityMap();
                 title = getString(R.string.configura_es);
             } else {
@@ -491,7 +489,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 if (LocationManagerUtil.isLocationValid(MAIN)==null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    if (MY_PREFERENCES.contains("ehMeu")) {
+                    if (MY_PREFERENCES.contains("distance")) {
                         loadFragment(new ActivityMap(), getString(R.string.view_events));
                     } else {
                         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

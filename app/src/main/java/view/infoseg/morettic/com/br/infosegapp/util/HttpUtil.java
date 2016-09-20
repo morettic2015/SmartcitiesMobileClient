@@ -126,13 +126,17 @@ public class HttpUtil {
         return ret;
     }
 
-    public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, int distance, String types){
+    public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, int distance, String types,boolean isOpenStreet,String myCity,String myState){
         String r = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
                 "&lat=" + pLat +
                 "&lon=" + pLon +
                 "&d="+ distance +
                 "&type="+types ;
+
+        if(isOpenStreet){
+            r+= "&myCity="+encode(myCity)+encode(",")+encode(myState);
+        }
 
         if(pMine!=null)
             r+= "&mine";

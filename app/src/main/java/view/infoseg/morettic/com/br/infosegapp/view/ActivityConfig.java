@@ -103,7 +103,7 @@ public class ActivityConfig extends Fragment {
                 editor.putBoolean("eMeuEstado",eMeuEstado.isChecked()).commit();
                 editor.putBoolean("ehMinhaCidade",ehMinhaCidade.isChecked()).commit();
                 editor.putBoolean("ehMeuPais",ehMeuPais.isChecked()).commit();*/
-                editor.putInt("distance",distance);
+                editor.putInt("distance",distance).commit();
                 editor.putBoolean("saude",saude.isChecked()).commit();
                 editor.putBoolean("imoveis",imoveis.isChecked()).commit();
                 editor.putBoolean("transporte",transporte.isChecked()).commit();
