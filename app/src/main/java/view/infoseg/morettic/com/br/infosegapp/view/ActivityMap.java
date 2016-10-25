@@ -26,6 +26,7 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
@@ -79,7 +80,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         try {
             this.longitude = location.getLongitude();
             this.latitude = location.getLatitude();
-            myAddres = LocationManagerUtil.getMyAddress(this.getContext(),this.latitude,this.longitude);
+            myAddres = LocationManagerUtil.getMyAddress(this.getContext(), this.latitude, this.longitude);
         } catch (Exception e) {//LATITUDE DE BRASILIA
             FirebaseCrash.report(new Exception("IMPOSSIVEL DETERMINAR LOCALIZAÇÃO DO EMO"));
             this.longitude = -15.7941d;
@@ -95,11 +96,11 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         JSONObject jsFilter = new JSONObject();
         try {
             //4000 = ~= 200km 400 = ~= 20km 1000 = ~= 50km
-            int distance = MY_PREFERENCES.getInt("distance",0)*20;
+            int distance = MY_PREFERENCES.getInt("distance", 0) * 20;
 
             jsFilter.put("lat", latitude);
             jsFilter.put("lon", longitude);
-            jsFilter.put("mine", MY_PREFERENCES.getBoolean("ehMeu",false));
+            jsFilter.put("mine", MY_PREFERENCES.getBoolean("ehMeu", false));
 
             StringBuilder sbTipos = new StringBuilder();
 
@@ -130,8 +131,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             if (MY_PREFERENCES.getBoolean("imoveis", false)) {
                 sbTipos.append("IMOVEIS,");
             }
-            if(myAddres!=null){
-                jsFilter.put("opengraph",myAddres);
+            if (myAddres != null) {
+                jsFilter.put("opengraph", myAddres);
             }
             jsFilter.put("type", sbTipos.toString());
             jsFilter.put("distance", distance);
@@ -152,7 +153,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             LatLng local = new LatLng(latitude, longitude);
 
             //ZOOM no mapa com efeito emo flamenguista
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(12).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
 
@@ -170,14 +171,21 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                     if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
 
                         js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
+
                         try {
+                            if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.IMOVEIS_GIMO.toString())) {
+                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("nmPicture"), js.getString("nmPicture").replace("HTTP","https"));
+                                ew.execute();
 
-                            AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"));
-                            ew.execute();
+                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("dsCompanyLogo"), js.getString("dsCompanyLogo").replace("HTTP","https"));
+                                ew1.execute();
+                            } else {
+                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), null);
+                                ew.execute();
 
-                            AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"));
-                            ew1.execute();
-
+                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"), null);
+                                ew1.execute();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -191,49 +199,62 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                     JSONObject js = null;
 
                     View v = inflater.inflate(R.layout.content_info_map, null);
+                    TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
+                    TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
+                    TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
+                    TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
+                    TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
+                    ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
+                    ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
+                    imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
+                    imgVAvatar.setImageBitmap(IMG_AUTHOR);
+
                     if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
                         try {
                             js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
+                            if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.IMOVEIS_GIMO.toString())) {
+                                txtTit.setText(js.getString("nmCategory"));
+                                txtAutor.setText(js.getString("nmCompany"));
 
-                            TextView txtTit = (TextView) v.findViewById(R.id.txtTitMapOcorrencia);
-                            TextView txtAutor = (TextView) v.findViewById(R.id.txtAutorMapOcorrencia);
-                            TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
-                            TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
-                            TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
-                            ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
-                            ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
-                            imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
-                            imgVAvatar.setImageBitmap(IMG_AUTHOR);
-                            //Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+                                String vlSale = js.getString("vlSale")==null?"VENDA":"ALUGUEL";
 
-                            /**
-                             *
-                             *      @TODO
-                             *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
-                             *
-                             *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
-                             * */
-                            //Mensagem share
-                            stringBuilder = new StringBuilder();
-                            stringBuilder.append("Ocorrencia:");
-                            stringBuilder.append(js.getString("tit"));
-                            stringBuilder.append(" descricao:");
-                            stringBuilder.append(js.getString("desc"));
-                            stringBuilder.append(" date:");
-                            stringBuilder.append(js.getString("date"));
-                            stringBuilder.append(" tipo:");
-                            stringBuilder.append(js.getString("tipo"));
-                            stringBuilder.append(" author:");
-                            stringBuilder.append(js.getString("author"));
-                            stringBuilder.append("http://citywatch.com.br");
+                                txtDt.setText(vlSale);
 
-                            txtTit.setText(js.getString("tit"));
-                            txtAutor.setText(js.getString("author"));
-                            txtDesc.setText(js.getString("desc"));
-                            txtDt.setText(js.getString("date"));
-                            txtTp.setText(js.getString("tipo"));
+                                txtDesc.setText(js.getString("dsAddress")+" R$"+js.getString("nmProperty"));
 
+                                txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
+                            } else {
 
+                                //Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
+
+                                /**
+                                 *
+                                 *      @TODO
+                                 *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
+                                 *
+                                 *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
+                                 * */
+                                //Mensagem share
+                                stringBuilder = new StringBuilder();
+                                stringBuilder.append("Ocorrencia:");
+                                stringBuilder.append(js.getString("tit"));
+                                stringBuilder.append(" descricao:");
+                                stringBuilder.append(js.getString("desc"));
+                                stringBuilder.append(" date:");
+                                stringBuilder.append(js.getString("date"));
+                                stringBuilder.append(" tipo:");
+                                stringBuilder.append(js.getString("tipo"));
+                                stringBuilder.append(" author:");
+                                stringBuilder.append(js.getString("author"));
+                                stringBuilder.append("http://citywatch.com.br");
+
+                                txtTit.setText(js.getString("tit"));
+                                txtAutor.setText(js.getString("author"));
+                                txtDesc.setText(js.getString("desc"));
+                                txtDt.setText(js.getString("date"));
+                                txtTp.setText(js.getString("tipo"));
+
+                            }
                             //((ImageView) v.findViewById(R.id.)).setImageBitmap(ValueObject.MAPA_BITMAPS.get(js.getString("")));
 
                         } catch (JSONException ex) {
@@ -255,7 +276,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         mMapView.onResume();
     }
 
-    public void onStop (){
+    public void onStop() {
         super.onStop();
         //txtInfoForecast.destroyDrawingCache();
         //this.mMapView.destroyDrawingCache();
@@ -263,6 +284,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
         txtInfoForecast = null;
     }
+
     @Override
     public void onPause() {
         super.onPause();

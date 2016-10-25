@@ -37,6 +37,7 @@
     <string name="action_settings">derechos de autor</string>
     <string name="ajude_nos_a_manter_o_app">Ayúdanos a mantener el APP</string>
     <string name="ajude_nosso_desenvolvimento">Ayúdanos a mantener el APP</string>
+    <string name="alimenta_o">ALIMENTACIÓN</string>
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Conectado</string>
@@ -98,6 +99,7 @@
     <string name="consultando_ocorrencias">Consulta de ocurrencias ...</string>
     <string name="cpf_cnpj">Doc. Id.</string>
     <string name="criar_uma_conta"> Regístrate es gratis!</string>
+    <string name="cultura">CULTURA</string>
     <string name="dados_tempo">Cargando datos del tiempo ...</string>
     <string name="descri_o">Descripción</string>
     <string name="dgts__call_me">Llámame</string>
@@ -166,10 +168,12 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="hello_blank_fragment">fu</string>
     <string name="help_us">Ayúdanos!</string>
     <string name="humidade">Humedad</string>
+    <string name="im_veis">REAL ESTATE</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Introduzca los tipos de eventos que desea ver</string>
     <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Informe a su teléfono móvil para recibir información a través de SMS. Le mandaremos una alerta cuando el dispositivo está en la zona de las ocurrencias de su elección.</string>
     <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Introduzca su contraseña de correo electrónico y la confirmación de la contraseña para registrarse</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Introduzca sus datos y mantenerlos actualizados, para colaborar en eventos en su municipio</string>
+    <string name="infraestrutura">INFRAESTRUCTURA</string>
     <string name="invalid_locate">Localización inválida</string>
     <string name="list_ocorrencias">lista de resultados</string>
     <string name="localiza_o_indispon_vel">Ubicación no disponible</string>
@@ -229,6 +233,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>
     <string name="senha">Contraseña</string>
     <string name="share_msg">! Instalar APP Ciudad del reloj para registrar los problemas de su comunidad y compartir con los ciudadanos \ nhttps: //play.google.com/store/apps/details id = view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="shop">SHOP</string>
     <string name="soletre_ocorrencia">Hablar la palabra</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
     <string name="sucesso_ocorrencia_registrada">El éxito. ocurrencia grabada!</string>
@@ -243,6 +248,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="title_activity_login">Entrar</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="transporte">Transporte</string>
+    <string name="turismo">TURISMO</string>
     <string name="tw__allow_btn_txt">Permitir</string>
     <string name="tw__like_tweet">Darle Me gusta al Tweet</string>
     <string name="tw__liked_tweet">Deshacer Me gusta</string>

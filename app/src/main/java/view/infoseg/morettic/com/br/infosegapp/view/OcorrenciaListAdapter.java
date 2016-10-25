@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncRate;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
+import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -59,23 +60,57 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
             txtDescListView.setText(ocorrencia.getString("desc"));
             txtAuthorListView.setText(ocorrencia.getString("author"));
             txtDateListView.setText(ocorrencia.getString("date"));
-            if (ocorrencia.getString("tipo").equals("POLITICA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_politics01));
-            } else if (ocorrencia.getString("tipo").equals("SAUDE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_health01));
-            } else if (ocorrencia.getString("tipo").equals("EDUCACAO")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_education01));
-            } else if (ocorrencia.getString("tipo").equals("MEIO_AMBIENTE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_nature01));
-            } else if (ocorrencia.getString("tipo").equals("TRANSPORTE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_transport01));
-            } else if (ocorrencia.getString("tipo").equals("SEGURANCA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_security01));
-            } else if (ocorrencia.getString("tipo").equals("UPA")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_upa01));
-            } else if (ocorrencia.getString("tipo").equals("ESPORTE")) {
-                imageView.setImageDrawable(getContext().getResources().getDrawable(R.mipmap.icon_sport01));
+            TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
+
+            int icon = 0;
+            switch(tp){
+                case ALIMENTACAO:
+                    icon = R.mipmap.ic_alimentacao;
+                    break;
+                case CULTURA:
+                    icon = R.mipmap.ic_cultura;
+                    break;
+                case EDUCACAO:
+                    icon = R.mipmap.icon_education01;
+                    break;
+                case ESPORTE:
+                    icon = R.mipmap.icon_sport01;
+                    break;
+                case IMOVEIS:
+                    icon = R.mipmap.icon_imoveis;
+                    break;
+                case INFRAESTRUTURA:
+                    icon = R.mipmap.ic_infraestrutura;
+                    break;
+                case MEIO_AMBIENTE:
+                    icon = R.mipmap.icon_nature01;
+                    break;
+                case POLITICA:
+                    icon = R.mipmap.icon_politics01;
+                    break;
+                case SEGURANCA:
+                    icon = R.mipmap.icon_security01;
+                    break;
+                case SERVICOS:
+                    icon = R.mipmap.icon;
+                    break;
+                case SHOP:
+                    icon = R.mipmap.ic_shop;
+                    break;
+                case TRANSPORTE:
+                    icon = R.mipmap.icon_transport01;
+                    break;
+                case TURISMO:
+                    icon = R.mipmap.ic_turismo;
+                    break;
+                case UPA:
+                    icon = R.mipmap.icon_health01;
+                    break;
+                case SAUDE:
+                    icon = R.mipmap.icon_health01;
+                    break;
             }
+            imageView.setImageDrawable(getContext().getResources().getDrawable(icon));
 
             imageView1.setImageBitmap(ImageCache.getBitmapFromMemCache(ocorrencia.getString("token")));
 

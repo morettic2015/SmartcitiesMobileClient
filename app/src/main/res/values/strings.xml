@@ -48,11 +48,11 @@
     <string name="saude">Saude</string>
     <string name="transporte">Transporte</string>
     <string name="meio_ambiente">Meio Ambiente</string>
-    <string name="educa_o">Educação</string>
-    <string name="seguran_a">Segurança</string>
+    <string name="educa_o">EDUCAÇÃO</string>
+    <string name="seguran_a">SEGURANÇA</string>
     <string name="politica">Politica</string>
     <string name="minhas_ocorr_ncias">Minhas ocorrências</string>
-    <string name="sa_de">Saúde</string>
+    <string name="sa_de">SAÚDE</string>
     <string name="enviar">Enviar</string>
     <string name="t_tulo_da_ocorr_ncia">Título da ocorrência</string>
     <string name="descri_o">Descrição</string>
@@ -108,7 +108,7 @@
     <string name="upload_image">Fazendo upload...</string>
     <string name="registro_de_ocorr_ncias_municipais">Registro de ocorrências municipais</string>
     <string name="upa">Unidades de pronto atendimento</string>
-    <string name="esporte">Esporte</string>
+    <string name="esporte">ESPORTE</string>
     <string name="cpf_cnpj">CPF/CNPJ</string>
     <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Informe seu email senha e confirmação de senha para registrar-se</string>
     <string name="confirmacao_de_senha">Confirmacao de senha</string>
@@ -138,4 +138,10 @@
     <string name="gps_habilitado">GPS ativo!</string>
     <string name="dados_tempo">Carregando dados meteorológicos...</string>
     <string name="salvando_perfil_face" translatable="false">Salvando perfil....</string>
+    <string name="alimenta_o">ALIMENTAÇÃO</string>
+    <string name="shop">SHOP</string>
+    <string name="im_veis">IMÓVEIS</string>
+    <string name="infraestrutura">INFRAESTRUTURA</string>
+    <string name="turismo">TURISMO</string>
+    <string name="cultura">CULTURA</string>
 </resources>

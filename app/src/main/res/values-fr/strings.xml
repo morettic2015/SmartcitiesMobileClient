@@ -111,4 +111,10 @@
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Ainsi, vous pouvez voir et les événements de rapport, vous devez activer votre GPS. S\'il vous plaît activer le GPS sur votre appareil et essayer à nouveau.</string>
     <string name="gps_habilitado">GPS activé</string>
     <string name="dados_tempo">Chargement des données météo ...</string>
+    <string name="alimenta_o">AIRE DE RESTAURATION</string>
+    <string name="cultura">CULTURE</string>
+    <string name="im_veis">REAL ESTATE</string>
+    <string name="infraestrutura">INFRASTRUCTURE</string>
+    <string name="turismo">TOURISME</string>
+    <string name="shop">BOUTIQUE</string>
 </resources>

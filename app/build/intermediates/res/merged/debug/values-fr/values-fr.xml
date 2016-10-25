@@ -37,6 +37,7 @@
     <string name="action_settings">droits d\'auteur</string>
     <string name="ajude_nos_a_manter_o_app">Aidez-nous à garder l\'APP</string>
     <string name="ajude_nosso_desenvolvimento">Aidez-nous à garder l\'APP</string>
+    <string name="alimenta_o">AIRE DE RESTAURATION</string>
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Authentifier ...</string>
@@ -98,6 +99,7 @@
     <string name="consultando_ocorrencias">Interrogation occurrences ...</string>
     <string name="cpf_cnpj">Document</string>
     <string name="criar_uma_conta">Inscrivez-vous gratuitement !</string>
+    <string name="cultura">CULTURE</string>
     <string name="dados_tempo">Chargement des données météo ...</string>
     <string name="descri_o">La description</string>
     <string name="dgts__call_me">Appelez moi</string>
@@ -165,10 +167,12 @@ numéro de téléphone et/ou votre email.</string>
     <string name="hello_blank_fragment">Fuck u</string>
     <string name="help_us">Aidez nous</string>
     <string name="humidade">Humidité</string>
+    <string name="im_veis">REAL ESTATE</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Choisissez le type d\'occurrence u veux voir</string>
     <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Donnez-nous votre téléphone mobile pour recevoir des alertes par SMS</string>
     <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Entrez vos coordonnées pour vous inscrire</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Gardez u information mise à jour à collaborer</string>
+    <string name="infraestrutura">INFRASTRUCTURE</string>
     <string name="invalid_locate">Location invalide</string>
     <string name="list_ocorrencias">Liste des Occurrence</string>
     <string name="localiza_o_indispon_vel">Emplacement indisponible</string>
@@ -228,6 +232,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Choisissez la distance pour rechercher</string>
     <string name="senha">Mot de passe</string>
     <string name="share_msg">Installez City Watch et partager u occurrences de la ville!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="shop">BOUTIQUE</string>
     <string name="soletre_ocorrencia">Prononcez le mot</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="sucesso_ocorrencia_registrada">Succès. occurrence enregistrée!</string>
@@ -242,6 +247,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_maps">Carte</string>
     <string name="transporte">Transport</string>
+    <string name="turismo">TOURISME</string>
     <string name="tw__allow_btn_txt">Autoriser</string>
     <string name="tw__like_tweet">Aimer le Tweet</string>
     <string name="tw__liked_tweet">Ne plus aimer</string>

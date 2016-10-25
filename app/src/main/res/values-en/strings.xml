@@ -11,7 +11,7 @@
     <string name="configura_es">Configurations</string>
     <string name="configure_suas_preferencias_no_app">Configure your preferences</string>
     <string name="descri_o">Description</string>
-    <string name="educa_o">Education</string>
+    <string name="educa_o">EDUCATION</string>
     <string name="entrar_ou_registrar_se">Sign in or register</string>
     <string name="enviar">Send</string>
     <string name="error_field_required">This field is required</string>
@@ -111,4 +111,10 @@
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">So you can view and report events, you must enable your GPS. Please enable GPS on your device and try again.</string>
     <string name="gps_habilitado">GPS enabled</string>
     <string name="dados_tempo">Loading weather data ...</string>
+    <string name="alimenta_o">FOOD</string>
+    <string name="cultura">CULT</string>
+    <string name="im_veis">REAL ESTATE</string>
+    <string name="infraestrutura">INFRASTRUCTURE</string>
+    <string name="turismo">TOURISM</string>
+    <string name="shop">SHOP</string>
 </resources>

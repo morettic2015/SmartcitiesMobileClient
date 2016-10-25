@@ -18,10 +18,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.FORECAST;
@@ -37,7 +39,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
     private JSONObject filter;
     private GoogleMap googleMap;
-
+    private JSONArray jProfiles;
     private TextView txtInfoForecast;
     private StringBuilder sb = new StringBuilder();
     private List<MarkerOptions> lMarkers = new ArrayList<MarkerOptions>();
@@ -83,7 +85,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
     public AssyncMapQuery(View activity, JSONObject filter, GoogleMap googleMap) {
         this.dialog = new ProgressDialog(activity.getContext());
-      
+
         this.filter = filter;
         this.googleMap = googleMap;
         this.msg = activity.getContext().getString(R.string.consultando_ocorrencias);
@@ -96,10 +98,10 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             JSONArray jOcorrencias;
             try {
 
-                boolean isOpenGraph = this.filter.getJSONObject("opengraph")!=null;
-                String myCity = null,myState = null;
+                boolean isOpenGraph = this.filter.getJSONObject("opengraph") != null;
+                String myCity = null, myState = null;
 
-                if(isOpenGraph) {
+                if (isOpenGraph) {
                     myCity = this.filter.getJSONObject("opengraph").getString("locality");
                     myState = this.filter.getJSONObject("opengraph").getString("state");
                 }
@@ -118,40 +120,100 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
                 js = HttpUtil.getJSONFromUrl(url);
 
+                /**
+                 * Fake profile for big data
+                 * */
+                this.jProfiles = js.getJSONArray("profiles");
 
+                if(js.has("iList")){
+                    jOcorrencias = js.getJSONArray("iList");
+                    LatLng latLng;
+                    MarkerOptions marker;
+                    for (int i = 0; i < jOcorrencias.length(); i++) {
+                        JSONObject ocorrencia = jOcorrencias.getJSONObject(i);
 
+                        latLng = new LatLng(ocorrencia.getDouble("vlLatitude"), ocorrencia.getDouble("vlLongitude"));
+                        // create marker
+                        marker = new MarkerOptions().position(latLng);
+                        marker.title(ocorrencia.getString("nmCategory") + " " + new Date().toString());
+                        Long id = ocorrencia.getLong("idProperty");
+                        marker.snippet(id.toString());
+                        ocorrencia.put("id",id);
+                        ocorrencia.put("type",TipoOcorrencia.IMOVEIS_GIMO);
+                        marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_imoveis));
+                        //Adiciona objeto no mapa de ocorrencias
+                        ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
+                        this.lMarkers.add(marker);
+                        latLng = null;
+                        ocorrencia = null;
+                    }
+                }
 
                 if (js.has("rList")) {
 
                     jOcorrencias = js.getJSONArray("rList");
+                    LatLng latLng;
+                    MarkerOptions marker;
                     for (int i = 0; i < jOcorrencias.length(); i++) {
                         JSONObject ocorrencia = jOcorrencias.getJSONObject(i);
 
-                        LatLng latLng = new LatLng(ocorrencia.getDouble("lat"), ocorrencia.getDouble("lon"));
+                        latLng = new LatLng(ocorrencia.getDouble("lat"), ocorrencia.getDouble("lon"));
                         // create marker
-                        MarkerOptions marker = new MarkerOptions().position(latLng);
+                        marker = new MarkerOptions().position(latLng);
                         marker.title(ocorrencia.getString("tit") + " " + ocorrencia.getString("date"));
                         marker.snippet(ocorrencia.getString("id"));
-                        if (ocorrencia.getString("tipo").equals("SAUDE")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_health01));
-                            lSaude.add(latLng);
-                        } else if (ocorrencia.getString("tipo").equals("POLITICA")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_politics01));
-                        } else if (ocorrencia.getString("tipo").equals("MEIO_AMBIENTE")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_nature01));
-                        } else if (ocorrencia.getString("tipo").equals("EDUCACAO")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_education01));
-                        } else if (ocorrencia.getString("tipo").equals("TRANSPORTE")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_transport01));
-                        } else if (ocorrencia.getString("tipo").equals("SEGURANCA")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_security01));
-                        } else if (ocorrencia.getString("tipo").equals("UPA")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_upa01));
-                        } else if (ocorrencia.getString("tipo").equals("ESPORTE")) {
-                            marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_sport01));
-                        } else {
-                            marker.icon(BitmapDescriptorFactory.defaultMarker());
+                        TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
+                        int icon = 0;
+                        switch (tp) {
+                            case ALIMENTACAO:
+                                icon = R.mipmap.ic_alimentacao;
+                                break;
+                            case CULTURA:
+                                icon = R.mipmap.ic_cultura;
+                                break;
+                            case EDUCACAO:
+                                icon = R.mipmap.icon_education01;
+                                break;
+                            case ESPORTE:
+                                icon = R.mipmap.icon_sport01;
+                                break;
+                            case IMOVEIS:
+                                icon = R.mipmap.icon_imoveis;
+                                break;
+                            case INFRAESTRUTURA:
+                                icon = R.mipmap.ic_infraestrutura;
+                                break;
+                            case MEIO_AMBIENTE:
+                                icon = R.mipmap.icon_nature01;
+                                break;
+                            case POLITICA:
+                                icon = R.mipmap.icon_politics01;
+                                break;
+                            case SEGURANCA:
+                                icon = R.mipmap.icon_security01;
+                                break;
+                            case SERVICOS:
+                                icon = R.mipmap.icon;
+                                break;
+                            case SHOP:
+                                icon = R.mipmap.ic_shop;
+                                break;
+                            case TRANSPORTE:
+                                icon = R.mipmap.icon_transport01;
+                                break;
+                            case TURISMO:
+                                icon = R.mipmap.ic_turismo;
+                                break;
+                            case UPA:
+                                icon = R.mipmap.icon_health01;
+                                lSaude.add(latLng);
+                                break;
+                            case SAUDE:
+                                icon = R.mipmap.icon_health01;
+                                lSaude.add(latLng);
+                                break;
                         }
+                        marker.icon(BitmapDescriptorFactory.fromResource(icon));
                         //Adiciona objeto no mapa de ocorrencias
                         ValueObject.MAPA_OCORRENCIAS.put(ocorrencia.getLong("id"), ocorrencia);
                         this.lMarkers.add(marker);
@@ -164,7 +226,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                 //Create a forecast {"curren_weather":[{"humidity":"94","pressure":"1011","temp":"27","temp_unit":"c","weather_code":"1","weather_text":"Partly cloudy","wind":[{"dir":"WSW","speed":"3","wind_unit":"kph"}]}],"forecast":[{"date":"2016-04-04","day":[{"weather_code":"0","weather_text":"Sunny skies","wind":[{"dir":"SSW","dir_degree":"197","speed":"18","wind_unit":"kph"}]}],"day_max_temp":"34","night":[{"weather_code":"1","weather_text":"Partly cloudy skies","wind":[{"dir":"SW","dir_degree":"230","speed":"22","wind_unit":"kph"}]}],"night_min_temp":"25","temp_unit":"c"},{"date":"2016-04-05","day":[{"weather_code":"2","weather_text":"Cloudy skies","wind":[{"dir":"SW","dir_degree":"224","speed":"18","wind_unit":"kph"}]}],"day_max_temp":"34","night":[{"weather_code":"1","weather_text":"Partly cloudy skies","wind":[{"dir":"WSW","dir_degree":"240","speed":"22","wind_unit":"kph"}]}],"night_min_temp":"26","temp_unit":"c"}]}
                 //http://www.myweather2.com/developer/forecast.ashx?uac=9H1IUHm/Ih&query=" + lat + "," + lon + "&temp_unit=c&output=json"
                 if (FORECAST == null) {
-                    FORECAST = HttpUtil.getJSONFromUrl(HttpUtil.getForecast( this.filter.getString("lat") + "",  this.filter.getString("lon") + ""));
+                    FORECAST = HttpUtil.getJSONFromUrl(HttpUtil.getForecast(this.filter.getString("lat") + "", this.filter.getString("lon") + ""));
                 }
                 try {
                     sb.append("Temperatura:");
@@ -190,7 +252,6 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             return lMarkers;
         }
     }
-
 
 
     private void addHeatMap() {

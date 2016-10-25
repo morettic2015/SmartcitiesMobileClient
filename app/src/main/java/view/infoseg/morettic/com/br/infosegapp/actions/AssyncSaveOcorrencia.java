@@ -1,8 +1,10 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.EditText;
@@ -10,19 +12,24 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.google.firebase.crash.FirebaseCrash;
-
 import org.json.JSONObject;
 
 import java.util.List;
-import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import view.infoseg.morettic.com.br.infosegapp.view.ActivityOcorrencia;
-import static view.infoseg.morettic.com.br.infosegapp.view.ActivityOcorrencia.*;
+
+import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.UPLOAD_URL;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA1;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA2;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA3;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -66,10 +73,10 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
         i3.setImageDrawable(null);
         i4.setImageDrawable(null);
         //limpa vo
-        ValueObject.UPLOAD_PIC_OCORRENCIA = null;
-        ValueObject.UPLOAD_PIC_OCORRENCIA1 = null;
-        ValueObject.UPLOAD_PIC_OCORRENCIA2 = null;
-        ValueObject.UPLOAD_PIC_OCORRENCIA3 = null;
+        UPLOAD_PIC_OCORRENCIA = null;
+        UPLOAD_PIC_OCORRENCIA1 = null;
+        UPLOAD_PIC_OCORRENCIA2 = null;
+        UPLOAD_PIC_OCORRENCIA3 = null;
         if (dialog.isShowing()) {
             dialog.dismiss();
         }
@@ -95,7 +102,26 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
 
         //builder = new AlertDialog.Builder(this.a1.getContext());
     }
+    private JSONObject saveImage(Bitmap i) throws Exception {
+        JSONObject js = HttpUtil.getJSONFromUrl(UPLOAD_URL);
+        URL_SUBMIT_UPLOAD = js.getString("uploadPath");
 
+        // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+        Uri tempUri = HttpUtil.getImageUri(a1.getContext(), i);
+
+        // CALL THIS METHOD TO GET THE ACTUAL PATH
+        String realPathInSO = HttpUtil.getRealPathFromURI(tempUri, MAIN);
+
+        String fTYpe = realPathInSO.substring(realPathInSO.length() - 3, realPathInSO.length());
+        if (URL_SUBMIT_UPLOAD != null) {
+
+            js = HttpFileUpload.uploadFile(realPathInSO,
+                    URL_SUBMIT_UPLOAD,
+                    fTYpe);
+            js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
+        }
+        return js;
+    }
     protected String doInBackground(JSONObject... urls) {
         JSONObject js = null;
         // Creating new JSON Parser   public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id){
@@ -104,12 +130,17 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
 
             //Pega os campos
             String tit = this.ocorrencia.getString("tit");
-            String ocorrenciaPic = ValueObject.UPLOAD_PIC_OCORRENCIA;
+
+
+            String ocorrenciaPic = UPLOAD_PIC_OCORRENCIA!=null?saveImage(UPLOAD_PIC_OCORRENCIA).getString("key"):null;
+            String ocorrenciaPic1 = UPLOAD_PIC_OCORRENCIA1!=null?saveImage(UPLOAD_PIC_OCORRENCIA1).getString("key"):null;
+            String ocorrenciaPic2 = UPLOAD_PIC_OCORRENCIA2!=null?saveImage(UPLOAD_PIC_OCORRENCIA2).getString("key"):null;
+            String ocorrenciaPic3 = UPLOAD_PIC_OCORRENCIA3!=null?saveImage(UPLOAD_PIC_OCORRENCIA3).getString("key"):null;
             String desc = this.ocorrencia.getString("desc");
             double lat = this.ocorrencia.getDouble("lat");
             double lon = this.ocorrencia.getDouble("lon");
             String tp = this.ocorrencia.getString("tipoOcorrencia");
-            String iProfile = "" + ValueObject.ID_PROFILE;
+            String iProfile = "" + ID_PROFILE;
             String idOcorrencia = null;
 
             //tenta localizar o endereço da ocorrencia pelo lat lon
@@ -132,11 +163,11 @@ public class AssyncSaveOcorrencia extends AsyncTask<JSONObject, Void, String> {
             }
 
             //URL PARA SALVAR O ocorrencia.
-            String url = HttpUtil.getSaveOcorrenciaPath(tit, lat, lon, desc, ocorrenciaPic, tp, iProfile,sb.toString(),ValueObject.UPLOAD_PIC_OCORRENCIA1,ValueObject.UPLOAD_PIC_OCORRENCIA2,ValueObject.UPLOAD_PIC_OCORRENCIA3);
+            String url = HttpUtil.getSaveOcorrenciaPath(tit, lat, lon, desc, ocorrenciaPic, tp, iProfile,sb.toString(), ocorrenciaPic1, ocorrenciaPic2, ocorrenciaPic3);
             //url =
             js = HttpUtil.getJSONFromUrl(url);
 
-            ValueObject.ID_OCORRENCIA = js.getString("key");
+            ID_OCORRENCIA = js.getString("key");
 
 
         } catch (Exception ex) {

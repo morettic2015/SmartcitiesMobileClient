@@ -98,7 +98,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/txtDescListView"
         android:contentDescription="TODO"
-        android:src="@drawable/logo_big_one" />
+        android:src="@mipmap/icon" />
 
     <RatingBar
         android:layout_width="wrap_content"

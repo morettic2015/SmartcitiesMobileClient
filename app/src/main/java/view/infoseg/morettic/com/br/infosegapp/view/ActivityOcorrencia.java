@@ -25,14 +25,17 @@ import java.util.Locale;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncSaveOcorrencia;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 
 import static android.app.Activity.RESULT_OK;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA1;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA2;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_PIC_OCORRENCIA3;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.WORD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
@@ -113,28 +116,46 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
                 selectedOne = (RadioButton) v.findViewById(OPCAO);
                 switch (opcao) {
                     case R.id.rMeioAmbiente:
-                        tipoOcorrencia = "MEIO_AMBIENTE";
+                        tipoOcorrencia = TipoOcorrencia.MEIO_AMBIENTE.toString();
                         break;
                     case R.id.rSaude:
-                        tipoOcorrencia = "SAUDE";
+                        tipoOcorrencia = TipoOcorrencia.SAUDE.toString();
                         break;
                     case R.id.rEducacao:
-                        tipoOcorrencia = "EDUCACAO";
+                        tipoOcorrencia = TipoOcorrencia.EDUCACAO.toString();
                         break;
                     case R.id.rSegurança:
-                        tipoOcorrencia = "SEGURANCA";
+                        tipoOcorrencia = TipoOcorrencia.SEGURANCA.toString();
                         break;
                     case R.id.rPolitica:
-                        tipoOcorrencia = "POLITICA";
+                        tipoOcorrencia = TipoOcorrencia.POLITICA.toString();
                         break;
                     case R.id.rTransporte:
-                        tipoOcorrencia = "TRANSPORTE";
+                        tipoOcorrencia = TipoOcorrencia.TRANSPORTE.toString();
                         break;
                     case R.id.rEsporte:
-                        tipoOcorrencia = "ESPORTE";
+                        tipoOcorrencia = TipoOcorrencia.ESPORTE.toString();
+                        break;
+                    case R.id.rCultura:
+                        tipoOcorrencia = TipoOcorrencia.CULTURA.toString();
+                        break;
+                    case R.id.rInfraestrutura:
+                        tipoOcorrencia = TipoOcorrencia.INFRAESTRUTURA.toString();
+                        break;
+                    case R.id.rImoveis:
+                        tipoOcorrencia = TipoOcorrencia.IMOVEIS.toString();
+                        break;
+                    case R.id.rAlimentacao:
+                        tipoOcorrencia = TipoOcorrencia.ALIMENTACAO.toString();
+                        break;
+                    case R.id.rTurismo:
+                        tipoOcorrencia = TipoOcorrencia.TURISMO.toString();
+                        break;
+                    case R.id.rShop:
+                        tipoOcorrencia = TipoOcorrencia.SHOP.toString();
                         break;
                     default:
-                        tipoOcorrencia = "SERVICOS";
+                        tipoOcorrencia = TipoOcorrencia.SERVICOS.toString();
                         break;
 
                 }
@@ -171,11 +192,21 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
                     ib = (ImageButton) v.findViewById(R.id.btCaptureCam);
                 }
                 ib.setImageBitmap(imageBitmap);
+                switch (ib.getId()){
+                    case R.id.btCaptureCam:
+                        UPLOAD_PIC_OCORRENCIA = imageBitmap;
+                        break;
+                    case R.id.btCaptureCam1:
+                        UPLOAD_PIC_OCORRENCIA1 = imageBitmap;
+                        break;
+                    case R.id.btCaptureCam2:
+                        UPLOAD_PIC_OCORRENCIA2 = imageBitmap;
+                        break;
+                    case R.id.btCaptureCam3:
+                        UPLOAD_PIC_OCORRENCIA3 = imageBitmap;
+                        break;
 
-                InfosegMain ism = (InfosegMain) getActivity();
-                AssyncUploadURLlink aurl = new AssyncUploadURLlink(ism, imageBitmap, codigo);
-                aurl.setOrigemOcorrencia(true);
-                aurl.execute();
+                }
             }
         } catch (Exception ex) {
             logException(ex);
@@ -238,7 +269,7 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
                         erros.append(MAIN.getString(R.string.foto_1));
                         erros.append(",");
                         codigo = R.id.btCaptureCam;//Foto principal da ocorrência
-                        dispatchTakePictureIntent(v);//Abre janela para tirar foto
+                        //dispatchTakePictureIntent(v);//Abre janela para tirar foto
                     }
                     if (selectedOne == null || !selectedOne.isChecked()) {
                         erros.append(MAIN.getString(R.string.tipo_do_servi_o));

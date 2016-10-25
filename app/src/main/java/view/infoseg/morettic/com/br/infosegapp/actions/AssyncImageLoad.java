@@ -14,11 +14,13 @@ import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logExcept
  */
 public class AssyncImageLoad extends AsyncTask<String, Void, Bitmap> {
     private String key;
-    private String img;
+    private String img,path;
 
-    public AssyncImageLoad(String im, String key) {
+    public AssyncImageLoad(String im, String key, String path) {
         this.key = key;
         this.img = im;
+        this.path = path;
+
     }
 
     public Bitmap doInBackground(String... urls) {
@@ -27,8 +29,13 @@ public class AssyncImageLoad extends AsyncTask<String, Void, Bitmap> {
         try {
             if(ImageCache.hasBitmapFromMemCache(this.key)){
                 mIcon11 =  ImageCache.getBitmapFromMemCache(this.key);
-            }else {
+            }else if(path==null){//Big data of experience
                 mIcon11 = HttpUtil.getBitmapFromURLBlobKey(this.key);
+                mIcon11 = HttpUtil.getResizedBitmap(mIcon11, 250, 250);
+                ImageCache.addBitmapToMemoryCache(this.key,mIcon11);
+            }else{//Data from genimo openstreemap
+
+                mIcon11 = HttpUtil.getBitmapFromURL(path);
                 mIcon11 = HttpUtil.getResizedBitmap(mIcon11, 250, 250);
                 ImageCache.addBitmapToMemoryCache(this.key,mIcon11);
             }

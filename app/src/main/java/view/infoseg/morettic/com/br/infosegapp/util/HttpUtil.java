@@ -20,6 +20,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.Normalizer;
+import java.util.regex.Pattern;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 
@@ -125,7 +127,12 @@ public class HttpUtil {
 
         return ret;
     }
-
+    public static String semAcento(String str) {
+        String nfdNormalizedString = Normalizer.normalize(str, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(nfdNormalizedString).replaceAll("");
+    }
+    public static String value = "À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ø ù ú û ü ý þ ÿ ";
     public static final String getOcorrenciasPath(String pId,String pLat,String pLon, String pMine, int distance, String types,boolean isOpenStreet,String myCity,String myState){
         String r = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=6" +
                 "&id=" + pId +
@@ -135,7 +142,7 @@ public class HttpUtil {
                 "&type="+types ;
 
         if(isOpenStreet){
-            r+= "&myCity="+encode(myCity)+encode(",")+encode(myState);
+            r+= "&myCity="+encode(semAcento(myCity))+encode(",")+encode(semAcento(myState));
         }
 
         if(pMine!=null)

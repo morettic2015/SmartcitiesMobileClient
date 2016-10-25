@@ -36,7 +36,7 @@
                 android:layout_height="60dp"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
-                android:background="@drawable/ic_menu_camera"
+                android:background="@drawable/ic_add_a_photo"
                 android:clickable="true"
                 android:contentDescription="@string/foto_1" />
 
@@ -47,7 +47,7 @@
                 android:layout_column="1"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
-                android:background="@drawable/ic_menu_camera"
+                android:background="@drawable/ic_add_a_photo"
                 android:clickable="true" />
 
             <ImageButton
@@ -57,7 +57,7 @@
                 android:layout_column="2"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
-                android:background="@drawable/ic_menu_camera"
+                android:background="@drawable/ic_add_a_photo"
                 android:clickable="true" />
 
             <ImageButton
@@ -68,7 +68,7 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="5dp"
                 android:layout_row="0"
-                android:background="@drawable/ic_menu_camera"
+                android:background="@drawable/ic_add_a_photo"
                 android:clickable="true" />
         </LinearLayout>
 
@@ -168,6 +168,7 @@
                 android:layout_height="90dp">
 
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rSegurança"
                     android:layout_marginRight="20dp"
                     android:layout_width="match_parent"
@@ -177,6 +178,7 @@
                     android:text="@string/seguran_a" />
 
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rSaude"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,6 +187,25 @@
                     android:text="@string/sa_de" />
 
                 <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rCultura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/ic_cultura"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/cultura" />
+
+                <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rTurismo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/ic_turismo"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/turismo" />
+
+                <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rEducacao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,6 +215,7 @@
                     android:text="@string/educa_o" />
 
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rTransporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -202,6 +224,7 @@
                     android:text="@string/transporte" />
 
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rMeioAmbiente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -210,8 +233,19 @@
                     android:layout_marginRight="20dp"
                     android:text="@string/meio_ambiente" />
 
-
                 <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rInfraestrutura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@mipmap/ic_infraestrutura"
+                    android:text="@string/infraestrutura"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rPolitica"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -222,6 +256,7 @@
 
                     />
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rEsporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -232,12 +267,35 @@
 
                     />
                 <RadioButton
+                    android:textAllCaps="true"
                     android:id="@+id/rImoveis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_sport01"
-                    android:text="Imoveis"
+                    android:drawableRight="@mipmap/icon_imoveis"
+                    android:text="@string/im_veis"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@mipmap/ic_shop"
+                    android:text="@string/shop"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rAlimentacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableRight="@mipmap/ic_alimentacao"
+                    android:text="@string/alimenta_o"
                     android:layout_marginRight="20dp"
 
                     />

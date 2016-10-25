@@ -111,4 +111,10 @@
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Таким образом, вы можете просматривать и события отчетов, необходимо включить функцию GPS. Пожалуйста, включите GPS на устройстве и повторите попытку.</string>
     <string name="gps_habilitado">включен GPS</string>
     <string name="dados_tempo">Загрузка данных о погоде ...</string>
+    <string name="alimenta_o">фуд-корт</string>
+    <string name="cultura">КУЛЬТУРА</string>
+    <string name="im_veis">НЕДВИЖИМОСТЬ</string>
+    <string name="infraestrutura">ИНФРАСТРУКТУРА</string>
+    <string name="turismo">ТУРИЗМ</string>
+    <string name="shop">МАГАЗИН</string>
 </resources>

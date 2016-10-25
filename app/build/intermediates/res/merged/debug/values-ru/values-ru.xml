@@ -37,6 +37,7 @@
     <string name="action_settings">Авторские права</string>
     <string name="ajude_nos_a_manter_o_app">Помогите нам сохранить приложение</string>
     <string name="ajude_nosso_desenvolvimento">Помогите нам сохранить приложение</string>
+    <string name="alimenta_o">фуд-корт</string>
     <string name="app_name">Город часы</string>
     <string name="app_title_main">Город часы</string>
     <string name="autenticando">Аутентификация ...</string>
@@ -98,6 +99,7 @@
     <string name="consultando_ocorrencias">Выполнение запросов ... вхождений</string>
     <string name="cpf_cnpj">Док. Я бы.</string>
     <string name="criar_uma_conta">Зарегистрироваться абсолютно бесплатна!</string>
+    <string name="cultura">КУЛЬТУРА</string>
     <string name="dados_tempo">Загрузка данных о погоде ...</string>
     <string name="descri_o">описание</string>
     <string name="dgts__call_me">Позвонить мне</string>
@@ -164,10 +166,12 @@
     <string name="hello_blank_fragment">a</string>
     <string name="help_us">Помогите нам!</string>
     <string name="humidade">влажность</string>
+    <string name="im_veis">НЕДВИЖИМОСТЬ</string>
     <string name="informe_os_tipos_de_ocorr_ncia_que_deseja_visualizar">Введите типы событий, которые вы хотите просмотреть</string>
     <string name="informe_seu_celular_para_receber_informativos_via_sms_iremos_enviar_alertas_quando_seu_dispositivo_estiver_em_rea_de_ocorr_ncias_de_sua_pref_rencia">Скажите ваш мобильный телефон, чтобы получать информацию с помощью SMS. Мы будем посылать сигналы, когда устройство находится в зоне вхождения вашего выбора.</string>
     <string name="informe_seu_email_senha_e_confirma_o_de_senha_para_registrar_se">Введите свой пароль электронной почты и подтверждение пароля для регистрации</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Введите ваши данные и держать их в курсе, для совместной работы над событиями в вашем городе</string>
+    <string name="infraestrutura">ИНФРАСТРУКТУРА</string>
     <string name="invalid_locate">недействительный Расположение</string>
     <string name="list_ocorrencias">список популярности</string>
     <string name="localiza_o_indispon_vel">Местоположение недоступно</string>
@@ -227,6 +231,7 @@
     <string name="selecione_as_dist_ncias_para_filtrar">Выберите расстояния для фильтрации</string>
     <string name="senha">пароль</string>
     <string name="share_msg">! Установите APP City Watch для записи проблемы вашего сообщества и делиться с гражданами \ nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
+    <string name="shop">МАГАЗИН</string>
     <string name="soletre_ocorrencia">Выразить желание</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
     <string name="sucesso_ocorrencia_registrada">Успех. зафиксированное появление!</string>
@@ -241,6 +246,7 @@
     <string name="title_activity_login">входить</string>
     <string name="title_activity_maps">карта</string>
     <string name="transporte">транспорт</string>
+    <string name="turismo">ТУРИЗМ</string>
     <string name="tw__allow_btn_txt">Разрешить</string>
     <string name="tw__like_tweet">Мне нравится</string>
     <string name="tw__liked_tweet">Не нравится</string>

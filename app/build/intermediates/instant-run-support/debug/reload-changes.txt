@@ -1,4 +1,2 @@
 CHANGED,C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\view\infoseg\morettic\com\br\infosegapp\util\LocationManagerUtil$override.class
-CHANGED,C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\view\infoseg\morettic\com\br\infosegapp\util\HttpUtil$override.class
-CHANGED,C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\view\infoseg\morettic\com\br\infosegapp\actions\AssyncMapQuery$override.class
+CHANGED,C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\view\infoseg\morettic\com\br\infosegapp\view\ActivityMap$1$override.class

@@ -100,7 +100,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         /**
          * Abre a janela para ativar o GPS do celular
          * */
-        turnGPSOn();
+        //turnGPSOn();
         /**
          * SE nao estiver autenticado pop up maldito dos infernos
          * */
@@ -133,7 +133,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
 
-                if ((d.getMinutes() % 4)== 0) {//If minutes mod 3 == 0 show ads
+                if ((d.getMinutes() % 7)== 0) {//If minutes mod 3 == 0 show ads
 
                     COUNTER_CLICK++;
                     adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
@@ -143,7 +143,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                                     com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
                                 }
                             });
-                } else if ((d.getMinutes() % 3) == 0 ) {//If minutes mod 2 == 0 show ads
+                } else if ((d.getMinutes() % 5) == 0 ) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }

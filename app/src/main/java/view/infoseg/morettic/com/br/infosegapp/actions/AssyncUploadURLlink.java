@@ -6,8 +6,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 
-import com.google.firebase.crash.FirebaseCrash;
-
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -51,7 +49,7 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
         bitmapM = null;
         dialog = null;
         String msg = MAIN.getApplicationContext().getString(R.string.save_sucess);
-        ToastHelper.makeToast(MAIN.getApplicationContext(),msg);
+        ToastHelper.makeToast(MAIN.getApplicationContext(), msg);
     }
 
     public AssyncUploadURLlink(InfosegMain activity, Bitmap b1, int origem) {
@@ -82,32 +80,10 @@ public class AssyncUploadURLlink extends AsyncTask<JSONObject, Void, String> {
                         fTYpe);
                 js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
 
-                //Salva em lugares distintos
-                if (origemIsOcorrencia) {
-                    switch (this.code){
-                        case R.id.btCaptureCam:
-                            ValueObject.UPLOAD_PIC_OCORRENCIA = js.getString("key");
-                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN = js.getString("token");
-                            break;
-                        case R.id.btCaptureCam1:
-                            ValueObject.UPLOAD_PIC_OCORRENCIA1 = js.getString("key");
-                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN1 = js.getString("token");
-                            break;
-                        case R.id.btCaptureCam2:
-                            ValueObject.UPLOAD_PIC_OCORRENCIA2 = js.getString("key");
-                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN2 = js.getString("token");
-                            break;
-                        case R.id.btCaptureCam3:
-                            ValueObject.UPLOAD_PIC_OCORRENCIA3 = js.getString("key");
-                            ValueObject.UPLOAD_PIC_OCORRENCIA_TOKEN3 = js.getString("token");
-                            break;
 
-                    }
+                ValueObject.UPLOAD_AVATAR = js.getString("key");
+                ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");
 
-                } else {
-                    ValueObject.UPLOAD_AVATAR = js.getString("key");
-                    ValueObject.UPLOAD_AVATAR_TOKEN = js.getString("token");
-                }
             }
             realPathInSO = null;
             tempUri = null;

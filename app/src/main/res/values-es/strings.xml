@@ -111,4 +111,10 @@
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Así que usted puede ver y eventos de informe, debe activar el GPS. Por favor, activa el GPS en el dispositivo y vuelva a intentarlo.</string>
     <string name="gps_habilitado">habilitado para GPS</string>
     <string name="dados_tempo">Cargando datos del tiempo ...</string>
+    <string name="alimenta_o">ALIMENTACIÓN</string>
+    <string name="cultura">CULTURA</string>
+    <string name="im_veis">REAL ESTATE</string>
+    <string name="infraestrutura">INFRAESTRUCTURA</string>
+    <string name="turismo">TURISMO</string>
+    <string name="shop">SHOP</string>
 </resources>
