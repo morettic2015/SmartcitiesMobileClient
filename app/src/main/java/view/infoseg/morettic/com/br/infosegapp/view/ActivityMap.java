@@ -1,6 +1,7 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,11 +26,14 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -179,6 +183,25 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                                 AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("dsCompanyLogo"), js.getString("dsCompanyLogo").replace("HTTP","https"));
                                 ew1.execute();
+                            } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                               /* */
+                                if(js.getString("token").equals("default")){
+                                    if(ImageCache.hasBitmapFromMemCache("default")){
+                                        IMG_OCORRENCIA =  ImageCache.getBitmapFromMemCache("default");
+                                    }else{
+                                        IMG_OCORRENCIA = ((BitmapDrawable) MAIN.getResources()
+                                                .getDrawable(R.drawable.logo)).getBitmap();
+                                        IMG_OCORRENCIA = HttpUtil.getResizedBitmap(IMG_OCORRENCIA, 60, 200);
+                                        ImageCache.addBitmapToMemoryCache("default",IMG_OCORRENCIA);
+                                    }
+
+                                }else{
+                                    AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), js.getString("token"));
+                                    ew.execute();
+                                }
+
+                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("mPicA"), js.getString("mPicA"));
+                                ew1.execute();
                             } else {
                                 AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), null);
                                 ew.execute();
@@ -216,13 +239,27 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtTit.setText(js.getString("nmCategory"));
                                 txtAutor.setText(js.getString("nmCompany"));
 
-                                String vlSale = js.getString("vlSale")==null?"VENDA":"ALUGUEL";
+                                String vlSale = js.getString("vlSale") == null ? "VENDA" : "ALUGUEL";
 
                                 txtDt.setText(vlSale);
 
-                                txtDesc.setText(js.getString("dsAddress")+" R$"+js.getString("nmProperty"));
+                                txtDesc.setText(js.getString("dsAddress") + " R$" + js.getString("nmProperty"));
 
                                 txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
+                            } if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                                txtTit.setText(js.getString("tit"));
+
+
+                                // Usually this can be a field rather than a method variable
+
+
+                                txtAutor.setText(js.getString("author"));
+
+                                txtDt.setText(TipoOcorrencia.OPENSTREEMAP.toString());
+
+                                txtDesc.setText(js.getString("desc")+". "+js.getString("address"));
+
+                                txtTp.setText(js.getString("tipo"));
                             } else {
 
                                 //Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);

@@ -123,7 +123,8 @@ public class FacebookUtil {
 
                                         String email = object.getString("email");
                                         String name = object.getString("name");
-                                        String birthday = (object.getString("birthday")==null||object.getString("birthday").equals(""))?"dd/MM/yyyy":object.getString("birthday");
+                                        String birthday = object.has("birthday")?object.getString("birthday"):"dd/MM/yyyy";
+
                                         String bL = birthday.substring(3,5)+"/"+birthday.substring(0,2)+"/"+birthday.substring(6,10);
                                         String pass = java.util.UUID.randomUUID().toString().substring(0, 8);
 

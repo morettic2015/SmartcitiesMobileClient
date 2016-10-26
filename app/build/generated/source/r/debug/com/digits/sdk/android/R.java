@@ -464,20 +464,20 @@ public final class R {
 		public static final int dgts__logo_name = 0x7f0200a1;
 		public static final int dgts__spinner_dark = 0x7f0200a2;
 		public static final int dgts__spinner_light = 0x7f0200a3;
-		public static final int notification_template_icon_bg = 0x7f020172;
-		public static final int progress_dark = 0x7f0200fe;
-		public static final int progress_light = 0x7f0200ff;
-		public static final int tw__ic_logo_default = 0x7f02014c;
-		public static final int tw__login_btn = 0x7f020160;
-		public static final int tw__login_btn_default = 0x7f020161;
-		public static final int tw__login_btn_default_light = 0x7f020162;
-		public static final int tw__login_btn_disabled = 0x7f020163;
-		public static final int tw__login_btn_light = 0x7f020164;
-		public static final int tw__login_btn_pressed = 0x7f020165;
-		public static final int tw__login_btn_pressed_light = 0x7f020166;
-		public static final int tw__login_btn_text_color_light = 0x7f020167;
-		public static final int tw__share_email_header = 0x7f02016b;
-		public static final int tw__transparent = 0x7f02016c;
+		public static final int notification_template_icon_bg = 0x7f02016f;
+		public static final int progress_dark = 0x7f0200fc;
+		public static final int progress_light = 0x7f0200fd;
+		public static final int tw__ic_logo_default = 0x7f020149;
+		public static final int tw__login_btn = 0x7f02015d;
+		public static final int tw__login_btn_default = 0x7f02015e;
+		public static final int tw__login_btn_default_light = 0x7f02015f;
+		public static final int tw__login_btn_disabled = 0x7f020160;
+		public static final int tw__login_btn_light = 0x7f020161;
+		public static final int tw__login_btn_pressed = 0x7f020162;
+		public static final int tw__login_btn_pressed_light = 0x7f020163;
+		public static final int tw__login_btn_text_color_light = 0x7f020164;
+		public static final int tw__share_email_header = 0x7f020168;
+		public static final int tw__transparent = 0x7f020169;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0f0187;

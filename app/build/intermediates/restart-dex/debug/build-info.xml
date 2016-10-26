@@ -4,48 +4,30 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="43031437605069"
+    timestamp="119686348674422"
     token="-1578772812129959442" >
 
     <task
         name="javac"
-        duration="1915" />
+        duration="2222" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="23" />
+        duration="2015" />
     <task
         name="verifier"
-        duration="4" />
+        duration="2395" />
 
     <artifact
-        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-        type="DEX" />
+        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="40322784831882" >
+    <build timestamp="119686348674422" >
         <artifact
             location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="41342669336225" >
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="42410712539541" >
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="43031437605069" >
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

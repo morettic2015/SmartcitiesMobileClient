@@ -19,5 +19,6 @@ public enum TipoOcorrencia {
     ALIMENTACAO,
     TURISMO,
     SHOP,
+    OPENSTREEMAP,
     SERVICOS;
 }

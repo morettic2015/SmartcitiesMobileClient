@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
@@ -141,6 +142,91 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         ocorrencia.put("id",id);
                         ocorrencia.put("type",TipoOcorrencia.IMOVEIS_GIMO);
                         marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_imoveis));
+                        //Adiciona objeto no mapa de ocorrencias
+                        ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
+                        this.lMarkers.add(marker);
+                        latLng = null;
+                        ocorrencia = null;
+                    }
+                }
+                if(js.has("openStreet")){
+                    jOcorrencias = js.getJSONArray("openStreet");
+                    LatLng latLng;
+                    MarkerOptions marker;
+                    for (int i = 0; i < jOcorrencias.length(); i++) {
+                        JSONObject ocorrencia = jOcorrencias.getJSONObject(i);
+
+                        latLng = new LatLng(ocorrencia.getDouble("lat"), ocorrencia.getDouble("lon"));
+                        // create marker
+                        marker = new MarkerOptions().position(latLng);
+                        marker.title(ocorrencia.getString("tit"));
+                        Long id = ocorrencia.getLong("id");
+                        marker.snippet(id.toString());
+                        ocorrencia.put("id",id);
+                        ocorrencia.put("type",TipoOcorrencia.OPENSTREEMAP);
+                        TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
+                        int icon = 0;
+                        switch (tp) {
+                            case ALIMENTACAO:
+                                icon = R.mipmap.ic_alimentacao;
+                                break;
+                            case CULTURA:
+                                icon = R.mipmap.ic_cultura;
+                                break;
+                            case EDUCACAO:
+                                icon = R.mipmap.icon_education01;
+                                break;
+                            case ESPORTE:
+                                icon = R.mipmap.icon_sport01;
+                                break;
+                            case IMOVEIS:
+                                icon = R.mipmap.icon_imoveis;
+                                break;
+                            case INFRAESTRUTURA:
+                                icon = R.mipmap.ic_infraestrutura;
+                                break;
+                            case MEIO_AMBIENTE:
+                                icon = R.mipmap.icon_nature01;
+                                break;
+                            case POLITICA:
+                                icon = R.mipmap.icon_politics01;
+                                break;
+                            case SEGURANCA:
+                                icon = R.mipmap.icon_security01;
+                                break;
+                            case SERVICOS:
+                                icon = R.mipmap.icon;
+                                break;
+                            case SHOP:
+                                icon = R.mipmap.ic_shop;
+                                break;
+                            case TRANSPORTE:
+                                icon = R.mipmap.icon_transport01;
+                                break;
+                            case TURISMO:
+                                icon = R.mipmap.ic_turismo;
+                                break;
+                            case UPA:
+                                icon = R.mipmap.icon_health01;
+                                lSaude.add(latLng);
+                                break;
+                            case SAUDE:
+                                icon = R.mipmap.icon_health01;
+                                lSaude.add(latLng);
+                                break;
+                        }
+                        marker.icon(BitmapDescriptorFactory.fromResource(icon));
+
+
+                        Random rand = new Random();
+
+                        // nextInt is normally exclusive of the top value,
+                        // so add 1 to make it inclusive
+                        int randomNum = rand.nextInt((5 - 1) + 1) + 1;
+                        randomNum--;
+                        JSONObject profRandom = this.jProfiles.getJSONObject(randomNum);
+                        ocorrencia.put("author",profRandom.getString("name"));
+                        ocorrencia.put("mPicA",profRandom.getString("avatar"));
                         //Adiciona objeto no mapa de ocorrencias
                         ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
                         this.lMarkers.add(marker);

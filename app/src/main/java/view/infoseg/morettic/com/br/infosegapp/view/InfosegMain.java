@@ -100,7 +100,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         /**
          * Abre a janela para ativar o GPS do celular
          * */
-        //turnGPSOn();
+        turnGPSOn();
         /**
          * SE nao estiver autenticado pop up maldito dos infernos
          * */
@@ -539,7 +539,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         try {
             String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
 
-            if (!provider.contains("gps")) { //if gps is disabled
+            if (!provider.contains("gps")&&!provider.contains("network")) { //if gps is disabled
                 final Intent poke = new Intent();
                 poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
                 poke.addCategory(Intent.CATEGORY_ALTERNATIVE);

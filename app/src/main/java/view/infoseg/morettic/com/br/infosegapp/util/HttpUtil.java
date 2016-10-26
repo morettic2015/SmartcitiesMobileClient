@@ -142,7 +142,7 @@ public class HttpUtil {
                 "&type="+types ;
 
         if(isOpenStreet){
-            r+= "&myCity="+encode(semAcento(myCity))+encode(",")+encode(semAcento(myState));
+            r+= "&myCity="+encode(semAcento(myCity));//+encode(",")+encode(semAcento(myState));
         }
 
         if(pMine!=null)
