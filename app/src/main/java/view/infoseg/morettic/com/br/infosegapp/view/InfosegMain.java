@@ -47,6 +47,7 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
@@ -121,29 +122,20 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             assyncLoginRegister.execute();
             //Load Ocorrencias
             //Load / register device
-            AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+          /*  AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
             assyncLoadListOcorrencias.setCtx(getApplicationContext());
-            assyncLoadListOcorrencias.execute();
+            assyncLoadListOcorrencias.setCity("Florianopolis");
+            assyncLoadListOcorrencias.execute();*/
              /*
                 *   @Here we show ADS!
                 *   @If Counter click <5 show ads. 5 ads each navigation;
                 *   @Only if the user has looged in.....
                 * **/
-            if (COUNTER_CLICK < 100) {
+            if (COUNTER_CLICK < 3) {
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
 
-                if ((d.getMinutes() % 7)== 0) {//If minutes mod 3 == 0 show ads
-
-                    COUNTER_CLICK++;
-                    adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
-                            new AdListener() {
-                                @Override
-                                public void onAdLoaded() {
-                                    com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
-                                }
-                            });
-                } else if ((d.getMinutes() % 5) == 0 ) {//If minutes mod 2 == 0 show ads
+                if ((d.getMinutes() % 5) == 0) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }
@@ -315,26 +307,13 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             fragment = new ActivityOcorrencia();
             title = getString(R.string.register_event);
         } else if (id == R.id.nav_gallery) {
-            if (MY_PREFERENCES.contains("distance")) {
-                fragment = new ActivityMap();
-                title = getString(R.string.configura_es);
-            } else {
-                final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-                alertDialogBuilder.setTitle(getString(R.string.preferences));
-                alertDialogBuilder
-                        .setMessage(getString(R.string.view_config_map))
-                        .setCancelable(false)
-                        .setPositiveButton(getString(R.string.ok),
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                fragment = new ActivityConfig();
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                alertDialog.show();
-            }
 
+            if (LocationManagerUtil.isLocationValid(MAIN) == null) {
+                loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
+            } else {
+                MapFilter.getInstance().show(getFragmentManager(), "dialog");
+
+            }
 
             title = getString(R.string.mapa_ocorrencias);
         } else if (id == R.id.nav_list) {
@@ -389,8 +368,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
-
-        loadFragment(fragment, title);
+        if (fragment != null)
+            loadFragment(fragment, title);
         title = null;
         fragment = null;
         //setTitle(title);
@@ -398,7 +377,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         return true;
     }
 
-    private void loadFragment(Fragment fragment, String title) {
+    public void loadFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -445,7 +424,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         ImageButton bt = (ImageButton) findViewById(R.id.btAvatar);
                         bt.setImageBitmap(yourSelectedImage);
                         if (yourSelectedImage != null)//Add the image to the cache
-                            ImageCache.addBitmapToMemoryCache("avatar",yourSelectedImage);
+                            ImageCache.addBitmapToMemoryCache("avatar", yourSelectedImage);
                         //Upload da imagem inicializado
                         new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
                     } catch (FileNotFoundException ex) {
@@ -486,39 +465,26 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
 
             case R.id.btMapaSplash:
-                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
+                if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
-                    if (MY_PREFERENCES.contains("distance")) {
-                        loadFragment(new ActivityMap(), getString(R.string.view_events));
-                    } else {
-                        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-                        alertDialogBuilder.setTitle(getString(R.string.preferences));
-                        alertDialogBuilder
-                                .setMessage(getString(R.string.view_config_map))
-                                .setCancelable(false)
-                                .setPositiveButton(getString(R.string.SIM),
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int id) {
-                                                dialog.cancel();
-                                            }
-                                        });
-                        AlertDialog alertDialog = alertDialogBuilder.create();
-                        alertDialog.show();
-                        loadFragment(new ActivityConfig(), getString(R.string.configura_es));
-                    }
+                    MapFilter.getInstance().show(getFragmentManager(), "dialog");
 
                 }
                 break;
             case R.id.btListOcorrencias:
                 AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
                 assyncLoadListOcorrencias.setCtx(getApplicationContext());
+                assyncLoadListOcorrencias.setCity("Florianopolis");
                 assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
-                if (isDataListLoaded()) {
-                    loadFragment(new ListOcorrencia(), getString(R.string.list_ocorrencias));
-                } else {
-                    loadFragment(new ActivityAds(), getString(R.string.help_us));
-                }
+                ToastHelper.makeToast(getApplicationContext(), getString(R.string.consultando_ocorrencias));
+                adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
+                        new AdListener() {
+                            @Override
+                            public void onAdLoaded() {
+                                com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
+                            }
+                        });
                 break;
             case R.id.btConfigSplash:
                 //whatever
@@ -526,7 +492,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.fab:
                 //whatever
-                if (LocationManagerUtil.isLocationValid(MAIN)==null) {
+                if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
                 } else {
                     loadFragment(new ActivityOcorrencia(), getString(R.string.register_event));
@@ -539,7 +505,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         try {
             String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
 
-            if (!provider.contains("gps")&&!provider.contains("network")) { //if gps is disabled
+            if (!provider.contains("gps") && !provider.contains("network")) { //if gps is disabled
                 final Intent poke = new Intent();
                 poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
                 poke.addCategory(Intent.CATEGORY_ALTERNATIVE);

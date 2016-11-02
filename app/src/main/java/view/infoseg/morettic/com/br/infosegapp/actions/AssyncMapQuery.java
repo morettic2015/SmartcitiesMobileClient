@@ -165,56 +165,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         ocorrencia.put("id",id);
                         ocorrencia.put("type",TipoOcorrencia.OPENSTREEMAP);
                         TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
-                        int icon = 0;
-                        switch (tp) {
-                            case ALIMENTACAO:
-                                icon = R.mipmap.ic_alimentacao;
-                                break;
-                            case CULTURA:
-                                icon = R.mipmap.ic_cultura;
-                                break;
-                            case EDUCACAO:
-                                icon = R.mipmap.icon_education01;
-                                break;
-                            case ESPORTE:
-                                icon = R.mipmap.icon_sport01;
-                                break;
-                            case IMOVEIS:
-                                icon = R.mipmap.icon_imoveis;
-                                break;
-                            case INFRAESTRUTURA:
-                                icon = R.mipmap.ic_infraestrutura;
-                                break;
-                            case MEIO_AMBIENTE:
-                                icon = R.mipmap.icon_nature01;
-                                break;
-                            case POLITICA:
-                                icon = R.mipmap.icon_politics01;
-                                break;
-                            case SEGURANCA:
-                                icon = R.mipmap.icon_security01;
-                                break;
-                            case SERVICOS:
-                                icon = R.mipmap.icon;
-                                break;
-                            case SHOP:
-                                icon = R.mipmap.ic_shop;
-                                break;
-                            case TRANSPORTE:
-                                icon = R.mipmap.icon_transport01;
-                                break;
-                            case TURISMO:
-                                icon = R.mipmap.ic_turismo;
-                                break;
-                            case UPA:
-                                icon = R.mipmap.icon_health01;
-                                lSaude.add(latLng);
-                                break;
-                            case SAUDE:
-                                icon = R.mipmap.icon_health01;
-                                lSaude.add(latLng);
-                                break;
-                        }
+                        int icon = tp.getIcon();
                         marker.icon(BitmapDescriptorFactory.fromResource(icon));
 
 
@@ -249,56 +200,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         marker.title(ocorrencia.getString("tit") + " " + ocorrencia.getString("date"));
                         marker.snippet(ocorrencia.getString("id"));
                         TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
-                        int icon = 0;
-                        switch (tp) {
-                            case ALIMENTACAO:
-                                icon = R.mipmap.ic_alimentacao;
-                                break;
-                            case CULTURA:
-                                icon = R.mipmap.ic_cultura;
-                                break;
-                            case EDUCACAO:
-                                icon = R.mipmap.icon_education01;
-                                break;
-                            case ESPORTE:
-                                icon = R.mipmap.icon_sport01;
-                                break;
-                            case IMOVEIS:
-                                icon = R.mipmap.icon_imoveis;
-                                break;
-                            case INFRAESTRUTURA:
-                                icon = R.mipmap.ic_infraestrutura;
-                                break;
-                            case MEIO_AMBIENTE:
-                                icon = R.mipmap.icon_nature01;
-                                break;
-                            case POLITICA:
-                                icon = R.mipmap.icon_politics01;
-                                break;
-                            case SEGURANCA:
-                                icon = R.mipmap.icon_security01;
-                                break;
-                            case SERVICOS:
-                                icon = R.mipmap.icon;
-                                break;
-                            case SHOP:
-                                icon = R.mipmap.ic_shop;
-                                break;
-                            case TRANSPORTE:
-                                icon = R.mipmap.icon_transport01;
-                                break;
-                            case TURISMO:
-                                icon = R.mipmap.ic_turismo;
-                                break;
-                            case UPA:
-                                icon = R.mipmap.icon_health01;
-                                lSaude.add(latLng);
-                                break;
-                            case SAUDE:
-                                icon = R.mipmap.icon_health01;
-                                lSaude.add(latLng);
-                                break;
-                        }
+                        int icon = tp.getIcon();
                         marker.icon(BitmapDescriptorFactory.fromResource(icon));
                         //Adiciona objeto no mapa de ocorrencias
                         ValueObject.MAPA_OCORRENCIAS.put(ocorrencia.getLong("id"), ocorrencia);

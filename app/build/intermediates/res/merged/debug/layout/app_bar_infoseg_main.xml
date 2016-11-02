@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:background="@drawable/button_twitter"
         android:src="@drawable/ic_add_ocorrencia" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -55,8 +55,8 @@ public class TwitterUtil {
      *
      * */
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
-    public static final String TWITTER_KEY = "NTFckkl2FqWiIzBiirbNMEQSm";
-    public static final String TWITTER_SECRET = "WpqFTSWI4fLIGXJvtpREKRaV0UR0NJy2O1qNwMAnJy6qTAKAN1";
+    public static final String TWITTER_KEY = "OzVHL0WiRfdoa4FDkjSTWWP5g";
+    public static final String TWITTER_SECRET = "EfEIRwJ3YcKkSj1B8bWgKGp5G6gyofphzPiSOaI8ZfTXktWKtO";
     private static Activity act;
     // private static TwitterSession ts;
 

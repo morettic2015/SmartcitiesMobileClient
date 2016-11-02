@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapSearch;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
@@ -33,6 +34,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.KEYWORD;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
@@ -104,37 +106,17 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
             jsFilter.put("lat", latitude);
             jsFilter.put("lon", longitude);
-            jsFilter.put("mine", MY_PREFERENCES.getBoolean("ehMeu", false));
+            jsFilter.put("mine", false);
 
             StringBuilder sbTipos = new StringBuilder();
 
-            if (MY_PREFERENCES.getBoolean("saude", false)) {
-                sbTipos.append("SAUDE,");
+            for (TipoOcorrencia tp : TipoOcorrencia.values()) {
+                if (MY_PREFERENCES.getBoolean(tp.toString(), false)) {
+                    sbTipos.append(tp.toString());
+                    sbTipos.append(",");
+                }
             }
-            if (MY_PREFERENCES.getBoolean("politica", false)) {
-                sbTipos.append("POLITICA,");
-            }
-            if (MY_PREFERENCES.getBoolean("meioAmbiente", false)) {
-                sbTipos.append("MEIO_AMBIENTE,");
-            }
-            if (MY_PREFERENCES.getBoolean("transporte", false)) {
-                sbTipos.append("TRANSPORTE,");
-            }
-            if (MY_PREFERENCES.getBoolean("seguranca", false)) {
-                sbTipos.append("SEGURANCA,");
-            }
-            if (MY_PREFERENCES.getBoolean("educacao", false)) {
-                sbTipos.append("EDUCACAO,");
-            }
-            if (MY_PREFERENCES.getBoolean("upa", false)) {
-                sbTipos.append("UPA,");
-            }
-            if (MY_PREFERENCES.getBoolean("esporte", false)) {
-                sbTipos.append("ESPORTE,");
-            }
-            if (MY_PREFERENCES.getBoolean("imoveis", false)) {
-                sbTipos.append("IMOVEIS,");
-            }
+
             if (myAddres != null) {
                 jsFilter.put("opengraph", myAddres);
             }
@@ -145,13 +127,20 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             FirebaseCrash.report(ex);
         } finally {
 
+            if (KEYWORD==null||KEYWORD.equalsIgnoreCase("keyword")||KEYWORD.equalsIgnoreCase("")) {
 
-            AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
-            assyncMapQuery.setTxtInfoForecast(txtInfoForecast);
-            assyncMapQuery.execute();
+                AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
+                assyncMapQuery.setTxtInfoForecast(txtInfoForecast);
+                assyncMapQuery.execute();
 
-
-            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            } else {
+                //@todo implement keyword search
+                //
+                AssyncMapSearch assyncMapSearch = new AssyncMapSearch(v, jsFilter, googleMap);
+                assyncMapSearch.setTxtInfoForecast(txtInfoForecast);
+                assyncMapSearch.execute();
+            }
+            googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
             googleMap.setTrafficEnabled(true);//Adiciona a camada de transito?
             googleMap.setBuildingsEnabled(true);//predios
             LatLng local = new LatLng(latitude, longitude);
@@ -178,24 +167,42 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                         try {
                             if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.IMOVEIS_GIMO.toString())) {
-                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("nmPicture"), js.getString("nmPicture").replace("HTTP","https"));
+                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("nmPicture"), js.getString("nmPicture").replace("HTTP", "https"));
                                 ew.execute();
 
-                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("dsCompanyLogo"), js.getString("dsCompanyLogo").replace("HTTP","https"));
+                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("dsCompanyLogo"), js.getString("dsCompanyLogo").replace("HTTP", "https"));
                                 ew1.execute();
-                            } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                            } else if (js.has("type") && (js.getString("type").equalsIgnoreCase(TipoOcorrencia.SEARCH.toString()))) {
+                                if (!js.has("token")) {
+                                    if (ImageCache.hasBitmapFromMemCache("default")) {
+                                        IMG_OCORRENCIA = ImageCache.getBitmapFromMemCache("default");
+                                    } else {
+                                        IMG_OCORRENCIA = ((BitmapDrawable) MAIN.getResources()
+                                                .getDrawable(TipoOcorrencia.SEARCH.getIcon())).getBitmap();
+                                        IMG_OCORRENCIA = HttpUtil.getResizedBitmap(IMG_OCORRENCIA, 60, 200);
+                                        ImageCache.addBitmapToMemoryCache("default", IMG_OCORRENCIA);
+                                    }
+
+                                } else {
+                                    AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), js.getString("token"));
+                                    ew.execute();
+                                }
+
+                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("mPicA"), js.getString("mPicA"));
+                                ew1.execute();
+                            } else if (js.has("type") && (js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString()))) {
                                /* */
-                                if(js.getString("token").equals("default")){
-                                    if(ImageCache.hasBitmapFromMemCache("default")){
-                                        IMG_OCORRENCIA =  ImageCache.getBitmapFromMemCache("default");
-                                    }else{
+                                if (js.getString("token").equals("default")) {
+                                    if (ImageCache.hasBitmapFromMemCache("default")) {
+                                        IMG_OCORRENCIA = ImageCache.getBitmapFromMemCache("default");
+                                    } else {
                                         IMG_OCORRENCIA = ((BitmapDrawable) MAIN.getResources()
                                                 .getDrawable(R.drawable.logo)).getBitmap();
                                         IMG_OCORRENCIA = HttpUtil.getResizedBitmap(IMG_OCORRENCIA, 60, 200);
-                                        ImageCache.addBitmapToMemoryCache("default",IMG_OCORRENCIA);
+                                        ImageCache.addBitmapToMemoryCache("default", IMG_OCORRENCIA);
                                     }
 
-                                }else{
+                                } else {
                                     AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), js.getString("token"));
                                     ew.execute();
                                 }
@@ -246,7 +253,8 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtDesc.setText(js.getString("dsAddress") + " R$" + js.getString("nmProperty"));
 
                                 txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
-                            } if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                            }
+                            if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
                                 txtTit.setText(js.getString("tit"));
 
 
@@ -257,7 +265,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                                 txtDt.setText(TipoOcorrencia.OPENSTREEMAP.toString());
 
-                                txtDesc.setText(js.getString("desc")+". "+js.getString("address"));
+                                txtDesc.setText(js.getString("desc") + ". " + js.getString("address"));
 
                                 txtTp.setText(js.getString("tipo"));
                             } else {

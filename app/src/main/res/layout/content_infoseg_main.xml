@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bk_logo"
-        android:background="@mipmap/ic_city_watch"
+        android:background="@mipmap/icon"
         android:layout_alignParentTop="true"
         android:alpha="0.1"
         android:layout_alignParentRight="true"

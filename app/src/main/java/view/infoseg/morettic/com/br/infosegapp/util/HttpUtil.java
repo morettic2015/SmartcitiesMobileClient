@@ -227,8 +227,8 @@ public class HttpUtil {
     public static final String saveConfigInfo(String id,String phone,String properties){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=15&idProfile="+id+"&phone="+encode(phone)+"&props="+encode(properties);
     }
-    public static final String getListTOp20(){
-        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16";
+    public static final String getListTOp20(String city){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=16&city="+encode(city);
     }
     public static final String getRatingUrl(String idOcorrencia,String rate){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=13&idPerfil="+ID_PROFILE+"&idOcorrencia="+idOcorrencia+"&rating="+rate;
@@ -238,5 +238,8 @@ public class HttpUtil {
     }
     public static final String getDeviceRegister(String token,String so,String idUser){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=19&so="+encode(so)+"&token="+encode(token)+"&idUser="+idUser;
+    }
+    public static final String getSearch(String city,String keyWord){
+        return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=21&city="+encode(semAcento(city))+"&service="+encode(semAcento(keyWord));
     }
 }

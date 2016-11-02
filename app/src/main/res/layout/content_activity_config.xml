@@ -188,7 +188,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:layout_row="9"
-            android:background="@drawable/button_shape_model"
+            android:background="@drawable/button_twitter"
             android:drawableLeft="@drawable/ic_save_action"
             android:enabled="true"
             android:text="@string/salvar" />

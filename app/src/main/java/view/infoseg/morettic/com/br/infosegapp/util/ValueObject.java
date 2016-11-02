@@ -33,7 +33,7 @@ public class ValueObject {
     public static String UPLOAD_AVATAR_TOKEN;
     public static Bitmap UPLOAD_PIC_OCORRENCIA = null;
     public static SharedPreferences MY_PREFERENCES;
-
+    public static String KEYWORD = null;
     public static boolean AUTENTICADO = false;
     public static LoginFragment LOGIN;
     public static Bitmap AVATAR_BITMAP;

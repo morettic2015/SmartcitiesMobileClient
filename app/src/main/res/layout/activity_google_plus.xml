@@ -47,12 +47,14 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="119dp"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/ic_city_watch"
-        android:id="@+id/imageView8"
-        android:layout_weight="0.18"
-        android:layout_gravity="center_horizontal" />
+        android:layout_width="198dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView6"
+
+        android:background="@drawable/logo"
+
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Citywatch.com.br" />
 
     <TextView
         android:layout_width="wrap_content"

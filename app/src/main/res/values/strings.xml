@@ -144,4 +144,10 @@
     <string name="infraestrutura">INFRAESTRUTURA</string>
     <string name="turismo">TURISMO</string>
     <string name="cultura">CULTURA</string>
+    <string name="entrar_com_google">Entrar com Google+</string>
+    <string name="entrar_com_o_twitter">Entrar com o Twitter</string>
+    <string name="entrar_com_o_facebook">Entrar com o Facebook</string>
+    <string name="beer">Beer</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="loading">Carregando</string>
 </resources>

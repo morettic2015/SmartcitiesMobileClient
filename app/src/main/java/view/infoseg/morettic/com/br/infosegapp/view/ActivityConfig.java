@@ -37,7 +37,7 @@ public class ActivityConfig extends Fragment {
     private SeekBar seekBarDistance;
     private SharedPreferences.Editor editor;
     private int distance = 0;
-    private final int constante = 200;
+    //private final int constante = 200;
     private Switch myOcurrences;
     @Override
     public void onStop() {

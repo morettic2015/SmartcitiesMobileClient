@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/button_shape_model">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="198dp"
+        android:layout_height="60dp"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="0"
+        android:background="@drawable/logo"
+        android:contentDescription="Citywatch.com.br" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="1"
+        android:text="@string/pesquisar"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollview_choices"
+        style="@style/scrollbar_shape_style"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_row="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/rSegurança"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_security01"
+                android:text="@string/seguran_a"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rSaude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/icon_health01"
+                android:text="@string/sa_de"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rCultura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/ic_cultura"
+                android:text="@string/cultura"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rTurismo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/ic_turismo"
+                android:text="@string/turismo"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rEducacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_education01"
+                android:text="@string/educa_o"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rTransporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/icon_transport01"
+                android:text="@string/transporte"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rMeioAmbiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_nature01"
+                android:text="@string/meio_ambiente"
+                android:textAllCaps="true" />
+
+            <CheckBox
+                android:id="@+id/rInfraestrutura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/ic_infraestrutura"
+                android:text="@string/infraestrutura"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rPolitica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_politics01"
+                android:text="@string/politica"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rEsporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_sport01"
+                android:text="@string/esporte"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rImoveis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/icon_imoveis"
+                android:text="@string/im_veis"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/ic_shop"
+                android:text="@string/shop"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rAlimentacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/ic_alimentacao"
+                android:text="@string/alimenta_o"
+                android:textAllCaps="true"
+
+                />
+
+            <CheckBox
+                android:id="@+id/rBeer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:drawableLeft="@mipmap/ic_ipa"
+                android:text="@string/beer"
+                android:textAllCaps="true"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <SeekBar
+        android:id="@+id/seekBarDistance"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginTop="26dp"
+        android:layout_row="3"
+        android:max="10"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center" />
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/selecione_as_dist_ncias_para_filtrar"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:foregroundGravity="center" />
+
+    <EditText
+        android:id="@+id/txtBusca"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="5"
+        android:ems="10"
+        android:text="keyword" />
+
+    <Button
+        android:id="@+id/btBuscarOcorrencias"
+        android:layout_width="145dp"
+        android:layout_height="36dp"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="6"
+        android:background="@drawable/button_twitter"
+        android:bottomLeftRadius="8dp"
+        android:bottomRightRadius="8dp"
+        android:drawableLeft="@drawable/ic_play_light"
+        android:text="@string/pesquisar"
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp" />
+
+
+
+</GridLayout>

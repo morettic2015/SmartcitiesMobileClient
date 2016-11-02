@@ -8,51 +8,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
 import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
  * Created by LuisAugusto on 02/03/2016.
  */
 public class LoginFragment extends DialogFragment implements View.OnClickListener {
-
-    private Button btLogin,btAdd;
-    private EditText email, senha;
-   // protected static LoginFragment myInstance;
+    private Button google, facebook, twitter;
+    private static LoginFragment loginFragment;
 
     public void onStop() {
         super.onStop();
-        if(btLogin!=null)
-            btLogin.destroyDrawingCache();
-        if(btAdd!=null)
-            btAdd.destroyDrawingCache();
-        if(email!=null)
-            email.destroyDrawingCache();
-        if(senha!=null)
-            senha.destroyDrawingCache();
     }
 
     static LoginFragment newInstance() {
-        return new LoginFragment();
+        return loginFragment==null? loginFragment = new LoginFragment():loginFragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.MyDialog);
-
-
     }
 
     @Override
@@ -60,21 +44,12 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.dialog_login, container, false);
 
-        btLogin = (Button) v.findViewById(R.id.btLoginRegister1);
-        btAdd = (Button) v.findViewById(R.id.imageButtonADDPERFIL);
-        email = (EditText) v.findViewById(R.id.txtEmailLG);
-        senha = (EditText) v.findViewById(R.id.txtSenhaLG);
-        email.setText(MY_PREFERENCES.getString("email", ""));
-        senha.setText(MY_PREFERENCES.getString("passwd", ""));
-
-        btLogin.setOnClickListener(this);
-        btAdd.setOnClickListener(this);
-        ImageButton google = (ImageButton) v.findViewById(R.id.imageButtonGoogle);
-        google.setOnClickListener(this);
-        ImageButton facebook = (ImageButton) v.findViewById(R.id.imageButtonFacebook);
-        facebook.setOnClickListener(this);
-        ImageButton twitter = (ImageButton) v.findViewById(R.id.imageButtonTwitter);
-        twitter.setOnClickListener(this);
+        this.google = (Button) v.findViewById(R.id.imageButtonGoogle);
+        this.google.setOnClickListener(this);
+        this.facebook = (Button) v.findViewById(R.id.imageButtonFacebook);
+        this.facebook.setOnClickListener(this);
+        this.twitter = (Button) v.findViewById(R.id.imageButtonTwitter);
+        this.twitter.setOnClickListener(this);
 
 
         return v;
@@ -93,10 +68,6 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
             }
         } catch (Exception ex) {
             logException(ex);
-        }finally {
-            btLogin = null;
-            email = null;
-            senha = null;
         }
     }
 
@@ -119,33 +90,20 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
     @Override
     public void onDestroy() {
         super.onDestroy();
-        btLogin = null;
-        email = null;
-        senha = null;
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btLoginRegister1:
-                if (email.getText().toString() == null || email.getText().toString().equals("")) {
-                    email.setFocusable(true);
-                } else if (senha.getText().toString() == null || senha.getText().toString().equals("")) {
-                    senha.setFocusable(true);
-                } else {
-                    AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(v.getContext(), email.getText().toString(), senha.getText().toString());
-                    assyncLoginRegister.execute();
-                }
-                break;
+
             case R.id.imageButtonGoogle:
-                Intent googlePlus = new Intent(MAIN,ActivityGPlus.class);
+                Intent googlePlus = new Intent(MAIN, ActivityGPlus.class);
                 MAIN.startActivity(googlePlus);
                 break;
-            case R.id.imageButtonADDPERFIL:
-                SocialFragment.newInstance().show(getFragmentManager(), "dialog");
-                break;
+
             case R.id.imageButtonFacebook:
-               // SocialFragment.newInstance().show(getFragmentManager(), "dialog");
+                // SocialFragment.newInstance().show(getFragmentManager(), "dialog");
                 FacebookUtil.clickFace();
                 break;
             case R.id.imageButtonTwitter:
