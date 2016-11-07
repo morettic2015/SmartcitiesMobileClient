@@ -1279,10 +1279,10 @@ int id btCaptureCam 0x7f1000e7
 int id btCaptureCam1 0x7f1000e8
 int id btCaptureCam2 0x7f1000e9
 int id btCaptureCam3 0x7f1000ea
-int id btConfigSplash 0x7f10012e
+int id btConfigSplash 0x7f10012f
 int id btEnviarOcorrencia 0x7f100103
 int id btListOcorrencias 0x7f100131
-int id btMapaSplash 0x7f10012f
+int id btMapaSplash 0x7f10012e
 int id btMic1 0x7f1000f1
 int id btMic2 0x7f1000ec
 int id btPerfilSlash 0x7f100130

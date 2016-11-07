@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="@string/configure_suas_preferencias_no_app"
-            android:style="@style/Widget.AppCompat.Button.Borderless"
+
             android:background="@drawable/button_facebook"
             android:drawableLeft="@drawable/ic_config_generico_01"
 

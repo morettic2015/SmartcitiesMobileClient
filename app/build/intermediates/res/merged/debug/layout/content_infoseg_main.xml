@@ -57,6 +57,17 @@
 
         <Button
             android:textColor="@color/cardview_light_background"
+            android:id="@+id/btMapaSplash"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa"
+
+            android:background="@drawable/button_facebook"
+            android:drawableLeft="@drawable/ic_map_generico_01"
+            android:layout_margin="5dp" />
+
+        <Button
+            android:textColor="@color/cardview_light_background"
             android:id="@+id/btConfigSplash"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -65,18 +76,7 @@
             android:background="@drawable/button_facebook"
             android:drawableLeft="@drawable/ic_config_generico_01"
 
-            android:layout_marginTop="40dp"
-            android:layout_margin="5dp" />
 
-        <Button
-            android:textColor="@color/cardview_light_background"
-            android:id="@+id/btMapaSplash"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="@string/visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa"
-
-            android:background="@drawable/button_facebook"
-            android:drawableLeft="@drawable/ic_map_generico_01"
             android:layout_margin="5dp" />
 
         <Button

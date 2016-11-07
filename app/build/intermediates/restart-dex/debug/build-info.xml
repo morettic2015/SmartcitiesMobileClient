@@ -4,12 +4,12 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="155437740441382"
+    timestamp="194061471961459"
     token="-1578772812129959442" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="3857" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -24,12 +24,20 @@
         location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
 
-    <build timestamp="154788738774384" >
+    <build timestamp="192594292897296" >
         <artifact
             location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="155437740441382" >
+    <build timestamp="193928663747067" >
+        <artifact
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="194061471961459" >
         <artifact
             location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />

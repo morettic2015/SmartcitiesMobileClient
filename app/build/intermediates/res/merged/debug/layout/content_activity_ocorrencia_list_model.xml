@@ -34,7 +34,7 @@
     </android.support.v7.widget.CardView>
 
     <TextView
-        style="@style/Base.Theme.AppCompat.Light.Dialog.MinWidth"
+
         android:id="@+id/txtTitListView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

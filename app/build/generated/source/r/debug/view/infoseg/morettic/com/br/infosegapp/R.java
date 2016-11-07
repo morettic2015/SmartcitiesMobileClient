@@ -3941,10 +3941,10 @@ containing a value of this type.
         public static final int btCaptureCam1=0x7f1000e8;
         public static final int btCaptureCam2=0x7f1000e9;
         public static final int btCaptureCam3=0x7f1000ea;
-        public static final int btConfigSplash=0x7f10012e;
+        public static final int btConfigSplash=0x7f10012f;
         public static final int btEnviarOcorrencia=0x7f100103;
         public static final int btListOcorrencias=0x7f100131;
-        public static final int btMapaSplash=0x7f10012f;
+        public static final int btMapaSplash=0x7f10012e;
         public static final int btMic1=0x7f1000f1;
         public static final int btMic2=0x7f1000ec;
         public static final int btPerfilSlash=0x7f100130;

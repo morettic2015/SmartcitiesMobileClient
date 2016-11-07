@@ -836,12 +836,12 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00022.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00052.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00052.png"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_plusone_standard_off_client.png",

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="320dp"
+    android:layout_width="30dp"
     android:layout_height="match_parent"
     android:label="@string/app_name"
     android:orientation="vertical"
@@ -38,6 +38,7 @@
         android:id="@+id/txtTitMapOcorrencia"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.02"
+        android:textSize="12sp"
         android:padding="5dp"
         android:layout_alignTop="@+id/view2"
         android:layout_toRightOf="@+id/view2"
@@ -48,6 +49,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Descriçao"
+        android:textSize="11sp"
         android:textAllCaps="false"
         android:id="@+id/txtDescricaoMapOcorrencia"
         android:layout_weight="0.07"
@@ -61,6 +63,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceButton"
         android:text="data"
+        android:textSize="10sp"
         android:textAllCaps="false"
         android:id="@+id/txtDataMapOcorrencia"
         android:layout_gravity="left|center_horizontal"
@@ -75,13 +78,13 @@
         android:textAllCaps="false"
         android:textAppearance="?android:attr/textAppearanceButton"
         android:text="tipo"
-
+        android:textSize="10sp"
         android:id="@+id/txtTipoMapOcorrencia"
         android:layout_gravity="left|center_horizontal"
         android:padding="5dp"
-        android:layout_below="@+id/view2"
-        android:layout_alignLeft="@+id/view2"
-        android:layout_alignStart="@+id/view2" />
+        android:layout_below="@+id/txtDescricaoMapOcorrencia"
+        android:layout_alignLeft="@+id/txtDescricaoMapOcorrencia"
+        android:layout_alignStart="@+id/txtDescricaoMapOcorrencia" />
 
     <TextView
         android:layout_width="233dp"
@@ -91,6 +94,7 @@
         android:layout_gravity="left|center_vertical"
         android:layout_weight="0.13"
         android:padding="5dp"
+        android:textSize="10sp"
         android:textAllCaps="false"
         android:text="asd"
         android:layout_below="@+id/txtTipoMapOcorrencia"
@@ -107,6 +111,7 @@
         android:thicknessRatio="1.9"
         app:cardCornerRadius="40dp"
         android:layout_gravity="top|center_horizontal"
+        android:layout_alignBottom="@+id/txtDataMapOcorrencia"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
         <ImageView
