@@ -33,27 +33,27 @@ public final class R {
 		public static final int zOrderOnTop = 0x7f010108;
 	}
 	public static final class color {
-		public static final int common_action_bar_splitter = 0x7f0e002b;
-		public static final int common_google_signin_btn_text_dark = 0x7f0e00aa;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f0e002c;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0e002d;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f0e002e;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0e002f;
-		public static final int common_google_signin_btn_text_light = 0x7f0e00ab;
-		public static final int common_google_signin_btn_text_light_default = 0x7f0e0030;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f0e0031;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f0e0032;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f0e0033;
-		public static final int common_plus_signin_btn_text_dark = 0x7f0e00ac;
-		public static final int common_plus_signin_btn_text_dark_default = 0x7f0e0034;
-		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0e0035;
-		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0e0036;
-		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0e0037;
-		public static final int common_plus_signin_btn_text_light = 0x7f0e00ad;
-		public static final int common_plus_signin_btn_text_light_default = 0x7f0e0038;
-		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0e0039;
-		public static final int common_plus_signin_btn_text_light_focused = 0x7f0e003a;
-		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0e003b;
+		public static final int common_action_bar_splitter = 0x7f0f002b;
+		public static final int common_google_signin_btn_text_dark = 0x7f0f00aa;
+		public static final int common_google_signin_btn_text_dark_default = 0x7f0f002c;
+		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0f002d;
+		public static final int common_google_signin_btn_text_dark_focused = 0x7f0f002e;
+		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0f002f;
+		public static final int common_google_signin_btn_text_light = 0x7f0f00ab;
+		public static final int common_google_signin_btn_text_light_default = 0x7f0f0030;
+		public static final int common_google_signin_btn_text_light_disabled = 0x7f0f0031;
+		public static final int common_google_signin_btn_text_light_focused = 0x7f0f0032;
+		public static final int common_google_signin_btn_text_light_pressed = 0x7f0f0033;
+		public static final int common_plus_signin_btn_text_dark = 0x7f0f00ac;
+		public static final int common_plus_signin_btn_text_dark_default = 0x7f0f0034;
+		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0f0035;
+		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0f0036;
+		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0f0037;
+		public static final int common_plus_signin_btn_text_light = 0x7f0f00ad;
+		public static final int common_plus_signin_btn_text_light_default = 0x7f0f0038;
+		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0f0039;
+		public static final int common_plus_signin_btn_text_light_focused = 0x7f0f003a;
+		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0f003b;
 	}
 	public static final class drawable {
 		public static final int bubble_mask = 0x7f02004c;
@@ -102,25 +102,25 @@ public final class R {
 		public static final int common_plus_signin_btn_text_light_pressed = 0x7f02009a;
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f0f0044;
-		public static final int adjust_width = 0x7f0f0045;
-		public static final int auto = 0x7f0f005b;
-		public static final int dark = 0x7f0f005c;
-		public static final int hybrid = 0x7f0f0046;
-		public static final int icon_only = 0x7f0f0058;
-		public static final int light = 0x7f0f005d;
-		public static final int none = 0x7f0f0013;
-		public static final int normal = 0x7f0f000f;
-		public static final int satellite = 0x7f0f0047;
-		public static final int standard = 0x7f0f0059;
-		public static final int terrain = 0x7f0f0048;
-		public static final int text = 0x7f0f000b;
-		public static final int webview = 0x7f0f01c9;
-		public static final int wide = 0x7f0f005a;
-		public static final int window = 0x7f0f0174;
+		public static final int adjust_height = 0x7f100044;
+		public static final int adjust_width = 0x7f100045;
+		public static final int auto = 0x7f10005b;
+		public static final int dark = 0x7f10005c;
+		public static final int hybrid = 0x7f100046;
+		public static final int icon_only = 0x7f100058;
+		public static final int light = 0x7f10005d;
+		public static final int none = 0x7f100013;
+		public static final int normal = 0x7f10000f;
+		public static final int satellite = 0x7f100047;
+		public static final int standard = 0x7f100059;
+		public static final int terrain = 0x7f100048;
+		public static final int text = 0x7f10000b;
+		public static final int webview = 0x7f1001c0;
+		public static final int wide = 0x7f10005a;
+		public static final int window = 0x7f10016b;
 	}
 	public static final class integer {
-		public static final int google_play_services_version = 0x7f0d0006;
+		public static final int google_play_services_version = 0x7f0e0006;
 	}
 	public static final class layout {
 		public static final int info_window = 0x7f040047;
@@ -181,9 +181,9 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f080042;
 	}
 	public static final class style {
-		public static final int Bubble_TextAppearance_Dark = 0x7f0c00c5;
-		public static final int Bubble_TextAppearance_Light = 0x7f0c00c6;
-		public static final int ClusterIcon_TextAppearance = 0x7f0c00c9;
+		public static final int Bubble_TextAppearance_Dark = 0x7f0d00c5;
+		public static final int Bubble_TextAppearance_Light = 0x7f0d00c6;
+		public static final int ClusterIcon_TextAppearance = 0x7f0d00c9;
 	}
 	public static final class styleable {
 		public static final int[] LoadingImageView = { 0x7f0100f7, 0x7f0100f8, 0x7f0100f9 };

@@ -4,47 +4,35 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="369856270700733"
+    timestamp="155437740441382"
     token="-1578772812129959442" >
 
     <task
         name="javac"
-        duration="1752" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="433" />
+        duration="0" />
     <task
         name="verifier"
-        duration="57" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-        type="DEX" />
+        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="367483201108481" >
+    <build timestamp="154788738774384" >
         <artifact
             location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="369856270700733" >
+    <build timestamp="155437740441382" >
         <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

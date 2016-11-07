@@ -3,7 +3,7 @@
     package="view.infoseg.morettic.com.br.infosegapp"
     android:installLocation="preferExternal"
     android:versionCode="2"
-    android:versionName="Beta01e0i18n1" >
+    android:versionName="CityWatch_Genimo_1.0" >
 
     <uses-feature
         android:name="android.hardware.camera"

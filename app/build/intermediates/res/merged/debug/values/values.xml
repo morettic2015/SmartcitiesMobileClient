@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="nEscolar">
+        <item>Fundamental</item>
+        <item>Ensino médio</item>
+        <item>Graduação</item>
+        <item>Pós-Graduação</item>
+    </string-array>
+    <string-array name="sexo">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
     <attr format="reference|color" name="dgts__accentColor"/>
     <attr format="reference" name="dgts__logoDrawable"/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -585,13 +595,14 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="autenticando">Autenticando...</string>
     <string name="beer">Beer</string>
+    <string name="bio_config">Ajude as outras pessoas a conhecerem você</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">80ed24d2-4a80-4af4-b508-ed19c2e70e14</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">d35cc8da-ac2b-4201-a7f1-d485c932aabb</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -714,6 +725,7 @@
     <string name="educa_o">EDUCAÇÃO</string>
     <string name="email">Email</string>
     <string name="email_already_registered">Email já registrado. Um email com sua senha foi enviado para sua conta.</string>
+    <string name="email_alternativo">Email alternativo</string>
     <string name="entrar_com_google">Entrar com Google+</string>
     <string name="entrar_com_o_facebook">Entrar com o Facebook</string>
     <string name="entrar_com_o_twitter">Entrar com o Twitter</string>
@@ -724,6 +736,7 @@
     <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_invalid_email">Email invalido</string>
     <string name="error_invalid_password">Senha muito curta</string>
+    <string name="escolaridade">Escolaridade</string>
     <string name="esporte">ESPORTE</string>
     <string name="facebook_app_id" translatable="false">291386861194854</string>
     <string name="facebook_login">Entrar pelo Facebook</string>
@@ -777,6 +790,7 @@
     <string name="next_level" translatable="false">Next Level</string>
     <string name="nome">Nome</string>
     <string name="ok">OK</string>
+    <string name="op_es">Opções</string>
     <string name="opc_es">Opcões</string>
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Para que você consiga visualizar e relatar ocorrências, é necessário ativar o seu GPS. Ative o GPS no seu dispositivo e tente novamente.</string>
     <string name="patroc_nio">Patrocínio:</string>
@@ -818,6 +832,7 @@
     <string name="selecione_as_dist_ncias_para_filtrar">Selecione as distâncias para filtrar</string>
     <string name="senha">Senha</string>
     <string name="server_client_id" translatable="false">811880962924-g0dcla32a9uau5gni7amqdl05osjt3h4.apps.googleusercontent.com</string>
+    <string name="sexo">Sexo</string>
     <string name="share_msg">Instale o APP City Watch para registrar os problemas de seu município e compartilhar com os cidadãos!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="shop">SHOP</string>
     <string name="soletre_ocorrencia">Fale a palavra</string>
@@ -875,6 +890,7 @@
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="website">Website</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

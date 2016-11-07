@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gaeloginendpoint",
+  "private_key_id": "a42c3563b8d8a2f4ef27657ecffc9d9cd3f012ee",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzvakO1T3OgqTE\n/eSSlQ7Q+FGJ3sP3ilkurEAXjopqOv2XXkzgLUMngiWpZECHbKhO+K0585sLHtx8\nzfTB8U2qjgJhAXMh0hS6L3BelhrIyIreoshl+3n/Lqwdh6S6KyN4iLib1SrrVW0D\nTpmy3XOvd0/J73b85/wqZnpsoPXsPwBQlS4iSa46DM84U7dvXYWXpyovPkn05uDQ\nNulPsN6gvoSYqde5IdPwmu0wEqbAg23lKbew+OcQEIgEIBU/VsAlS/wOWdEiEDiH\ncVv9su44RAQ8WdPi5eCIT137fEI8+vDQiz5svn3hJepaew/1SQapImhIl8VUN04a\nwTbBSPuNAgMBAAECggEAZ0bQsFlIhA01NccCp92C1qaxHgMG9Adp/G2+Bn0+Rv7R\n3uZ1GnPzRXVO8fRppzgyJKwX8js3UcH02OkHsXnGV+MuPN45Y3Y5lB5vtZRSqwrW\nVLmSwiuJKMgk46pK8RtAP11nI5hyRB8BPup6E6Dj2NBsPXs65rSBU5Hyg768FSpV\nDMt0hb9rxApXCduC1fY7b6Naar5r52mB3wmua27QXs5cTSUxid2wrDIe8qdmJ8XS\nj+wLBvmGMuGMQkT6iBkJTu6D5c/T0moOPvLbpkX3iwyu9Pw6pSea1u7Y+q7diaAH\n7wzbld8oTHn/wJomwg8HSiaBoczB/eo4jkATLA7AYQKBgQD8AqN2kcvxuNHhDfXq\n+Quy4IhOygzbH7ACRCbqHiw5LCueLemJICAp8RX3pCuxGRXBrjAQGUFhJMZyFk35\nmZB9u+9mvLs+E+0ELonnH5DfEMnpYJ+jIB/SbGy+CzF8rYLHpEzt+wCB9cC4JjYV\nmFVgalfUjk7Et9m2iXe6rHJDdQKBgQD3mYHJjHQr7fdfl9q3wIy4FUQZ1YbsVNsJ\ngJIUqckzMMC1NgOzP81cNcGSe2y/B8aFgcM+vut6tIWs6KfskNxYHPmxjafQrnJC\ngesJgyL985mddziTch11ra9seUlb9AiDv3ZQMqjTOKy5OmHpryPs9j/jxc4idzYf\nHjqs24HMuQKBgQCYY8gRFQzseMSBgP2qPzsxydDjRA8OGlVGqYuWmvRHBkzB9CV6\nRDDu69hKzb2V9ANSAVETCxKb+a7+ojo4qwHS5mhYCdx4J3h1xOajGlVybiaKt2ER\nNYXIqsP/D6m3KP0iWFoktlmSPNdzA7hEyr8l9Gh0IjHDhyFh3jLGcS0PWQKBgH1P\nI3BttR3GgbvPjtIQkSdZG+43MuHI0FIuz7/Fbh6KPf14KMc/Mx/H1P/dl1vXA5Ht\n6nKHDYY8dqrb1KDVb67oezZxCs2CfDFMrzdRNxRvhP88p1V4G5DDJlUvzQDMsMJ8\n09Qiz26W8FOOSJ+MFBKJTixon7qxuqJlGi0Bqt+BAoGAar44vD36V4u1dOF2uAl/\nd49CZt7KQKmEBcmIYLxJ3WjHKz7bJGniaXeFDpAqVtLr+RDas9yo+2QZaFxX2kBZ\nMWhh1FVJ4w3oIsv1GOPhoI0fg6Fs7/pUZP61jGx9naed8uGOJj4ToA9OJ+mu4VAy\n7Jmf1FRqi9BLV4MVCD53jpc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "citywatch-message@gaeloginendpoint.iam.gserviceaccount.com",
+  "client_id": "106886502305172417723",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/citywatch-message%40gaeloginendpoint.iam.gserviceaccount.com"
+}

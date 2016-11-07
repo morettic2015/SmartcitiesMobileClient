@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="nEscolar">
+        <item>фундаментальный</item>
+        <item>высшая школа</item>
+        <item>градация</item>
+        <item>Выпускник</item>
+    </string-array>
+    <string-array name="sexo">
+        <item>мужчина</item>
+        <item>женщина</item>
+    </string-array>
     <plurals name="tw__time_hours">
         <item quantity="one">1 ч</item>
         <item quantity="other">%d ч</item>
@@ -41,6 +51,8 @@
     <string name="app_name">Город часы</string>
     <string name="app_title_main">Город часы</string>
     <string name="autenticando">Аутентификация ...</string>
+    <string name="beer">пиво</string>
+    <string name="bio_config">Помощь другим людям знать, что вы</string>
     <string name="cep">Почтовый индекс</string>
     <string name="com_facebook_device_auth_instructions">Откройте «&lt;b>facebook.com/device&lt;/b>&lt;br />» на своем смартфофне или компьютере и введите этот код:</string>
     <string name="com_facebook_image_download_unknown_error">При загрузке изображения возникла неожиданная ошибка.</string>
@@ -150,6 +162,10 @@
     <string name="educa_o">образование</string>
     <string name="email">электронная почта</string>
     <string name="email_already_registered">E-mail уже зарегистрирован. Электронное письмо с паролем было отправлено на ваш счет.</string>
+    <string name="email_alternativo">E почты альтернатива</string>
+    <string name="entrar_com_google">Войти с Google</string>
+    <string name="entrar_com_o_facebook">Войти с Facebook</string>
+    <string name="entrar_com_o_twitter">Войти с Twitter</string>
     <string name="entrar_ou_registrar_se">Войдите или зарегистрируйтесь</string>
     <string name="enviar">послать</string>
     <string name="erro_cadastro_perfil">Произошла ошибка. Проверьте Интернет и повторите попытку.</string>
@@ -157,6 +173,7 @@
     <string name="error_incorrect_password">неправильный пароль</string>
     <string name="error_invalid_email">адрес электронной почты недействителен</string>
     <string name="error_invalid_password">Пароль слишком короткий</string>
+    <string name="escolaridade">образование</string>
     <string name="esporte">спорт</string>
     <string name="facebook_login">Войти через Facebook</string>
     <string name="filtros">фильтры</string>
@@ -174,6 +191,7 @@
     <string name="infraestrutura">ИНФРАСТРУКТУРА</string>
     <string name="invalid_locate">недействительный Расположение</string>
     <string name="list_ocorrencias">список популярности</string>
+    <string name="loading">загрузка</string>
     <string name="localiza_o_indispon_vel">Местоположение недоступно</string>
     <string name="localizacao_invalida">недействительный Расположение</string>
     <string name="login">Войти</string>
@@ -201,6 +219,7 @@
     <string name="perfil">профиль</string>
     <string name="perfil_create">Создание профиля ...</string>
     <string name="person_info_null">Личная информация не нашла ....</string>
+    <string name="pesquisar">исследование</string>
     <string name="pessoa_fisica">физическое лицо</string>
     <string name="pessoa_juridica">лицо, юридическое</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Удалить поисковый запрос"</string>
@@ -230,6 +249,7 @@
     <string name="selecioneData">Выберите дату</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Выберите расстояния для фильтрации</string>
     <string name="senha">пароль</string>
+    <string name="sexo">секс</string>
     <string name="share_msg">! Установите APP City Watch для записи проблемы вашего сообщества и делиться с гражданами \ nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="shop">МАГАЗИН</string>
     <string name="soletre_ocorrencia">Выразить желание</string>
@@ -274,4 +294,5 @@
     <string name="view_events">Посмотреть на карте вхождения</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Просмотр 20 лучших вхождений</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Посмотреть на карте вхождения</string>
+    <string name="website">веб-сайт</string>
 </resources>

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,14 +28,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 import com.google.firebase.crash.FirebaseCrash;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
@@ -47,7 +52,6 @@ import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
@@ -211,19 +215,19 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         navigationView.setNavigationItemSelectedListener(this);
 
         //Inicializa os botooes da tela Splash
-        ImageView b1 = (ImageView) findViewById(R.id.btNovoSplah);
-        b1.setOnClickListener((View.OnClickListener) this);
+      /*  ImageView b1 = (ImageView) findViewById(R.id.btNovoSplah);
+        b1.setOnClickListener((View.OnClickListener) this);*/
 
-        ImageView b2 = (ImageView) findViewById(R.id.btPerfilSlash);
+        Button b2 = (Button) findViewById(R.id.btPerfilSlash);
         b2.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b3 = (ImageView) findViewById(R.id.btConfigSplash);
+        Button b3 = (Button) findViewById(R.id.btConfigSplash);
         b3.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b4 = (ImageView) findViewById(R.id.btMapaSplash);
+        Button b4 = (Button) findViewById(R.id.btMapaSplash);
         b4.setOnClickListener((View.OnClickListener) this);
 
-        ImageView b5 = (ImageView) findViewById(R.id.btListOcorrencias);
+        Button b5 = (Button) findViewById(R.id.btListOcorrencias);
         b5.setOnClickListener((View.OnClickListener) this);
 
         /**
@@ -460,10 +464,6 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             case R.id.btPerfilSlash:
                 loadFragment(new ActivityProfile(), getString(R.string.perfil));
                 break;
-
-            case R.id.btNovoSplah:
-
-
             case R.id.btMapaSplash:
                 if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
@@ -473,18 +473,36 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 }
                 break;
             case R.id.btListOcorrencias:
-                AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
-                assyncLoadListOcorrencias.setCtx(getApplicationContext());
-                assyncLoadListOcorrencias.setCity("Florianopolis");
-                assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
-                ToastHelper.makeToast(getApplicationContext(), getString(R.string.consultando_ocorrencias));
-                adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
-                        new AdListener() {
-                            @Override
-                            public void onAdLoaded() {
-                                com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
-                            }
-                        });
+                if (LocationManagerUtil.isLocationValid(MAIN) == null) {
+                    loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
+                } else {
+                    Location location = LocationManagerUtil.getMyLocation(this);
+
+                    JSONObject myAddres;
+                    AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
+                    assyncLoadListOcorrencias.info = this;
+                    try {
+                        myAddres = LocationManagerUtil.getMyAddress(getApplicationContext(), location.getLatitude(), location.getLongitude());
+                        assyncLoadListOcorrencias.city = myAddres.getString("locality");
+                        myAddres = null;
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } finally {
+                        assyncLoadListOcorrencias.execute();//Carrega as ultimas ocorrencias atualizadas.
+                        if (COUNTER_CLICK < 2) {
+                            adInterstitial = com.tappx.TAPPXAdInterstitial.Configure(this, TAPPX_KEY,
+                                    new AdListener() {
+                                        @Override
+                                        public void onAdLoaded() {
+                                            com.tappx.TAPPXAdInterstitial.Show(adInterstitial);
+                                        }
+                                    });
+                            COUNTER_CLICK++;
+                        }
+                    }
+                }
                 break;
             case R.id.btConfigSplash:
                 //whatever
@@ -499,6 +517,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 }
                 break;
         }
+    }
+
+    public void initListOcorrencias() {
+        loadFragment(new ListOcorrencia(), getApplicationContext().getString(R.string.list_ocorrencias));
     }
 
     private void turnGPSOn() {
@@ -540,7 +562,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             LOGGER.log(Level.SEVERE, ex.toString());
             // ex.printStackTrace();
             FirebaseCrash.report(ex);
-            FirebaseCrash.log(ex.toString());
+            //FirebaseCrash.log(ex.toString());
         } catch (Exception e) {
             FirebaseCrash.log(ex.toString());
         }

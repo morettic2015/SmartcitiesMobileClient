@@ -14,6 +14,7 @@ import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
+import com.twitter.sdk.android.core.identity.TwitterAuthClient;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 import com.twitter.sdk.android.core.models.User;
 
@@ -37,6 +38,7 @@ import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdat
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
@@ -49,7 +51,8 @@ import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logExcept
 public class TwitterUtil {
 
     public static TwitterLoginButton loginButton;
-
+    static User user;
+    static TwitterSession session;
     /**
      *
      *
@@ -90,13 +93,30 @@ public class TwitterUtil {
     }
 
     public static void getTwitterData() {
-        TwitterSession session = Twitter.getSessionManager().getActiveSession();
+        session = Twitter.getSessionManager().getActiveSession();
         Twitter.getApiClient(session).getAccountService().verifyCredentials(true, false, new Callback<User>() {
             @Override
             public void success(Result<User> userResult) {
-                User user = userResult.data;
-                AssyncSaveTwitterProfile assyncSaveTwitterProfile = new AssyncSaveTwitterProfile(user, act);
-                assyncSaveTwitterProfile.execute();
+                user = userResult.data;
+                TwitterAuthClient authClient = new TwitterAuthClient();
+                authClient.requestEmail(session, new Callback<String>() {
+                    @Override
+                    public void success(Result<String> result) {
+
+                        AssyncSaveTwitterProfile a = new AssyncSaveTwitterProfile(user,MAIN);
+                        a.setEmail(result.data);
+                        a.execute();
+                        // Do something with the result, which provides the email address
+                    }
+
+                    @Override
+                    public void failure(TwitterException exception) {
+                        AssyncSaveTwitterProfile a = new AssyncSaveTwitterProfile(user,MAIN);
+                        a.setEmail(null);
+                        a.execute();
+                    }
+                });
+
             }
 
             @Override
@@ -113,6 +133,11 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
     private User user;
     private Activity act;
     private ProgressDialog dialog;
+    String email;
+
+    public void setEmail(String e){
+        email = e;
+    }
 
     public AssyncSaveTwitterProfile(User user, Activity a) {
         this.user = user;
@@ -155,7 +180,7 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
             UPLOAD_AVATAR = js.getString("key");
             UPLOAD_AVATAR_TOKEN = js.getString("token");
 
-            String email = user.email == null ? user.screenName + "@twitter.com" : user.email;
+            String email = this.email==null?user.email == null ? user.screenName + "@twitter.com" : user.email:this.email;
             String pass = java.util.UUID.randomUUID().toString().substring(0, 8);
 
             js = getJSONFromUrl(getSaveUpdateProfile(email, UPLOAD_AVATAR, user.name, "xxx.xxx.xxx-xx", "00000-000", pass, user.description, true, "dd/MM/yyyy", "-1"));
