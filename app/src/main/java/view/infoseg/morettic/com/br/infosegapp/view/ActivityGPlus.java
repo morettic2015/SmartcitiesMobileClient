@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -36,7 +35,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -214,21 +212,11 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 Person currentPerson = Plus.PeopleApi
                         .getCurrentPerson(mGoogleApiClient);
                 String personName = currentPerson.getDisplayName();
-                String personPhotoUrl = currentPerson.getImage().getUrl();
-                //String personGooglePlusProfile = currentPerson.getUrl();
+
                 String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
 
                 txtName.setText(personName);
                 txtEmail.setText(email);
-
-                // by default the profile url gives 50x50 px image only
-                // we can replace the value with whatever dimension we want by
-                // replacing sz=X
-                personPhotoUrl = personPhotoUrl.substring(0,
-                        personPhotoUrl.length() - 2)
-                        + PROFILE_PIC_SIZE;
-
-                new LoadProfileImage(imgProfilePic).execute(personPhotoUrl);
 
                 AssyncSaveGPLUSProfile assyncSaveGPLUSProfile = new AssyncSaveGPLUSProfile(currentPerson,email,this);
                 assyncSaveGPLUSProfile.execute();
@@ -269,36 +257,6 @@ public class ActivityGPlus extends Activity implements OnClickListener,
         if (!mGoogleApiClient.isConnecting()) {
             mSignInClicked = true;
             resolveSignInError();
-        }
-    }
-
-
-
-
-    /**
-     * Background Async task to load user profile picture from url
-     * */
-    private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
-        ImageView bmImage;
-
-        public LoadProfileImage(ImageView bmImage) {
-            this.bmImage = bmImage;
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String urldisplay = urls[0];
-            Bitmap mIcon11 = null;
-            try {
-                InputStream in = new java.net.URL(urldisplay).openStream();
-                mIcon11 = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                FirebaseCrash.report(e);
-            }
-            return mIcon11;
-        }
-
-        protected void onPostExecute(Bitmap result) {
-            bmImage.setImageBitmap(result);
         }
     }
 

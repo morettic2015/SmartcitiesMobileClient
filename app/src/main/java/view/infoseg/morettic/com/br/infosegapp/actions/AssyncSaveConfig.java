@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
@@ -21,9 +22,10 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
     public static final String LOGIN_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     private ProgressDialog dialog;
     //private View a1;
-    private String idProfile, phone;
+
     private StringBuilder sb;
-    private String msg;
+    private String msg, escolar,about,site,email,idProfile, phone;
+    private char sexo;
 
 
     @Override
@@ -47,10 +49,15 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
         ToastHelper.makeToast(MAIN.getApplicationContext(),msg);
     }
 
-    public AssyncSaveConfig(Context ctx, String idProfile, String phone) {
+    public AssyncSaveConfig(Context ctx, String idProfile, String phone,char sexo, String escolar, String about,String site, String email) {
         this.dialog = new ProgressDialog(ctx);
         this.idProfile = idProfile;
         this.phone = phone;
+        this.sexo = sexo;
+        this.escolar = escolar;
+        this.about = about;
+        this.site = site;
+        this.email = email;
         this.msg = ctx.getString(R.string.save_config);
 
     }
@@ -63,49 +70,37 @@ public class AssyncSaveConfig extends AsyncTask<JSONObject, Void, String> {
             //Validacao @TODO
             sb = new StringBuilder();
             //URL PARA SALVAR O PERFIL.
-            sb.append("mine");
+
+            for(TipoOcorrencia tp: TipoOcorrencia.values()) {
+                sb.append(tp.name());
+                sb.append(":");
+                sb.append(MY_PREFERENCES.getBoolean(tp.name(), false));
+                sb.append("-");
+            }
+            sb.append("EMAIL");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("mine",false));
+            sb.append(email);
             sb.append("-");
-            sb.append("distance");
+            sb.append("ABOUT");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getInt("distance",0));
+            sb.append(about);
             sb.append("-");
-            sb.append("imoveis");
+            sb.append("SEXO");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("imoveis",false));
+            sb.append(sexo);
             sb.append("-");
-            sb.append("saude");
+            sb.append("ESCOLARIDADE");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("saude",false));
+            sb.append(escolar);
             sb.append("-");
-            sb.append("transporte");
+            sb.append("SITE");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("transporte",false));
+            sb.append(site);
             sb.append("-");
-            sb.append("meioAmbiente");
+            sb.append("PHONE");
             sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("meioAmbiente",false));
+            sb.append(phone);
             sb.append("-");
-            sb.append("educacao");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("educacao",false));
-            sb.append("-");
-            sb.append("seguranca");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("seguranca",false));
-            sb.append("-");
-            sb.append("politica");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("politica",false));
-            sb.append("-");
-            sb.append("upa");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("upa",false));
-            sb.append("-");
-            sb.append("esporte");
-            sb.append(":");
-            sb.append(MY_PREFERENCES.getBoolean("esporte",false));
 
             String url = HttpUtil.saveConfigInfo(idProfile, phone,sb.toString());
             //url =

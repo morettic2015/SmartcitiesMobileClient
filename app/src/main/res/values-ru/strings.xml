@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sexo">
+        <item>мужчина</item>
+        <item>женщина</item>
+    </string-array>
+    <string-array name="nEscolar">
+        <item>фундаментальный</item>
+        <item>высшая школа</item>
+        <item>градация</item>
+        <item>Выпускник</item>
+    </string-array>
     <string name="app_name">Город часы</string>
     <string name="NAO">Нет</string>
     <string name="SIM">да</string>
@@ -117,4 +127,15 @@
     <string name="infraestrutura">ИНФРАСТРУКТУРА</string>
     <string name="turismo">ТУРИЗМ</string>
     <string name="shop">МАГАЗИН</string>
+    <string name="website">веб-сайт</string>
+    <string name="sexo">секс</string>
+    <string name="pesquisar">исследование</string>
+    <string name="loading">загрузка</string>
+    <string name="escolaridade">образование</string>
+    <string name="entrar_com_o_twitter">Войти с Twitter</string>
+    <string name="entrar_com_o_facebook">Войти с Facebook</string>
+    <string name="entrar_com_google">Войти с Google</string>
+    <string name="email_alternativo">E почты альтернатива</string>
+    <string name="beer">пиво</string>
+    <string name="bio_config">Помощь другим людям знать, что вы</string>
 </resources>

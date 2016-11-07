@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sexo">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="nEscolar">
+        <item>Fundamental</item>
+        <item>High school</item>
+        <item>Graduation</item>
+        <item>Postgraduate studies</item>
+    </string-array>
     <string name="app_name">City Watch</string>
     <string name="NAO">No</string>
     <string name="SIM">Yes</string>
@@ -117,4 +127,15 @@
     <string name="infraestrutura">INFRASTRUCTURE</string>
     <string name="turismo">TOURISM</string>
     <string name="shop">SHOP</string>
+    <string name="website">Website</string>
+    <string name="sexo">Sex</string>
+    <string name="pesquisar">Search</string>
+    <string name="loading">Loading</string>
+    <string name="escolaridade">Scholarship</string>
+    <string name="entrar_com_o_twitter">Signin with twitter</string>
+    <string name="entrar_com_o_facebook">Sign in with Facebook</string>
+    <string name="entrar_com_google">Sign in with Google</string>
+    <string name="email_alternativo">Alternative Email</string>
+    <string name="beer">Beer</string>
+    <string name="bio_config">Help other people get to know you.</string>
 </resources>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="nEscolar">
+        <item>fondamental</item>
+        <item>lycée</item>
+        <item>graduation</item>
+        <item>Diplômé</item>
+    </string-array>
+    <string-array name="sexo">
+        <item>mâle</item>
+        <item>femelle</item>
+    </string-array>
     <plurals name="tw__time_hours">
         <item quantity="one">1 h</item>
         <item quantity="other">%d h</item>
@@ -41,6 +51,8 @@
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Authentifier ...</string>
+    <string name="beer">bière</string>
+    <string name="bio_config">Aidez d\'autres personnes à vous connaître</string>
     <string name="cep">Code postal</string>
     <string name="com_facebook_device_auth_instructions">Rendez-vous sur &lt;b>facebook.com/device&lt;/b>&lt;br /> sur votre smartphone ou votre ordinateur et entrez ce code :</string>
     <string name="com_facebook_image_download_unknown_error">Une erreur inattendue s’est produite au moment de télécharger une image.</string>
@@ -151,6 +163,10 @@ numéro de téléphone et/ou votre email.</string>
     <string name="educa_o">Éducation</string>
     <string name="email">Email</string>
     <string name="email_already_registered">Email déjà enregistré. Un e-mail avec votre mot de passe a été envoyé à votre compte.</string>
+    <string name="email_alternativo">Courriel alternatif</string>
+    <string name="entrar_com_google">Connectez-vous avec Google</string>
+    <string name="entrar_com_o_facebook">Connectez-vous avec Facebook</string>
+    <string name="entrar_com_o_twitter">Connectez-vous avec Twitter</string>
     <string name="entrar_ou_registrar_se">Connectez-vous ou inscrivez-vous</string>
     <string name="enviar">Envoyer</string>
     <string name="erro_cadastro_perfil">Une erreur est survenue. Vérifiez votre Internet et essayer à nouveau.</string>
@@ -158,6 +174,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="error_incorrect_password">Le mot de passe est incorrect</string>
     <string name="error_invalid_email">Adresse email invalide</string>
     <string name="error_invalid_password">Le mot de passe est trop court</string>
+    <string name="escolaridade">éducation</string>
     <string name="esporte">Sport</string>
     <string name="facebook_login">Connectez-vous via Facebook</string>
     <string name="filtros">Filtres</string>
@@ -175,6 +192,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="infraestrutura">INFRASTRUCTURE</string>
     <string name="invalid_locate">Location invalide</string>
     <string name="list_ocorrencias">Liste des Occurrence</string>
+    <string name="loading">chargement</string>
     <string name="localiza_o_indispon_vel">Emplacement indisponible</string>
     <string name="localizacao_invalida">Lieu invalide</string>
     <string name="login">S\'identifier</string>
@@ -202,6 +220,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="perfil">Profil</string>
     <string name="perfil_create">Création d\'un profil ...</string>
     <string name="person_info_null">Informations personne est null</string>
+    <string name="pesquisar">Recherche</string>
     <string name="pessoa_fisica">Personnel</string>
     <string name="pessoa_juridica">Compagnie</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Effacer la recherche"</string>
@@ -231,6 +250,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="selecioneData">Choisis une date</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Choisissez la distance pour rechercher</string>
     <string name="senha">Mot de passe</string>
+    <string name="sexo">sexe</string>
     <string name="share_msg">Installez City Watch et partager u occurrences de la ville!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="shop">BOUTIQUE</string>
     <string name="soletre_ocorrencia">Prononcez le mot</string>
@@ -275,4 +295,5 @@ numéro de téléphone et/ou votre email.</string>
     <string name="view_events">Voir la carte occurrences</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Voir la carte occurrences</string>
+    <string name="website">site Web</string>
 </resources>

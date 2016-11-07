@@ -30,7 +30,7 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
     }
 
     static LoginFragment newInstance() {
-        return loginFragment==null? loginFragment = new LoginFragment():loginFragment;
+        return new LoginFragment();
     }
 
     @Override

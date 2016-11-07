@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sexo">
+        <item>mâle</item>
+        <item>femelle</item>
+    </string-array>
+    <string-array name="nEscolar">
+        <item>fondamental</item>
+        <item>lycée</item>
+        <item>graduation</item>
+        <item>Diplômé</item>
+    </string-array>
     <string name="app_name">City Watch</string>
     <string name="NAO">Pas</string>
     <string name="SIM">Oui</string>
@@ -117,4 +127,15 @@
     <string name="infraestrutura">INFRASTRUCTURE</string>
     <string name="turismo">TOURISME</string>
     <string name="shop">BOUTIQUE</string>
+    <string name="website">site Web</string>
+    <string name="sexo">sexe</string>
+    <string name="pesquisar">Recherche</string>
+    <string name="loading">chargement</string>
+    <string name="escolaridade">éducation</string>
+    <string name="entrar_com_o_twitter">Connectez-vous avec Twitter</string>
+    <string name="entrar_com_o_facebook">Connectez-vous avec Facebook</string>
+    <string name="entrar_com_google">Connectez-vous avec Google</string>
+    <string name="email_alternativo">Courriel alternatif</string>
+    <string name="beer">bière</string>
+    <string name="bio_config">Aidez d\'autres personnes à vous connaître</string>
 </resources>

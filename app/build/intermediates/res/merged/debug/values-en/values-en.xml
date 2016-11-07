@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="nEscolar">
+        <item>Fundamental</item>
+        <item>High school</item>
+        <item>Graduation</item>
+        <item>Postgraduate studies</item>
+    </string-array>
+    <string-array name="sexo">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
     <string name="NAO">No</string>
     <string name="SIM">Yes</string>
     <string name="a12">View occurrences</string>
@@ -10,6 +20,8 @@
     <string name="app_name">City Watch</string>
     <string name="app_title_main">City Watch</string>
     <string name="autenticando">Authenticating ...</string>
+    <string name="beer">Beer</string>
+    <string name="bio_config">Help other people get to know you.</string>
     <string name="cep">Postal code</string>
     <string name="compartilhe">Share</string>
     <string name="complemento">Complement</string>
@@ -26,6 +38,10 @@
     <string name="educa_o">EDUCATION</string>
     <string name="email">Email</string>
     <string name="email_already_registered">Email already registered. An email with your password has been sent to your account.</string>
+    <string name="email_alternativo">Alternative Email</string>
+    <string name="entrar_com_google">Sign in with Google</string>
+    <string name="entrar_com_o_facebook">Sign in with Facebook</string>
+    <string name="entrar_com_o_twitter">Signin with twitter</string>
     <string name="entrar_ou_registrar_se">Sign in or register</string>
     <string name="enviar">Send</string>
     <string name="erro_cadastro_perfil">An error occurred. Check your Internet and try again.</string>
@@ -33,6 +49,7 @@
     <string name="error_incorrect_password">Password is incorrect</string>
     <string name="error_invalid_email">Email address is invalid</string>
     <string name="error_invalid_password">Password is too short</string>
+    <string name="escolaridade">Scholarship</string>
     <string name="esporte">Sport</string>
     <string name="facebook_login">Log in through Facebook</string>
     <string name="filtros">Filters</string>
@@ -50,6 +67,7 @@
     <string name="infraestrutura">INFRASTRUCTURE</string>
     <string name="invalid_locate">Invalid location</string>
     <string name="list_ocorrencias">Occurrence list</string>
+    <string name="loading">Loading</string>
     <string name="localiza_o_indispon_vel">Location unavailable</string>
     <string name="localizacao_invalida">Invalid location</string>
     <string name="login">Login</string>
@@ -65,6 +83,7 @@
     <string name="perfil">Profile</string>
     <string name="perfil_create">Creating profile ...</string>
     <string name="person_info_null">Person information is null</string>
+    <string name="pesquisar">Search</string>
     <string name="pessoa_fisica">Personal</string>
     <string name="pessoa_juridica">Company</string>
     <string name="politica">Politics</string>
@@ -92,6 +111,7 @@
     <string name="selecioneData">Pick a Date</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Choose the distance to search</string>
     <string name="senha">Password</string>
+    <string name="sexo">Sex</string>
     <string name="share_msg">Install City Watch and share u city occurrences!\nhttps://play.google.com/store/apps/details?id=view.infoseg.morettic.com.br.infosegapp</string>
     <string name="shop">SHOP</string>
     <string name="soletre_ocorrencia">Speak the word</string>
@@ -117,4 +137,5 @@
     <string name="view_events">View occurrences map</string>
     <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">View top 20 ocurrences</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">View occurrences map</string>
+    <string name="website">Website</string>
 </resources>

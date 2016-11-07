@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sexo">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string-array name="nEscolar">
+        <item>Fundamental</item>
+        <item>Ensino médio</item>
+        <item>Graduação</item>
+        <item>Pós-Graduação</item>
+    </string-array>
     <string name="app_name">City Watch</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
@@ -150,4 +160,10 @@
     <string name="beer">Beer</string>
     <string name="pesquisar">Pesquisar</string>
     <string name="loading">Carregando</string>
+    <string name="sexo">Sexo</string>
+    <string name="escolaridade">Escolaridade</string>
+    <string name="bio_config">Ajude as outras pessoas a conhecerem você</string>
+    <string name="email_alternativo">Email alternativo</string>
+    <string name="website">Website</string>
+    <string name="op_es">Opções</string>
 </resources>
