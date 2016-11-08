@@ -602,7 +602,7 @@
     <string name="cast_notification_disconnect">Disconnect</string>
     <string name="cep">CEP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">3b10ae3d-1b0f-4372-9ebb-5a3124aaea72</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">5f0458fe-d6ee-4e74-89fb-4a9567a8ae4f</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -651,11 +651,12 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="compartilhar_experi_ncia">Compartilhar Experiência</string>
     <string name="compartilhe">Compartilhar</string>
     <string name="complemento">Complemento</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Concordo com os termos e diretrizes do serviço</string>
     <string name="configura_es">Configurações</string>
-    <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
+    <string name="configure_suas_preferencias_no_app">Preferências</string>
     <string name="confirmacao_de_senha">Confirmacao de senha</string>
     <string name="consultando_ocorrencias">Consultando ocorrencias...</string>
     <string name="cpf_cnpj">CPF/CNPJ</string>
@@ -852,7 +853,7 @@
     <string name="title_activity_activity_adds">Patrocinadores</string>
     <string name="title_activity_activity_ads" translatable="false">ActivityAds</string>
     <string name="title_activity_activity_map">Mapa</string>
-    <string name="title_activity_activity_ocorrencia">Registrar ocorrência</string>
+    <string name="title_activity_activity_ocorrencia">Registrar</string>
     <string name="title_activity_login">Entrar</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="transporte">Transporte</string>
@@ -887,8 +888,8 @@
     <string name="verifique_erros2">] e tente novamente.</string>
     <string name="view_config_map">Para visualiza as ocorrências no mapa você deve configurar o seu filtro</string>
     <string name="view_events">Visualizar ocorrências</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">O que ta rolando aqui?</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Buscar Experiências</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <string name="website">Website</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

@@ -92,7 +92,7 @@
     <string name="title">Titulo</string>
     <string name="title_activity_activity_adds">Patrocinadores</string>
     <string name="title_activity_activity_map">Mapa</string>
-    <string name="title_activity_activity_ocorrencia">Registro ocurrencia</string>
+    <string name="title_activity_activity_ocorrencia">Registro</string>
     <string name="title_activity_login">Entrar</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="transporte">Transporte</string>
@@ -100,7 +100,7 @@
     <string name="upload_image">Subiendo ...</string>
     <string name="view_config_map">Para ver los eventos en el mapa debe configurar el filtro</string>
     <string name="view_events">Ver ocurrencias</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">¿Qué pasa aquí?</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Ver los eventos de su elección en el mapa.</string>
     <string name="criar_uma_conta"> Regístrate es gratis!</string>
     <string name="google_connected">El usuario está conectado a Google!</string>
@@ -138,4 +138,6 @@
     <string name="email_alternativo">E alternativa correo</string>
     <string name="beer">cerveza</string>
     <string name="bio_config">Ayuda a otras personas sepan que usted</string>
+    <string name="op_es">opciones</string>
+    <string name="compartilhar_experi_ncia">Compartir experiencia</string>
 </resources>

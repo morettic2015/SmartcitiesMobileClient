@@ -102,6 +102,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Abrir en teléfono"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Iniciar sesión"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
+    <string name="compartilhar_experi_ncia">Compartir experiencia</string>
     <string name="compartilhe">Cuota</string>
     <string name="complemento">Complemento</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Estoy de acuerdo con el EULA</string>
@@ -215,6 +216,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="nascimento">Cumpleaños</string>
     <string name="nome">Nombre</string>
     <string name="ok">OK</string>
+    <string name="op_es">opciones</string>
     <string name="opc_es">Opciones</string>
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Así que usted puede ver y eventos de informe, debe activar el GPS. Por favor, activa el GPS en el dispositivo y vuelva a intentarlo.</string>
     <string name="patroc_nio">patrocinio</string>
@@ -264,7 +266,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="title">Titulo</string>
     <string name="title_activity_activity_adds">Patrocinadores</string>
     <string name="title_activity_activity_map">Mapa</string>
-    <string name="title_activity_activity_ocorrencia">Registro ocurrencia</string>
+    <string name="title_activity_activity_ocorrencia">Registro</string>
     <string name="title_activity_login">Entrar</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="transporte">Transporte</string>
@@ -294,7 +296,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="verifique_erros2">] Y vuelve a intentarlo.</string>
     <string name="view_config_map">Para ver los eventos en el mapa debe configurar el filtro</string>
     <string name="view_events">Ver ocurrencias</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Ver más eventos en una lista ordenada por fecha</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">¿Qué pasa aquí?</string>
     <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Ver los eventos de su elección en el mapa.</string>
     <string name="website">sitio</string>
 </resources>

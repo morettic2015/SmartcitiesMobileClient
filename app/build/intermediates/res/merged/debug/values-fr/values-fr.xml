@@ -102,6 +102,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Ouvrir sur le téléphone"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Se connecter"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Se connecter avec Google"</string>
+    <string name="compartilhar_experi_ncia">Partager une expérience</string>
     <string name="compartilhe">Partager</string>
     <string name="complemento">Complément</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Je suis d\'accord avec CLUF</string>
@@ -214,6 +215,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="nascimento">Anniversaire</string>
     <string name="nome">prénom</string>
     <string name="ok">D\'accord</string>
+    <string name="op_es">options de</string>
     <string name="opc_es">options de</string>
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Ainsi, vous pouvez voir et les événements de rapport, vous devez activer votre GPS. S\'il vous plaît activer le GPS sur votre appareil et essayer à nouveau.</string>
     <string name="patroc_nio">patronage</string>
@@ -263,7 +265,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="title">Titre</string>
     <string name="title_activity_activity_adds">Sponsors</string>
     <string name="title_activity_activity_map">Carte</string>
-    <string name="title_activity_activity_ocorrencia">Registre occurrence</string>
+    <string name="title_activity_activity_ocorrencia">Registre</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_maps">Carte</string>
     <string name="transporte">Transport</string>
@@ -293,7 +295,7 @@ numéro de téléphone et/ou votre email.</string>
     <string name="verifique_erros2">] Et essayer à nouveau.</string>
     <string name="view_config_map">Pour regarder les occurrences sur la carte u besoin de u config filtres</string>
     <string name="view_events">Voir la carte occurrences</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Voir la carte occurrences</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Qu\'est-ce qui se passe ici?</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Rechercher des expériences</string>
     <string name="website">site Web</string>
 </resources>

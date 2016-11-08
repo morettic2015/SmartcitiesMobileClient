@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:label="@string/app_name"
-    android:paddingBottom="0dp"
+    android:paddingBottom="10dp"
     android:paddingLeft="10dp"
-    android:paddingRight="0dp"
+    android:paddingRight="10dp"
     android:paddingTop="70dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.ActivityOcorrencia"
@@ -15,9 +15,9 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f1f1f1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:background="@drawable/modal_shape_list"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -87,8 +87,9 @@
             android:drawableLeft="@drawable/ic_action_mic"
             android:layout_row="4"
             android:layout_column="1"
-            android:background="@drawable/button_twitter"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/button_home"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:id="@+id/LabelTit"
@@ -102,7 +103,7 @@
 
         <EditText
             android:id="@+id/txtTitulo"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="2"
@@ -121,8 +122,8 @@
 
         <EditText
             android:id="@+id/txtDescricao"
-            android:layout_width="302dp"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="56dp"
             android:layout_column="0"
             android:layout_row="4"
             android:ems="10"
@@ -137,8 +138,9 @@
             android:drawableLeft="@drawable/ic_action_mic"
             android:layout_row="2"
             android:layout_column="1"
-            android:background="@drawable/button_twitter"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/button_home"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -316,14 +318,14 @@
             android:id="@+id/btEnviarOcorrencia"
             android:layout_width="120dp"
             android:layout_height="35dp"
-            android:layout_column="0"
             android:layout_gravity="center_horizontal"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
             android:layout_row="8"
-            android:background="@drawable/button_twitter"
+            android:background="@drawable/button_home"
             android:drawableLeft="@drawable/ic_menu_send"
             android:padding="5dp"
             android:text="@string/registrar"
+            android:layout_column="0"
             android:layout_columnSpan="2" />
 
         <CheckBox

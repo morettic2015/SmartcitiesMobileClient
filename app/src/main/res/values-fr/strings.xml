@@ -92,7 +92,7 @@
     <string name="title">Titre</string>
     <string name="title_activity_activity_adds">Sponsors</string>
     <string name="title_activity_activity_map">Carte</string>
-    <string name="title_activity_activity_ocorrencia">Registre occurrence</string>
+    <string name="title_activity_activity_ocorrencia">Registre</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_maps">Carte</string>
     <string name="transporte">Transport</string>
@@ -100,8 +100,8 @@
     <string name="upload_image">Uploading ...</string>
     <string name="view_config_map">Pour regarder les occurrences sur la carte u besoin de u config filtres</string>
     <string name="view_events">Voir la carte occurrences</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Voir les 20 occurrences</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Voir la carte occurrences</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Qu\'est-ce qui se passe ici?</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Rechercher des expériences</string>
     <string name="criar_uma_conta">Inscrivez-vous gratuitement !</string>
     <string name="google_connected">L\'utilisateur est connecté à Google!</string>
     <string name="person_info_null">Informations personne est null</string>
@@ -138,4 +138,6 @@
     <string name="email_alternativo">Courriel alternatif</string>
     <string name="beer">bière</string>
     <string name="bio_config">Aidez d\'autres personnes à vous connaître</string>
+    <string name="op_es">options de</string>
+    <string name="compartilhar_experi_ncia">Partager une expérience</string>
 </resources>

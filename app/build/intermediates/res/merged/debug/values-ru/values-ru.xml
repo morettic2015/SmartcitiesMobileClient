@@ -102,6 +102,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Открыть на телефоне"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Войти"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Войти через аккаунт Google"</string>
+    <string name="compartilhar_experi_ncia">Доля Опыт работы</string>
     <string name="compartilhe">Поделиться</string>
     <string name="complemento">комплемент</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">Я согласен с лицензионным соглашением</string>
@@ -213,6 +214,7 @@
     <string name="nascimento">рождение</string>
     <string name="nome">имя</string>
     <string name="ok">хорошо</string>
+    <string name="op_es">опции</string>
     <string name="opc_es">опции</string>
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">Таким образом, вы можете просматривать и события отчетов, необходимо включить функцию GPS. Пожалуйста, включите GPS на устройстве и повторите попытку.</string>
     <string name="patroc_nio">протекция</string>
@@ -292,7 +294,7 @@
     <string name="verifique_erros2">] И попробуй еще раз.</string>
     <string name="view_config_map">Для просмотра вхождений на карте U нужно конфиг U фильтры</string>
     <string name="view_events">Посмотреть на карте вхождения</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Просмотр 20 лучших вхождений</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Посмотреть на карте вхождения</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Что здесь происходит?</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Поиск опыт</string>
     <string name="website">веб-сайт</string>
 </resources>

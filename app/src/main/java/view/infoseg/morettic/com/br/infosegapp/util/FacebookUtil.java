@@ -27,14 +27,13 @@ import javax.net.ssl.HttpsURLConnection;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 
-import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.UPLOAD_URL;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;

@@ -27,10 +27,10 @@
     <string name="consultando_ocorrencias">Выполнение запросов ... вхождений</string>
     <string name="cpf_cnpj">Док. Я бы.</string>
     <string name="criar_uma_conta">Зарегистрироваться абсолютно бесплатна!</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Посмотреть на карте вхождения</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Поиск опыт</string>
     <string name="view_config_map">Для просмотра вхождений на карте U нужно конфиг U фильтры</string>
     <string name="view_events">Посмотреть на карте вхождения</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Просмотр 20 лучших вхождений</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Что здесь происходит?</string>
     <string name="verifique_erros2">] И попробуй еще раз.</string>
     <string name="verifique_erros1">Пожалуйста, проверьте поля [</string>
     <string name="utilize_sua_conta_do_google_plus_para_registrar_se_e_fazer_login_assim_automaticamente_criamos_seu_perfil_e_carregamos_seu_avatar">Используйте свой Google Plus счет, чтобы зарегистрироваться и войти. Чтобы мы автоматически создать свой профиль и загрузить свой аватар.</string>
@@ -138,4 +138,6 @@
     <string name="email_alternativo">E почты альтернатива</string>
     <string name="beer">пиво</string>
     <string name="bio_config">Помощь другим людям знать, что вы</string>
+    <string name="op_es">опции</string>
+    <string name="compartilhar_experi_ncia">Доля Опыт работы</string>
 </resources>

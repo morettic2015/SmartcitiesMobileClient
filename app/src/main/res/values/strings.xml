@@ -16,7 +16,7 @@
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <string name="action_settings">Copyright</string>
-    <string name="title_activity_activity_ocorrencia">Registrar ocorrência</string>
+    <string name="title_activity_activity_ocorrencia">Registrar</string>
     <string name="title_activity_activity_map">Mapa</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -69,8 +69,8 @@
     <string name="tipo_do_servi_o">Tipo do serviço</string>
     <string name="registre_ocorr_ncias_em_seu_munic_pio_na_rea_de_sa_de_educa_o_seguran_a_e_servi_os">Registre ocorrências em seu município, em uma das categorias disponíveis</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Informe seus dados e mantenha-os atualizados, para colaborar com ocorrências em seu municipio</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Visualize as ocorrências de sua preferência no mapa.</string>
-    <string name="configure_suas_preferencias_no_app">Configure suas preferencias no APP</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Buscar Experiências</string>
+    <string name="configure_suas_preferencias_no_app">Preferências</string>
     <string name="registrar">Registrar</string>
     <string name="title_activity_activity_ads" translatable="false">ActivityAds</string>
     <string name="help_us">Ajude-nos!</string>
@@ -98,7 +98,7 @@
     <string name="error_invalid_email">Email invalido</string>
     <string name="error_invalid_password">Senha muito curta</string>
     <string name="filtros">Filtros</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">Visualize as últimas ocorrências em uma lista ordenada por data</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">O que ta rolando aqui?</string>
     <string name="registrar_ocorr_ncia">Registrar ocorrência</string>
     <string name="opc_es">Opcões</string>
     <string name="nome">Nome</string>
@@ -166,4 +166,5 @@
     <string name="email_alternativo">Email alternativo</string>
     <string name="website">Website</string>
     <string name="op_es">Opções</string>
+    <string name="compartilhar_experi_ncia">Compartilhar Experiência</string>
 </resources>

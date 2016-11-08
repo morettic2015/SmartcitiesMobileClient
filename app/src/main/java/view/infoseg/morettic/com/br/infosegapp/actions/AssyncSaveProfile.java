@@ -1,16 +1,24 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
 
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
+import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.ToastHelper;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -22,6 +30,9 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
     private View a1;
     private JSONObject perfil;
     private String msg;
+    private Bitmap bitmapM;
+    private boolean origemIsOcorrencia = false;
+    private int code;
 
 
     @Override
@@ -53,11 +64,38 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
         // Creating new JSON Parser   public static final String getSaveUpdateProfile(String email,String avatar,String nome,String cpfCnpj,String cep,String passwd, String complemento, boolean pjf,String nasc,String id){
 
         try {
+            if( ImageCache.hasBitmapFromMemCache("avatar")){
+                bitmapM = ImageCache.getBitmapFromMemCache("avatar");
+                js = HttpUtil.getJSONFromUrl(UPLOAD_URL);
+                URL_SUBMIT_UPLOAD = js.getString("uploadPath");
 
+                // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+                Uri tempUri = HttpUtil.getImageUri(MAIN.getApplicationContext(), this.bitmapM);
+
+                // CALL THIS METHOD TO GET THE ACTUAL PATH
+                String realPathInSO = HttpUtil.getRealPathFromURI(tempUri, MAIN);
+
+                String fTYpe = realPathInSO.substring(realPathInSO.length() - 3, realPathInSO.length());
+                if (URL_SUBMIT_UPLOAD != null) {
+
+                    js = HttpFileUpload.uploadFile(realPathInSO,
+                            URL_SUBMIT_UPLOAD,
+                            fTYpe);
+                    js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
+
+
+                    UPLOAD_AVATAR = js.getString("key");
+                    UPLOAD_AVATAR_TOKEN = js.getString("token");
+
+                }
+                realPathInSO = null;
+                tempUri = null;
+                fTYpe = null;
+            }
 
             //Pega os campos
             String email = this.perfil.getString("email");
-            String avatar = ValueObject.UPLOAD_AVATAR;
+            String avatar = UPLOAD_AVATAR;
             String nome = this.perfil.getString("nome");
             String cpfCnpj = this.perfil.getString("cpfCnpj");
             String cep = this.perfil.getString("cep");
@@ -74,7 +112,7 @@ public class AssyncSaveProfile extends AsyncTask<JSONObject, Void, String> {
             //url =
             js = HttpUtil.getJSONFromUrl(url);
 
-            ValueObject.ID_PROFILE = js.getString("key");
+            ID_PROFILE = js.getString("key");
 
         } catch (Exception ex) {
             logException(ex);

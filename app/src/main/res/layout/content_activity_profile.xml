@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:label="@string/app_name"
-    android:paddingBottom="0dp"
+    android:paddingBottom="10dp"
     android:paddingLeft="10dp"
-    android:paddingRight="0dp"
+    android:paddingRight="10dp"
     android:paddingTop="70dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <!-- TODO: Update blank fragment layout -->
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#f1f1f1">
+        android:background="@drawable/modal_shape_list">
 
         <TextView
             android:id="@+id/textView3"
@@ -212,9 +212,8 @@
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"
-            android:layout_marginRight="5dp"
             android:layout_row="11"
-            android:background="@drawable/button_twitter"
+            android:background="@drawable/button_home"
             android:drawableLeft="@drawable/ic_save_action"
             android:padding="5dp"
             android:text="@string/salvar" />

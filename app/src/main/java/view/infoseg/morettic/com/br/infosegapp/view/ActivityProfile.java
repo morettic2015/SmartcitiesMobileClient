@@ -44,27 +44,6 @@ public class ActivityProfile extends Fragment {
     private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
 
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        cpf.destroyDrawingCache();
-        rdCNPJ.destroyDrawingCache();
-        complemento.destroyDrawingCache();
-        cep.destroyDrawingCache();
-        passwd.destroyDrawingCache();
-        nome.destroyDrawingCache();
-        email.destroyDrawingCache();
-        btAvatar.destroyDrawingCache();
-        rd.destroyDrawingCache();
-        cpfMask = null;
-        cnpjMask = null;
-        cepMask = null;
-        radioGroup = null;
-        rdCNPJ = null;
-        editor = null;
-        rd = null;
-        v.destroyDrawingCache();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,

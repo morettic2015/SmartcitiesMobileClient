@@ -39,7 +39,7 @@
     <string name="list_ocorrencias">Occurrence list</string>
     <string name="login">Login</string>
     <string name="mapa_ocorrencias">Occurrence map</string>
-    <string name="title_activity_activity_ocorrencia">Register occurrence</string>
+    <string name="title_activity_activity_ocorrencia">Register</string>
     <string name="title_activity_activity_map">Map</string>
     <string name="title_activity_activity_adds">Sponsors</string>
     <string name="tipo_do_servi_o">Kind of service</string>
@@ -54,7 +54,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="transporte">Transport</string>
     <string name="view_events">View occurrences map</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">View occurrences map</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Search experiences</string>
     <string name="view_config_map">To watch the occurrences on map u need to config u filters</string>
     <string name="informe_seus_dados_e_mantenha_os_atualizados_para_colaborar_com_ocorr_ncias_em_seu_municipio">Keep u info updated to collaborate</string>
     <string name="title_activity_login">Login</string>
@@ -75,7 +75,7 @@
     <string name="perfil">Profile</string>
     <string name="ok">OK</string>
     <string name="email">Email</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">View top 20 ocurrences</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">What is going on here?</string>
     <string name="registrar_ocorr_ncia">Register occurrence</string>
     <string name="opc_es">Options</string>
     <string name="nascimento">Birthday</string>
@@ -138,4 +138,6 @@
     <string name="email_alternativo">Alternative Email</string>
     <string name="beer">Beer</string>
     <string name="bio_config">Help other people get to know you.</string>
+    <string name="op_es">Options</string>
+    <string name="compartilhar_experi_ncia">Share Experience</string>
 </resources>

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="view.infoseg.morettic.com.br.infosegapp"
     android:installLocation="preferExternal"
-    android:versionCode="45"
-    android:versionName="Capsule_Corp1.0" >
+    android:versionCode="69"
+    android:versionName="Capsule_Corp_2.0" >
 
     <uses-sdk
         android:minSdkVersion="15"

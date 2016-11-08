@@ -1,10 +1,8 @@
 package view.infoseg.morettic.com.br.infosegapp.actions;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,22 +12,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.crash.FirebaseCrash;
-
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.net.URLEncoder;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
-import view.infoseg.morettic.com.br.infosegapp.view.InfosegMain;
 
-import static java.net.URLEncoder.*;
-import static view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_URL;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -142,17 +134,17 @@ public class AssyncSocialConnect extends AsyncTask<JSONObject, Void, String> {
                 String fTYpe = realPathInSO.substring(realPathInSO.length() - 3, realPathInSO.length());
                 //Get Upload URL
                 js = HttpUtil.getJSONFromUrl(UPLOAD_URL);
-                ValueObject.URL_SUBMIT_UPLOAD = js.getString("uploadPath");
+                URL_SUBMIT_UPLOAD = js.getString("uploadPath");
 
 
-                if (ValueObject.URL_SUBMIT_UPLOAD != null) {
-                    js = HttpFileUpload.uploadFile(realPathInSO, ValueObject.URL_SUBMIT_UPLOAD, fTYpe);
+                if (URL_SUBMIT_UPLOAD != null) {
+                    js = HttpFileUpload.uploadFile(realPathInSO, URL_SUBMIT_UPLOAD, fTYpe);
                     js = HttpUtil.getJSONFromUrl(HttpUtil.getSaveImagePath(js.getString("fName"), js.getString("token")));
                     imageToken = js.getString("key");
                 }
                 url = HttpUtil.getSaveUpdateProfile(this.email, imageToken, this.nome, "xxx.xxx.xxx-xx", "88000-000", this.senha, "N/I", true, "dd/MM/yyyy", "-1");
                 js = HttpUtil.getJSONFromUrl(url);
-                ValueObject.ID_PROFILE = js.getString("key");
+                ID_PROFILE = js.getString("key");
 
                 //Envia email de cadastro
                 url = HttpUtil.sendEmailNovoCadastro(email);

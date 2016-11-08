@@ -48,7 +48,6 @@ import java.util.logging.Level;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoadListOcorrencias;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncLoginRegister;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncUploadURLlink;
 import view.infoseg.morettic.com.br.infosegapp.util.FacebookUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
@@ -62,7 +61,6 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.COUNTER_CLICK;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LIST_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGGER;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
@@ -124,12 +122,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             BITMAP_DEFAULT = BitmapFactory.decodeResource(getResources(), R.drawable.ic_smartcities_icon_logo);
             AssyncLoginRegister assyncLoginRegister = new AssyncLoginRegister(this.getApplicationContext(), MY_PREFERENCES.getString("email", ""), MY_PREFERENCES.getString("passwd", ""));
             assyncLoginRegister.execute();
-            //Load Ocorrencias
-            //Load / register device
-          /*  AssyncLoadListOcorrencias assyncLoadListOcorrencias = new AssyncLoadListOcorrencias();
-            assyncLoadListOcorrencias.setCtx(getApplicationContext());
-            assyncLoadListOcorrencias.setCity("Florianopolis");
-            assyncLoadListOcorrencias.execute();*/
+
              /*
                 *   @Here we show ADS!
                 *   @If Counter click <5 show ads. 5 ads each navigation;
@@ -214,21 +207,14 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Inicializa os botooes da tela Splash
-      /*  ImageView b1 = (ImageView) findViewById(R.id.btNovoSplah);
-        b1.setOnClickListener((View.OnClickListener) this);*/
-
-        Button b2 = (Button) findViewById(R.id.btPerfilSlash);
-        b2.setOnClickListener((View.OnClickListener) this);
-
-        Button b3 = (Button) findViewById(R.id.btConfigSplash);
-        b3.setOnClickListener((View.OnClickListener) this);
-
         Button b4 = (Button) findViewById(R.id.btMapaSplash);
         b4.setOnClickListener((View.OnClickListener) this);
 
         Button b5 = (Button) findViewById(R.id.btListOcorrencias);
         b5.setOnClickListener((View.OnClickListener) this);
+
+        Button b6 = (Button) findViewById(R.id.btNewExperiencie);
+        b6.setOnClickListener((View.OnClickListener) this);
 
         /**
          *
@@ -302,81 +288,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        String title = null;
-        Fragment fragment = null;
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-            fragment = new ActivityOcorrencia();
-            title = getString(R.string.register_event);
-        } else if (id == R.id.nav_gallery) {
-
-            if (LocationManagerUtil.isLocationValid(MAIN) == null) {
-                loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
-            } else {
-                MapFilter.getInstance().show(getFragmentManager(), "dialog");
-
-            }
-
-            title = getString(R.string.mapa_ocorrencias);
-        } else if (id == R.id.nav_list) {
-            if (isDataListLoaded()) {
-                fragment = new ListOcorrencia();
-                title = getString(R.string.list_ocorrencias);
-            } else {
-                fragment = new ActivityAds();
-                title = getString(R.string.help_us);
-            }
-        } else if (id == R.id.nav_slideshow) {
-            fragment = new ActivityProfile();
-            title = getString(R.string.perfil);
-        } else if (id == R.id.nav_manage) {
-            fragment = new ActivityConfig();
-            title = getString(R.string.configura_es);
-        } else if (id == R.id.nav_adds) {
-            fragment = new ActivityAds();
-            title = getString(R.string.help_us);
-        } else if (id == R.id.nav_exit) {
-            //Fecha o APP
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(getString(R.string.sair));
-            alertDialogBuilder
-                    .setMessage(getString(R.string.sair_remover_sessao))
-                    .setCancelable(false)
-                    .setPositiveButton(getString(R.string.SIM),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    //Limpa as preferencias
-                                    //getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
-                                    //Move para background e destroi o app
-                                    moveTaskToBack(true);
-                                    Process.killProcess(Process.myPid());
-                                    System.exit(1);
-                                }
-                            })
-
-                    .setNegativeButton(getString(R.string.NAO), new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-
-                            dialog.cancel();
-                        }
-                    });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-        } else if (id == R.id.nav_share) {
-            Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_msg));
-            sendIntent.setType("text/plain");
-            startActivity(sendIntent);
-        }
-        if (fragment != null)
-            loadFragment(fragment, title);
-        title = null;
-        fragment = null;
-        //setTitle(title);
+        doIt(item.getItemId());
 
         return true;
     }
@@ -430,7 +342,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                         if (yourSelectedImage != null)//Add the image to the cache
                             ImageCache.addBitmapToMemoryCache("avatar", yourSelectedImage);
                         //Upload da imagem inicializado
-                        new AssyncUploadURLlink(this, yourSelectedImage, 0).execute();
+
                     } catch (FileNotFoundException ex) {
                         logException(ex);
                     }
@@ -459,11 +371,65 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     public void onClick(View v) {
-        String title = null;
-        switch (v.getId()) {
-            case R.id.btPerfilSlash:
+        doIt(v.getId());
+
+    }
+    /**
+     *  @Navigation menu events
+     * */
+    public void doIt(int i) {
+        switch (i) {
+            //Load config
+            case R.id.nav_exit:
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+                alertDialogBuilder.setTitle(getString(R.string.sair));
+                alertDialogBuilder
+                        .setMessage(getString(R.string.sair_remover_sessao))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.SIM),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        //Limpa as preferencias
+                                        getSharedPreferences("INFOSEGMAIN", 0).edit().clear().commit();
+                                        //Move para background e destroi o app
+                                        moveTaskToBack(true);
+                                        Process.killProcess(Process.myPid());
+                                        System.exit(1);
+                                    }
+                                })
+
+                        .setNegativeButton(getString(R.string.NAO), new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+                break;
+            //Share options
+            case R.id.nav_share:
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_msg));
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+                break;
+            //Load profile;
+            case R.id.nav_slideshow:
                 loadFragment(new ActivityProfile(), getString(R.string.perfil));
                 break;
+            //Load ads
+            case R.id.nav_adds:
+                loadFragment(new ActivityAds(), getString(R.string.help_us));
+                break;
+            //Config options
+            case R.id.nav_manage:
+                loadFragment(new ActivityConfig(), getString(R.string.configura_es));
+                break;
+            //Map filter options
+            case R.id.nav_gallery:
             case R.id.btMapaSplash:
                 if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
@@ -472,6 +438,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
 
                 }
                 break;
+            //Load list of experience most recent
+            case R.id.nav_list:
             case R.id.btListOcorrencias:
                 if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
@@ -504,11 +472,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                     }
                 }
                 break;
-            case R.id.btConfigSplash:
-                //whatever
-                loadFragment(new ActivityConfig(), getString(R.string.configura_es));
-                break;
-            case R.id.fab:
+            //Add new experience
+            case R.id.nav_camera://bt menu
+            case R.id.fab://BT MATERIAL
+            case R.id.btNewExperiencie:// BT HOME
                 //whatever
                 if (LocationManagerUtil.isLocationValid(MAIN) == null) {
                     loadFragment(new ActivityNoGps(), getString(R.string.invalid_locate));
@@ -540,13 +507,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         }
     }
 
-    private boolean isDataListLoaded() {
-        if (LIST_OCORRENCIAS == null) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+
 
     public void startVoiceRecognitionActivity() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);

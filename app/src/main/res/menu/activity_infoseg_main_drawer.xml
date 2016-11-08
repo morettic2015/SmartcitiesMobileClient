@@ -4,16 +4,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_novo_generico_01"
-            android:title="@string/registrar_ocorr_ncia" />
+            android:icon="@mipmap/ic_megagone"
+            android:title="@string/compartilhar_experi_ncia" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_map_generico_01"
-            android:title="@string/mapa_ocorrencias" />
+            android:icon="@mipmap/ic_lupa"
+            android:title="@string/visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa" />
         <item
             android:id="@+id/nav_list"
-            android:icon="@mipmap/ic_list_ocorrencias"
-            android:title="@string/list_ocorrencias" />
+            android:icon="@mipmap/ic_oquetarolando"
+            android:title="@string/visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_avatar_novo_01"

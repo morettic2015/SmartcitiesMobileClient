@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="0dp"
+    android:paddingBottom="10dp"
     android:paddingLeft="10dp"
-    android:paddingRight="0dp"
+    android:paddingRight="10dp"
     android:paddingTop="70dp"
     tools:context=".view.ActivityConfig">
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:background="#f1f1f1"
+        android:background="@drawable/modal_shape_list"
         android:layout_alignParentStart="true"
         android:weightSum="1"
         android:layout_alignParentBottom="true">
@@ -107,7 +107,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_twitter"
+            android:background="@drawable/button_home"
             android:drawableLeft="@drawable/ic_save_action"
             android:enabled="true"
             android:text="@string/salvar" />

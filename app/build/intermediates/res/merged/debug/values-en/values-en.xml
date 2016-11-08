@@ -23,6 +23,7 @@
     <string name="beer">Beer</string>
     <string name="bio_config">Help other people get to know you.</string>
     <string name="cep">Postal code</string>
+    <string name="compartilhar_experi_ncia">Share Experience</string>
     <string name="compartilhe">Share</string>
     <string name="complemento">Complement</string>
     <string name="concordo_com_os_termos_e_diretrizes_do_servi_o">I Agree with EULA</string>
@@ -77,6 +78,7 @@
     <string name="nascimento">Birthday</string>
     <string name="nome">Name</string>
     <string name="ok">OK</string>
+    <string name="op_es">Options</string>
     <string name="opc_es">Options</string>
     <string name="para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente">So you can view and report events, you must enable your GPS. Please enable GPS on your device and try again.</string>
     <string name="patroc_nio">Sponsorship</string>
@@ -123,7 +125,7 @@
     <string name="title">Title</string>
     <string name="title_activity_activity_adds">Sponsors</string>
     <string name="title_activity_activity_map">Map</string>
-    <string name="title_activity_activity_ocorrencia">Register occurrence</string>
+    <string name="title_activity_activity_ocorrencia">Register</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_maps">Map</string>
     <string name="transporte">Transport</string>
@@ -135,7 +137,7 @@
     <string name="verifique_erros2">] And try again.</string>
     <string name="view_config_map">To watch the occurrences on map u need to config u filters</string>
     <string name="view_events">View occurrences map</string>
-    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">View top 20 ocurrences</string>
-    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">View occurrences map</string>
+    <string name="visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data">What is going on here?</string>
+    <string name="visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa">Search experiences</string>
     <string name="website">Website</string>
 </resources>

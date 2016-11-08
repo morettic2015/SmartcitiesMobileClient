@@ -42,7 +42,7 @@ public class ValueObject {
     public static Bitmap IMG_OCORRENCIA = null;
     public static Bitmap IMG_AUTHOR = null;
     public static LocationManager locationManager;
-
+    public static final String UPLOAD_URL = "http://gaeloginendpoint.appspot.com/upload.exec";
     public static String[] LIST_OCORRENCIAS;
 
     public static Bitmap BITMAP_DEFAULT;

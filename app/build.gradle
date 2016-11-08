@@ -28,8 +28,8 @@ android {
         applicationId "view.infoseg.morettic.com.br.infosegapp"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 45
-        versionName "Capsule_Corp1.0"
+        versionCode 69
+        versionName "Capsule_Corp_2.0"
         multiDexEnabled true
     }
     buildTypes {
