@@ -140,13 +140,14 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                 assyncMapSearch.setTxtInfoForecast(txtInfoForecast);
                 assyncMapSearch.execute();
             }
-            googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             googleMap.setTrafficEnabled(true);//Adiciona a camada de transito?
+            googleMap.setIndoorEnabled(true);
             googleMap.setBuildingsEnabled(true);//predios
             LatLng local = new LatLng(latitude, longitude);
 
             //ZOOM no mapa com efeito emo flamenguista
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(12).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
 
@@ -246,15 +247,17 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtTit.setText(js.getString("nmCategory"));
                                 txtAutor.setText(js.getString("nmCompany"));
 
-                                String vlSale = js.getString("vlSale") == null ? "VENDA" : "ALUGUEL";
+                                String vlSale = js.getDouble("vlSale")<=0? "ALUGUEL" : "VENDA";
 
                                 txtDt.setText(vlSale);
 
-                                txtDesc.setText(js.getString("dsAddress") + " R$" + js.getString("nmProperty"));
+                                String vl = js.getDouble("vlSale")<=0?js.getString("vlRental"):js.getString("vlSale");
+
+                                txtDesc.setText(js.getString("dsAddress") + " R$:" + vl);
 
                                 txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
                             }
-                            if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                            else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
                                 txtTit.setText(js.getString("tit"));
 
 
