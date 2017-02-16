@@ -24,6 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
+import view.infoseg.morettic.com.br.infosegapp.actions.AssyncAirbnbImages;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapSearch;
@@ -61,12 +62,13 @@ import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logExcept
 public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
     private MapView mMapView;
-    private GoogleMap googleMap;
+    public GoogleMap googleMap;
 
     private StringBuilder stringBuilder = new StringBuilder();
     private double longitude = 0, latitude = 0;
     private TextView txtInfoForecast;
     private View v;
+
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
@@ -127,7 +129,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             FirebaseCrash.report(ex);
         } finally {
 
-            if (KEYWORD==null||KEYWORD.equalsIgnoreCase("keyword")||KEYWORD.equalsIgnoreCase("")) {
+            if (KEYWORD == null || KEYWORD.equalsIgnoreCase("keyword") || KEYWORD.equalsIgnoreCase("")) {
 
                 AssyncMapQuery assyncMapQuery = new AssyncMapQuery(v, jsFilter, googleMap);
                 assyncMapQuery.setTxtInfoForecast(txtInfoForecast);
@@ -147,10 +149,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
             LatLng local = new LatLng(latitude, longitude);
 
             //ZOOM no mapa com efeito emo flamenguista
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(12).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(local).zoom(18).build();
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-
+            LocationManagerUtil.setGMap(googleMap);
             /**
              *
              * Action para visualizar detalhes da ocorrencia
@@ -191,6 +193,10 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                                 AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("mPicA"), js.getString("mPicA"));
                                 ew1.execute();
+                            } else if (js.getString("type").equalsIgnoreCase(TipoOcorrencia.AIRBNB.toString())) {
+                                AssyncAirbnbImages assyncAirbnbImages = new AssyncAirbnbImages(js.getString("token"),js.getString("host_avatar"));
+                                assyncAirbnbImages.execute();
+
                             } else if (js.has("type") && (js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString()))) {
                                /* */
                                 if (js.getString("token").equals("default")) {
@@ -247,17 +253,16 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtTit.setText(js.getString("nmCategory"));
                                 txtAutor.setText(js.getString("nmCompany"));
 
-                                String vlSale = js.getDouble("vlSale")<=0? "ALUGUEL" : "VENDA";
+                                String vlSale = js.getDouble("vlSale") <= 0 ? "ALUGUEL" : "VENDA";
 
                                 txtDt.setText(vlSale);
 
-                                String vl = js.getDouble("vlSale")<=0?js.getString("vlRental"):js.getString("vlSale");
+                                String vl = js.getDouble("vlSale") <= 0 ? js.getString("vlRental") : js.getString("vlSale");
 
                                 txtDesc.setText(js.getString("dsAddress") + " R$:" + vl);
 
                                 txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
-                            }
-                            else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                            } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
                                 txtTit.setText(js.getString("tit"));
 
 
@@ -267,6 +272,20 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtAutor.setText(js.getString("author"));
 
                                 txtDt.setText(TipoOcorrencia.OPENSTREEMAP.toString());
+
+                                txtDesc.setText(js.getString("desc") + ". " + js.getString("address"));
+
+                                txtTp.setText(js.getString("tipo"));
+                            } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.AIRBNB.toString())) {
+                                txtTit.setText(js.getString("tit"));
+
+
+                                // Usually this can be a field rather than a method variable
+
+
+                                txtAutor.setText(js.getString("host"));
+
+                                txtDt.setText(TipoOcorrencia.AIRBNB.toString());
 
                                 txtDesc.setText(js.getString("desc") + ". " + js.getString("address"));
 
@@ -329,7 +348,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
         //txtInfoForecast.destroyDrawingCache();
         //this.mMapView.destroyDrawingCache();
         this.v.destroyDrawingCache();
-
+        LocationManagerUtil.setGMap(null);
         txtInfoForecast = null;
     }
 
@@ -342,7 +361,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     @Override
     public void onDestroy() {
         super.onDestroy();
-
+        LocationManagerUtil.setGMap(null);
         stringBuilder = null;
         txtInfoForecast = null;
         googleMap = null;
@@ -352,6 +371,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+        LocationManagerUtil.setGMap(null);
         mMapView.onLowMemory();
     }
 

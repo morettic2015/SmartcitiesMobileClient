@@ -73,12 +73,12 @@ public final class R {
 		public static final int tw__share_email_title = 0x7f08008d;
 	}
 	public static final class style {
-		public static final int tw__Button = 0x7f0d0196;
-		public static final int tw__ButtonBar = 0x7f0d0198;
-		public static final int tw__Button_Light = 0x7f0d0197;
-		public static final int tw__Permission_Container = 0x7f0d01a7;
-		public static final int tw__Permission_Description = 0x7f0d01a8;
-		public static final int tw__Permission_Title = 0x7f0d01a9;
+		public static final int tw__Button = 0x7f0d0197;
+		public static final int tw__ButtonBar = 0x7f0d0199;
+		public static final int tw__Button_Light = 0x7f0d0198;
+		public static final int tw__Permission_Container = 0x7f0d01a8;
+		public static final int tw__Permission_Description = 0x7f0d01a9;
+		public static final int tw__Permission_Title = 0x7f0d01aa;
 	}
 	public static final class styleable {
 		public static final int[] tw__AspectRatioImageView = { 0x7f01018f, 0x7f010190 };

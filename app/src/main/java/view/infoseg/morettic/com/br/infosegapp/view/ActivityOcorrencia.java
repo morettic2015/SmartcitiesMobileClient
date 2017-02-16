@@ -154,6 +154,9 @@ public class ActivityOcorrencia extends Fragment implements View.OnClickListener
                     case R.id.rShop:
                         tipoOcorrencia = TipoOcorrencia.SHOP.toString();
                         break;
+                    case R.id.rMangueVivo:
+                        tipoOcorrencia = TipoOcorrencia.MANGUE_VIVO.toString();
+                        break;
                     default:
                         tipoOcorrencia = TipoOcorrencia.SERVICOS.toString();
                         break;

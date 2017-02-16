@@ -15,7 +15,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/modal_shape_list"
+        android:background="@color/cardview_light_background"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -87,7 +87,7 @@
             android:drawableLeft="@drawable/ic_action_mic"
             android:layout_row="4"
             android:layout_column="1"
-            android:background="@drawable/button_home"
+            android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"
             android:layout_marginRight="5dp" />
 
@@ -138,7 +138,7 @@
             android:drawableLeft="@drawable/ic_action_mic"
             android:layout_row="2"
             android:layout_column="1"
-            android:background="@drawable/button_home"
+            android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"
             android:layout_marginRight="5dp" />
 
@@ -176,7 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_security01"
+                    android:drawableStart="@mipmap/icon_security01"
                     android:text="@string/seguran_a" />
 
                 <RadioButton
@@ -184,7 +184,7 @@
                     android:id="@+id/rSaude"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/icon_health01"
+                    android:drawableStart="@mipmap/icon_health01"
                     android:layout_marginRight="20dp"
                     android:text="@string/sa_de" />
 
@@ -193,7 +193,7 @@
                     android:id="@+id/rCultura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/ic_cultura"
+                    android:drawableStart="@mipmap/ic_cultura"
                     android:layout_marginRight="20dp"
                     android:text="@string/cultura" />
 
@@ -202,7 +202,7 @@
                     android:id="@+id/rTurismo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/ic_turismo"
+                    android:drawableStart="@mipmap/ic_turismo"
                     android:layout_marginRight="20dp"
                     android:text="@string/turismo" />
 
@@ -212,7 +212,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_education01"
+                    android:drawableStart="@mipmap/icon_education01"
                     android:layout_marginRight="20dp"
                     android:text="@string/educa_o" />
 
@@ -221,7 +221,7 @@
                     android:id="@+id/rTransporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/icon_transport01"
+                    android:drawableStart="@mipmap/icon_transport01"
                     android:layout_marginRight="20dp"
                     android:text="@string/transporte" />
 
@@ -231,7 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_nature01"
+                    android:drawableStart="@mipmap/icon_nature01"
                     android:layout_marginRight="20dp"
                     android:text="@string/meio_ambiente" />
 
@@ -241,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/ic_infraestrutura"
+                    android:drawableStart="@mipmap/ic_infraestrutura"
                     android:text="@string/infraestrutura"
                     android:layout_marginRight="20dp"
 
@@ -252,7 +252,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_politics01"
+                    android:drawableStart="@mipmap/icon_politics01"
                     android:text="@string/politica"
                     android:layout_marginRight="20dp"
 
@@ -263,7 +263,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_sport01"
+                    android:drawableStart="@mipmap/icon_sport01"
                     android:text="@string/esporte"
                     android:layout_marginRight="20dp"
 
@@ -274,7 +274,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/icon_imoveis"
+                    android:drawableStart="@mipmap/icon_imoveis"
                     android:text="@string/im_veis"
                     android:layout_marginRight="20dp"
 
@@ -285,7 +285,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/ic_shop"
+                    android:drawableStart="@mipmap/ic_shop"
                     android:text="@string/shop"
                     android:layout_marginRight="20dp"
 
@@ -296,8 +296,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:drawableRight="@mipmap/ic_alimentacao"
+                    android:drawableStart="@mipmap/ic_alimentacao"
                     android:text="@string/alimenta_o"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <RadioButton
+                    android:textAllCaps="true"
+                    android:id="@+id/rMangueVivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:drawableStart="@mipmap/icon_nature01"
+                    android:text="MANGUE_VIVO"
                     android:layout_marginRight="20dp"
 
                     />
@@ -307,7 +318,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:checked="false"
-                    android:drawableRight="@mipmap/ic_ipa"
+                    android:drawableStart="@mipmap/ic_ipa"
                     android:text="@string/beer"
                     android:textAllCaps="true"
                     />

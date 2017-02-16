@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentLeft="true"
-    android:background="@drawable/modal_shape_list"
-    android:layout_alignParentStart="true"
-    android:layout_margin="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginTop="5dp"
+    android:layout_margin="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/tw__composer_white"
     android:layout_centerHorizontal="true">
 
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/imageView6"
         android:layout_width="220dp"
         android:layout_height="60dp"
@@ -19,13 +18,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_row="0"
         android:background="@drawable/login_cw"
-        android:contentDescription="Citywatch.com.br" />
+        android:contentDescription="Citywatch.com.br" /> -->
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
+        android:textColor="@color/cardview_shadow_end_color"
         android:layout_gravity="center_horizontal"
         android:layout_row="1"
         android:text="@string/pesquisar"
@@ -50,7 +50,7 @@
                 android:id="@+id/rSegurança"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-               
+                android:theme="@style/MyCheckBox"
                 android:checked="false"
                 android:drawableLeft="@mipmap/icon_security01"
                 android:text="@string/seguran_a"
@@ -61,7 +61,7 @@
                 android:id="@+id/rSaude"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-               
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_health01"
                 android:text="@string/sa_de"
                 android:textAllCaps="true"
@@ -74,6 +74,7 @@
                 android:layout_margin="5dp"
                 android:drawableLeft="@mipmap/ic_cultura"
                 android:text="@string/cultura"
+                android:theme="@style/MyCheckBox"
                 android:textAllCaps="true" />
 
             <CheckBox
@@ -83,6 +84,7 @@
                 android:layout_margin="5dp"
                 android:drawableLeft="@mipmap/ic_turismo"
                 android:text="@string/turismo"
+                android:theme="@style/MyCheckBox"
                 android:textAllCaps="true" />
 
             <CheckBox
@@ -91,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_education01"
                 android:text="@string/educa_o"
                 android:textAllCaps="true" />
@@ -100,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_transport01"
                 android:text="@string/transporte"
                 android:textAllCaps="true" />
@@ -110,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_nature01"
                 android:text="@string/meio_ambiente"
                 android:textAllCaps="true" />
@@ -120,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/ic_infraestrutura"
                 android:text="@string/infraestrutura"
                 android:textAllCaps="true"
@@ -132,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_politics01"
                 android:text="@string/politica"
                 android:textAllCaps="true"
@@ -144,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_sport01"
                 android:text="@string/esporte"
                 android:textAllCaps="true"
@@ -156,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/icon_imoveis"
                 android:text="@string/im_veis"
                 android:textAllCaps="true"
@@ -168,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/ic_shop"
                 android:text="@string/shop"
                 android:textAllCaps="true"
@@ -180,6 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/ic_alimentacao"
                 android:text="@string/alimenta_o"
                 android:textAllCaps="true"
@@ -192,6 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checked="false"
+                android:theme="@style/MyCheckBox"
                 android:drawableLeft="@mipmap/ic_ipa"
                 android:text="@string/beer"
                 android:textAllCaps="true"
@@ -208,6 +220,7 @@
         android:layout_marginTop="26dp"
         android:layout_row="3"
         android:max="10"
+        android:background="@color/verde"
         android:layout_gravity="center_horizontal"
         android:foregroundGravity="center" />
 
@@ -217,9 +230,9 @@
         android:layout_height="50dp"
         android:layout_column="0"
         android:layout_row="4"
+        android:textColor="@color/cardview_shadow_end_color"
         android:layout_gravity="center_horizontal"
         android:text="@string/selecione_as_dist_ncias_para_filtrar"
-        android:textAppearance="?android:attr/actionBarDivider"
         android:foregroundGravity="center" />
 
     <EditText
@@ -229,6 +242,7 @@
         android:layout_column="0"
         android:layout_gravity="center_horizontal"
         android:layout_row="5"
+        android:visibility="gone"
         android:ems="10"
         android:text="keyword" />
 
@@ -246,7 +260,4 @@
         android:text="@string/pesquisar"
         android:topLeftRadius="8dp"
         android:topRightRadius="8dp" />
-
-
-
 </GridLayout>

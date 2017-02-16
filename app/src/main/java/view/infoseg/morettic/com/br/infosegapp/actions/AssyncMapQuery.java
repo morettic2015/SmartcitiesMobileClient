@@ -29,6 +29,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.FORECAST;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
 /**
@@ -109,7 +110,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
                 int distance = this.filter.getInt("distance");
 
-                String url = HttpUtil.getOcorrenciasPath(ValueObject.ID_PROFILE,
+                String url = HttpUtil.getOcorrenciasPath(MY_PREFERENCES.getString("id", ""),
                         this.filter.getString("lat"),
                         this.filter.getString("lon"),
                         (this.filter.getBoolean("mine") ? "0" : null),
@@ -126,7 +127,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                  * */
                 this.jProfiles = js.getJSONArray("profiles");
 
-                if(js.has("iList")){
+                if (js.has("iList")) {
                     jOcorrencias = js.getJSONArray("iList");
                     LatLng latLng;
                     MarkerOptions marker;
@@ -139,8 +140,8 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         marker.title(ocorrencia.getString("nmCategory") + " " + new Date().toString());
                         Long id = ocorrencia.getLong("idProperty");
                         marker.snippet(id.toString());
-                        ocorrencia.put("id",id);
-                        ocorrencia.put("type",TipoOcorrencia.IMOVEIS_GIMO);
+                        ocorrencia.put("id", id);
+                        ocorrencia.put("type", TipoOcorrencia.IMOVEIS_GIMO);
                         marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.icon_imoveis));
                         //Adiciona objeto no mapa de ocorrencias
                         ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
@@ -149,7 +150,32 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         ocorrencia = null;
                     }
                 }
-                if(js.has("openStreet")){
+                if (js.has("airbnb")) {
+                    jOcorrencias = js.getJSONArray("airbnb");
+                    LatLng latLng;
+                    MarkerOptions marker;
+                    for (int i = 0; i < jOcorrencias.length(); i++) {
+                        JSONObject ocorrencia = jOcorrencias.getJSONObject(i);
+
+                        latLng = new LatLng(ocorrencia.getDouble("lat"), ocorrencia.getDouble("lon"));
+                        // create marker
+                        marker = new MarkerOptions().position(latLng);
+                        marker.title(ocorrencia.getString("tit"));
+                        Long id = ocorrencia.getLong("id");
+                        marker.snippet(id.toString());
+                        ocorrencia.put("id", id);
+                        ocorrencia.put("author", ocorrencia.getString("host_avatar"));
+                        ocorrencia.put("mPicA", ocorrencia.getString("token"));
+                        ocorrencia.put("type", TipoOcorrencia.AIRBNB);
+                        marker.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_airbnb));
+                        //Adiciona objeto no mapa de ocorrencias
+                        ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
+                        this.lMarkers.add(marker);
+                        latLng = null;
+                        ocorrencia = null;
+                    }
+                }
+                if (js.has("openStreet")) {
                     jOcorrencias = js.getJSONArray("openStreet");
                     LatLng latLng;
                     MarkerOptions marker;
@@ -162,8 +188,8 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         marker.title(ocorrencia.getString("tit"));
                         Long id = ocorrencia.getLong("id");
                         marker.snippet(id.toString());
-                        ocorrencia.put("id",id);
-                        ocorrencia.put("type",TipoOcorrencia.OPENSTREEMAP);
+                        ocorrencia.put("id", id);
+                        ocorrencia.put("type", TipoOcorrencia.OPENSTREEMAP);
                         TipoOcorrencia tp = TipoOcorrencia.valueOf(ocorrencia.getString("tipo"));
                         int icon = tp.getIcon();
                         marker.icon(BitmapDescriptorFactory.fromResource(icon));
@@ -176,8 +202,8 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                         int randomNum = rand.nextInt((5 - 1) + 1) + 1;
                         randomNum--;
                         JSONObject profRandom = this.jProfiles.getJSONObject(randomNum);
-                        ocorrencia.put("author",profRandom.getString("name"));
-                        ocorrencia.put("mPicA",profRandom.getString("avatar"));
+                        ocorrencia.put("author", profRandom.getString("name"));
+                        ocorrencia.put("mPicA", profRandom.getString("avatar"));
                         //Adiciona objeto no mapa de ocorrencias
                         ValueObject.MAPA_OCORRENCIAS.put(id, ocorrencia);
                         this.lMarkers.add(marker);

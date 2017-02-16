@@ -56,7 +56,6 @@ import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
@@ -88,7 +87,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     private Toolbar toolbar;
     private FloatingActionButton fab;
     //private Uri imageUri;
-    private static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
+    public static int MY_REQUEST_CODE, MY_REQUEST_CODE1, MY_REQUEST_CODE2, MY_REQUEST_CODE3, MY_REQUEST_CODE4;
     //private Firebase mFirebaseRef;
 
     static void setTitleToolbar(String title, View v) {
@@ -243,10 +242,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE3);
         }
         //Checa a permissao da puta que te pariu
-        if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
+      /*  if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
             String[] p = {GET_ACCOUNTS};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
-        }
+        }*/
         //Inicializa client facebook
 
 

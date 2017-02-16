@@ -11,6 +11,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,6 +37,8 @@ public class LocationManagerUtil {
     private static Location myLocal;
     private static boolean hasListener = false;
     private static String mProvider;
+    private static InnerLocationManager innerLocation;
+
 
 
     /**
@@ -44,6 +50,10 @@ public class LocationManagerUtil {
      * <p/>
      * HUAUHAUAUHAU NO ARCO IRIS DA MANHA UM SILENCIO INVADE O PANTANO E FAZ OS CARNEIROS FLUTUAREM NAS MARGES DO NILO
      */
+
+    public static void setGMap(GoogleMap mapa){
+        innerLocation.map = mapa;
+    }
 
     public static Location isLocationValid(final Activity fa) throws SecurityException {
 
@@ -103,7 +113,8 @@ public class LocationManagerUtil {
             }*/
         }
         if (!hasListener && myLocal != null) {
-            locationManager.requestLocationUpdates(mProvider, 1620000, 5000, new InnerLocationManager());
+            innerLocation = new InnerLocationManager();
+            locationManager.requestLocationUpdates(mProvider, 900000, 50, innerLocation);
         }
 
     }
@@ -129,7 +140,7 @@ public class LocationManagerUtil {
     }
 
     private static class InnerLocationManager implements LocationListener {
-
+        GoogleMap map;
 
         @Override
         public void onLocationChanged(final Location locFromGps) {
@@ -138,6 +149,15 @@ public class LocationManagerUtil {
             if(dfLat||dfLon) {
                 new AssyncSinalizePush(locFromGps.getLatitude(), locFromGps.getLongitude(), MY_PREFERENCES.getString("DEVICE_TYPE", "")).execute();
                 myLocal = locFromGps;
+            }
+            if(map!=null){
+                LatLng latLng = new LatLng(locFromGps.getLatitude(), locFromGps.getLongitude());
+
+                // Showing the current location in Google Map
+                map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+
+                // Zoom in the Google Map
+                map.animateCamera(CameraUpdateFactory.zoomTo(14));
             }
         }
 
@@ -175,6 +195,7 @@ public class LocationManagerUtil {
                                 .getString(R.string.para_que_voc_consiga_visualizar_e_relatar_ocorr_ncias_necess_rio_ativar_o_seu_gps_ative_o_gps_no_seu_dispositivo_e_tente_novamente));
             }
         }
+
     }
 
 }

@@ -7,6 +7,7 @@ import view.infoseg.morettic.com.br.infosegapp.R;
  */
 public enum TipoOcorrencia {
     MEIO_AMBIENTE(R.mipmap.icon_nature01),
+    MANGUE_VIVO(R.mipmap.icon_nature01),
     SAUDE(R.mipmap.icon_health01),
     EDUCACAO(R.mipmap.icon_education01),
     SEGURANCA(R.mipmap.icon_security01),
@@ -23,6 +24,7 @@ public enum TipoOcorrencia {
     SHOP( R.mipmap.ic_shop),
     OPENSTREEMAP(R.mipmap.icon),
     SERVICOS(R.mipmap.icon),
+    AIRBNB(R.mipmap.ic_airbnb),
     BEER(R.mipmap.ic_ipa),
     SEARCH(R.mipmap.icon);
     private int icon;

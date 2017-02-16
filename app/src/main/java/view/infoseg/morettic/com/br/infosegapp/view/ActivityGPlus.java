@@ -10,11 +10,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
+        import android.content.pm.PackageManager;
+        import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.View;
+        import android.support.v4.app.ActivityCompat;
+        import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -41,7 +43,8 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 
-import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
+        import static android.Manifest.permission.GET_ACCOUNTS;
+        import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getBitmapFromURL;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
@@ -211,7 +214,10 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 Person currentPerson = Plus.PeopleApi
                         .getCurrentPerson(mGoogleApiClient);
                 String personName = currentPerson.getDisplayName();
-
+                if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
+                    String[] p = {GET_ACCOUNTS};
+                    ActivityCompat.requestPermissions(this, p, InfosegMain.MY_REQUEST_CODE4);
+                }
                 String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
 
                 txtName.setText(personName);
@@ -225,6 +231,7 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 Toast.makeText(getApplicationContext(), R.string.person_info_null, Toast.LENGTH_LONG).show();
             }
         } catch (Exception e) {
+            e.printStackTrace();
             FirebaseCrash.log(e.toString());
         }
     }

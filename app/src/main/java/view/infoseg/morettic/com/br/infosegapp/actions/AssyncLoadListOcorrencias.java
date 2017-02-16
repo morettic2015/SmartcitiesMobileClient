@@ -51,10 +51,9 @@ public class AssyncLoadListOcorrencias extends AsyncTask<JSONObject, Void, Strin
             for (int i = 0; i < ja.length(); i++) {
 
                 if (!ImageCache.hasBitmapFromMemCache(ja.getJSONObject(i).getString("token"))) {
-                    Bitmap m = HttpUtil.getBitmapFromURLBlobKey(ja.getJSONObject(i).getString("token"));
+                    Bitmap m = HttpUtil.getBitmapFromURL(ja.getJSONObject(i).getString("token"));
                     if (m != null) {
-                        ImageCache.addBitmapToMemoryCache(
-                                ja.getJSONObject(i).getString("token"),
+                        ImageCache.addBitmapToMemoryCache(ja.getJSONObject(i).getString("token"),
                                 HttpUtil.getResizedBitmap(m, 96, 96)
                         );
                     } else {

@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "view.infoseg.morettic.com.br.infosegapp";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 69;
-  public static final String VERSION_NAME = "Capsule_Corp_2.0";
+  public static final int VERSION_CODE = 666;
+  public static final String VERSION_NAME = "CASTLE_BLACK_BETA";
 }

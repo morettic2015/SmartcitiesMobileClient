@@ -7,7 +7,7 @@
                 android:color="#f1f1f1" />
             <stroke
                 android:width="1dp"
-                android:color="#cecece" />
+                android:color="#3da849" />
             <corners
                 android:radius="1dp" />
 
@@ -16,11 +16,11 @@
     <item >
         <shape>
             <gradient
-                android:startColor="#f1f1f1"
-                android:endColor="#cecece"
+                android:startColor="#3da849"
+                android:endColor="#3da849"
                 android:angle="270" />
             <stroke
-                android:width="1dp"
+                android:width="0dp"
                 android:color="#ffffff" />
             <corners
                 android:radius="1dp" />

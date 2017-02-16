@@ -49,13 +49,13 @@ public final class R {
 		public static final int com_facebook_button_login_silver_background_color_pressed = 0x7f0f0022;
 		public static final int com_facebook_button_send_background_color = 0x7f0f0023;
 		public static final int com_facebook_button_send_background_color_pressed = 0x7f0f0024;
-		public static final int com_facebook_button_text_color = 0x7f0f00a8;
+		public static final int com_facebook_button_text_color = 0x7f0f00a9;
 		public static final int com_facebook_device_auth_text = 0x7f0f0025;
 		public static final int com_facebook_likeboxcountview_border_color = 0x7f0f0026;
 		public static final int com_facebook_likeboxcountview_text_color = 0x7f0f0027;
 		public static final int com_facebook_likeview_text_color = 0x7f0f0028;
 		public static final int com_facebook_messenger_blue = 0x7f0f0029;
-		public static final int com_facebook_send_button_text_color = 0x7f0f00a9;
+		public static final int com_facebook_send_button_text_color = 0x7f0f00aa;
 		public static final int com_facebook_share_button_text_color = 0x7f0f002a;
 	}
 	public static final class dimen {
@@ -206,14 +206,14 @@ public final class R {
 		public static final int MessengerButton_White = 0x7f0d00ce;
 		public static final int MessengerButton_White_Large = 0x7f0d00cf;
 		public static final int MessengerButton_White_Small = 0x7f0d00d0;
-		public static final int com_facebook_auth_dialog = 0x7f0d0182;
-		public static final int com_facebook_button = 0x7f0d0183;
-		public static final int com_facebook_button_like = 0x7f0d0184;
-		public static final int com_facebook_button_send = 0x7f0d0185;
-		public static final int com_facebook_button_share = 0x7f0d0186;
-		public static final int com_facebook_loginview_default_style = 0x7f0d0187;
-		public static final int com_facebook_loginview_silver_style = 0x7f0d0188;
-		public static final int tooltip_bubble_text = 0x7f0d0191;
+		public static final int com_facebook_auth_dialog = 0x7f0d0183;
+		public static final int com_facebook_button = 0x7f0d0184;
+		public static final int com_facebook_button_like = 0x7f0d0185;
+		public static final int com_facebook_button_send = 0x7f0d0186;
+		public static final int com_facebook_button_share = 0x7f0d0187;
+		public static final int com_facebook_loginview_default_style = 0x7f0d0188;
+		public static final int com_facebook_loginview_silver_style = 0x7f0d0189;
+		public static final int tooltip_bubble_text = 0x7f0d0192;
 	}
 	public static final class styleable {
 		public static final int[] CardView = { 0x0101013f, 0x01010140, 0x7f0100a8, 0x7f0100a9, 0x7f0100aa, 0x7f0100ab, 0x7f0100ac, 0x7f0100ad, 0x7f0100ae, 0x7f0100af, 0x7f0100b0, 0x7f0100b1, 0x7f0100b2 };

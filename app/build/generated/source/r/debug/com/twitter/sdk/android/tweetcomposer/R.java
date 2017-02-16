@@ -135,24 +135,24 @@ public final class R {
 	public static final class style {
 		public static final int ComposerDark = 0x7f0d0018;
 		public static final int ComposerLight = 0x7f0d0019;
-		public static final int tw__Button = 0x7f0d0196;
-		public static final int tw__ButtonBar = 0x7f0d0198;
-		public static final int tw__Button_Light = 0x7f0d0197;
-		public static final int tw__CardAppInfoLayout = 0x7f0d0199;
-		public static final int tw__CardAppName = 0x7f0d019a;
-		public static final int tw__CardAppStoreName = 0x7f0d019b;
-		public static final int tw__CardInstallButton = 0x7f0d019c;
-		public static final int tw__ComposerAvatar = 0x7f0d019f;
-		public static final int tw__ComposerCharCount = 0x7f0d01a0;
-		public static final int tw__ComposerCharCountOverflow = 0x7f0d01a1;
-		public static final int tw__ComposerClose = 0x7f0d01a2;
-		public static final int tw__ComposerDivider = 0x7f0d01a3;
-		public static final int tw__ComposerToolbar = 0x7f0d01a4;
-		public static final int tw__ComposerTweetButton = 0x7f0d01a5;
-		public static final int tw__EditTweet = 0x7f0d01a6;
-		public static final int tw__Permission_Container = 0x7f0d01a7;
-		public static final int tw__Permission_Description = 0x7f0d01a8;
-		public static final int tw__Permission_Title = 0x7f0d01a9;
+		public static final int tw__Button = 0x7f0d0197;
+		public static final int tw__ButtonBar = 0x7f0d0199;
+		public static final int tw__Button_Light = 0x7f0d0198;
+		public static final int tw__CardAppInfoLayout = 0x7f0d019a;
+		public static final int tw__CardAppName = 0x7f0d019b;
+		public static final int tw__CardAppStoreName = 0x7f0d019c;
+		public static final int tw__CardInstallButton = 0x7f0d019d;
+		public static final int tw__ComposerAvatar = 0x7f0d01a0;
+		public static final int tw__ComposerCharCount = 0x7f0d01a1;
+		public static final int tw__ComposerCharCountOverflow = 0x7f0d01a2;
+		public static final int tw__ComposerClose = 0x7f0d01a3;
+		public static final int tw__ComposerDivider = 0x7f0d01a4;
+		public static final int tw__ComposerToolbar = 0x7f0d01a5;
+		public static final int tw__ComposerTweetButton = 0x7f0d01a6;
+		public static final int tw__EditTweet = 0x7f0d01a7;
+		public static final int tw__Permission_Container = 0x7f0d01a8;
+		public static final int tw__Permission_Description = 0x7f0d01a9;
+		public static final int tw__Permission_Title = 0x7f0d01aa;
 	}
 	public static final class styleable {
 		public static final int[] tw__AspectRatioImageView = { 0x7f01018f, 0x7f010190 };

@@ -42,7 +42,7 @@
 
         <ImageView
             android:layout_width="200dp"
-            android:layout_height="58dp"
+            android:layout_height="60dp"
             android:id="@+id/imageView4"
             android:background="@drawable/login_cw"
             android:layout_gravity="center_horizontal"
@@ -56,7 +56,7 @@
             android:layout_height="40dp"
             android:text="@string/visualize_as_ocorr_ncias_de_sua_prefer_ncia_no_mapa"
 
-            android:background="@drawable/button_home"
+            android:background="@color/common_action_bar_splitter"
             android:drawableLeft="@mipmap/ic_lupa"
             android:layout_margin="5dp"
             android:layout_gravity="center_horizontal" />
@@ -68,7 +68,7 @@
             android:layout_height="40dp"
 
             android:text="@string/visualize_as_ltimas_ocorr_ncias_em_uma_lista_ordenada_por_data"
-            android:background="@drawable/button_home"
+            android:background="@color/common_action_bar_splitter"
             android:drawableLeft="@mipmap/ic_oquetarolando"
             android:layout_margin="5dp"
             android:layout_gravity="center_horizontal" />
@@ -81,7 +81,7 @@
 
             android:text="@string/compartilhar_experi_ncia"
 
-            android:background="@drawable/button_home"
+            android:background="@color/common_action_bar_splitter"
             android:drawableLeft="@mipmap/ic_megagone"
             android:layout_margin="5dp"
             android:layout_gravity="center_horizontal" />
@@ -96,12 +96,13 @@
             android:id="@+id/textView30"
 
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="40dp"
+            android:layout_weight="0.11" />
 
         <ImageView
             android:id="@+id/bt_morettic"
-            android:layout_width="104dp"
-            android:layout_height="37dp"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
 
             android:background="@drawable/morettic_icon"
             android:layout_gravity="center_horizontal"

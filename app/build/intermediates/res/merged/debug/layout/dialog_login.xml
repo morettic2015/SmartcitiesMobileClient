@@ -3,12 +3,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/button_shape_model"
-    android:orientation="vertical">
+    android:layout_margin="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/tw__composer_white"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -27,7 +28,8 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/login"
 
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="0.11" />
 
     <TextView
         android:id="@+id/textView17"
@@ -36,7 +38,8 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/criar_uma_conta"
 
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_weight="0.12" />
 
     <Button
         android:drawableLeft="@drawable/icon_gplus"
@@ -71,14 +74,6 @@
         android:textColor="@color/cardview_light_background"
         android:text="@string/entrar_com_o_twitter"
         />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="180dp"
-        android:layout_height="58dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/morettic_icon"
-        android:contentDescription="morettic.com.br" />
 
 
 </LinearLayout>
