@@ -147,7 +147,7 @@ public class FacebookUtil {
                                         editor.putString("avatar", UPLOAD_AVATAR).commit();
 
                                         AUTENTICADO = true;
-                                        ImageCache.addBitmapToMemoryCache("avatar",HttpUtil.getResizedBitmap(btm, 200, 200));
+                                        ImageCache.addBitmapToMemoryCache("avatar",btm);
 
                                         conn1 = null;
                                         realPathInSO = null;

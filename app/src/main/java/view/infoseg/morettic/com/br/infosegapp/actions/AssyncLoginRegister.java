@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.view.View;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
@@ -15,6 +17,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -123,7 +126,13 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                     if (!ImageCache.hasBitmapFromMemCache("avatar")) {/*
                         ValueObject.AVATAR_BITMAP = ImageCache.getBitmapFromMemCache("avatar");
                     }else {*/
-                        ValueObject.AVATAR_BITMAP = HttpUtil.getResizedBitmap(HttpUtil.getBitmapFromURLBlobKey(js.getString("avatar")), 200, 200);
+
+
+                        ValueObject.AVATAR_BITMAP = Picasso.with(MAIN.getApplicationContext()).
+                                load(HttpUtil.IMAGE_PATH+js.getString("avatar")).
+                                error(R.drawable.logo).
+                                resize(200,200).get();
+
                         ImageCache.addBitmapToMemoryCache("avatar", ValueObject.AVATAR_BITMAP);
                     }
                 } catch (Exception ex) {

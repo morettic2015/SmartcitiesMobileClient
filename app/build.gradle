@@ -28,7 +28,7 @@ android {
         applicationId "view.infoseg.morettic.com.br.infosegapp"
         minSdkVersion 18
         targetSdkVersion 23
-        versionCode 1940
+        versionCode 1942
         versionName "CASTLE_BLACK_BETA"
         multiDexEnabled true
     }
@@ -64,6 +64,7 @@ dependencies {
     compile 'com.google.maps.android:android-maps-utils:0.4+'
     compile 'com.google.firebase:firebase-core:9.0.0'
     compile 'com.google.firebase:firebase-auth:9.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     //compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile('com.twitter.sdk.android:twitter:1.13.1@aar') {
         transitive = true;

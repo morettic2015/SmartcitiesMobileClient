@@ -3,31 +3,55 @@
     abi="armeabi-v7a,armeabi"
     api-level="23"
     density="xhdpi"
-    format="7"
-    timestamp="454832637604882"
-    token="-1578772812129959442" >
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="388791962131650"
+    token="-1578772812129959442"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="9651" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2467" />
+        duration="0" />
     <task
         name="verifier"
-        duration="536" />
+        duration="0" />
 
-    <artifact
-        location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="454832637604882" >
+    <build
+        timestamp="387055437385869"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
+    <build
+        timestamp="387587980285998"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="387695015125700"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="388600503609828"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="388791962131650"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

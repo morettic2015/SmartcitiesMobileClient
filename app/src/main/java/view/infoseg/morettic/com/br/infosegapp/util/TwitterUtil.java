@@ -28,19 +28,19 @@ import io.fabric.sdk.android.Fabric;
 import view.infoseg.morettic.com.br.infosegapp.R;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
-import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getBitmapFromURL;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_URL;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
@@ -162,7 +162,7 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
         Bitmap btm = null;
         JSONObject js = null;
         try {
-            btm = getBitmapFromURL(user.profileImageUrl);
+            btm = HttpUtil.getResizedBitmap(user.profileImageUrl,200,200);
 
             js = getJSONFromUrl(UPLOAD_URL);
 
@@ -201,7 +201,7 @@ class AssyncSaveTwitterProfile extends AsyncTask<JSONObject, Void, String> {
 
 
             AUTENTICADO = true;
-            ImageCache.addBitmapToMemoryCache("avatar",HttpUtil.getResizedBitmap(btm, 200, 200));
+            ImageCache.addBitmapToMemoryCache("avatar",btm);
 
             tempUri = null;
             realPathInSO = null;

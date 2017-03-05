@@ -56,6 +56,7 @@ import view.infoseg.morettic.com.br.infosegapp.util.TwitterUtil;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.BITMAP_DEFAULT;
@@ -131,7 +132,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
                 //Promote TAPPAX NETWORK!
                 Date d = new Date();
 
-                if ((d.getMinutes() % 5) == 0) {//If minutes mod 2 == 0 show ads
+                if ((d.getMinutes() % 4) == 0) {//If minutes mod 2 == 0 show ads
                     loadFragment(new ActivityAds(), getString(R.string.help_us));
                     COUNTER_CLICK++;
                 }
@@ -230,7 +231,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             String[] p = {ACCESS_FINE_LOCATION};
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE);
         }
-
+        if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
+            String[] p = {GET_ACCOUNTS};
+            ActivityCompat.requestPermissions(this, p, InfosegMain.MY_REQUEST_CODE4);
+        }
         //Checa permissão da camera
         if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, CAMERA)) {
             String[] p = {CAMERA};

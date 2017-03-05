@@ -68,7 +68,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
             //Previsão do tempo
             txtInfoForecast.setText(sb.toString());
             //Adiciona o mapa de calor da saude
-            addHeatMap();
+            //addHeatMap();
         } catch (Exception ex) {
             logException(ex);
         } finally {
@@ -125,7 +125,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                 /**
                  * Fake profile for big data
                  * */
-                this.jProfiles = js.getJSONArray("profiles");
+
 
                 if (js.has("iList")) {
                     jOcorrencias = js.getJSONArray("iList");
@@ -176,6 +176,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
                     }
                 }
                 if (js.has("openStreet")) {
+                    this.jProfiles = js.getJSONArray("profiles");
                     jOcorrencias = js.getJSONArray("openStreet");
                     LatLng latLng;
                     MarkerOptions marker;
@@ -269,6 +270,7 @@ public class AssyncMapQuery extends AsyncTask<JSONObject, Void, List<MarkerOptio
 
 
     private void addHeatMap() {
+
         int[] colors = {
                 Color.rgb(102, 225, 0), // green
                 Color.rgb(255, 0, 0)    // red

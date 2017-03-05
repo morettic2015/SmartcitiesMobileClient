@@ -1,7 +1,6 @@
 package view.infoseg.morettic.com.br.infosegapp.view;
 
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,24 +18,18 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.firebase.crash.FirebaseCrash;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncAirbnbImages;
-import view.infoseg.morettic.com.br.infosegapp.actions.AssyncImageLoad;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapSearch;
-import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
-import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_AUTHOR;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.IMG_OCORRENCIA;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.KEYWORD;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAPA_OCORRENCIAS;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
@@ -68,6 +61,7 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     private double longitude = 0, latitude = 0;
     private TextView txtInfoForecast;
     private View v;
+    public static ImageView imgVOcorrencia, imgVAvatar;
 
 
     @Override
@@ -162,72 +156,29 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
 
                 @Override
                 public View getInfoWindow(Marker arg0) {
-                    String idOcorrencia = arg0.getSnippet();
-                    JSONObject js = null;
-                    if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
-
-                        js = MAPA_OCORRENCIAS.get(new Long(idOcorrencia));
-
-                        try {
-                            if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.IMOVEIS_GIMO.toString())) {
-                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("nmPicture"), js.getString("nmPicture").replace("HTTP", "https"));
-                                ew.execute();
-
-                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("dsCompanyLogo"), js.getString("dsCompanyLogo").replace("HTTP", "https"));
-                                ew1.execute();
-                            } else if (js.has("type") && (js.getString("type").equalsIgnoreCase(TipoOcorrencia.SEARCH.toString()))) {
-                                if (!js.has("token")) {
-                                    if (ImageCache.hasBitmapFromMemCache("default")) {
-                                        IMG_OCORRENCIA = ImageCache.getBitmapFromMemCache("default");
-                                    } else {
-                                        IMG_OCORRENCIA = ((BitmapDrawable) MAIN.getResources()
-                                                .getDrawable(TipoOcorrencia.SEARCH.getIcon())).getBitmap();
-                                        IMG_OCORRENCIA = HttpUtil.getResizedBitmap(IMG_OCORRENCIA, 60, 200);
-                                        ImageCache.addBitmapToMemoryCache("default", IMG_OCORRENCIA);
-                                    }
-
-                                } else {
-                                    AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), js.getString("token"));
-                                    ew.execute();
-                                }
-
-                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("mPicA"), js.getString("mPicA"));
-                                ew1.execute();
-                            } else if (js.getString("type").equalsIgnoreCase(TipoOcorrencia.AIRBNB.toString())) {
-                                AssyncAirbnbImages assyncAirbnbImages = new AssyncAirbnbImages(js.getString("token"),js.getString("host_avatar"));
-                                assyncAirbnbImages.execute();
-
-                            } else if (js.has("type") && (js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString()))) {
-                               /* */
-                                if (js.getString("token").equals("default")) {
-                                    if (ImageCache.hasBitmapFromMemCache("default")) {
-                                        IMG_OCORRENCIA = ImageCache.getBitmapFromMemCache("default");
-                                    } else {
-                                        IMG_OCORRENCIA = ((BitmapDrawable) MAIN.getResources()
-                                                .getDrawable(R.drawable.logo)).getBitmap();
-                                        IMG_OCORRENCIA = HttpUtil.getResizedBitmap(IMG_OCORRENCIA, 60, 200);
-                                        ImageCache.addBitmapToMemoryCache("default", IMG_OCORRENCIA);
-                                    }
-
-                                } else {
-                                    AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), js.getString("token"));
-                                    ew.execute();
-                                }
-
-                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("mPicA"), js.getString("mPicA"));
-                                ew1.execute();
-                            } else {
-                                AssyncImageLoad ew = new AssyncImageLoad("0", js.getString("token"), null);
-                                ew.execute();
-
-                                AssyncImageLoad ew1 = new AssyncImageLoad("1", js.getString("avatar"), null);
-                                ew1.execute();
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                   /* try {
+                        imgVOcorrencia = (ImageView) this.getInfoContents(arg0).findViewById(R.id.imageViewOcorrencia);
+                        imgVAvatar = (ImageView) this.getInfoContents(arg0).findViewById(R.id.imageViewAvatarMap);
+                        JSONObject js = MAPA_OCORRENCIAS.get(new Long(arg0.getSnippet()));
+                        if (js.getString("type").equalsIgnoreCase(TipoOcorrencia.IMOVEIS_GIMO.toString())) {
+                            String url = js.getString("nmPicture").replace("HTTP://www.", "https://");
+                            Picasso.with(v.getContext()).load(url).error(R.drawable.logo).into(imgVOcorrencia);
+                            url = js.getString("dsCompanyLogo").replace("HTTP://www.", "https://");
+                            Picasso.with(v.getContext()).load(url).error(R.drawable.logo).into(imgVAvatar);
+                        } else if (js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
+                            Picasso.with(v.getContext()).load(js.getString("token")).error(R.drawable.logo).into(imgVOcorrencia);
+                            Picasso.with(v.getContext()).load(js.getString("mPicA")).error(R.drawable.logo).into(imgVAvatar);
+                        } else if (js.getString("type").equalsIgnoreCase(TipoOcorrencia.AIRBNB.toString())) {
+                            Picasso.with(v.getContext()).load(js.getString("token")).error(R.drawable.logo).into(imgVOcorrencia);
+                            Picasso.with(v.getContext()).load(js.getString("host_avatar")).error(R.drawable.logo).into(imgVAvatar);
+                        } else {
+                            Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("token")).error(R.drawable.logo).into(imgVOcorrencia);
+                            Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("avatar")).error(R.drawable.logo).into(imgVAvatar);
                         }
-                    }
-                    return null;
+                    } catch (Exception e) {
+e.printStackTrace();
+                    }*/
+                    return this.getInfoContents(arg0);
                 }
 
                 @Override
@@ -241,10 +192,9 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                     TextView txtDesc = (TextView) v.findViewById(R.id.txtDescricaoMapOcorrencia);
                     TextView txtDt = (TextView) v.findViewById(R.id.txtDataMapOcorrencia);
                     TextView txtTp = (TextView) v.findViewById(R.id.txtTipoMapOcorrencia);
-                    ImageView imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
-                    ImageView imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
-                    imgVOcorrencia.setImageBitmap(IMG_OCORRENCIA);
-                    imgVAvatar.setImageBitmap(IMG_AUTHOR);
+                    imgVOcorrencia = (ImageView) v.findViewById(R.id.imageViewOcorrencia);
+                    imgVAvatar = (ImageView) v.findViewById(R.id.imageViewAvatarMap);
+
 
                     if (idOcorrencia != null && MAPA_OCORRENCIAS.containsKey(new Long(idOcorrencia))) {
                         try {
@@ -262,6 +212,19 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtDesc.setText(js.getString("dsAddress") + " R$:" + vl);
 
                                 txtTp.setText(TipoOcorrencia.IMOVEIS_GIMO.toString());
+
+                                String url = js.getString("nmPicture").replace("HTTP://www.", "https://");
+                                Picasso.with(v.getContext()).load(url).
+                                        error(R.drawable.logo).
+                                        into(imgVOcorrencia);
+
+
+                                url = js.getString("dsCompanyLogo").replace("HTTP://www.", "https://");
+                                Picasso.with(v.getContext()).load(url).
+                                        error(R.drawable.logo).
+                                        into(imgVAvatar);
+
+
                             } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.OPENSTREEMAP.toString())) {
                                 txtTit.setText(js.getString("tit"));
 
@@ -276,6 +239,15 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtDesc.setText(js.getString("desc") + ". " + js.getString("address"));
 
                                 txtTp.setText(js.getString("tipo"));
+
+                                Picasso.with(v.getContext()).load(js.getString("token")).
+                                        error(R.drawable.logo).
+                                        into(imgVOcorrencia);
+
+                                Picasso.with(v.getContext()).load(js.getString("mPicA")).
+                                        error(R.drawable.logo).
+                                        into(imgVAvatar);
+
                             } else if (js.has("type") && js.getString("type").equalsIgnoreCase(TipoOcorrencia.AIRBNB.toString())) {
                                 txtTit.setText(js.getString("tit"));
 
@@ -290,36 +262,30 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
                                 txtDesc.setText(js.getString("desc") + ". " + js.getString("address"));
 
                                 txtTp.setText(js.getString("tipo"));
+
+                                Picasso.with(v.getContext()).load(js.getString("token")).
+                                        error(R.drawable.logo).
+                                        into(imgVOcorrencia);
+
+                                Picasso.with(v.getContext()).load(js.getString("host_avatar")).
+                                        error(R.drawable.logo).
+                                        into(imgVAvatar);
+
                             } else {
-
-                                //Button bShare = (Button) v.findViewById(R.id.btCompartilharOcorrencia);
-
-                                /**
-                                 *
-                                 *      @TODO
-                                 *      CRIAR MENSAGEM PADRAO PARA DAR O SHARE! REFACTOR PARA UNIFICAR COM O OUTRO BOTAO DE SHARE PASSANDO APENAS UMA MENSAGEM COMO PARAMETRO DE ENTRADA
-                                 *
-                                 *      CRIAR EVENTO DAS ESTRELAS PONTUANDO A OCORRENCIA E O AUTHOR
-                                 * */
-                                //Mensagem share
-                                stringBuilder = new StringBuilder();
-                                stringBuilder.append("Ocorrencia:");
-                                stringBuilder.append(js.getString("tit"));
-                                stringBuilder.append(" descricao:");
-                                stringBuilder.append(js.getString("desc"));
-                                stringBuilder.append(" date:");
-                                stringBuilder.append(js.getString("date"));
-                                stringBuilder.append(" tipo:");
-                                stringBuilder.append(js.getString("tipo"));
-                                stringBuilder.append(" author:");
-                                stringBuilder.append(js.getString("author"));
-                                stringBuilder.append("http://citywatch.com.br");
 
                                 txtTit.setText(js.getString("tit"));
                                 txtAutor.setText(js.getString("author"));
                                 txtDesc.setText(js.getString("desc"));
                                 txtDt.setText(js.getString("date"));
                                 txtTp.setText(js.getString("tipo"));
+
+                                Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("token")).
+                                        error(R.drawable.logo).
+                                        into(imgVOcorrencia);
+
+                                Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("avatar")).
+                                        error(R.drawable.logo).
+                                        into(imgVAvatar);
 
                             }
                             //((ImageView) v.findViewById(R.id.)).setImageBitmap(ValueObject.MAPA_BITMAPS.get(js.getString("")));
@@ -379,7 +345,25 @@ public class ActivityMap extends Fragment /* implements OnMapReadyCallback */ {
     public void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         // System.out.print(requestCode);
     }
+   /* static class MarkerCallback implements Callback {
+        Marker marker=null;
 
+        MarkerCallback(Marker marker) {
+            this.marker=marker;
+        }
+
+        @Override
+        public void onError() {
+            Log.e(getClass().getSimpleName(), "Error loading thumbnail!");
+        }
+
+        @Override
+        public void onSuccess() {
+            if (marker != null && marker.isInfoWindowShown()) {
+                marker.showInfoWindow();
+            }
+        }
+    }*/
 }
 
 

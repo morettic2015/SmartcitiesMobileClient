@@ -10,13 +10,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.content.SharedPreferences;
-        import android.content.pm.PackageManager;
-        import android.graphics.Bitmap;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-        import android.support.v4.app.ActivityCompat;
-        import android.view.View;
+import android.support.v4.app.ActivityCompat;
+import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,20 +43,20 @@ import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 
-        import static android.Manifest.permission.GET_ACCOUNTS;
-        import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
-import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getBitmapFromURL;
+import static android.Manifest.permission.GET_ACCOUNTS;
+import static view.infoseg.morettic.com.br.infosegapp.util.HttpFileUpload.uploadFile;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getImageUri;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getJSONFromUrl;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getRealPathFromURI;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveImagePath;
 import static view.infoseg.morettic.com.br.infosegapp.util.HttpUtil.getSaveUpdateProfile;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.*;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.AUTENTICADO;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.LOGIN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_AVATAR_TOKEN;
+import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.UPLOAD_URL;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.URL_SUBMIT_UPLOAD;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
@@ -217,15 +217,15 @@ public class ActivityGPlus extends Activity implements OnClickListener,
                 if (PackageManager.PERMISSION_GRANTED != ActivityCompat.checkSelfPermission(this, GET_ACCOUNTS)) {
                     String[] p = {GET_ACCOUNTS};
                     ActivityCompat.requestPermissions(this, p, InfosegMain.MY_REQUEST_CODE4);
+                }else {
+                    String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
+
+                    txtName.setText(personName);
+                    txtEmail.setText(email);
+
+                    AssyncSaveGPLUSProfile assyncSaveGPLUSProfile = new AssyncSaveGPLUSProfile(currentPerson, email, this);
+                    assyncSaveGPLUSProfile.execute();
                 }
-                String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
-
-                txtName.setText(personName);
-                txtEmail.setText(email);
-
-                AssyncSaveGPLUSProfile assyncSaveGPLUSProfile = new AssyncSaveGPLUSProfile(currentPerson,email,this);
-                assyncSaveGPLUSProfile.execute();
-
 
             } else {
                 Toast.makeText(getApplicationContext(), R.string.person_info_null, Toast.LENGTH_LONG).show();
@@ -304,7 +304,7 @@ class AssyncSaveGPLUSProfile extends AsyncTask<JSONObject, Void, String> {
         JSONObject js = null;
         try {
 
-            btm = getBitmapFromURL(user.getImage().getUrl());
+            btm = HttpUtil.getResizedBitmap(user.getImage().getUrl(),200,200);
 
             js = getJSONFromUrl(UPLOAD_URL);
 
@@ -342,7 +342,7 @@ class AssyncSaveGPLUSProfile extends AsyncTask<JSONObject, Void, String> {
 
 
             AUTENTICADO = true;
-            ImageCache.addBitmapToMemoryCache("avatar",HttpUtil.getResizedBitmap(btm, 200, 200));
+            ImageCache.addBitmapToMemoryCache("avatar",btm);
 
 
         } catch (UnsupportedEncodingException ex) {

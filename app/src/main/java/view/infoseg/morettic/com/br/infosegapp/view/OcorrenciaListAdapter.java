@@ -11,12 +11,13 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncRate;
-import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
 import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
@@ -66,7 +67,8 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
 
                 imageView.setImageDrawable(getContext().getResources().getDrawable(icon));
 
-                imageView1.setImageBitmap(ImageCache.getBitmapFromMemCache(ocorrencia.getString("token")));
+                Picasso.with(rowView.getContext()).load(ocorrencia.getString("token")).error(R.drawable.logo).into(imageView1);
+
             }else  if(ocorrencia.getString("mType").equals("twitter")) {
                 title = ocorrencia.getString("text");
                 desc = ocorrencia.getString("user_desc");
@@ -77,11 +79,13 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
                 txtAuthorListView.setText(ocorrencia.getString("twitter_user"));
                 txtDateListView.setText(ocorrencia.getString("created_at"));
                 imageView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.logo));
-                imageView1.setImageBitmap(ImageCache.getBitmapFromMemCache(ocorrencia.getString("avatar_url")));
+
+                Picasso.with(rowView.getContext()).load(ocorrencia.getString("avatar_url")).error(R.drawable.logo).into(imageView1);
+
                 rating.setEnabled(false);
                 rating.setVisibility(View.GONE);
 
-            }else  if(ocorrencia.getString("mType").equals("webhose")) {
+            }/*else  if(ocorrencia.getString("mType").equals("webhose")) {
                 title = ocorrencia.getString("title");
                 desc = ocorrencia.getString("text");
                 idOcorrencia = ocorrencia.getString("id");
@@ -95,7 +99,7 @@ public class OcorrenciaListAdapter extends ArrayAdapter<String> {
                 rating.setEnabled(false);
                 rating.setVisibility(View.GONE);
 
-            }
+            }*/
             share.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

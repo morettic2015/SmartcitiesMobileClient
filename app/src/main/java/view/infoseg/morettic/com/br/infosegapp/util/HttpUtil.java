@@ -4,20 +4,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.provider.MediaStore;
+
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.Normalizer;
@@ -152,28 +150,12 @@ public class HttpUtil {
     }
 
     public static Bitmap getBitmapFromURL(String src) throws IOException {
-        URL url = null;
-        HttpURLConnection connection = null;
-        Bitmap myBitmap = null;
-        InputStream input = null;
-        try {
-            url = new URL(src);
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            input = connection.getInputStream();
+        return Picasso.with(MAIN.getApplicationContext()).load(src).error(R.drawable.logo).get();
 
-            myBitmap = BitmapFactory.decodeStream(input);
-        } catch (IOException ex) {
-            //logException(ex);
-            myBitmap = BitmapFactory.decodeResource(MAIN.getResources(), R.mipmap.ic_city_watch);
-        } finally {
-            url = null;
-            //input.close();
-            //connection.disconnect();
-            return myBitmap;
-        }
     }
+
+
+    public static final String IMAGE_PATH = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=";
     public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
         String urlImage = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
         return getBitmapFromURL(urlImage);
@@ -182,22 +164,8 @@ public class HttpUtil {
     public static final String getPathLoginRegister(String login,String senha){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
     }
-    public static final Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-
-        // create a matrix for the manipulation
-        Matrix matrix = new Matrix();
-
-        // resize the bit map
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // recreate the new Bitmap
-        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
-
-        return resizedBitmap;
+    public static final Bitmap getResizedBitmap(String url, int newHeight, int newWidth) throws IOException {
+        return Picasso.with(MAIN.getApplicationContext()).load(url).resize(newWidth,newHeight).get();
     }
 
     /*public static final String getTokenImagemById(String id){
