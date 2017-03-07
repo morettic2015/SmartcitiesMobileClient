@@ -149,23 +149,34 @@ public class HttpUtil {
         return r;
     }
 
-    public static Bitmap getBitmapFromURL(String src) throws IOException {
-        return Picasso.with(MAIN.getApplicationContext()).load(src).error(R.drawable.logo).get();
 
-    }
 
 
     public static final String IMAGE_PATH = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=";
-    public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
+
+   /* public static Bitmap getBitmapFromURLBlobKey(String src) throws IOException {
         String urlImage = "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id="+encode(src);
         return getBitmapFromURL(urlImage);
-    }
+    }*/
 
     public static final String getPathLoginRegister(String login,String senha){
         return "http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=7&email="+encode(login)+"&pass="+encode(senha);
     }
+
+    /**
+     *
+     * @Picasso image component
+     * */
     public static final Bitmap getResizedBitmap(String url, int newHeight, int newWidth) throws IOException {
         return Picasso.with(MAIN.getApplicationContext()).load(url).resize(newWidth,newHeight).get();
+    }
+
+    public static Bitmap getBitmapFromURL(String src) throws IOException {
+        return Picasso.with(MAIN.getApplicationContext()).
+                load(src).
+                error(R.drawable.logo).
+                get();
+
     }
 
     /*public static final String getTokenImagemById(String id){

@@ -103,7 +103,6 @@ public class LoginFragment extends DialogFragment implements View.OnClickListene
                 break;
 
             case R.id.imageButtonFacebook:
-                // SocialFragment.newInstance().show(getFragmentManager(), "dialog");
                 FacebookUtil.clickFace();
                 break;
             case R.id.imageButtonTwitter:

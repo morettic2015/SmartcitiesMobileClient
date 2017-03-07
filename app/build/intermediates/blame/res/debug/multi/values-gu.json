@@ -12,7 +12,7 @@
                     "endOffset": 232
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 363
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 494
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -70,17 +70,17 @@
                     "startLine": 14,
                     "startColumn": 4,
                     "startOffset": 499,
-                    "endColumn": 176,
-                    "endOffset": 671
+                    "endColumn": 150,
+                    "endOffset": 645
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 55,
-                        "endColumn": 176,
-                        "endOffset": 227
+                        "endColumn": 150,
+                        "endOffset": 201
                     }
                 }
             },
@@ -88,18 +88,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 676,
+                    "startOffset": 650,
                     "endColumn": 110,
-                    "endOffset": 782
+                    "endOffset": 756
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 232,
+                        "startOffset": 206,
                         "endColumn": 110,
-                        "endOffset": 338
+                        "endOffset": 312
                     }
                 }
             },
@@ -107,18 +107,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 787,
+                    "startOffset": 761,
                     "endColumn": 120,
-                    "endOffset": 903
+                    "endOffset": 877
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 343,
+                        "startOffset": 317,
                         "endColumn": 120,
-                        "endOffset": 459
+                        "endOffset": 433
                     }
                 }
             },
@@ -126,18 +126,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 908,
+                    "startOffset": 882,
                     "endColumn": 92,
-                    "endOffset": 996
+                    "endOffset": 970
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 464,
+                        "startOffset": 438,
                         "endColumn": 92,
-                        "endOffset": 552
+                        "endOffset": 526
                     }
                 }
             },
@@ -145,18 +145,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1001,
+                    "startOffset": 975,
                     "endColumn": 70,
-                    "endOffset": 1067
+                    "endOffset": 1041
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 557,
+                        "startOffset": 531,
                         "endColumn": 70,
-                        "endOffset": 623
+                        "endOffset": 597
                     }
                 }
             },
@@ -164,18 +164,18 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1072,
+                    "startOffset": 1046,
                     "endColumn": 71,
-                    "endOffset": 1139
+                    "endOffset": 1113
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 628,
+                        "startOffset": 602,
                         "endColumn": 71,
-                        "endOffset": 695
+                        "endOffset": 669
                     }
                 }
             },
@@ -183,18 +183,18 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1144,
-                    "endColumn": 69,
-                    "endOffset": 1209
+                    "startOffset": 1118,
+                    "endColumn": 67,
+                    "endOffset": 1181
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 700,
-                        "endColumn": 69,
-                        "endOffset": 765
+                        "startOffset": 674,
+                        "endColumn": 67,
+                        "endOffset": 737
                     }
                 }
             },
@@ -202,18 +202,18 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1214,
+                    "startOffset": 1186,
                     "endColumn": 71,
-                    "endOffset": 1281
+                    "endOffset": 1253
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 770,
+                        "startOffset": 742,
                         "endColumn": 71,
-                        "endOffset": 837
+                        "endOffset": 809
                     }
                 }
             },
@@ -221,18 +221,18 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1286,
+                    "startOffset": 1258,
                     "endColumn": 75,
-                    "endOffset": 1357
+                    "endOffset": 1329
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 842,
+                        "startOffset": 814,
                         "endColumn": 75,
-                        "endOffset": 913
+                        "endOffset": 885
                     }
                 }
             },
@@ -240,18 +240,18 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1362,
-                    "endColumn": 92,
-                    "endOffset": 1450
+                    "startOffset": 1334,
+                    "endColumn": 97,
+                    "endOffset": 1427
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 918,
-                        "endColumn": 92,
-                        "endOffset": 1006
+                        "startOffset": 890,
+                        "endColumn": 97,
+                        "endOffset": 983
                     }
                 }
             },
@@ -259,18 +259,18 @@
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1455,
-                    "endColumn": 77,
-                    "endOffset": 1528
+                    "startOffset": 1432,
+                    "endColumn": 92,
+                    "endOffset": 1520
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1011,
-                        "endColumn": 77,
-                        "endOffset": 1084
+                        "startOffset": 988,
+                        "endColumn": 92,
+                        "endOffset": 1076
                     }
                 }
             },
@@ -278,18 +278,18 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1533,
+                    "startOffset": 1525,
                     "endColumn": 77,
-                    "endOffset": 1606
+                    "endOffset": 1598
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1089,
+                        "startOffset": 1081,
                         "endColumn": 77,
-                        "endOffset": 1162
+                        "endOffset": 1154
                     }
                 }
             },
@@ -297,18 +297,18 @@
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1611,
-                    "endColumn": 89,
-                    "endOffset": 1696
+                    "startOffset": 1603,
+                    "endColumn": 77,
+                    "endOffset": 1676
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1167,
-                        "endColumn": 89,
-                        "endOffset": 1252
+                        "startOffset": 1159,
+                        "endColumn": 77,
+                        "endOffset": 1232
                     }
                 }
             },
@@ -316,18 +316,18 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1701,
-                    "endColumn": 107,
-                    "endOffset": 1804
+                    "startOffset": 1681,
+                    "endColumn": 89,
+                    "endOffset": 1766
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1257,
-                        "endColumn": 107,
-                        "endOffset": 1360
+                        "startOffset": 1237,
+                        "endColumn": 89,
+                        "endOffset": 1322
                     }
                 }
             },
@@ -335,18 +335,18 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1809,
-                    "endColumn": 63,
-                    "endOffset": 1868
+                    "startOffset": 1771,
+                    "endColumn": 107,
+                    "endOffset": 1874
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1365,
-                        "endColumn": 63,
-                        "endOffset": 1424
+                        "startOffset": 1327,
+                        "endColumn": 107,
+                        "endOffset": 1430
                     }
                 }
             },
@@ -354,18 +354,18 @@
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1873,
-                    "endColumn": 66,
-                    "endOffset": 1935
+                    "startOffset": 1879,
+                    "endColumn": 63,
+                    "endOffset": 1938
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1429,
-                        "endColumn": 66,
-                        "endOffset": 1491
+                        "startOffset": 1435,
+                        "endColumn": 63,
+                        "endOffset": 1494
                     }
                 }
             },
@@ -373,18 +373,18 @@
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1940,
-                    "endColumn": 146,
-                    "endOffset": 2082
+                    "startOffset": 1943,
+                    "endColumn": 66,
+                    "endOffset": 2005
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1496,
-                        "endColumn": 146,
-                        "endOffset": 1638
+                        "startOffset": 1499,
+                        "endColumn": 66,
+                        "endOffset": 1561
                     }
                 }
             },
@@ -392,12 +392,107 @@
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 2087,
-                    "endColumn": 254,
-                    "endOffset": 2337
+                    "startOffset": 2010,
+                    "endColumn": 166,
+                    "endOffset": 2172
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1566,
+                        "endColumn": 166,
+                        "endOffset": 1728
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2177,
+                    "endColumn": 78,
+                    "endOffset": 2251
+                },
+                "from": {
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1733,
+                        "endColumn": 78,
+                        "endOffset": 1807
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2256,
+                    "endColumn": 81,
+                    "endOffset": 2333
+                },
+                "from": {
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1812,
+                        "endColumn": 81,
+                        "endOffset": 1889
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2338,
+                    "endColumn": 90,
+                    "endOffset": 2424
+                },
+                "from": {
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1894,
+                        "endColumn": 90,
+                        "endOffset": 1980
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2429,
+                    "endColumn": 140,
+                    "endOffset": 2565
+                },
+                "from": {
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1985,
+                        "endColumn": 140,
+                        "endOffset": 2121
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2570,
+                    "endColumn": 254,
+                    "endOffset": 2820
+                },
+                "from": {
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -409,14 +504,14 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2342,
+                    "startOffset": 2825,
                     "endColumn": 127,
-                    "endOffset": 2465
+                    "endOffset": 2948
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -428,14 +523,14 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 2470,
+                    "startOffset": 2953,
                     "endColumn": 197,
-                    "endOffset": 2663
+                    "endOffset": 3146
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -447,14 +542,14 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 2668,
+                    "startOffset": 3151,
                     "endColumn": 126,
-                    "endOffset": 2790
+                    "endOffset": 3273
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -466,14 +561,14 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 2795,
+                    "startOffset": 3278,
                     "endColumn": 124,
-                    "endOffset": 2915
+                    "endOffset": 3398
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -485,14 +580,14 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 2920,
+                    "startOffset": 3403,
                     "endColumn": 200,
-                    "endOffset": 3116
+                    "endOffset": 3599
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -504,14 +599,14 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3121,
+                    "startOffset": 3604,
                     "endColumn": 205,
-                    "endOffset": 3322
+                    "endOffset": 3805
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -523,14 +618,14 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3327,
+                    "startOffset": 3810,
                     "endColumn": 123,
-                    "endOffset": 3446
+                    "endOffset": 3929
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -542,14 +637,14 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3451,
+                    "startOffset": 3934,
                     "endColumn": 186,
-                    "endOffset": 3633
+                    "endOffset": 4116
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -561,14 +656,14 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 3638,
+                    "startOffset": 4121,
                     "endColumn": 122,
-                    "endOffset": 3756
+                    "endOffset": 4239
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -580,14 +675,14 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3761,
+                    "startOffset": 4244,
                     "endColumn": 164,
-                    "endOffset": 3921
+                    "endOffset": 4404
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -599,14 +694,14 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 3926,
+                    "startOffset": 4409,
                     "endColumn": 117,
-                    "endOffset": 4039
+                    "endOffset": 4522
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -618,14 +713,14 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 4044,
+                    "startOffset": 4527,
                     "endColumn": 128,
-                    "endOffset": 4168
+                    "endOffset": 4651
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -637,14 +732,14 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 4173,
+                    "startOffset": 4656,
                     "endColumn": 186,
-                    "endOffset": 4355
+                    "endOffset": 4838
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -656,14 +751,14 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 4360,
+                    "startOffset": 4843,
                     "endColumn": 148,
-                    "endOffset": 4504
+                    "endOffset": 4987
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -675,14 +770,14 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 4509,
+                    "startOffset": 4992,
                     "endColumn": 171,
-                    "endOffset": 4676
+                    "endOffset": 5159
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -694,14 +789,14 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 4681,
+                    "startOffset": 5164,
                     "endColumn": 130,
-                    "endOffset": 4807
+                    "endOffset": 5290
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -713,14 +808,14 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 4812,
+                    "startOffset": 5295,
                     "endColumn": 182,
-                    "endOffset": 4990
+                    "endOffset": 5473
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -732,14 +827,14 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 4995,
+                    "startOffset": 5478,
                     "endColumn": 126,
-                    "endOffset": 5117
+                    "endOffset": 5600
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -751,14 +846,14 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 5122,
+                    "startOffset": 5605,
                     "endColumn": 252,
-                    "endOffset": 5370
+                    "endOffset": 5853
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\0fb27e77c4eece0439790d9456f3e5e33ed3ca20\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -770,14 +865,14 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 5375,
+                    "startOffset": 5858,
                     "endColumn": 241,
-                    "endOffset": 5612
+                    "endOffset": 6095
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -789,14 +884,14 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 5617,
+                    "startOffset": 6100,
                     "endColumn": 120,
-                    "endOffset": 5733
+                    "endOffset": 6216
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -808,14 +903,14 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 5738,
+                    "startOffset": 6221,
                     "endColumn": 109,
-                    "endOffset": 5843
+                    "endOffset": 6326
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -827,14 +922,14 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 5848,
+                    "startOffset": 6331,
                     "endColumn": 194,
-                    "endOffset": 6038
+                    "endOffset": 6521
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -846,14 +941,14 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 6043,
+                    "startOffset": 6526,
                     "endColumn": 126,
-                    "endOffset": 6165
+                    "endOffset": 6648
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -865,14 +960,14 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 6170,
+                    "startOffset": 6653,
                     "endColumn": 201,
-                    "endOffset": 6367
+                    "endOffset": 6850
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -884,14 +979,14 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 6372,
+                    "startOffset": 6855,
                     "endColumn": 134,
-                    "endOffset": 6502
+                    "endOffset": 6985
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -903,14 +998,14 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 6507,
+                    "startOffset": 6990,
                     "endColumn": 179,
-                    "endOffset": 6682
+                    "endOffset": 7165
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -922,14 +1017,14 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 6687,
+                    "startOffset": 7170,
                     "endColumn": 90,
-                    "endOffset": 6773
+                    "endOffset": 7256
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -941,14 +1036,14 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 6778,
+                    "startOffset": 7261,
                     "endColumn": 95,
-                    "endOffset": 6869
+                    "endOffset": 7352
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -960,14 +1055,14 @@
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 6874,
+                    "startOffset": 7357,
                     "endColumn": 110,
-                    "endOffset": 6980
+                    "endOffset": 7463
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 33,
                         "startColumn": 4,
@@ -979,14 +1074,14 @@
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 6985,
+                    "startOffset": 7468,
                     "endColumn": 53,
-                    "endOffset": 7034
+                    "endOffset": 7517
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -998,14 +1093,14 @@
             },
             {
                 "to": {
-                    "startLine": 63,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 7039,
+                    "startOffset": 7522,
                     "endColumn": 60,
-                    "endOffset": 7095
+                    "endOffset": 7578
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1017,14 +1112,14 @@
             },
             {
                 "to": {
-                    "startLine": 64,
+                    "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 7100,
+                    "startOffset": 7583,
                     "endColumn": 62,
-                    "endOffset": 7158
+                    "endOffset": 7641
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1036,14 +1131,14 @@
             },
             {
                 "to": {
-                    "startLine": 65,
+                    "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 7163,
+                    "startOffset": 7646,
                     "endColumn": 94,
-                    "endOffset": 7253
+                    "endOffset": 7736
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1055,14 +1150,14 @@
             },
             {
                 "to": {
-                    "startLine": 66,
+                    "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 7258,
+                    "startOffset": 7741,
                     "endColumn": 91,
-                    "endOffset": 7345
+                    "endOffset": 7828
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1074,14 +1169,14 @@
             },
             {
                 "to": {
-                    "startLine": 67,
+                    "startLine": 72,
                     "startColumn": 4,
-                    "startOffset": 7350,
+                    "startOffset": 7833,
                     "endColumn": 126,
-                    "endOffset": 7472
+                    "endOffset": 7955
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1093,14 +1188,14 @@
             },
             {
                 "to": {
-                    "startLine": 68,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 7477,
+                    "startOffset": 7960,
                     "endColumn": 106,
-                    "endOffset": 7579
+                    "endOffset": 8062
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1112,14 +1207,14 @@
             },
             {
                 "to": {
-                    "startLine": 69,
+                    "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 7584,
+                    "startOffset": 8067,
                     "endColumn": 52,
-                    "endOffset": 7632
+                    "endOffset": 8115
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1131,14 +1226,14 @@
             },
             {
                 "to": {
-                    "startLine": 70,
+                    "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 7637,
+                    "startOffset": 8120,
                     "endColumn": 62,
-                    "endOffset": 7695
+                    "endOffset": 8178
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1150,14 +1245,14 @@
             },
             {
                 "to": {
-                    "startLine": 71,
+                    "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 7700,
+                    "startOffset": 8183,
                     "endColumn": 68,
-                    "endOffset": 7764
+                    "endOffset": 8247
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -1169,14 +1264,14 @@
             },
             {
                 "to": {
-                    "startLine": 72,
+                    "startLine": 77,
                     "startColumn": 4,
-                    "startOffset": 7769,
+                    "startOffset": 8252,
                     "endColumn": 71,
-                    "endOffset": 7836
+                    "endOffset": 8319
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1188,14 +1283,14 @@
             },
             {
                 "to": {
-                    "startLine": 73,
+                    "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 7841,
+                    "startOffset": 8324,
                     "endColumn": 51,
-                    "endOffset": 7888
+                    "endOffset": 8371
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1207,14 +1302,14 @@
             },
             {
                 "to": {
-                    "startLine": 74,
+                    "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 7893,
+                    "startOffset": 8376,
                     "endColumn": 52,
-                    "endOffset": 7941
+                    "endOffset": 8424
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1226,14 +1321,14 @@
             },
             {
                 "to": {
-                    "startLine": 75,
+                    "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 7946,
+                    "startOffset": 8429,
                     "endColumn": 69,
-                    "endOffset": 8011
+                    "endOffset": 8494
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1245,14 +1340,14 @@
             },
             {
                 "to": {
-                    "startLine": 76,
+                    "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 8016,
+                    "startOffset": 8499,
                     "endColumn": 74,
-                    "endOffset": 8086
+                    "endOffset": 8569
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1264,14 +1359,14 @@
             },
             {
                 "to": {
-                    "startLine": 77,
+                    "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 8091,
+                    "startOffset": 8574,
                     "endColumn": 69,
-                    "endOffset": 8156
+                    "endOffset": 8639
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1283,14 +1378,14 @@
             },
             {
                 "to": {
-                    "startLine": 78,
+                    "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 8161,
+                    "startOffset": 8644,
                     "endColumn": 80,
-                    "endOffset": 8237
+                    "endOffset": 8720
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1302,14 +1397,14 @@
             },
             {
                 "to": {
-                    "startLine": 79,
+                    "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 8242,
+                    "startOffset": 8725,
                     "endColumn": 75,
-                    "endOffset": 8313
+                    "endOffset": 8796
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1321,14 +1416,14 @@
             },
             {
                 "to": {
-                    "startLine": 80,
+                    "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 8318,
+                    "startOffset": 8801,
                     "endColumn": 77,
-                    "endOffset": 8391
+                    "endOffset": 8874
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1340,14 +1435,14 @@
             },
             {
                 "to": {
-                    "startLine": 81,
+                    "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 8396,
+                    "startOffset": 8879,
                     "endColumn": 94,
-                    "endOffset": 8486
+                    "endOffset": 8969
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1359,14 +1454,14 @@
             },
             {
                 "to": {
-                    "startLine": 82,
+                    "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 8491,
+                    "startOffset": 8974,
                     "endColumn": 53,
-                    "endOffset": 8540
+                    "endOffset": 9023
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -1378,14 +1473,14 @@
             },
             {
                 "to": {
-                    "startLine": 83,
+                    "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 8545,
+                    "startOffset": 9028,
                     "endColumn": 47,
-                    "endOffset": 8588
+                    "endOffset": 9071
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -1397,14 +1492,14 @@
             },
             {
                 "to": {
-                    "startLine": 84,
+                    "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 8593,
+                    "startOffset": 9076,
                     "endColumn": 67,
-                    "endOffset": 8656
+                    "endOffset": 9139
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -1416,14 +1511,14 @@
             },
             {
                 "to": {
-                    "startLine": 85,
+                    "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 8661,
+                    "startOffset": 9144,
                     "endColumn": 75,
-                    "endOffset": 8732
+                    "endOffset": 9215
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -1435,14 +1530,14 @@
             },
             {
                 "to": {
-                    "startLine": 86,
+                    "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 8737,
+                    "startOffset": 9220,
                     "endColumn": 91,
-                    "endOffset": 8824
+                    "endOffset": 9307
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -1454,14 +1549,14 @@
             },
             {
                 "to": {
-                    "startLine": 87,
+                    "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 8829,
+                    "startOffset": 9312,
                     "endColumn": 79,
-                    "endOffset": 8904
+                    "endOffset": 9387
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -1473,14 +1568,14 @@
             },
             {
                 "to": {
-                    "startLine": 88,
+                    "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 8909,
+                    "startOffset": 9392,
                     "endColumn": 81,
-                    "endOffset": 8986
+                    "endOffset": 9469
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1492,14 +1587,14 @@
             },
             {
                 "to": {
-                    "startLine": 89,
+                    "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 8991,
+                    "startOffset": 9474,
                     "endColumn": 73,
-                    "endOffset": 9060
+                    "endOffset": 9543
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1511,14 +1606,14 @@
             },
             {
                 "to": {
-                    "startLine": 90,
+                    "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 9065,
+                    "startOffset": 9548,
                     "endColumn": 59,
-                    "endOffset": 9120
+                    "endOffset": 9603
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -1530,14 +1625,14 @@
             },
             {
                 "to": {
-                    "startLine": 91,
+                    "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 9125,
+                    "startOffset": 9608,
                     "endColumn": 58,
-                    "endOffset": 9179
+                    "endOffset": 9662
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -1549,14 +1644,14 @@
             },
             {
                 "to": {
-                    "startLine": 92,
+                    "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 9184,
+                    "startOffset": 9667,
                     "endColumn": 304,
-                    "endOffset": 9484
+                    "endOffset": 9967
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -1568,14 +1663,14 @@
             },
             {
                 "to": {
-                    "startLine": 93,
+                    "startLine": 98,
                     "startColumn": 4,
-                    "startOffset": 9489,
+                    "startOffset": 9972,
                     "endColumn": 336,
-                    "endOffset": 9821
+                    "endOffset": 10304
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 33,
                         "startColumn": 4,
@@ -1587,14 +1682,14 @@
             },
             {
                 "to": {
-                    "startLine": 94,
+                    "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 9826,
+                    "startOffset": 10309,
                     "endColumn": 191,
-                    "endOffset": 10013
+                    "endOffset": 10496
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -1606,14 +1701,14 @@
             },
             {
                 "to": {
-                    "startLine": 95,
+                    "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 10018,
+                    "startOffset": 10501,
                     "endColumn": 308,
-                    "endOffset": 10322
+                    "endOffset": 10805
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,
@@ -1625,14 +1720,14 @@
             },
             {
                 "to": {
-                    "startLine": 96,
+                    "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 10327,
+                    "startOffset": 10810,
                     "endColumn": 236,
-                    "endOffset": 10559
+                    "endOffset": 11042
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -1644,14 +1739,14 @@
             },
             {
                 "to": {
-                    "startLine": 97,
+                    "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 10564,
+                    "startOffset": 11047,
                     "endColumn": 341,
-                    "endOffset": 10901
+                    "endOffset": 11384
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
@@ -1663,14 +1758,14 @@
             },
             {
                 "to": {
-                    "startLine": 98,
+                    "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 10906,
+                    "startOffset": 11389,
                     "endColumn": 58,
-                    "endOffset": 10960
+                    "endOffset": 11443
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -1682,14 +1777,14 @@
             },
             {
                 "to": {
-                    "startLine": 99,
+                    "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 10965,
+                    "startOffset": 11448,
                     "endColumn": 97,
-                    "endOffset": 11058
+                    "endOffset": 11541
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -1701,14 +1796,14 @@
             },
             {
                 "to": {
-                    "startLine": 100,
+                    "startLine": 105,
                     "startColumn": 4,
-                    "startOffset": 11063,
+                    "startOffset": 11546,
                     "endColumn": 91,
-                    "endOffset": 11150
+                    "endOffset": 11633
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
@@ -1720,14 +1815,14 @@
             },
             {
                 "to": {
-                    "startLine": 101,
+                    "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 11155,
+                    "startOffset": 11638,
                     "endColumn": 99,
-                    "endOffset": 11250
+                    "endOffset": 11733
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 41,
                         "startColumn": 4,
@@ -1739,14 +1834,14 @@
             },
             {
                 "to": {
-                    "startLine": 102,
+                    "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 11255,
+                    "startOffset": 11738,
                     "endColumn": 78,
-                    "endOffset": 11329
+                    "endOffset": 11812
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -1758,14 +1853,14 @@
             },
             {
                 "to": {
-                    "startLine": 103,
+                    "startLine": 108,
                     "startColumn": 4,
-                    "startOffset": 11334,
+                    "startOffset": 11817,
                     "endColumn": 103,
-                    "endOffset": 11433
+                    "endOffset": 11916
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 43,
                         "startColumn": 4,
@@ -1777,14 +1872,14 @@
             },
             {
                 "to": {
-                    "startLine": 104,
+                    "startLine": 109,
                     "startColumn": 4,
-                    "startOffset": 11438,
+                    "startOffset": 11921,
                     "endColumn": 360,
-                    "endOffset": 11794
+                    "endOffset": 12277
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 4,
@@ -1796,14 +1891,14 @@
             },
             {
                 "to": {
-                    "startLine": 105,
+                    "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 11799,
+                    "startOffset": 12282,
                     "endColumn": 62,
-                    "endOffset": 11857
+                    "endOffset": 12340
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 45,
                         "startColumn": 4,
@@ -1815,14 +1910,14 @@
             },
             {
                 "to": {
-                    "startLine": 106,
+                    "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 11862,
+                    "startOffset": 12345,
                     "endColumn": 101,
-                    "endOffset": 11959
+                    "endOffset": 12442
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 46,
                         "startColumn": 4,
@@ -1834,33 +1929,33 @@
             },
             {
                 "to": {
-                    "startLine": 107,
+                    "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 11964,
+                    "startOffset": 12447,
                     "endColumn": 60,
-                    "endOffset": 12020
+                    "endOffset": 12503
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 1643,
+                        "startOffset": 2126,
                         "endColumn": 60,
-                        "endOffset": 1699
+                        "endOffset": 2182
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 108,
+                    "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 12025,
+                    "startOffset": 12508,
                     "endColumn": 101,
-                    "endOffset": 12122
+                    "endOffset": 12605
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1d3548881b3d128325e5c82ee84c3c48871e7031\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1872,14 +1967,14 @@
             },
             {
                 "to": {
-                    "startLine": 109,
+                    "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 12127,
+                    "startOffset": 12610,
                     "endColumn": 93,
-                    "endOffset": 12216
+                    "endOffset": 12699
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.0\\res\\values-gu\\values.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1d3548881b3d128325e5c82ee84c3c48871e7031\\output\\res\\values-gu\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1891,14 +1986,14 @@
             },
             {
                 "to": {
-                    "startLine": 110,
+                    "startLine": 115,
                     "startColumn": 4,
-                    "startOffset": 12221,
+                    "startOffset": 12704,
                     "endColumn": 60,
-                    "endOffset": 12277
+                    "endOffset": 12760
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -1910,14 +2005,14 @@
             },
             {
                 "to": {
-                    "startLine": 111,
+                    "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 12282,
+                    "startOffset": 12765,
                     "endColumn": 57,
-                    "endOffset": 12335
+                    "endOffset": 12818
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1929,14 +2024,14 @@
             },
             {
                 "to": {
-                    "startLine": 112,
+                    "startLine": 117,
                     "startColumn": 4,
-                    "startOffset": 12340,
+                    "startOffset": 12823,
                     "endColumn": 60,
-                    "endOffset": 12396
+                    "endOffset": 12879
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1948,14 +2043,14 @@
             },
             {
                 "to": {
-                    "startLine": 113,
+                    "startLine": 118,
                     "startColumn": 4,
-                    "startOffset": 12401,
+                    "startOffset": 12884,
                     "endColumn": 65,
-                    "endOffset": 12462
+                    "endOffset": 12945
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1967,14 +2062,14 @@
             },
             {
                 "to": {
-                    "startLine": 114,
+                    "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 12467,
+                    "startOffset": 12950,
                     "endColumn": 68,
-                    "endOffset": 12531
+                    "endOffset": 13014
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1986,14 +2081,14 @@
             },
             {
                 "to": {
-                    "startLine": 115,
+                    "startLine": 120,
                     "startColumn": 4,
-                    "startOffset": 12536,
+                    "startOffset": 13019,
                     "endColumn": 58,
-                    "endOffset": 12590
+                    "endOffset": 13073
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -2005,14 +2100,14 @@
             },
             {
                 "to": {
-                    "startLine": 116,
+                    "startLine": 121,
                     "startColumn": 4,
-                    "startOffset": 12595,
+                    "startOffset": 13078,
                     "endColumn": 44,
-                    "endOffset": 12635
+                    "endOffset": 13118
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -2024,14 +2119,14 @@
             },
             {
                 "to": {
-                    "startLine": 117,
+                    "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 12640,
+                    "startOffset": 13123,
                     "endColumn": 45,
-                    "endOffset": 12681
+                    "endOffset": 13164
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -2043,14 +2138,14 @@
             },
             {
                 "to": {
-                    "startLine": 118,
+                    "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 12686,
+                    "startOffset": 13169,
                     "endColumn": 51,
-                    "endOffset": 12733
+                    "endOffset": 13216
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -2062,14 +2157,14 @@
             },
             {
                 "to": {
-                    "startLine": 119,
+                    "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 12738,
+                    "startOffset": 13221,
                     "endColumn": 77,
-                    "endOffset": 12811
+                    "endOffset": 13294
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -2081,14 +2176,14 @@
             },
             {
                 "to": {
-                    "startLine": 120,
+                    "startLine": 125,
                     "startColumn": 4,
-                    "startOffset": 12816,
+                    "startOffset": 13299,
                     "endColumn": 112,
-                    "endOffset": 12924
+                    "endOffset": 13407
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -2100,14 +2195,14 @@
             },
             {
                 "to": {
-                    "startLine": 121,
+                    "startLine": 126,
                     "startColumn": 4,
-                    "startOffset": 12929,
+                    "startOffset": 13412,
                     "endColumn": 263,
-                    "endOffset": 13188
+                    "endOffset": 13671
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2119,14 +2214,14 @@
             },
             {
                 "to": {
-                    "startLine": 122,
+                    "startLine": 127,
                     "startColumn": 4,
-                    "startOffset": 13193,
+                    "startOffset": 13676,
                     "endColumn": 76,
-                    "endOffset": 13265
+                    "endOffset": 13748
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -2138,14 +2233,14 @@
             },
             {
                 "to": {
-                    "startLine": 123,
+                    "startLine": 128,
                     "startColumn": 4,
-                    "startOffset": 13270,
+                    "startOffset": 13753,
                     "endColumn": 78,
-                    "endOffset": 13344
+                    "endOffset": 13827
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -2157,14 +2252,14 @@
             },
             {
                 "to": {
-                    "startLine": 124,
+                    "startLine": 129,
                     "startColumn": 4,
-                    "startOffset": 13349,
+                    "startOffset": 13832,
                     "endColumn": 57,
-                    "endOffset": 13402
+                    "endOffset": 13885
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -2176,14 +2271,14 @@
             },
             {
                 "to": {
-                    "startLine": 125,
+                    "startLine": 130,
                     "startColumn": 4,
-                    "startOffset": 13407,
+                    "startOffset": 13890,
                     "endColumn": 75,
-                    "endOffset": 13478
+                    "endOffset": 13961
                 },
                 "from": {
-                    "file": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\values-gu\\values-gu.xml",
+                    "file": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\values-gu\\values-gu.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,

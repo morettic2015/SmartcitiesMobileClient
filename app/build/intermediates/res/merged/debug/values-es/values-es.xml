@@ -54,7 +54,7 @@
     <string name="beer">cerveza</string>
     <string name="bio_config">Ayuda a otras personas sepan que usted</string>
     <string name="cep">código postal</string>
-    <string name="com_facebook_device_auth_instructions">Visita &lt;b>facebook.com/device&lt;/b>&lt;br /> en tu smartphone u ordenador e introduce este código:</string>
+    <string name="com_facebook_device_auth_instructions">Visita &lt;b>facebook.com/device&lt;/b> e ingresa el código que se muestra arriba.</string>
     <string name="com_facebook_image_download_unknown_error">Se produjo un error inesperado al descargar una imagen.</string>
     <string name="com_facebook_internet_permission_error_message">El inicio de sesión a la web requiere permiso de conexión a internet</string>
     <string name="com_facebook_internet_permission_error_title">Error AndroidManifest</string>
@@ -63,6 +63,7 @@
     <string name="com_facebook_loading">Cargando…</string>
     <string name="com_facebook_loginview_cancel_action">Cancelar</string>
     <string name="com_facebook_loginview_log_in_button">Inicio de sesión</string>
+    <string name="com_facebook_loginview_log_in_button_continue">Continuar con Facebook</string>
     <string name="com_facebook_loginview_log_in_button_long">Iniciar sesión con Facebook</string>
     <string name="com_facebook_loginview_log_out_action">Salir</string>
     <string name="com_facebook_loginview_log_out_button">Salir</string>
@@ -70,7 +71,12 @@
     <string name="com_facebook_loginview_logged_in_using_facebook">Sesión iniciada con Facebook</string>
     <string name="com_facebook_send_button_text">Enviar</string>
     <string name="com_facebook_share_button_text">Compartir</string>
-    <string name="com_facebook_tooltip_default">¡Nuevo! Tú tienes el control: elige qué información quieres compartir con las aplicaciones.</string>
+    <string name="com_facebook_smart_device_instructions">Para conectar tu cuenta, abre la aplicación de Facebook en tu dispositivo móvil y comprueba las notificaciones.</string>
+    <string name="com_facebook_smart_device_instructions_or">- O -</string>
+    <string name="com_facebook_smart_login_confirmation_cancel">¿No eres tú?</string>
+    <string name="com_facebook_smart_login_confirmation_continue_as">Continuar como %1$s</string>
+    <string name="com_facebook_smart_login_confirmation_title">Confirmar inicio de sesión</string>
+    <string name="com_facebook_tooltip_default">Tú decides: elige qué información quieres compartir con las aplicaciones.</string>
     <string msgid="4770915072144378781" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> necesita uno o varios servicios de Google Play que no están disponibles en este momento. Ponte en contacto con el desarrollador para obtener ayuda."</string>
     <string msgid="2050101795821476669" name="common_google_play_services_enable_button">"Habilitar servicios de Google Play"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no funcionará hasta que no habilites los Servicios de Google Play."</string>
@@ -249,6 +255,7 @@ Se pueden aplicar cargos por mensajes, llamadas y datos.</string>
     <string name="save_profile_msg">Guardar perfil ...</string>
     <string name="save_sucess">Salvo!</string>
     <string name="se_voc_gosta_do_servi_o_ajude_nos_a_manter_o_app_e_desenvolver_outras_aplica_es_para_tornar_as_cidades_inteligentes_basta_clicar_em_dois_an_ncios_um_pequeno_gesto_estar_colaborando_para_uma_sociedade_do_conhecimento">Si te gusta el servicio, nos ayude a mantener la aplicación y el desarrollo de otras aplicaciones para hacer que las ciudades inteligentes. Basta con hacer clic dos anuncios! Un pequeño gesto estará contribuyendo a una sociedad del conocimiento.</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Buscar"</string>
     <string name="seguran_a">Seguridad</string>
     <string name="selecioneData">Seleccione una fecha</string>
     <string name="selecione_as_dist_ncias_para_filtrar">Elija la distancia para buscar</string>

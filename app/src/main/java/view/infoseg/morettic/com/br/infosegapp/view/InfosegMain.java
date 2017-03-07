@@ -179,7 +179,7 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         return key;
     }*/
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
+    @TargetApi(value = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

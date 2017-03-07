@@ -21,14 +21,14 @@ repositories {
 
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "view.infoseg.morettic.com.br.infosegapp"
         minSdkVersion 18
         targetSdkVersion 23
-        versionCode 1942
+        versionCode 1943
         versionName "CASTLE_BLACK_BETA"
         multiDexEnabled true
     }
@@ -53,15 +53,15 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
-    compile 'com.android.support:support-v4:23.2.1'
-    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
     compile 'com.google.android.gms:play-services:9.0.0'
     compile 'com.google.android.gms:play-services-ads:9.0.0'
     compile 'com.google.android.gms:play-services-maps:9.0.0'
     compile 'com.google.android.gms:play-services-identity:9.0.0'
-    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.google.maps.android:android-maps-utils:0.4'
     compile 'com.google.firebase:firebase-core:9.0.0'
     compile 'com.google.firebase:firebase-auth:9.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'

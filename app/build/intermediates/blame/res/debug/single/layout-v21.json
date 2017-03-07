@@ -1,6 +1,22 @@
 [
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\place_autocomplete_fragment.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\9.0.0\\res\\layout-v21\\place_autocomplete_fragment.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1d3548881b3d128325e5c82ee84c3c48871e7031\\output\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     }
 ]

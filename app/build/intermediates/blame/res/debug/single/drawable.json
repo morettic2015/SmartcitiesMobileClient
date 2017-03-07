@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_seekbar.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__video_seekbar.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__video_seekbar.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrollbar_vertical_track.xml",
@@ -9,35 +9,51 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\drawable\\progress_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\drawable\\progress_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_background.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_login_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_logo.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_login_logo.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dgts__digits_btn.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\drawable\\dgts__digits_btn.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\drawable\\dgts__digits_btn.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_text_cursor_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_pressed_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_pressed_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_pressed_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_switch_thumb_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_text_color_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_text_color_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_text_color_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_cw.png",
@@ -45,55 +61,63 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_disabled.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_disabled.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_disabled.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_send_button_icon.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_send_button_icon.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__install_button_border.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-composer\\1.0.3\\res\\drawable\\tw__install_button_border.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5514d3475ab513a105de19dd35c81ea65e62f7bf\\output\\res\\drawable\\tw__install_button_border.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__like_action.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__like_action.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__like_action.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_btn_radio_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dgts__digits_btn_default.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\drawable\\dgts__digits_btn_default.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\drawable\\dgts__digits_btn_default.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__share_action.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__share_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__share_action.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__bg_media_badge.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__bg_media_badge.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__bg_media_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__seekbar_thumb.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__seekbar_thumb.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__seekbar_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_gplus.xml",
@@ -105,111 +129,119 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_login_silver_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_default.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_default.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_default.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\drawable\\design_snackbar_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__player_overlay.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__player_overlay.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__player_overlay.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_pause_btn.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__video_pause_btn.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__video_pause_btn.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_play_btn.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__video_play_btn.xml"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__video_play_btn.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_media_route_mono_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\drawable\\design_fab_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_cab_background_top_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\drawable\\progress_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\drawable\\progress_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_pressed.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_pressed.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_pressed.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_connecting.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\9.0.0\\res\\drawable\\cast_ic_notification_connecting.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\6436c9e0ee5587d80a6b84053132e43113b9407d\\output\\res\\drawable\\cast_ic_notification_connecting.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_play_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_home.xml",
@@ -217,15 +249,23 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__transparent.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__transparent.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__transparent.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_header_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.png",
@@ -237,103 +277,119 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_default_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\twitter-core\\1.6.6\\res\\drawable\\tw__login_btn_default_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5c1dab01e6eaf8005adf348294eceb789ba471c8\\output\\res\\drawable\\tw__login_btn_default_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_like_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_like_background.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__gif_badge.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__gif_badge.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__gif_badge.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_seekbar_track_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_icon.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dgts__digits_btn_pressed.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.digits.sdk.android\\digits\\1.10.3\\res\\drawable\\dgts__digits_btn_pressed.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\\output\\res\\drawable\\dgts__digits_btn_pressed.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_settings_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_replay_btn.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-ui\\1.10.1\\res\\drawable\\tw__video_replay_btn.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\e15b458da789895d804c306ccf9f2a4fae589050\\output\\res\\drawable\\tw__video_replay_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__app_info_layout_border.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-composer\\1.0.3\\res\\drawable\\tw__app_info_layout_border.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5514d3475ab513a105de19dd35c81ea65e62f7bf\\output\\res\\drawable\\tw__app_info_layout_border.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_blue_bg_round.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_send_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_pause_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_twitter.png",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable\\icon_twitter.png"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__btn_composer_tweet.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.twitter.sdk.android\\tweet-composer\\1.0.3\\res\\drawable\\tw__btn_composer_tweet.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5514d3475ab513a105de19dd35c81ea65e62f7bf\\output\\res\\drawable\\tw__btn_composer_tweet.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\image_list.xml",
@@ -341,15 +397,15 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_btn_check_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_white_bg_round.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_facebook.xml",
@@ -364,8 +420,12 @@
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_favicon_blue.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_favicon_blue.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_cast_dark.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrollbar_vertical_thumb.xml",
@@ -373,42 +433,54 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_cast_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_play_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_settings_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_shape_model.xml",
         "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\src\\main\\res\\drawable\\button_shape_model.xml"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_btn_borderless_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_cancel_background.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_white_bg_selector.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_light.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable\\mr_ic_pause_light.xml"
     }
 ]

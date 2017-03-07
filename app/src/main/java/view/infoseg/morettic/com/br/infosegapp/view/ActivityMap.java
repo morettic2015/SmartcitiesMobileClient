@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapQuery;
 import view.infoseg.morettic.com.br.infosegapp.actions.AssyncMapSearch;
+import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.LocationManagerUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.TipoOcorrencia;
 
@@ -279,11 +280,13 @@ e.printStackTrace();
                                 txtDt.setText(js.getString("date"));
                                 txtTp.setText(js.getString("tipo"));
 
-                                Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("token")).
+                                Picasso.with(v.getContext()).
+                                        load(HttpUtil.IMAGE_PATH + js.getString("token")).
                                         error(R.drawable.logo).
                                         into(imgVOcorrencia);
 
-                                Picasso.with(v.getContext()).load("http://gaeloginendpoint.appspot.com/infosegcontroller.exec?action=8&id=" + js.getString("avatar")).
+                                Picasso.with(v.getContext()).
+                                        load(HttpUtil.IMAGE_PATH + js.getString("avatar")).
                                         error(R.drawable.logo).
                                         into(imgVAvatar);
 

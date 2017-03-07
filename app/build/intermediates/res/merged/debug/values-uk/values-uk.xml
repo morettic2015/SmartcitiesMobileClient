@@ -144,6 +144,7 @@ SMS-повідомлення, або пункт «Зателефонуйте м�
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Пристрої"</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Очистити поле пошуку"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Пошук"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Пошук"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="tw__allow_btn_txt">Дозволити</string>
     <string name="tw__like_tweet">Вподобати твіт</string>

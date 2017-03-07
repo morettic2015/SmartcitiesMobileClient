@@ -33,23 +33,23 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:14:5-67
-MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:19:5-67
-MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.0.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:21:5-66
-MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:25:5-67
-MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:25:5-67
-MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:25:5-67
-MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:25:5-67
-MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.10\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:19:5-67
+MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f432ee2d611b773cd00cdf54af848755c3eb15ef\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\935fa43f798441722d0d733cb0f5e0bd49ba6340\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\8cf894025beb9ba4be1f71d66c7e8eca9c764729\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:21:5-66
+MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:25:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\.android\build-cache\5064af7ba0c24739e532bec918d48b50733645a1\output\AndroidManifest.xml:25:5-67
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:14:22-64
 uses-permission#android.permission.CAMERA
@@ -78,71 +78,77 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:20:22-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:21:5-79
-MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.0.0\AndroidManifest.xml:19:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:20:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:21:5-78
-MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed398c26bdb8d6472bd94e3095092d96b0499f08\output\AndroidManifest.xml:19:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\8cf894025beb9ba4be1f71d66c7e8eca9c764729\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:20:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:20:5-78
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:21:22-76
 application
 ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:29:5-110:19
-MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-core\9.0.0\AndroidManifest.xml:5:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:28:5-37:19
-MERGED from [com.android.support:customtabs:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\9.0.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:20:5-30:19
-MERGED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:20:5-32:19
-MERGED from [com.google.android.gms:play-services-cast:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-config:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:24:5-32:19
-MERGED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.0\AndroidManifest.xml:20:5-32:19
-MERGED from [com.google.android.gms:play-services-fitness:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-games:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-drive:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.0\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.0.0\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.gms:play-services-location:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.0.0\AndroidManifest.xml:20:5-20
-MERGED from [com.google.android.gms:play-services-panorama:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-plus:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-safetynet:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.0\AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:24:5-38:19
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:30:5-59:19
-MERGED from [com.google.android.gms:play-services-vision:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.0.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-wearable:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:24:5-32:19
-MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-identity:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.0.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.3\AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.firebase:firebase-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.0.0\AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-auth-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.0.0\AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:5:5-12:19
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.twitter.sdk.android:twitter:1.13.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.13.1\AndroidManifest.xml:25:5-20
-MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:27:5-111:19
-MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:27:5-37:19
-MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:27:5-35:19
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:27:5-40:19
-MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.10\AndroidManifest.xml:27:5-20
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\LuisAugusto\.android\build-cache\bf6616eaf44a716c9a27bc864797abb398a8584b\output\AndroidManifest.xml:5:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:28:5-48:19
+MERGED from [com.android.support:customtabs:25.0.0] C:\Users\LuisAugusto\.android\build-cache\92bf3b77040020c71a123cb7bf39a09adbe8650b\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:25.2.0] C:\Users\LuisAugusto\.android\build-cache\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.2.0] C:\Users\LuisAugusto\.android\build-cache\d6a599e6c5b960f88d5a9211df061fa2e76934cb\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:25.2.0] C:\Users\LuisAugusto\.android\build-cache\87ba68d8840a68febc956fa6ae3950a48fa68b33\output\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services:9.0.0] C:\Users\LuisAugusto\.android\build-cache\69d73094247bf43d43a7604ceadfc1675e694353\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:20:5-30:19
+MERGED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-cast:9.0.0] C:\Users\LuisAugusto\.android\build-cache\6436c9e0ee5587d80a6b84053132e43113b9407d\output\AndroidManifest.xml:19:5-20
+MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\LuisAugusto\.android\build-cache\a6063dfb6b38c66a7af076d6397401e130d83722\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\LuisAugusto\.android\build-cache\91755c971d02c129f9a4b2ec5e0cc701c2066dee\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\LuisAugusto\.android\build-cache\e4096473b66f243f6e350147546481a70babaa8f\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\LuisAugusto\.android\build-cache\ced21de16c69d605a0d1e6f165837d07c6736d3b\output\AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-config:9.0.0] C:\Users\LuisAugusto\.android\build-cache\d4e280e0208c9d4e10381894b8bc863ce8019135\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\.android\build-cache\621ac8f3d1ab01a34b3c04c95fb5a2d8d8624671\output\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-fitness:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a8bbbb3374fdc3b5e78a11bf0d153c7231a12b80\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-games:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3a8a6b3be6287d098d002a910ed63ccec26801b3\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-drive:9.0.0] C:\Users\LuisAugusto\.android\build-cache\27a9a1cbba6a057b6bff6f037478dceb52bedf41\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f432ee2d611b773cd00cdf54af848755c3eb15ef\output\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c26574e78e2c376e8121eed0df712dd6f0259059\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\935fa43f798441722d0d733cb0f5e0bd49ba6340\output\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-location:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1d3548881b3d128325e5c82ee84c3c48871e7031\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed398c26bdb8d6472bd94e3095092d96b0499f08\output\AndroidManifest.xml:20:5-20
+MERGED from [com.google.android.gms:play-services-panorama:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ef5a7130fb8c6d8d78612b9e43bf82ef0313911d\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-plus:9.0.0] C:\Users\LuisAugusto\.android\build-cache\4011e994c382861c4edf3e4dd9e242ef1d7db297\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9b335abb5cf8300f930b70954ab29638aeff2193\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\8cf894025beb9ba4be1f71d66c7e8eca9c764729\output\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:24:5-38:19
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.android.gms:play-services-vision:9.0.0] C:\Users\LuisAugusto\.android\build-cache\df8f122033040ebfd14849a9e3d1802892f17cec\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-wearable:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a07276e6023411637cf8283b95ff29772fd12cf0\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-identity:9.0.0] C:\Users\LuisAugusto\.android\build-cache\546bbc8acdf53cb7ddaa53dc5a53e266f4c2d86f\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\LuisAugusto\.android\build-cache\bad0a47c9720c051a41e6395c24efca768dc4814\output\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.firebase:firebase-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\b42cb1043f69c62a5da289df036d0569531df371\output\AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\38e34e9e63966a5959898665b56c6fa471646179\output\AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a26eb7ba7c073be4de388d5a013373a07b49a48b\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\.android\build-cache\0fb27e77c4eece0439790d9456f3e5e33ed3ca20\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.twitter.sdk.android:twitter:1.13.1] C:\Users\LuisAugusto\.android\build-cache\8aa8155bb2d0939ffe1d5547f4679413b1e61a06\output\AndroidManifest.xml:25:5-20
+MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:27:5-111:19
+MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:27:5-37:19
+MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:27:5-35:19
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\LuisAugusto\.android\build-cache\16aadbb892ec100820f07bc59a9f5d1b505fcbea\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\LuisAugusto\.android\build-cache\1df8e15d4ff20a177b4f8008af1e053653c84bb4\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\LuisAugusto\.android\build-cache\767085e5671a72e1c42f217403ffdcfcade6a855\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\LuisAugusto\.android\build-cache\e769980c83df64e99bbdcc6b743bb7d787982dfa\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\LuisAugusto\.android\build-cache\7e26c2b2b55ccbcbf44199b718f80ff101a73066\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\LuisAugusto\.android\build-cache\ea1d3e9f5c4c3c29234db9e75fd97db9d005621d\output\AndroidManifest.xml:25:5-20
+MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:27:5-40:19
+MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\.android\build-cache\5064af7ba0c24739e532bec918d48b50733645a1\output\AndroidManifest.xml:27:5-20
 	android:screenOrientation
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:34:9-45
 	android:label
@@ -175,17 +181,17 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:43:27-74
 activity#com.google.android.gms.ads.AdActivity
 ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:51:9-53:125
-MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:26:9-29:64
+MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:26:9-29:64
 	android:configChanges
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:53:13-122
 	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:29:13-61
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:29:13-61
 	android:name
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:52:13-65
 meta-data#com.google.android.gms.version
 ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:54:9-56:69
-MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.3\AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\LuisAugusto\.android\build-cache\bad0a47c9720c051a41e6395c24efca768dc4814\output\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\.android\build-cache\0fb27e77c4eece0439790d9456f3e5e33ed3ca20\output\AndroidManifest.xml:21:9-23:69
 	android:value
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:56:13-66
 	android:name
@@ -256,71 +262,76 @@ ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\Androi
 		ADDED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml:105:13-44
 uses-sdk
 INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-core\9.0.0\AndroidManifest.xml:4:5-42
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:customtabs:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\9.0.0\AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-cast:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-config:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:22:5-42
-MERGED from [com.google.firebase:firebase-database:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.0.0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database-connection:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.0.0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-storage:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.0.0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-storage-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.0.0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.android.gms:play-services-fitness:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-games:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-drive:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-appindexing:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-location:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-panorama:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-plus:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-auth-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.0.0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.android.gms:play-services-safetynet:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-tagmanager:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-vision:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.0.0\AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-wallet:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.0.0\AndroidManifest.xml:19:5-42
-MERGED from [com.google.android.gms:play-services-wearable:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-ads:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.0.0\AndroidManifest.xml:19:5-42
-MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:23:5-42
-MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:26:5-42
-MERGED from [com.google.android.gms:play-services-identity:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.maps.android:android-maps-utils:0.4.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.3\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-module:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.0.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.twitter.sdk.android:twitter:1.13.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.13.1\AndroidManifest.xml:23:5-43
-MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:23:5-43
-MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:23:5-43
-MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:23:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:23:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.10\AndroidManifest.xml:23:5-43
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\LuisAugusto\.android\build-cache\bf6616eaf44a716c9a27bc864797abb398a8584b\output\AndroidManifest.xml:4:5-42
+MERGED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:customtabs:25.0.0] C:\Users\LuisAugusto\.android\build-cache\92bf3b77040020c71a123cb7bf39a09adbe8650b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:25.2.0] C:\Users\LuisAugusto\.android\build-cache\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\LuisAugusto\.android\build-cache\b6ee4846e4a98f48a733a4a0e20cacb9987368e4\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] C:\Users\LuisAugusto\.android\build-cache\d6a599e6c5b960f88d5a9211df061fa2e76934cb\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:25.2.0] C:\Users\LuisAugusto\.android\build-cache\87ba68d8840a68febc956fa6ae3950a48fa68b33\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services:9.0.0] C:\Users\LuisAugusto\.android\build-cache\69d73094247bf43d43a7604ceadfc1675e694353\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-cast:9.0.0] C:\Users\LuisAugusto\.android\build-cache\6436c9e0ee5587d80a6b84053132e43113b9407d\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\LuisAugusto\.android\build-cache\a6063dfb6b38c66a7af076d6397401e130d83722\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\LuisAugusto\.android\build-cache\91755c971d02c129f9a4b2ec5e0cc701c2066dee\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\LuisAugusto\.android\build-cache\e4096473b66f243f6e350147546481a70babaa8f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\LuisAugusto\.android\build-cache\ced21de16c69d605a0d1e6f165837d07c6736d3b\output\AndroidManifest.xml:21:5-43
+MERGED from [com.google.firebase:firebase-config:9.0.0] C:\Users\LuisAugusto\.android\build-cache\d4e280e0208c9d4e10381894b8bc863ce8019135\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:22:5-42
+MERGED from [com.google.firebase:firebase-database:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a225cb371ed3e9149cfa018c6338aafd92c901c5\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database-connection:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7365fe7454b13a2251872fb7494c909768c64c55\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\.android\build-cache\621ac8f3d1ab01a34b3c04c95fb5a2d8d8624671\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-storage:9.0.0] C:\Users\LuisAugusto\.android\build-cache\cbe79c1e7a3a4ffbc81f3b648f3373ada6572a07\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-storage-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\384a567bd79ddfeb852f79020477e61608360340\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-fitness:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a8bbbb3374fdc3b5e78a11bf0d153c7231a12b80\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-games:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3a8a6b3be6287d098d002a910ed63ccec26801b3\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-drive:9.0.0] C:\Users\LuisAugusto\.android\build-cache\27a9a1cbba6a057b6bff6f037478dceb52bedf41\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f432ee2d611b773cd00cdf54af848755c3eb15ef\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c26574e78e2c376e8121eed0df712dd6f0259059\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\935fa43f798441722d0d733cb0f5e0bd49ba6340\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-location:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1d3548881b3d128325e5c82ee84c3c48871e7031\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-nearby:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed398c26bdb8d6472bd94e3095092d96b0499f08\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-panorama:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ef5a7130fb8c6d8d78612b9e43bf82ef0313911d\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-plus:9.0.0] C:\Users\LuisAugusto\.android\build-cache\4011e994c382861c4edf3e4dd9e242ef1d7db297\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-auth-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9abf8f2d9e8a1aa498dcd612811744f6139bc955\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9b335abb5cf8300f930b70954ab29638aeff2193\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager:9.0.0] C:\Users\LuisAugusto\.android\build-cache\b9191614d496d10c7cda0ceeb4baac854ba9381e\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\8cf894025beb9ba4be1f71d66c7e8eca9c764729\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-vision:9.0.0] C:\Users\LuisAugusto\.android\build-cache\df8f122033040ebfd14849a9e3d1802892f17cec\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-wallet:9.0.0] C:\Users\LuisAugusto\.android\build-cache\df49676809471fc520fe0fe95647f8150f90efa9\output\AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-wearable:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a07276e6023411637cf8283b95ff29772fd12cf0\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-ads:9.0.0] C:\Users\LuisAugusto\.android\build-cache\751292122dc7e3a47cae9abe38a84b2f86684917\output\AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-identity:9.0.0] C:\Users\LuisAugusto\.android\build-cache\546bbc8acdf53cb7ddaa53dc5a53e266f4c2d86f\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\LuisAugusto\.android\build-cache\bad0a47c9720c051a41e6395c24efca768dc4814\output\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\b42cb1043f69c62a5da289df036d0569531df371\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\38e34e9e63966a5959898665b56c6fa471646179\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-module:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f4e5b7299658afe5792ebaa794ac41fe93d18811\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\LuisAugusto\.android\build-cache\a26eb7ba7c073be4de388d5a013373a07b49a48b\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\LuisAugusto\.android\build-cache\0fb27e77c4eece0439790d9456f3e5e33ed3ca20\output\AndroidManifest.xml:18:5-42
+MERGED from [com.twitter.sdk.android:twitter:1.13.1] C:\Users\LuisAugusto\.android\build-cache\8aa8155bb2d0939ffe1d5547f4679413b1e61a06\output\AndroidManifest.xml:23:5-43
+MERGED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:23:5-43
+MERGED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:23:5-43
+MERGED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:23:5-43
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\LuisAugusto\.android\build-cache\16aadbb892ec100820f07bc59a9f5d1b505fcbea\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\LuisAugusto\.android\build-cache\1df8e15d4ff20a177b4f8008af1e053653c84bb4\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\LuisAugusto\.android\build-cache\767085e5671a72e1c42f217403ffdcfcade6a855\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\LuisAugusto\.android\build-cache\e769980c83df64e99bbdcc6b743bb7d787982dfa\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\LuisAugusto\.android\build-cache\7e26c2b2b55ccbcbf44199b718f80ff101a73066\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\LuisAugusto\.android\build-cache\ea1d3e9f5c4c3c29234db9e75fd97db9d005621d\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:23:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\.android\build-cache\5064af7ba0c24739e532bec918d48b50733645a1\output\AndroidManifest.xml:23:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.2.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:design:25.2.0] C:\Users\LuisAugusto\.android\build-cache\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
@@ -328,426 +339,432 @@ MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\LuisAugusto\AndroidSt
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\src\main\AndroidManifest.xml
 activity#com.facebook.FacebookActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:29:9-32:75
+ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:29:9-32:66
 	android:configChanges
-		ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:31:13-96
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:31:13-96
 	android:theme
-		ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:32:13-72
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:30:13-57
-activity#com.facebook.CustomTabActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:33:9-36:20
-	android:exported
-		ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:35:13-36
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:30:13-57
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:34:13-58
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.0\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:22:5-68
-	android:name
-		ADDED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.0\AndroidManifest.xml:25:22-65
-activity#com.google.android.gms.appinvite.PreviewActivity
-ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:21:9-29:20
-	android:exported
-		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:23:17-40
-	android:theme
-		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:24:17-63
-	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:22:17-48
-intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
-ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:25:13-28:29
-action#com.google.android.gms.appinvite.ACTION_PREVIEW
-ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:26:17-89
-	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:26:25-87
-category#android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:27:17-75
-	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.0\AndroidManifest.xml:27:27-73
-activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:21:9-24:46
-	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:23:19-52
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:24:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:22:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:21:19-68
-service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:28:9-31:110
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:30:13-36
-	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:31:13-107
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.0\AndroidManifest.xml:29:13-58
-service#com.google.firebase.crash.internal.service.FirebaseCrashReceiverService
-ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:26:9-27:50
-	android:process
-		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:27:13-48
-	android:name
-		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:26:18-79
-service#com.google.firebase.crash.internal.service.FirebaseCrashSenderService
-ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:29:9-30:50
-	android:process
-		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:30:13-48
-	android:name
-		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.0\AndroidManifest.xml:29:18-77
-service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.0\AndroidManifest.xml:24:9-30:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.0\AndroidManifest.xml:26:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.0\AndroidManifest.xml:25:13-82
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.0\AndroidManifest.xml:21:5-82
-MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.0.0\AndroidManifest.xml:21:5-82
-MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:23:5-82
-	android:name
-		ADDED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.0\AndroidManifest.xml:21:22-79
-service#com.google.android.gms.tagmanager.TagManagerService
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:25:9-27:42
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:27:17-39
-	android:exported
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:26:17-41
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:25:18-84
-activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:28:9-37:20
-	android:noHistory
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:29:13-87
-intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:31:13-36:29
-data
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:32:17-72
-	android:scheme
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:32:23-69
-action#android.intent.action.VIEW
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:33:17-69
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:33:25-66
-category#android.intent.category.BROWSABLE
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:35:17-77
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.0\AndroidManifest.xml:35:27-75
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:28:7-34:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:28:7-34:18
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:30:11-33
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:29:11-83
-intent-filter#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:31:9-33:25
-action#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:32:11-77
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:32:19-75
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:36:7-39:37
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\AndroidManifest.xml:36:7-39:37
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:38:11-33
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:39:11-35
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\AndroidManifest.xml:37:11-82
-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:25:5-26:47
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:26:9-44
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:25:17-71
-uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:28:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:28:22-76
-receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:32:9-41:20
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:34:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:35:13-73
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:33:13-78
-intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:36:13-40:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:37:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:37:25-78
-action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:38:17-86
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:38:25-83
-category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:39:17-61
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:39:27-58
-receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:45:9-47:40
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:46:13-86
-service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:51:9-57:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:53:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\AndroidManifest.xml:52:13-77
-activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:30:9-31:52
-	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:31:13-50
-	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.0\AndroidManifest.xml:30:19-91
-uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:22:5-24:33
-	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:23:8-40
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.0\AndroidManifest.xml:24:8-31
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:20:9-22:45
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:21:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\AndroidManifest.xml:20:19-85
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:7:9-11:39
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:33:19-68
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:44:9-47:40
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:8:13-72
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:46:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:10:13-37
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.20.0] C:\Users\LuisAugusto\.android\build-cache\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\output\AndroidManifest.xml:45:13-70
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\8cf894025beb9ba4be1f71d66c7e8eca9c764729\output\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9f76f3b9ea67e3a7d06925195c9f3f5e4da19a6b\output\AndroidManifest.xml:25:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:21:9-29:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:23:17-40
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:24:17-63
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:22:17-48
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:25:13-28:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:26:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:26:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:27:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\5a3acd542b7760d2a4c1f04444fbda41403b4661\output\AndroidManifest.xml:27:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:21:9-24:46
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:23:19-52
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:24:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:22:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:21:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:28:9-31:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:31:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:9.0.0] C:\Users\LuisAugusto\.android\build-cache\7d32d4605a036d799fc796b15832df76dcd7a1f6\output\AndroidManifest.xml:29:13-58
+service#com.google.firebase.crash.internal.service.FirebaseCrashReceiverService
+ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:26:9-27:50
+	android:process
+		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:27:13-48
+	android:name
+		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:26:18-79
+service#com.google.firebase.crash.internal.service.FirebaseCrashSenderService
+ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:29:9-30:50
+	android:process
+		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:30:13-48
+	android:name
+		ADDED from [com.google.firebase:firebase-crash:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fef0484cd600a9e7bca1de32acd42be2d0617e53\output\AndroidManifest.xml:29:18-77
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\.android\build-cache\621ac8f3d1ab01a34b3c04c95fb5a2d8d8624671\output\AndroidManifest.xml:24:9-30:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\.android\build-cache\621ac8f3d1ab01a34b3c04c95fb5a2d8d8624671\output\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:9.0.0] C:\Users\LuisAugusto\.android\build-cache\621ac8f3d1ab01a34b3c04c95fb5a2d8d8624671\output\AndroidManifest.xml:25:13-82
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f432ee2d611b773cd00cdf54af848755c3eb15ef\output\AndroidManifest.xml:21:5-82
+MERGED from [com.google.android.gms:play-services-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\935fa43f798441722d0d733cb0f5e0bd49ba6340\output\AndroidManifest.xml:21:5-82
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f432ee2d611b773cd00cdf54af848755c3eb15ef\output\AndroidManifest.xml:21:22-79
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:25:9-27:42
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:27:17-39
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:26:17-41
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:25:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:28:9-37:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:29:13-87
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:31:13-36:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:32:17-72
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:32:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:33:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.0.0] C:\Users\LuisAugusto\.android\build-cache\c0188c5689bd8ec4c61d283afc52ff5a4953d1d5\output\AndroidManifest.xml:35:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:28:7-34:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:30:11-33
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:29:11-83
+intent-filter#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:31:9-33:25
+action#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:32:11-77
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:32:19-75
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\LuisAugusto\.android\build-cache\ed17207361957d141eb054e6ee73cdada69be204\output\AndroidManifest.xml:36:7-39:37
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:38:11-33
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:39:11-35
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\LuisAugusto\.android\build-cache\f3f25bcba4c5795b58d96baf32c5736dfd051f8d\output\AndroidManifest.xml:37:11-82
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:25:5-26:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:25:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:28:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:32:9-41:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:34:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:35:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:33:13-78
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:36:13-40:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:37:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:37:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:38:17-86
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:38:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:39:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:39:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:45:9-47:40
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:46:13-86
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:51:9-57:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\LuisAugusto\.android\build-cache\3d864d16e31a076ee92502e4382053f2b944c97f\output\AndroidManifest.xml:52:13-77
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:30:9-31:52
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:31:13-50
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c9a73f7fe7bb9183a13655285eed8ed1e3286b7\output\AndroidManifest.xml:30:19-91
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.0.0] C:\Users\LuisAugusto\.android\build-cache\1f43e1cfef834873fc2390f944cc7c9d40e93876\output\AndroidManifest.xml:24:8-31
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\LuisAugusto\.android\build-cache\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\output\AndroidManifest.xml:20:19-85
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:7:9-11:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:8:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:10:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:11:13-36
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\AndroidManifest.xml:9:13-58
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\LuisAugusto\.android\build-cache\9c3290a04e9b8c97bd10bd5c292d84b7d2f56996\output\AndroidManifest.xml:9:13-58
 activity#com.digits.sdk.android.PhoneNumberActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:28:9-33:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:28:9-33:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:31:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:31:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:33:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:33:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:30:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:30:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:32:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:32:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:29:13-70
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:29:13-70
 activity#com.digits.sdk.android.ConfirmationCodeActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:34:9-39:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:34:9-39:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:37:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:37:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:39:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:39:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:36:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:36:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:38:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:38:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:35:13-75
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:35:13-75
 activity#com.digits.sdk.android.LoginCodeActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:40:9-45:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:40:9-45:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:43:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:43:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:45:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:45:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:42:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:42:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:44:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:44:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:41:13-68
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:41:13-68
 activity#com.digits.sdk.android.PinCodeActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:46:9-51:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:46:9-51:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:49:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:49:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:51:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:51:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:48:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:48:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:50:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:50:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:47:13-66
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:47:13-66
 activity#com.digits.sdk.android.FailureActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:52:9-56:61
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:52:9-56:61
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:55:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:55:13-37
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:54:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:54:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:56:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:56:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:53:13-66
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:53:13-66
 activity#com.digits.sdk.android.ContactsActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:57:9-60:40
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:57:9-60:40
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:60:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:60:13-37
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:59:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:59:13-59
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:58:13-67
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:58:13-67
 activity#com.digits.sdk.android.EmailRequestActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:61:9-66:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:61:9-66:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:64:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:64:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:66:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:66:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:63:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:63:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:65:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:65:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:62:13-71
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:62:13-71
 activity#com.digits.sdk.android.PhoneNumberActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:67:9-72:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:67:9-72:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:70:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:70:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:72:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:72:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:69:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:69:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:71:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:71:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:68:13-79
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:68:13-79
 activity#com.digits.sdk.android.ConfirmationCodeActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:73:9-78:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:73:9-78:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:76:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:76:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:78:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:78:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:75:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:75:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:77:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:77:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:74:13-84
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:74:13-84
 activity#com.digits.sdk.android.LoginCodeActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:79:9-84:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:79:9-84:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:82:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:82:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:84:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:84:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:81:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:81:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:83:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:83:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:80:13-77
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:80:13-77
 activity#com.digits.sdk.android.FailureActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:85:9-89:61
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:85:9-89:61
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:88:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:88:13-37
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:87:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:87:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:89:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:89:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:86:13-75
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:86:13-75
 activity#com.digits.sdk.android.ContactsActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:90:9-93:40
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:90:9-93:40
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:93:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:93:13-37
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:92:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:92:13-59
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:91:13-76
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:91:13-76
 activity#com.digits.sdk.android.PinCodeActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:94:9-99:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:94:9-99:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:97:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:97:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:99:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:99:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:96:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:96:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:98:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:98:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:95:13-75
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:95:13-75
 activity#com.digits.sdk.android.EmailRequestActionBarActivity
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:100:9-105:58
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:100:9-105:58
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:103:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:103:13-37
 	android:windowSoftInputMode
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:105:13-55
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:105:13-55
 	android:configChanges
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:102:13-59
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:102:13-59
 	android:taskAffinity
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:104:13-58
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:104:13-58
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:101:13-80
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:101:13-80
 service#com.digits.sdk.android.ContactsUploadService
-ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:107:9-110:40
+ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:107:9-110:40
 	android:enabled
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:109:13-35
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:109:13-35
 	android:exported
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:110:13-37
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:110:13-37
 	android:name
-		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.10.3\AndroidManifest.xml:108:13-72
+		ADDED from [com.digits.sdk.android:digits:1.10.3] C:\Users\LuisAugusto\.android\build-cache\1f2c30f9749d29de96a45d3abd3e69d1be2d077d\output\AndroidManifest.xml:108:13-72
 activity#com.twitter.sdk.android.tweetcomposer.ComposerActivity
-ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:28:9-31:71
+ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:28:9-31:71
 	android:exported
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:30:13-37
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:30:13-37
 	android:windowSoftInputMode
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:31:13-68
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:31:13-68
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:29:13-82
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:29:13-82
 service#com.twitter.sdk.android.tweetcomposer.TweetUploadService
-ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:33:9-36:40
+ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:33:9-36:40
 	android:enabled
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:35:13-35
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:35:13-35
 	android:exported
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:36:13-37
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\1.0.3\AndroidManifest.xml:34:13-84
+		ADDED from [com.twitter.sdk.android:tweet-composer:1.0.3] C:\Users\LuisAugusto\.android\build-cache\5514d3475ab513a105de19dd35c81ea65e62f7bf\output\AndroidManifest.xml:34:13-84
 activity#com.twitter.sdk.android.tweetui.PlayerActivity
-ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:28:9-31:49
+ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:28:9-31:49
 	android:configChanges
-		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:30:13-74
+		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:30:13-74
 	android:theme
-		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:31:13-46
+		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:31:13-46
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:29:13-74
+		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:29:13-74
 activity#com.twitter.sdk.android.tweetui.GalleryActivity
-ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:32:9-34:49
+ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:32:9-34:49
 	android:theme
-		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:34:13-46
+		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:34:13-46
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.10.1\AndroidManifest.xml:33:13-75
+		ADDED from [com.twitter.sdk.android:tweet-ui:1.10.1] C:\Users\LuisAugusto\.android\build-cache\e15b458da789895d804c306ccf9f2a4fae589050\output\AndroidManifest.xml:33:13-75
 activity#com.twitter.sdk.android.core.identity.OAuthActivity
-ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:28:9-32:40
+ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:28:9-32:40
 	android:excludeFromRecents
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:31:13-46
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:31:13-46
 	android:exported
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:32:13-37
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:32:13-37
 	android:configChanges
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:30:13-59
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:30:13-59
 	android:name
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:29:13-79
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:29:13-79
 activity#com.twitter.sdk.android.core.identity.ShareEmailActivity
-ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:33:9-39:48
+ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:33:9-39:48
 	android:label
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:39:13-45
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:39:13-45
 	android:excludeFromRecents
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:36:13-46
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:36:13-46
 	android:exported
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:37:13-37
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:37:13-37
 	android:configChanges
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:35:13-59
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:35:13-59
 	android:icon
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:38:13-53
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:38:13-53
 	android:name
-		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.6.6\AndroidManifest.xml:34:13-84
+		ADDED from [com.twitter.sdk.android:twitter-core:1.6.6] C:\Users\LuisAugusto\.android\build-cache\5c1dab01e6eaf8005adf348294eceb789ba471c8\output\AndroidManifest.xml:34:13-84

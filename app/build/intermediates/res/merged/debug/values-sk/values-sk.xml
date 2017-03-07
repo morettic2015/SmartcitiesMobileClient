@@ -31,15 +31,16 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Zdieľať pomocou"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Zdieľať pomocou %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Zbaliť"</string>
-    <string name="com_facebook_device_auth_instructions">Navštívte &lt;b>facebook.com/device&lt;/b>&lt;br /> v smartfóne alebo počítači a zadajte tento kód:</string>
+    <string name="com_facebook_device_auth_instructions">Navštívte stránku &lt;b>facebook.com/device&lt;/b> a zadajte kód zobrazený vyššie.</string>
     <string name="com_facebook_image_download_unknown_error">Pri sťahovaní obrázka sa vyskytla neočakávaná chyba.</string>
     <string name="com_facebook_internet_permission_error_message">Na prihlásenie sa v rozhraní WebView sa vyžaduje povolenie pre INTERNET</string>
     <string name="com_facebook_internet_permission_error_title">Chyba súboru AndroidManifest</string>
     <string name="com_facebook_like_button_liked">Páči sa mi to</string>
     <string name="com_facebook_like_button_not_liked">Páči sa mi to</string>
-    <string name="com_facebook_loading">Načítava sa...</string>
+    <string name="com_facebook_loading">Načítava sa…</string>
     <string name="com_facebook_loginview_cancel_action">Zrušiť</string>
     <string name="com_facebook_loginview_log_in_button">Prihlásiť sa</string>
+    <string name="com_facebook_loginview_log_in_button_continue">Pokračovať s Facebookom</string>
     <string name="com_facebook_loginview_log_in_button_long">Prihlásiť sa cez Facebook</string>
     <string name="com_facebook_loginview_log_out_action">Odhlásiť sa</string>
     <string name="com_facebook_loginview_log_out_button">Odhlásiť sa</string>
@@ -47,7 +48,11 @@
     <string name="com_facebook_loginview_logged_in_using_facebook">Prihlásený cez Facebook</string>
     <string name="com_facebook_send_button_text">Odoslať</string>
     <string name="com_facebook_share_button_text">Zdieľať</string>
-    <string name="com_facebook_tooltip_default">Novinka! Máte to pod kontrolou: vyberte, ktoré informácie chcete zdieľať s aplikáciami.</string>
+    <string name="com_facebook_smart_device_instructions">Na pripojenie svojho účtu otvorte vo svojom mobilnom zariadení aplikáciu Facebook a skontrolujte upozornenia.</string>
+    <string name="com_facebook_smart_device_instructions_or">- ALEBO -</string>
+    <string name="com_facebook_smart_login_confirmation_cancel">Nie ste to vy?</string>
+    <string name="com_facebook_smart_login_confirmation_title">Potvrdiť prihlásenie</string>
+    <string name="com_facebook_tooltip_default">Máte to pod kontrolou: vyberte, ktoré informácie chcete zdieľať s aplikáciami.</string>
     <string msgid="4770915072144378781" name="common_google_play_services_api_unavailable_text">"Aplikácia <ns1:g id="APP_NAME">%1$s</ns1:g> vyžaduje minimálne jednu službu Google Play, ktorá v súčasnosti nie je k dispozícii. Kontaktujte príslušného vývojára a požiadajte ho o pomoc."</string>
     <string msgid="2050101795821476669" name="common_google_play_services_enable_button">"Povoliť služby Google Play"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Aplikácia <ns1:g id="APP_NAME">%1$s</ns1:g> bude fungovať až po povolení služieb Google Play."</string>
@@ -137,6 +142,7 @@
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"Zariadenia"</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Vymazať vyhľadávanie"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Vyhľadávajte"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Vyhľadávanie"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="tw__allow_btn_txt">Povoliť</string>
     <string name="tw__like_tweet">Obľúbiť si Tweet</string>
