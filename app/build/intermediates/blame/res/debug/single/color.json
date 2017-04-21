@@ -4,20 +4,20 @@
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_plus_signin_btn_text_light.xml",
-        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\color\\common_plus_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\91755c971d02c129f9a4b2ec5e0cc701c2066dee\\output\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b55a0cc57e98306c86d2f0dcec5d0ddc1eb21d23\\output\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fe4b26b63e07da5fc8a3f726c5e2fd56407f424e\\output\\res\\color\\common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_plus_signin_btn_text_dark.xml",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\com_facebook_button_text_color.xml",
-        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\color\\com_facebook_button_text_color.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b5f89fc5a5ac7ed20a2b7ec448811f49444f3a5d\\output\\res\\color\\com_facebook_button_text_color.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
@@ -89,7 +89,7 @@
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\com_facebook_send_button_text_color.xml",
-        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\5bad1f2a36f3b027b95a9ef6a12888c37dc153c8\\output\\res\\color\\com_facebook_send_button_text_color.xml"
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\b5f89fc5a5ac7ed20a2b7ec448811f49444f3a5d\\output\\res\\color\\com_facebook_send_button_text_color.xml"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",

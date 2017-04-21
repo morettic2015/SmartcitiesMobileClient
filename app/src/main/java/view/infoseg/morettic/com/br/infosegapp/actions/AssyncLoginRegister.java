@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.view.View;
 
+import com.onesignal.OneSignal;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
@@ -13,12 +14,10 @@ import org.json.JSONObject;
 import view.infoseg.morettic.com.br.infosegapp.R;
 import view.infoseg.morettic.com.br.infosegapp.util.HttpUtil;
 import view.infoseg.morettic.com.br.infosegapp.util.ImageCache;
-import view.infoseg.morettic.com.br.infosegapp.util.InstanceIdService;
 import view.infoseg.morettic.com.br.infosegapp.util.ValueObject;
 
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.ID_PROFILE;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MAIN;
-import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_DEVICE_TOKEN;
 import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.MY_PREFERENCES;
 import static view.infoseg.morettic.com.br.infosegapp.view.InfosegMain.logException;
 
@@ -30,7 +29,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
     private ProgressDialog dialog;
     private View a1;
     private String email, senha, desc, imagePath, adrress;
-    private SharedPreferences.Editor editor = ValueObject.MY_PREFERENCES.edit();
+    private SharedPreferences.Editor editor = MY_PREFERENCES.edit();
     String msg;
 
     @Override
@@ -63,7 +62,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         }
     }
 
-    public AssyncLoginRegister(Context ctx, String login, String senha, String desc, String imagePath, String adrress) {
+  /*  public AssyncLoginRegister(Context ctx, String login, String senha, String desc, String imagePath, String adrress) {
         this.dialog = new ProgressDialog(ctx);
         msg = ctx.getString(R.string.autenticando);
         this.email = login;
@@ -73,7 +72,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
         this.desc = desc;
         this.adrress = adrress;
         //builder = new AlertDialog.Builder(this.a1.getContext());
-    }
+    }*/
 
     public AssyncLoginRegister(Context ctx, String login, String senha) {
         this.dialog = new ProgressDialog(ctx);
@@ -101,7 +100,7 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
             } else {
 
 
-                ValueObject.ID_PROFILE = js.getString("key");
+                ID_PROFILE = js.getString("key");
                 ValueObject.UPLOAD_AVATAR = js.getString("avatar");
 
                 this.editor.putString("nome", js.getString("nome")).commit();
@@ -112,15 +111,11 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 this.editor.putBoolean("pjf", Boolean.getBoolean(js.getString("pjf"))).commit();
                 this.editor.putString("nasc", js.getString("nasc")).commit();
                 this.editor.putString("email", js.getString("email")).commit();
-                this.editor.putString("id", ValueObject.ID_PROFILE).commit();
+                this.editor.putString("id", ID_PROFILE).commit();
                 this.editor.putString("avatar", ValueObject.UPLOAD_AVATAR).commit();
 
                 //Update device ID for push notifications
-                MY_DEVICE_TOKEN = InstanceIdService.getToken();
-                if (!MY_PREFERENCES.getString("DEVICE_TYPE", "").equals(MY_DEVICE_TOKEN)) {
-                    HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(MY_DEVICE_TOKEN, "ANDROID", ID_PROFILE));
-                    this.editor.putString("DEVICE_TYPE", MY_DEVICE_TOKEN).commit();
-                }
+
                 ValueObject.AUTENTICADO = true;
                 try {
                     if (!ImageCache.hasBitmapFromMemCache("avatar")) {/*
@@ -140,6 +135,26 @@ public class AssyncLoginRegister extends AsyncTask<JSONObject, Void, String> {
                 }
             }
 
+            OneSignal.idsAvailable(new OneSignal.IdsAvailableHandler() {
+                @Override
+                public void idsAvailable(String userId, String registrationId) {
+
+                    if (registrationId != null) {
+                        //labelStr += registrationId;
+                        if (!MY_PREFERENCES.getString("DEVICE_TYPE", "").equals(userId)) {
+                            try {
+                                HttpUtil.getJSONFromUrl(HttpUtil.getDeviceRegister(userId, "ANDROID", ID_PROFILE));
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            MY_PREFERENCES.edit().putString("DEVICE_TYPE", userId).commit();
+                        }
+                    }
+
+                }
+            });
+           /* MY_DEVICE_TOKEN = InstanceIdService.getToken();
+            */
 
         } catch (Exception ex) {
             logException(ex);

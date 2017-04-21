@@ -69,12 +69,12 @@ public final class R {
         public static final int bubble_shadow = 0x7f020057;
         public static final int common_full_open_on_phone = 0x7f02007e;
         public static final int common_ic_googleplayservices = 0x7f020093;
-        public static final int ic_plusone_medium_off_client = 0x7f0200e4;
-        public static final int ic_plusone_small_off_client = 0x7f0200e5;
-        public static final int ic_plusone_standard_off_client = 0x7f0200e6;
-        public static final int ic_plusone_tall_off_client = 0x7f0200e7;
-        public static final int powered_by_google_dark = 0x7f02011b;
-        public static final int powered_by_google_light = 0x7f02011c;
+        public static final int ic_plusone_medium_off_client = 0x7f0200e5;
+        public static final int ic_plusone_small_off_client = 0x7f0200e6;
+        public static final int ic_plusone_standard_off_client = 0x7f0200e7;
+        public static final int ic_plusone_tall_off_client = 0x7f0200e8;
+        public static final int powered_by_google_dark = 0x7f02011c;
+        public static final int powered_by_google_light = 0x7f02011d;
     }
     public static final class id {
         public static final int adjust_height = 0x7f11004b;
@@ -100,7 +100,7 @@ public final class R {
         public static final int strict_sandbox = 0x7f11006a;
         public static final int terrain = 0x7f11004f;
         public static final int text = 0x7f11000b;
-        public static final int webview = 0x7f1101d4;
+        public static final int webview = 0x7f1101d9;
         public static final int window = 0x7f110175;
         public static final int wrap_content = 0x7f110027;
     }
@@ -109,29 +109,29 @@ public final class R {
     }
     public static final class layout {
         public static final int info_window = 0x7f04004c;
-        public static final int text_bubble = 0x7f04006e;
-        public static final int webview = 0x7f04007b;
+        public static final int text_bubble = 0x7f04006f;
+        public static final int webview = 0x7f04007c;
     }
     public static final class raw {
         public static final int ballon_gx_prefix = 0x7f080000;
         public static final int basic_folder = 0x7f080001;
         public static final int basic_placemark = 0x7f080002;
         public static final int cdata = 0x7f080003;
-        public static final int default_balloon = 0x7f080004;
-        public static final int document_nest = 0x7f080005;
-        public static final int draw_order_ground_overlay = 0x7f080006;
-        public static final int extended_data = 0x7f080007;
-        public static final int ground_overlay = 0x7f080008;
-        public static final int ground_overlay_color = 0x7f080009;
-        public static final int gtm_analytics = 0x7f08000a;
-        public static final int inline_style = 0x7f08000b;
-        public static final int multigeometry_placemarks = 0x7f08000c;
-        public static final int multiple_placemarks = 0x7f08000d;
-        public static final int nested_folders = 0x7f08000e;
-        public static final int nested_multigeometry = 0x7f08000f;
-        public static final int unknwown_folder = 0x7f080011;
-        public static final int unsupported = 0x7f080012;
-        public static final int visibility_ground_overlay = 0x7f080013;
+        public static final int default_balloon = 0x7f080005;
+        public static final int document_nest = 0x7f080006;
+        public static final int draw_order_ground_overlay = 0x7f080007;
+        public static final int extended_data = 0x7f080008;
+        public static final int ground_overlay = 0x7f080009;
+        public static final int ground_overlay_color = 0x7f08000a;
+        public static final int gtm_analytics = 0x7f08000b;
+        public static final int inline_style = 0x7f08000c;
+        public static final int multigeometry_placemarks = 0x7f08000d;
+        public static final int multiple_placemarks = 0x7f08000e;
+        public static final int nested_folders = 0x7f08000f;
+        public static final int nested_multigeometry = 0x7f080010;
+        public static final int unknwown_folder = 0x7f080012;
+        public static final int unsupported = 0x7f080013;
+        public static final int visibility_ground_overlay = 0x7f080014;
     }
     public static final class string {
         public static final int accept = 0x7f090126;

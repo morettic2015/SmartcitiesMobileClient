@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/common_action_bar_splitter"
+    android:background="@color/tw__solid_white"
     tools:context=".view.ActivityGPlus"
     android:weightSum="1">
 

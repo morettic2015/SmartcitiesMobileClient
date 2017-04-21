@@ -446,20 +446,20 @@ public final class R {
         public static final int dgts__logo_name = 0x7f0200b5;
         public static final int dgts__spinner_dark = 0x7f0200b6;
         public static final int dgts__spinner_light = 0x7f0200b7;
-        public static final int notification_template_icon_bg = 0x7f02018f;
-        public static final int progress_dark = 0x7f02011d;
-        public static final int progress_light = 0x7f02011e;
-        public static final int tw__ic_logo_default = 0x7f02016a;
-        public static final int tw__login_btn = 0x7f02017e;
-        public static final int tw__login_btn_default = 0x7f02017f;
-        public static final int tw__login_btn_default_light = 0x7f020180;
-        public static final int tw__login_btn_disabled = 0x7f020181;
-        public static final int tw__login_btn_light = 0x7f020182;
-        public static final int tw__login_btn_pressed = 0x7f020183;
-        public static final int tw__login_btn_pressed_light = 0x7f020184;
-        public static final int tw__login_btn_text_color_light = 0x7f020185;
-        public static final int tw__share_email_header = 0x7f020189;
-        public static final int tw__transparent = 0x7f02018a;
+        public static final int notification_template_icon_bg = 0x7f020190;
+        public static final int progress_dark = 0x7f02011e;
+        public static final int progress_light = 0x7f02011f;
+        public static final int tw__ic_logo_default = 0x7f02016b;
+        public static final int tw__login_btn = 0x7f02017f;
+        public static final int tw__login_btn_default = 0x7f020180;
+        public static final int tw__login_btn_default_light = 0x7f020181;
+        public static final int tw__login_btn_disabled = 0x7f020182;
+        public static final int tw__login_btn_light = 0x7f020183;
+        public static final int tw__login_btn_pressed = 0x7f020184;
+        public static final int tw__login_btn_pressed_light = 0x7f020185;
+        public static final int tw__login_btn_text_color_light = 0x7f020186;
+        public static final int tw__share_email_header = 0x7f02018a;
+        public static final int tw__transparent = 0x7f02018b;
     }
     public static final class id {
         public static final int action0 = 0x7f110189;
@@ -578,11 +578,11 @@ public final class R {
         public static final int title = 0x7f110096;
         public static final int title_template = 0x7f1100a3;
         public static final int topPanel = 0x7f1100a2;
-        public static final int tw__allow_btn = 0x7f1101ab;
-        public static final int tw__not_now_btn = 0x7f1101aa;
-        public static final int tw__share_email_desc = 0x7f1101a9;
-        public static final int tw__spinner = 0x7f1101a8;
-        public static final int tw__web_view = 0x7f1101a7;
+        public static final int tw__allow_btn = 0x7f1101b0;
+        public static final int tw__not_now_btn = 0x7f1101af;
+        public static final int tw__share_email_desc = 0x7f1101ae;
+        public static final int tw__spinner = 0x7f1101ad;
+        public static final int tw__web_view = 0x7f1101ac;
         public static final int up = 0x7f110010;
         public static final int useLogo = 0x7f11001b;
         public static final int width = 0x7f11008c;
@@ -634,15 +634,15 @@ public final class R {
         public static final int notification_template_media = 0x7f040062;
         public static final int notification_template_part_chronometer = 0x7f040064;
         public static final int notification_template_part_time = 0x7f040065;
-        public static final int select_dialog_item_material = 0x7f04006a;
-        public static final int select_dialog_multichoice_material = 0x7f04006b;
-        public static final int select_dialog_singlechoice_material = 0x7f04006c;
-        public static final int support_simple_spinner_dropdown_item = 0x7f04006d;
-        public static final int tw__activity_oauth = 0x7f040071;
-        public static final int tw__activity_share_email = 0x7f040072;
+        public static final int select_dialog_item_material = 0x7f04006b;
+        public static final int select_dialog_multichoice_material = 0x7f04006c;
+        public static final int select_dialog_singlechoice_material = 0x7f04006d;
+        public static final int support_simple_spinner_dropdown_item = 0x7f04006e;
+        public static final int tw__activity_oauth = 0x7f040072;
+        public static final int tw__activity_share_email = 0x7f040073;
     }
     public static final class raw {
-        public static final int tw__cacerts = 0x7f080010;
+        public static final int tw__cacerts = 0x7f080011;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f090000;

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable-mdpi\\ic_cast_on_light.png"
     },
     {
-        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_cast_disabled_light.png",
-        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable-mdpi\\ic_cast_disabled_light.png"
-    },
-    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_media_route_on_1_mono_dark.png",
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable-mdpi\\ic_media_route_on_1_mono_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_cast_disabled_light.png",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\a6063dfb6b38c66a7af076d6397401e130d83722\\output\\res\\drawable-mdpi\\ic_cast_disabled_light.png"
     },
     {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_play_dark.png",

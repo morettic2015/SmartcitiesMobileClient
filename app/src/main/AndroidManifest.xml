@@ -65,11 +65,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".util.InstanceIdService" >
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
         <receiver
             android:name="view.infoseg.morettic.com.br.infosegapp.actions.TAPPXBroadcastReceiver"
             android:exported="true" >

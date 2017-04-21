@@ -16,6 +16,10 @@
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\bad0a47c9720c051a41e6395c24efca768dc4814\\output\\res\\raw\\basic_placemark.kml"
     },
     {
+        "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\raw\\consumer_onesignal_keep.xml",
+        "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\fce68a9a0e1a445f4a1bec8dd35a6c46bc689049\\output\\res\\raw\\consumer_onesignal_keep.xml"
+    },
+    {
         "merged": "C:\\Users\\LuisAugusto\\AndroidStudioProjects\\Beta01\\app\\build\\intermediates\\res\\merged\\debug\\raw\\ground_overlay_color.kml",
         "source": "C:\\Users\\LuisAugusto\\.android\\build-cache\\bad0a47c9720c051a41e6395c24efca768dc4814\\output\\res\\raw\\ground_overlay_color.kml"
     },

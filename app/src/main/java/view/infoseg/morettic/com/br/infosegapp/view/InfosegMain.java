@@ -33,7 +33,8 @@ import android.widget.ImageButton;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
-import com.google.firebase.crash.FirebaseCrash;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.onesignal.OneSignal;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -72,6 +73,11 @@ import static view.infoseg.morettic.com.br.infosegapp.util.ValueObject.WORD;
 
 public class InfosegMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "OzVHL0WiRfdoa4FDkjSTWWP5g";
+    private static final String TWITTER_SECRET = "EfEIRwJ3YcKkSj1B8bWgKGp5G6gyofphzPiSOaI8ZfTXktWKtO";
+
+    private FirebaseAnalytics mFirebaseAnalytics;
     private static final int FACEBOOK_CODE = 64206;
     /**
      * @Tappax object to show ADS as possible way to
@@ -147,42 +153,10 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
         //printKeyHash(this);
 
     }
-    /*public static String printKeyHash(Activity context) {
-        PackageInfo packageInfo;
-        String key = null;
-        try {
-            //getting application package name, as defined in manifest
-            String packageName = context.getApplicationContext().getPackageName();
-
-            //Retriving package info
-            packageInfo = context.getPackageManager().getPackageInfo(packageName,
-                    PackageManager.GET_SIGNATURES);
-
-            Log.e("Package Name=", context.getApplicationContext().getPackageName());
-
-            for (android.content.pm.Signature signature : packageInfo.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                key = new String(Base64.encode(md.digest(), 0));
-
-                // String key = new String(Base64.encodeBytes(md.digest()));
-                Log.e("Key Hash=", key);
-            }
-        } catch (PackageManager.NameNotFoundException e1) {
-            Log.e("Name not found", e1.toString());
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("No such an algorithm", e.toString());
-        } catch (Exception e) {
-            Log.e("Exception", e.toString());
-        }
-
-        return key;
-    }*/
 
     @TargetApi(value = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         COUNTER_CLICK = 0;
         //Facebook SDK instance
@@ -251,7 +225,8 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
             ActivityCompat.requestPermissions(this, p, MY_REQUEST_CODE4);
         }*/
         //Inicializa client facebook
-
+        //mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        OneSignal.startInit(this).init();
 
     }
 
@@ -524,11 +499,11 @@ public class InfosegMain extends AppCompatActivity implements NavigationView.OnN
     public static final void logException(Exception ex) {
         try {
             LOGGER.log(Level.SEVERE, ex.toString());
-            // ex.printStackTrace();
-            FirebaseCrash.report(ex);
+            ex.printStackTrace();
+            //FirebaseCrash.report(ex);
             //FirebaseCrash.log(ex.toString());
         } catch (Exception e) {
-            FirebaseCrash.log(ex.toString());
+            //FirebaseCrash.log(ex.toString());
         }
 
     }

@@ -31,6 +31,9 @@ android {
         versionCode 1943
         versionName "CASTLE_BLACK_BETA"
         multiDexEnabled true
+        manifestPlaceholders = [onesignal_app_id: "6ae3bb6e-e6b2-4acb-b18d-ab2180a8ba96",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "811880962924 "]
     }
     buildTypes {
         release {
@@ -51,7 +54,12 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+    //compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile('com.twitter.sdk.android:twitter:1.13.1@aar') {
+        transitive = true;
+    }
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/tappx-sdk-android-v2.3.3.jar')
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
@@ -61,14 +69,19 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:9.0.0'
     compile 'com.google.android.gms:play-services-maps:9.0.0'
     compile 'com.google.android.gms:play-services-identity:9.0.0'
+    compile "com.google.android.gms:play-services-location:9.0.0"
+    compile 'com.google.android.gms:play-services-gcm:9.0.0'
     compile 'com.google.maps.android:android-maps-utils:0.4'
-    compile 'com.google.firebase:firebase-core:9.0.0'
-    compile 'com.google.firebase:firebase-auth:9.0.0'
+  //  compile 'com.google.firebase:firebase-core:9.0.0'
+  //  compile 'com.google.firebase:firebase-auth:9.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    //compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-    compile('com.twitter.sdk.android:twitter:1.13.1@aar') {
-        transitive = true;
-    }
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/tappx-sdk-android-v2.3.3.jar')
+    compile 'com.onesignal:OneSignal:3.+@aar'
+
+    // Required for OneSignal, even if you have added FCM.
+
+
+    // Required for geotagging
+
+  //  compile 'com.google.firebase:firebase-messaging:9.0.0'
+    testCompile 'junit:junit:4.12'
 }
