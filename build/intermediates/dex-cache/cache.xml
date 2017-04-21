@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="true"
+        jar="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\libs\tappx-sdk-android-v2.3.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c9c63b2c9341d69f6d2f045efdad497a5af016e">
+        <dex dex="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\2\tappx-sdk-android-v2.3.3_283c00f0e9b42e9de0c72683b8889e2d26c33593\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d91b76c7e62c7cdd5a6f66c94792eebb90d10725">
+        <dex dex="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_43f122a5470a9a3d23d2c46ae4cd38e62efed449\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\LuisAugusto\AndroidStudioProjects\Beta01\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ac341e24ebb35f1496be2320fe0860efdcb1dc5c\classes.dex" />
+    </item>
+
+</items>
